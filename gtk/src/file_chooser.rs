@@ -4,13 +4,13 @@ use crate::FileChooser;
 #[cfg(feature = "v3_22")]
 #[cfg_attr(docsrs, doc(cfg(feature = "v3_22")))]
 use glib::translate::*;
-use glib::IsA;
+use glib::object::IsA;
 
 // rustdoc-stripper-ignore-next
 /// Trait containing manually implemented methods of [`FileChooser`](crate::FileChooser).
 mod sealed {
     pub trait Sealed {}
-    impl<T: glib::IsA<crate::FileChooser>> Sealed for T {}
+    impl<T: glib::object::IsA<crate::FileChooser>> Sealed for T {}
 }
 
 pub trait FileChooserExtManual: IsA<FileChooser> + sealed::Sealed + 'static {

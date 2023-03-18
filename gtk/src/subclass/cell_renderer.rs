@@ -6,7 +6,7 @@ use std::mem;
 use glib::object::IsA;
 use glib::subclass::prelude::*;
 use glib::translate::*;
-use glib::Cast;
+use glib::prelude::Cast;
 use glib::GString;
 
 use crate::CellEditable;

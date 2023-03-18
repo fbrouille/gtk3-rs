@@ -4,7 +4,7 @@ use libc::c_char;
 
 use glib::subclass::prelude::*;
 use glib::translate::*;
-use glib::{Cast, GString};
+use glib::{prelude::Cast, GString};
 
 use super::cell_renderer::CellRendererImpl;
 

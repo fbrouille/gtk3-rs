@@ -30,8 +30,8 @@ fn build_ui(application: &gtk::Application) {
     append_text_column(&left_tree);
 
     for i in 0..10 {
-        // insert_with_values takes a slice of tuples: column index and ToValue
-        // trait objects. ToValue is implemented for strings, numeric types,
+        // insert_with_values takes a slice of tuples: column index and glib::prelude::ToValue
+        // trait objects. glib::prelude::ToValue is implemented for strings, numeric types,
         // bool and Object descendants
         let iter = left_store.insert_with_values(None, None, &[(0, &format!("Hello {i}"))]);
 

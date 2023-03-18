@@ -22,11 +22,11 @@ fn build_ui(application: &gtk::Application) {
     combobox.set_entry_text_column(1);
 
     let model = gtk::ListStore::new(&[glib::Type::BOOL, glib::Type::STRING]);
-    let data: [(u32, &dyn ToValue); 2] = [(0, &true), (1, &"data1")];
+    let data: [(u32, &dyn glib::prelude::ToValue); 2] = [(0, &true), (1, &"data1")];
     model.insert_with_values(Some(0), &data);
-    let data: [(u32, &dyn ToValue); 2] = [(0, &false), (1, &"date2")];
+    let data: [(u32, &dyn glib::prelude::ToValue); 2] = [(0, &false), (1, &"date2")];
     model.insert_with_values(Some(1), &data);
-    let data: [(u32, &dyn ToValue); 2] = [(0, &false), (1, &"date3")];
+    let data: [(u32, &dyn glib::prelude::ToValue); 2] = [(0, &false), (1, &"date3")];
     model.insert_with_values(Some(2), &data);
 
     combobox.set_model(Some(&model));

@@ -68,7 +68,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for AccelFlags {
     }
 }
 
-impl ToValue for AccelFlags {
+impl glib::prelude::ToValue for AccelFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -88,7 +88,7 @@ impl From<AccelFlags> for glib::Value {
     #[inline]
     fn from(v: AccelFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -158,7 +158,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for ApplicationInhibitFlags {
     }
 }
 
-impl ToValue for ApplicationInhibitFlags {
+impl glib::prelude::ToValue for ApplicationInhibitFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -178,7 +178,7 @@ impl From<ApplicationInhibitFlags> for glib::Value {
     #[inline]
     fn from(v: ApplicationInhibitFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -250,7 +250,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for CalendarDisplayOptions {
     }
 }
 
-impl ToValue for CalendarDisplayOptions {
+impl glib::prelude::ToValue for CalendarDisplayOptions {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -270,7 +270,7 @@ impl From<CalendarDisplayOptions> for glib::Value {
     #[inline]
     fn from(v: CalendarDisplayOptions) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -346,7 +346,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for CellRendererState {
     }
 }
 
-impl ToValue for CellRendererState {
+impl glib::prelude::ToValue for CellRendererState {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -366,7 +366,7 @@ impl From<CellRendererState> for glib::Value {
     #[inline]
     fn from(v: CellRendererState) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -436,7 +436,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for DestDefaults {
     }
 }
 
-impl ToValue for DestDefaults {
+impl glib::prelude::ToValue for DestDefaults {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -456,7 +456,7 @@ impl From<DestDefaults> for glib::Value {
     #[inline]
     fn from(v: DestDefaults) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -524,7 +524,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for DialogFlags {
     }
 }
 
-impl ToValue for DialogFlags {
+impl glib::prelude::ToValue for DialogFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -544,7 +544,7 @@ impl From<DialogFlags> for glib::Value {
     #[inline]
     fn from(v: DialogFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -634,7 +634,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for EventControllerScrollFlags {
 
 #[cfg(feature = "v3_24")]
 #[cfg_attr(docsrs, doc(cfg(feature = "v3_24")))]
-impl ToValue for EventControllerScrollFlags {
+impl glib::prelude::ToValue for EventControllerScrollFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -656,7 +656,7 @@ impl From<EventControllerScrollFlags> for glib::Value {
     #[inline]
     fn from(v: EventControllerScrollFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -726,7 +726,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for FileFilterFlags {
     }
 }
 
-impl ToValue for FileFilterFlags {
+impl glib::prelude::ToValue for FileFilterFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -746,7 +746,7 @@ impl From<FileFilterFlags> for glib::Value {
     #[inline]
     fn from(v: FileFilterFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -834,7 +834,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for FontChooserLevel {
 
 #[cfg(feature = "v3_24")]
 #[cfg_attr(docsrs, doc(cfg(feature = "v3_24")))]
-impl ToValue for FontChooserLevel {
+impl glib::prelude::ToValue for FontChooserLevel {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -856,7 +856,7 @@ impl From<FontChooserLevel> for glib::Value {
     #[inline]
     fn from(v: FontChooserLevel) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -936,7 +936,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for IconLookupFlags {
     }
 }
 
-impl ToValue for IconLookupFlags {
+impl glib::prelude::ToValue for IconLookupFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -956,7 +956,7 @@ impl From<IconLookupFlags> for glib::Value {
     #[inline]
     fn from(v: IconLookupFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1042,7 +1042,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for InputHints {
     }
 }
 
-impl ToValue for InputHints {
+impl glib::prelude::ToValue for InputHints {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1062,7 +1062,7 @@ impl From<InputHints> for glib::Value {
     #[inline]
     fn from(v: InputHints) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1142,7 +1142,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for JunctionSides {
     }
 }
 
-impl ToValue for JunctionSides {
+impl glib::prelude::ToValue for JunctionSides {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1162,7 +1162,7 @@ impl From<JunctionSides> for glib::Value {
     #[inline]
     fn from(v: JunctionSides) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1230,7 +1230,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for PlacesOpenFlags {
     }
 }
 
-impl ToValue for PlacesOpenFlags {
+impl glib::prelude::ToValue for PlacesOpenFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1250,7 +1250,7 @@ impl From<PlacesOpenFlags> for glib::Value {
     #[inline]
     fn from(v: PlacesOpenFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1324,7 +1324,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for RecentFilterFlags {
     }
 }
 
-impl ToValue for RecentFilterFlags {
+impl glib::prelude::ToValue for RecentFilterFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1344,7 +1344,7 @@ impl From<RecentFilterFlags> for glib::Value {
     #[inline]
     fn from(v: RecentFilterFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1418,7 +1418,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for RegionFlags {
     }
 }
 
-impl ToValue for RegionFlags {
+impl glib::prelude::ToValue for RegionFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1438,7 +1438,7 @@ impl From<RegionFlags> for glib::Value {
     #[inline]
     fn from(v: RegionFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1528,7 +1528,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for StateFlags {
     }
 }
 
-impl ToValue for StateFlags {
+impl glib::prelude::ToValue for StateFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1548,7 +1548,7 @@ impl From<StateFlags> for glib::Value {
     #[inline]
     fn from(v: StateFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1616,7 +1616,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for StyleContextPrintFlags {
     }
 }
 
-impl ToValue for StyleContextPrintFlags {
+impl glib::prelude::ToValue for StyleContextPrintFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1636,7 +1636,7 @@ impl From<StyleContextPrintFlags> for glib::Value {
     #[inline]
     fn from(v: StyleContextPrintFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1706,7 +1706,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for TargetFlags {
     }
 }
 
-impl ToValue for TargetFlags {
+impl glib::prelude::ToValue for TargetFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1726,7 +1726,7 @@ impl From<TargetFlags> for glib::Value {
     #[inline]
     fn from(v: TargetFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1794,7 +1794,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for TextSearchFlags {
     }
 }
 
-impl ToValue for TextSearchFlags {
+impl glib::prelude::ToValue for TextSearchFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1814,7 +1814,7 @@ impl From<TextSearchFlags> for glib::Value {
     #[inline]
     fn from(v: TextSearchFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1880,7 +1880,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for ToolPaletteDragTargets {
     }
 }
 
-impl ToValue for ToolPaletteDragTargets {
+impl glib::prelude::ToValue for ToolPaletteDragTargets {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1900,7 +1900,7 @@ impl From<ToolPaletteDragTargets> for glib::Value {
     #[inline]
     fn from(v: ToolPaletteDragTargets) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1966,7 +1966,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for TreeModelFlags {
     }
 }
 
-impl ToValue for TreeModelFlags {
+impl glib::prelude::ToValue for TreeModelFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1986,6 +1986,6 @@ impl From<TreeModelFlags> for glib::Value {
     #[inline]
     fn from(v: TreeModelFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }

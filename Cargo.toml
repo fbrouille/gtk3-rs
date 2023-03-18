@@ -26,3 +26,18 @@ members = [
 ]
 
 exclude = ["gir", "checker"]
+
+[patch."https://github.com/gtk-rs/gtk-rs-core"]
+glib = { path = "../gtk-rs-core/glib" }
+glib-sys = { path = "../gtk-rs-core/glib/sys" }
+gobject-sys = { path = "../gtk-rs-core/glib/gobject-sys" }
+glib-build-tools = { path = "../gtk-rs-core/glib-build-tools" }
+gio = { path = "../gtk-rs-core/gio" }
+gio-sys = { path = "../gtk-rs-core/gio/sys" }
+gdk-pixbuf = { path = "../gtk-rs-core/gdk-pixbuf" }
+gdk-pixbuf-sys = { path = "../gtk-rs-core/gdk-pixbuf/sys" }
+cairo-rs = { path = "../gtk-rs-core/cairo" }
+cairo-sys-rs = { path = "../gtk-rs-core/cairo/sys" }
+pango = { path = "../gtk-rs-core/pango" }
+pango-sys = { path = "../gtk-rs-core/pango/sys" }
+pangocairo = { path = "../gtk-rs-core/pangocairo" }

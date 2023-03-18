@@ -64,7 +64,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for HyperlinkStateFlags {
     }
 }
 
-impl ToValue for HyperlinkStateFlags {
+impl glib::prelude::ToValue for HyperlinkStateFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -84,6 +84,6 @@ impl From<HyperlinkStateFlags> for glib::Value {
     #[inline]
     fn from(v: HyperlinkStateFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }

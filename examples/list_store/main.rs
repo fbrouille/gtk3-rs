@@ -188,7 +188,7 @@ fn create_model() -> gtk::ListStore {
 
         let sensitive = d_idx != 3;
 
-        let values: [(u32, &dyn ToValue); 8] = [
+        let values: [(u32, &dyn glib::prelude::ToValue); 8] = [
             (0, &d.fixed),
             (1, &d.number),
             (2, &d.severity),

@@ -80,7 +80,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for AnchorHints {
     }
 }
 
-impl ToValue for AnchorHints {
+impl glib::prelude::ToValue for AnchorHints {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -100,7 +100,7 @@ impl From<AnchorHints> for glib::Value {
     #[inline]
     fn from(v: AnchorHints) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -180,7 +180,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for AxisFlags {
     }
 }
 
-impl ToValue for AxisFlags {
+impl glib::prelude::ToValue for AxisFlags {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -200,7 +200,7 @@ impl From<AxisFlags> for glib::Value {
     #[inline]
     fn from(v: AxisFlags) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -274,7 +274,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for DragAction {
     }
 }
 
-impl ToValue for DragAction {
+impl glib::prelude::ToValue for DragAction {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -294,7 +294,7 @@ impl From<DragAction> for glib::Value {
     #[inline]
     fn from(v: DragAction) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -408,7 +408,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for EventMask {
     }
 }
 
-impl ToValue for EventMask {
+impl glib::prelude::ToValue for EventMask {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -428,7 +428,7 @@ impl From<EventMask> for glib::Value {
     #[inline]
     fn from(v: EventMask) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -506,7 +506,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for FrameClockPhase {
     }
 }
 
-impl ToValue for FrameClockPhase {
+impl glib::prelude::ToValue for FrameClockPhase {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -526,7 +526,7 @@ impl From<FrameClockPhase> for glib::Value {
     #[inline]
     fn from(v: FrameClockPhase) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -652,7 +652,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for ModifierType {
     }
 }
 
-impl ToValue for ModifierType {
+impl glib::prelude::ToValue for ModifierType {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -672,7 +672,7 @@ impl From<ModifierType> for glib::Value {
     #[inline]
     fn from(v: ModifierType) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -748,7 +748,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for SeatCapabilities {
     }
 }
 
-impl ToValue for SeatCapabilities {
+impl glib::prelude::ToValue for SeatCapabilities {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -768,7 +768,7 @@ impl From<SeatCapabilities> for glib::Value {
     #[inline]
     fn from(v: SeatCapabilities) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -844,7 +844,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for WMDecoration {
     }
 }
 
-impl ToValue for WMDecoration {
+impl glib::prelude::ToValue for WMDecoration {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -864,7 +864,7 @@ impl From<WMDecoration> for glib::Value {
     #[inline]
     fn from(v: WMDecoration) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -938,7 +938,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for WMFunction {
     }
 }
 
-impl ToValue for WMFunction {
+impl glib::prelude::ToValue for WMFunction {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -958,7 +958,7 @@ impl From<WMFunction> for glib::Value {
     #[inline]
     fn from(v: WMFunction) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1038,7 +1038,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for WindowHints {
     }
 }
 
-impl ToValue for WindowHints {
+impl glib::prelude::ToValue for WindowHints {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1058,7 +1058,7 @@ impl From<WindowHints> for glib::Value {
     #[inline]
     fn from(v: WindowHints) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1154,7 +1154,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for WindowState {
     }
 }
 
-impl ToValue for WindowState {
+impl glib::prelude::ToValue for WindowState {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1174,6 +1174,6 @@ impl From<WindowState> for glib::Value {
     #[inline]
     fn from(v: WindowState) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }

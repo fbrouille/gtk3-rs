@@ -4,7 +4,7 @@ use libc::c_int;
 
 use glib::subclass::prelude::*;
 use glib::translate::*;
-use glib::Cast;
+use glib::prelude::Cast;
 
 use super::container::ContainerImpl;
 

@@ -1,8 +1,9 @@
 // Take a look at the license at the top of the repository in the LICENSE file.
 
 use glib::translate::{from_glib, FromGlib, IntoGlib, ToGlibPtr, ToGlibPtrMut};
-use glib::value::{FromValue, ToValue, ValueType};
-use glib::{StaticType, Type};
+use glib::value::{FromValue, ValueType};
+use glib::prelude::ToValue;
+use glib::{types::StaticType, Type};
 use std::fmt;
 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]
@@ -124,7 +125,7 @@ unsafe impl<'a> FromValue<'a> for ResponseType {
     }
 }
 
-impl ToValue for ResponseType {
+impl glib::prelude::ToValue for ResponseType {
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
         unsafe {

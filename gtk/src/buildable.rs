@@ -2,11 +2,11 @@
 
 use crate::Buildable;
 use glib::translate::*;
-use glib::IsA;
+use glib::object::IsA;
 
 mod sealed {
     pub trait Sealed {}
-    impl<T: glib::IsA<crate::Buildable>> Sealed for T {}
+    impl<T: glib::object::IsA<crate::Buildable>> Sealed for T {}
 }
 
 pub trait BuildableExtManual: IsA<Buildable> + sealed::Sealed + 'static {

@@ -112,7 +112,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for AxisUse {
     }
 }
 
-impl ToValue for AxisUse {
+impl glib::prelude::ToValue for AxisUse {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -132,7 +132,7 @@ impl From<AxisUse> for glib::Value {
     #[inline]
     fn from(v: AxisUse) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -208,7 +208,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for ByteOrder {
     }
 }
 
-impl ToValue for ByteOrder {
+impl glib::prelude::ToValue for ByteOrder {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -228,7 +228,7 @@ impl From<ByteOrder> for glib::Value {
     #[inline]
     fn from(v: ByteOrder) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -332,7 +332,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for CrossingMode {
     }
 }
 
-impl ToValue for CrossingMode {
+impl glib::prelude::ToValue for CrossingMode {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -352,7 +352,7 @@ impl From<CrossingMode> for glib::Value {
     #[inline]
     fn from(v: CrossingMode) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -738,7 +738,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for CursorType {
     }
 }
 
-impl ToValue for CursorType {
+impl glib::prelude::ToValue for CursorType {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -758,7 +758,7 @@ impl From<CursorType> for glib::Value {
     #[inline]
     fn from(v: CursorType) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -838,7 +838,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for DevicePadFeature {
     }
 }
 
-impl ToValue for DevicePadFeature {
+impl glib::prelude::ToValue for DevicePadFeature {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -858,7 +858,7 @@ impl From<DevicePadFeature> for glib::Value {
     #[inline]
     fn from(v: DevicePadFeature) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -958,7 +958,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for DeviceToolType {
     }
 }
 
-impl ToValue for DeviceToolType {
+impl glib::prelude::ToValue for DeviceToolType {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -978,7 +978,7 @@ impl From<DeviceToolType> for glib::Value {
     #[inline]
     fn from(v: DeviceToolType) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1058,7 +1058,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for DeviceType {
     }
 }
 
-impl ToValue for DeviceType {
+impl glib::prelude::ToValue for DeviceType {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1078,7 +1078,7 @@ impl From<DeviceType> for glib::Value {
     #[inline]
     fn from(v: DeviceType) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1158,7 +1158,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for DragCancelReason {
     }
 }
 
-impl ToValue for DragCancelReason {
+impl glib::prelude::ToValue for DragCancelReason {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1178,7 +1178,7 @@ impl From<DragCancelReason> for glib::Value {
     #[inline]
     fn from(v: DragCancelReason) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1278,7 +1278,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for DragProtocol {
     }
 }
 
-impl ToValue for DragProtocol {
+impl glib::prelude::ToValue for DragProtocol {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1298,7 +1298,7 @@ impl From<DragProtocol> for glib::Value {
     #[inline]
     fn from(v: DragProtocol) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1556,7 +1556,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for EventType {
     }
 }
 
-impl ToValue for EventType {
+impl glib::prelude::ToValue for EventType {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1576,7 +1576,7 @@ impl From<EventType> for glib::Value {
     #[inline]
     fn from(v: EventType) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1652,7 +1652,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for FullscreenMode {
     }
 }
 
-impl ToValue for FullscreenMode {
+impl glib::prelude::ToValue for FullscreenMode {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1672,7 +1672,7 @@ impl From<FullscreenMode> for glib::Value {
     #[inline]
     fn from(v: FullscreenMode) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1775,7 +1775,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for GLError {
     }
 }
 
-impl ToValue for GLError {
+impl glib::prelude::ToValue for GLError {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1795,7 +1795,7 @@ impl From<GLError> for glib::Value {
     #[inline]
     fn from(v: GLError) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1875,7 +1875,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for GrabOwnership {
     }
 }
 
-impl ToValue for GrabOwnership {
+impl glib::prelude::ToValue for GrabOwnership {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -1895,7 +1895,7 @@ impl From<GrabOwnership> for glib::Value {
     #[inline]
     fn from(v: GrabOwnership) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -1987,7 +1987,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for GrabStatus {
     }
 }
 
-impl ToValue for GrabStatus {
+impl glib::prelude::ToValue for GrabStatus {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2007,7 +2007,7 @@ impl From<GrabStatus> for glib::Value {
     #[inline]
     fn from(v: GrabStatus) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2115,7 +2115,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for Gravity {
     }
 }
 
-impl ToValue for Gravity {
+impl glib::prelude::ToValue for Gravity {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2135,7 +2135,7 @@ impl From<Gravity> for glib::Value {
     #[inline]
     fn from(v: Gravity) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2215,7 +2215,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for InputMode {
     }
 }
 
-impl ToValue for InputMode {
+impl glib::prelude::ToValue for InputMode {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2235,7 +2235,7 @@ impl From<InputMode> for glib::Value {
     #[inline]
     fn from(v: InputMode) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2339,7 +2339,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for InputSource {
     }
 }
 
-impl ToValue for InputSource {
+impl glib::prelude::ToValue for InputSource {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2359,7 +2359,7 @@ impl From<InputSource> for glib::Value {
     #[inline]
     fn from(v: InputSource) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2455,7 +2455,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for ModifierIntent {
     }
 }
 
-impl ToValue for ModifierIntent {
+impl glib::prelude::ToValue for ModifierIntent {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2475,7 +2475,7 @@ impl From<ModifierIntent> for glib::Value {
     #[inline]
     fn from(v: ModifierIntent) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2567,7 +2567,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for NotifyType {
     }
 }
 
-impl ToValue for NotifyType {
+impl glib::prelude::ToValue for NotifyType {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2587,7 +2587,7 @@ impl From<NotifyType> for glib::Value {
     #[inline]
     fn from(v: NotifyType) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2667,7 +2667,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for OwnerChange {
     }
 }
 
-impl ToValue for OwnerChange {
+impl glib::prelude::ToValue for OwnerChange {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2687,7 +2687,7 @@ impl From<OwnerChange> for glib::Value {
     #[inline]
     fn from(v: OwnerChange) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2767,7 +2767,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for PropMode {
     }
 }
 
-impl ToValue for PropMode {
+impl glib::prelude::ToValue for PropMode {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2787,7 +2787,7 @@ impl From<PropMode> for glib::Value {
     #[inline]
     fn from(v: PropMode) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2863,7 +2863,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for PropertyState {
     }
 }
 
-impl ToValue for PropertyState {
+impl glib::prelude::ToValue for PropertyState {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2883,7 +2883,7 @@ impl From<PropertyState> for glib::Value {
     #[inline]
     fn from(v: PropertyState) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -2971,7 +2971,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for ScrollDirection {
     }
 }
 
-impl ToValue for ScrollDirection {
+impl glib::prelude::ToValue for ScrollDirection {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -2991,7 +2991,7 @@ impl From<ScrollDirection> for glib::Value {
     #[inline]
     fn from(v: ScrollDirection) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -3071,7 +3071,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for SettingAction {
     }
 }
 
-impl ToValue for SettingAction {
+impl glib::prelude::ToValue for SettingAction {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -3091,7 +3091,7 @@ impl From<SettingAction> for glib::Value {
     #[inline]
     fn from(v: SettingAction) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -3183,7 +3183,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for SubpixelLayout {
     }
 }
 
-impl ToValue for SubpixelLayout {
+impl glib::prelude::ToValue for SubpixelLayout {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -3203,7 +3203,7 @@ impl From<SubpixelLayout> for glib::Value {
     #[inline]
     fn from(v: SubpixelLayout) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -3283,7 +3283,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for VisibilityState {
     }
 }
 
-impl ToValue for VisibilityState {
+impl glib::prelude::ToValue for VisibilityState {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -3303,7 +3303,7 @@ impl From<VisibilityState> for glib::Value {
     #[inline]
     fn from(v: VisibilityState) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -3395,7 +3395,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for VisualType {
     }
 }
 
-impl ToValue for VisualType {
+impl glib::prelude::ToValue for VisualType {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -3415,7 +3415,7 @@ impl From<VisualType> for glib::Value {
     #[inline]
     fn from(v: VisualType) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -3515,7 +3515,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for WindowEdge {
     }
 }
 
-impl ToValue for WindowEdge {
+impl glib::prelude::ToValue for WindowEdge {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -3535,7 +3535,7 @@ impl From<WindowEdge> for glib::Value {
     #[inline]
     fn from(v: WindowEdge) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -3631,7 +3631,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for WindowType {
     }
 }
 
-impl ToValue for WindowType {
+impl glib::prelude::ToValue for WindowType {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -3651,7 +3651,7 @@ impl From<WindowType> for glib::Value {
     #[inline]
     fn from(v: WindowType) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -3773,7 +3773,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for WindowTypeHint {
     }
 }
 
-impl ToValue for WindowTypeHint {
+impl glib::prelude::ToValue for WindowTypeHint {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -3793,7 +3793,7 @@ impl From<WindowTypeHint> for glib::Value {
     #[inline]
     fn from(v: WindowTypeHint) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }
 
@@ -3869,7 +3869,7 @@ unsafe impl<'a> glib::value::FromValue<'a> for WindowWindowClass {
     }
 }
 
-impl ToValue for WindowWindowClass {
+impl glib::prelude::ToValue for WindowWindowClass {
     #[inline]
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();
@@ -3889,6 +3889,6 @@ impl From<WindowWindowClass> for glib::Value {
     #[inline]
     fn from(v: WindowWindowClass) -> Self {
         skip_assert_initialized!();
-        ToValue::to_value(&v)
+        glib::prelude::ToValue::to_value(&v)
     }
 }

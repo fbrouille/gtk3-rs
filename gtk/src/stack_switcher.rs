@@ -13,13 +13,13 @@ use glib::object::IsA;
 use glib::object::ObjectExt;
 use glib::signal::{connect_raw, SignalHandlerId};
 use glib::translate::*;
-use glib::Cast;
+use glib::prelude::Cast;
 use std::boxed::Box as Box_;
 use std::mem::transmute;
 
 mod sealed {
     pub trait Sealed {}
-    impl<T: glib::IsA<crate::StackSwitcher>> Sealed for T {}
+    impl<T: glib::object::IsA<crate::StackSwitcher>> Sealed for T {}
 }
 
 pub trait StackSwitcherExtManual: IsA<StackSwitcher> + sealed::Sealed + 'static {

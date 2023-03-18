@@ -2,7 +2,7 @@
 
 use glib::subclass::prelude::*;
 use glib::translate::*;
-use glib::Cast;
+use glib::prelude::Cast;
 
 use super::button::ButtonImpl;
 use crate::ToggleButton;

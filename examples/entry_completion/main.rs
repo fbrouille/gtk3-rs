@@ -89,7 +89,7 @@ fn create_list_model() -> gtk::ListStore {
     ];
     let store = gtk::ListStore::new(&col_types);
     for d in data.iter() {
-        let values: [(u32, &dyn ToValue); 1] = [(0, &d.description)];
+        let values: [(u32, &dyn glib::prelude::ToValue); 1] = [(0, &d.description)];
         store.set(&store.append(), &values);
     }
     store

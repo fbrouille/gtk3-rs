@@ -2,12 +2,12 @@
 
 use crate::Invisible;
 use glib::translate::{from_glib_none, ToGlibPtr};
-use glib::IsA;
+use glib::object::IsA;
 
 // For some reasons, it's not generated...
 mod sealed {
     pub trait Sealed {}
-    impl<T: glib::IsA<crate::Invisible>> Sealed for T {}
+    impl<T: glib::object::IsA<crate::Invisible>> Sealed for T {}
 }
 
 pub trait InvisibleExtManual: IsA<Invisible> + sealed::Sealed + 'static {

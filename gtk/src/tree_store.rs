@@ -5,7 +5,7 @@ use crate::TreeModel;
 use crate::TreeStore;
 use glib::object::{Cast, IsA};
 use glib::translate::*;
-use glib::{ToValue, Type, Value};
+use glib::{prelude::ToValue, Type, Value};
 use libc::c_int;
 
 impl TreeStore {
@@ -27,7 +27,7 @@ impl TreeStore {
 
 mod sealed {
     pub trait Sealed {}
-    impl<T: glib::IsA<crate::TreeStore>> Sealed for T {}
+    impl<T: glib::object::IsA<crate::TreeStore>> Sealed for T {}
 }
 
 pub trait TreeStoreExtManual: IsA<TreeStore> + sealed::Sealed + 'static {
@@ -36,7 +36,7 @@ pub trait TreeStoreExtManual: IsA<TreeStore> + sealed::Sealed + 'static {
         &self,
         parent: Option<&TreeIter>,
         position: Option<u32>,
-        columns_and_values: &[(u32, &dyn ToValue)],
+        columns_and_values: &[(u32, &dyn glib::prelude::ToValue)],
     ) -> TreeIter {
         unsafe {
             assert!(
@@ -128,7 +128,7 @@ pub trait TreeStoreExtManual: IsA<TreeStore> + sealed::Sealed + 'static {
 
     #[doc(alias = "gtk_tree_store_set")]
     #[doc(alias = "gtk_tree_store_set_valuesv")]
-    fn set(&self, iter: &TreeIter, columns_and_values: &[(u32, &dyn ToValue)]) {
+    fn set(&self, iter: &TreeIter, columns_and_values: &[(u32, &dyn glib::prelude::ToValue)]) {
         unsafe {
             let n_columns = ffi::gtk_tree_model_get_n_columns(
                 self.as_ref().upcast_ref::<TreeModel>().to_glib_none().0,

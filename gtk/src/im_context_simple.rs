@@ -2,12 +2,12 @@
 
 use crate::IMContextSimple;
 use glib::translate::*;
-use glib::IsA;
+use glib::object::IsA;
 use std::path::Path;
 
 mod sealed {
     pub trait Sealed {}
-    impl<T: glib::IsA<crate::IMContextSimple>> Sealed for T {}
+    impl<T: glib::object::IsA<crate::IMContextSimple>> Sealed for T {}
 }
 
 pub trait IMContextSimpleExtManual: IsA<IMContextSimple> + sealed::Sealed + 'static {

@@ -5,11 +5,11 @@ use crate::EntryCompletion;
 use crate::Widget;
 use glib::object::IsA;
 use glib::translate::*;
-use glib::Cast;
+use glib::prelude::Cast;
 
 mod sealed {
     pub trait Sealed {}
-    impl<T: glib::IsA<crate::EntryCompletion>> Sealed for T {}
+    impl<T: glib::object::IsA<crate::EntryCompletion>> Sealed for T {}
 }
 
 pub trait EntryCompletionExtManual: IsA<EntryCompletion> + sealed::Sealed + 'static {

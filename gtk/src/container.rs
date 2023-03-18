@@ -2,11 +2,11 @@
 
 use crate::{Container, Widget};
 use glib::translate::*;
-use glib::{value::FromValue, IsA, ToValue};
+use glib::{value::FromValue, object::IsA, prelude::ToValue};
 
 mod sealed {
     pub trait Sealed {}
-    impl<T: glib::IsA<crate::Container>> Sealed for T {}
+    impl<T: glib::object::IsA<crate::Container>> Sealed for T {}
 }
 
 pub trait ContainerExtManual: IsA<Container> + sealed::Sealed + 'static {
@@ -57,7 +57,7 @@ pub trait ContainerExtManual: IsA<Container> + sealed::Sealed + 'static {
         &self,
         child: &impl IsA<Widget>,
         property_name: &str,
-        value: &dyn ToValue,
+        value: &dyn glib::prelude::ToValue,
     ) {
         unsafe {
             let container_class = glib::Class::<Container>::from_type(Self::static_type()).unwrap();
