@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/style_context.rs`."><title>style_context.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/style_context.rs`."><title>style_context.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -1138,26 +1139,20 @@
 <a href="#1065" id="1065">1065</a>
 <a href="#1066" id="1066">1066</a>
 <a href="#1067" id="1067">1067</a>
-<a href="#1068" id="1068">1068</a>
-<a href="#1069" id="1069">1069</a>
-<a href="#1070" id="1070">1070</a>
-<a href="#1071" id="1071">1071</a>
-<a href="#1072" id="1072">1072</a>
-<a href="#1073" id="1073">1073</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
 </span><span class="kw">use crate</span>::{
-    <a href="../border.rs.html#7-18">Border</a>, <a href="css_section.rs.html#8-20">CssSection</a>, <a href="flags.rs.html#1255-1288">JunctionSides</a>, <a href="flags.rs.html#1702-1752">StateFlags</a>, <a href="flags.rs.html#1834-1851">StyleContextPrintFlags</a>, <a href="style_provider.rs.html#9-22">StyleProvider</a>,
-    <a href="enums.rs.html#9893-9905">TextDirection</a>, <a href="widget_path.rs.html#9-73">WidgetPath</a>,
+    <a href="../border.rs.html#7-18">Border</a>, <a href="css_section.rs.html#8-20">CssSection</a>, <a href="flags.rs.html#1195-1228">JunctionSides</a>, <a href="flags.rs.html#1622-1672">StateFlags</a>, <a href="flags.rs.html#1749-1766">StyleContextPrintFlags</a>, <a href="style_provider.rs.html#8-21">StyleProvider</a>,
+    <a href="enums.rs.html#8720-8732">TextDirection</a>, <a href="widget_path.rs.html#8-72">WidgetPath</a>,
 };
 <span class="kw">use </span>glib::{
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// [`StyleContext`][crate::StyleContext] is an object that stores styling information affecting
@@ -1252,7 +1247,7 @@
     /// # Implements
     ///
     /// [`StyleContextExt`][trait@crate::prelude::StyleContextExt], [`trait@glib::ObjectExt`], [`StyleContextExtManual`][trait@crate::prelude::StyleContextExtManual]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;GtkStyleContext&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"GtkStyleContext"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.StyleContext.html">StyleContext</a>(Object&lt;<a href="../../../gtk_sys/struct.GtkStyleContext.html">ffi::GtkStyleContext</a>, <a href="../../../gtk_sys/struct.GtkStyleContextClass.html">ffi::GtkStyleContextClass</a>&gt;);
 
     <span class="kw">match fn </span>{
@@ -1261,7 +1256,7 @@
 }
 
 <span class="kw">impl </span><a href="#16-115">StyleContext</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#16-115">StyleContext</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#16-115">StyleContext</a>&gt; = <span class="prelude-val">None</span>;
 
     <span class="doccomment">/// Creates a standalone [`StyleContext`][crate::StyleContext], this style context
     /// won’t be attached to any widget, so you may want
@@ -1275,7 +1270,7 @@
     /// # Returns
     ///
     /// A newly created [`StyleContext`][crate::StyleContext].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_new&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_new"</span>)]
     </span><span class="kw">pub fn </span>new() -&gt; <a href="#16-115">StyleContext</a> {
         <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
         <span class="kw">unsafe </span>{ from_glib_full(ffi::gtk_style_context_new()) }
@@ -1308,10 +1303,10 @@
     ///  construction. Typically this will be in the range
     ///  between `GTK_STYLE_PROVIDER_PRIORITY_FALLBACK` and
     ///  `GTK_STYLE_PROVIDER_PRIORITY_USER`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_add_provider_for_screen&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_add_provider_for_screen"</span>)]
     </span><span class="kw">pub fn </span>add_provider_for_screen(
         screen: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/screen/struct.Screen.html">gdk::Screen</a>,
-        provider: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_provider.rs.html#9-22">StyleProvider</a>&gt;,
+        provider: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_provider.rs.html#8-21">StyleProvider</a>&gt;,
         priority: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
     ) {
         <span class="macro">skip_assert_initialized!</span>();
@@ -1329,8 +1324,8 @@
     /// a [`gdk::Screen`][crate::gdk::Screen]
     /// ## `provider`
     /// a [`StyleProvider`][crate::StyleProvider]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_remove_provider_for_screen&quot;</span>)]
-    </span><span class="kw">pub fn </span>remove_provider_for_screen(screen: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/screen/struct.Screen.html">gdk::Screen</a>, provider: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_provider.rs.html#9-22">StyleProvider</a>&gt;) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_remove_provider_for_screen"</span>)]
+    </span><span class="kw">pub fn </span>remove_provider_for_screen(screen: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/screen/struct.Screen.html">gdk::Screen</a>, provider: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_provider.rs.html#8-21">StyleProvider</a>&gt;) {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_remove_provider_for_screen(
@@ -1348,7 +1343,7 @@
     /// in the related [`Settings`][crate::Settings] object.
     /// ## `screen`
     /// a [`gdk::Screen`][crate::gdk::Screen]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_reset_widgets&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_reset_widgets"</span>)]
     </span><span class="kw">pub fn </span>reset_widgets(screen: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/screen/struct.Screen.html">gdk::Screen</a>) {
         <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
         <span class="kw">unsafe </span>{
@@ -1367,9 +1362,9 @@
 </span><span class="doccomment">/// A [builder-pattern] type to construct [`StyleContext`] objects.
 ///
 /// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html
-</span><span class="attr">#[must_use = <span class="string">&quot;The builder must be built to be used&quot;</span>]
+</span><span class="attr">#[must_use = <span class="string">"The builder must be built to be used"</span>]
 </span><span class="kw">pub struct </span><a href="../../../gtk/builders/struct.StyleContextBuilder.html">StyleContextBuilder</a> {
-    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">&#39;static</span>, <a href="#16-115">StyleContext</a>&gt;,
+    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">'static</span>, <a href="#16-115">StyleContext</a>&gt;,
 }
 
 <span class="kw">impl </span><a href="#225-227">StyleContextBuilder</a> {
@@ -1379,15 +1374,15 @@
         }
     }
 
-    <span class="kw">pub fn </span>direction(<span class="self">self</span>, direction: <a href="enums.rs.html#9893-9905">TextDirection</a>) -&gt; <span class="self">Self </span>{
+    <span class="kw">pub fn </span>direction(<span class="self">self</span>, direction: <a href="enums.rs.html#8720-8732">TextDirection</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#236">self</a>.builder.property(<span class="string">&quot;direction&quot;</span>, <a href="#236">direction</a>),
+            builder: <a class="self" href="#236">self</a>.builder.property(<span class="string">"direction"</span>, <a href="#236">direction</a>),
         }
     }
 
     <span class="kw">pub fn </span>paint_clock(<span class="self">self</span>, paint_clock: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#242">self</a>.builder.property(<span class="string">&quot;paint-clock&quot;</span>, <a href="#242">paint_clock</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>()),
+            builder: <a class="self" href="#242">self</a>.builder.property(<span class="string">"paint-clock"</span>, <a href="#242">paint_clock</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>()),
         }
     }
 
@@ -1395,19 +1390,19 @@
     /// for details.
     </span><span class="kw">pub fn </span>parent(<span class="self">self</span>, parent: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="#16-115">StyleContext</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#250">self</a>.builder.property(<span class="string">&quot;parent&quot;</span>, <a href="#250">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
+            builder: <a class="self" href="#250">self</a>.builder.property(<span class="string">"parent"</span>, <a href="#250">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
         }
     }
 
     <span class="kw">pub fn </span>screen(<span class="self">self</span>, screen: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/screen/struct.Screen.html">gdk::Screen</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#256">self</a>.builder.property(<span class="string">&quot;screen&quot;</span>, <a href="#256">screen</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>()),
+            builder: <a class="self" href="#256">self</a>.builder.property(<span class="string">"screen"</span>, <a href="#256">screen</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>()),
         }
     }
 
     <span class="comment">// rustdoc-stripper-ignore-next
     </span><span class="doccomment">/// Build the [`StyleContext`].
-    </span><span class="attr">#[must_use = <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]
+    </span><span class="attr">#[must_use = <span class="string">"Building the object from the builder is usually expensive and is not expected to have side effects"</span>]
     </span><span class="kw">pub fn </span>build(<span class="self">self</span>) -&gt; <a href="#16-115">StyleContext</a> {
         <a class="self" href="#265">self</a>.builder.build()
     }
@@ -1423,7 +1418,7 @@
 /// # Implementors
 ///
 /// [`StyleContext`][struct@crate::StyleContext]
-</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.StyleContextExt.html">StyleContextExt</a>: IsA&lt;<a href="#16-115">StyleContext</a>&gt; + <a href="#271">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.StyleContextExt.html">StyleContextExt</a>: IsA&lt;<a href="#16-115">StyleContext</a>&gt; + <a href="#271">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Adds a style class to `self`, so posterior calls to
     /// `gtk_style_context_get()` or any of the gtk_render_*()
     /// functions will make use of this new class for styling.
@@ -1450,7 +1445,7 @@
     /// ```
     /// ## `class_name`
     /// class name to use in styling
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_add_class&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_add_class"</span>)]
     </span><span class="kw">fn </span>add_class(<span class="kw-2">&amp;</span><span class="self">self</span>, class_name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_add_class(
@@ -1477,8 +1472,8 @@
     ///  construction. Typically this will be in the range
     ///  between `GTK_STYLE_PROVIDER_PRIORITY_FALLBACK` and
     ///  `GTK_STYLE_PROVIDER_PRIORITY_USER`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_add_provider&quot;</span>)]
-    </span><span class="kw">fn </span>add_provider(<span class="kw-2">&amp;</span><span class="self">self</span>, provider: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_provider.rs.html#9-22">StyleProvider</a>&gt;, priority: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_add_provider"</span>)]
+    </span><span class="kw">fn </span>add_provider(<span class="kw-2">&amp;</span><span class="self">self</span>, provider: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_provider.rs.html#8-21">StyleProvider</a>&gt;, priority: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_add_provider(
                 <a class="self" href="#335">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1500,9 +1495,9 @@
     ///
     /// ## `border`
     /// return value for the border settings
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_border&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_border&quot;</span>)]
-    </span><span class="kw">fn </span>border(<span class="kw-2">&amp;</span><span class="self">self</span>, state: <a href="flags.rs.html#1702-1752">StateFlags</a>) -&gt; <a href="../border.rs.html#7-18">Border</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_border"</span>)]
+    #[doc(alias = <span class="string">"get_border"</span>)]
+    </span><span class="kw">fn </span>border(<span class="kw-2">&amp;</span><span class="self">self</span>, state: <a href="flags.rs.html#1622-1672">StateFlags</a>) -&gt; <a href="../border.rs.html#7-18">Border</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>border = Border::uninitialized();
             ffi::gtk_style_context_get_border(
@@ -1526,9 +1521,9 @@
     ///
     /// ## `color`
     /// return value for the foreground color
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_color&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_color&quot;</span>)]
-    </span><span class="kw">fn </span>color(<span class="kw-2">&amp;</span><span class="self">self</span>, state: <a href="flags.rs.html#1702-1752">StateFlags</a>) -&gt; <a href="../../../gdk/auto/rgba/struct.RGBA.html">gdk::RGBA</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_color"</span>)]
+    #[doc(alias = <span class="string">"get_color"</span>)]
+    </span><span class="kw">fn </span>color(<span class="kw-2">&amp;</span><span class="self">self</span>, state: <a href="flags.rs.html#1622-1672">StateFlags</a>) -&gt; <a href="../../../gdk/auto/rgba/struct.RGBA.html">gdk::RGBA</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>color = gdk::RGBA::uninitialized();
             ffi::gtk_style_context_get_color(
@@ -1546,8 +1541,8 @@
     ///
     /// a [`gdk::FrameClock`][crate::gdk::FrameClock], or [`None`]
     ///  if `self` does not have an attached frame clock.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_frame_clock&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_frame_clock&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_frame_clock"</span>)]
+    #[doc(alias = <span class="string">"get_frame_clock"</span>)]
     </span><span class="kw">fn </span>frame_clock(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_style_context_get_frame_clock(
@@ -1561,9 +1556,9 @@
     /// # Returns
     ///
     /// the junction sides
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_junction_sides&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_junction_sides&quot;</span>)]
-    </span><span class="kw">fn </span>junction_sides(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#1255-1288">JunctionSides</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_junction_sides"</span>)]
+    #[doc(alias = <span class="string">"get_junction_sides"</span>)]
+    </span><span class="kw">fn </span>junction_sides(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#1195-1228">JunctionSides</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_style_context_get_junction_sides(
                 <a class="self" href="#420">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1582,9 +1577,9 @@
     ///
     /// ## `margin`
     /// return value for the margin settings
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_margin&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_margin&quot;</span>)]
-    </span><span class="kw">fn </span>margin(<span class="kw-2">&amp;</span><span class="self">self</span>, state: <a href="flags.rs.html#1702-1752">StateFlags</a>) -&gt; <a href="../border.rs.html#7-18">Border</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_margin"</span>)]
+    #[doc(alias = <span class="string">"get_margin"</span>)]
+    </span><span class="kw">fn </span>margin(<span class="kw-2">&amp;</span><span class="self">self</span>, state: <a href="flags.rs.html#1622-1672">StateFlags</a>) -&gt; <a href="../border.rs.html#7-18">Border</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>margin = Border::uninitialized();
             ffi::gtk_style_context_get_margin(
@@ -1607,9 +1602,9 @@
     ///
     /// ## `padding`
     /// return value for the padding settings
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_padding&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_padding&quot;</span>)]
-    </span><span class="kw">fn </span>padding(<span class="kw-2">&amp;</span><span class="self">self</span>, state: <a href="flags.rs.html#1702-1752">StateFlags</a>) -&gt; <a href="../border.rs.html#7-18">Border</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_padding"</span>)]
+    #[doc(alias = <span class="string">"get_padding"</span>)]
+    </span><span class="kw">fn </span>padding(<span class="kw-2">&amp;</span><span class="self">self</span>, state: <a href="flags.rs.html#1622-1672">StateFlags</a>) -&gt; <a href="../border.rs.html#7-18">Border</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>padding = Border::uninitialized();
             ffi::gtk_style_context_get_padding(
@@ -1627,8 +1622,8 @@
     /// # Returns
     ///
     /// the parent context or [`None`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_parent&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_parent&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_parent"</span>)]
+    #[doc(alias = <span class="string">"get_parent"</span>)]
     #[must_use]
     </span><span class="kw">fn </span>parent(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="#16-115">StyleContext</a>&gt; {
         <span class="kw">unsafe </span>{
@@ -1643,9 +1638,9 @@
     /// # Returns
     ///
     /// A [`WidgetPath`][crate::WidgetPath]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_path&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_path&quot;</span>)]
-    </span><span class="kw">fn </span>path(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="widget_path.rs.html#9-73">WidgetPath</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_path"</span>)]
+    #[doc(alias = <span class="string">"get_path"</span>)]
+    </span><span class="kw">fn </span>path(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="widget_path.rs.html#8-72">WidgetPath</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_style_context_get_path(
                 <a class="self" href="#502">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1676,9 +1671,9 @@
     ///
     /// ## `value`
     /// return location for the style property value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_property&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_property&quot;</span>)]
-    </span><span class="kw">fn </span>style_property_for_state(<span class="kw-2">&amp;</span><span class="self">self</span>, property: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, state: <a href="flags.rs.html#1702-1752">StateFlags</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_property"</span>)]
+    #[doc(alias = <span class="string">"get_property"</span>)]
+    </span><span class="kw">fn </span>style_property_for_state(<span class="kw-2">&amp;</span><span class="self">self</span>, property: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, state: <a href="flags.rs.html#1622-1672">StateFlags</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::uninitialized();
             ffi::gtk_style_context_get_property(
@@ -1696,8 +1691,8 @@
     /// # Returns
     ///
     /// the scale
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_scale&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_scale&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_scale"</span>)]
+    #[doc(alias = <span class="string">"get_scale"</span>)]
     </span><span class="kw">fn </span>scale(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_style_context_get_scale(<a class="self" href="#555">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1707,8 +1702,8 @@
     /// # Returns
     ///
     /// a [`gdk::Screen`][crate::gdk::Screen].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_screen&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_screen&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_screen"</span>)]
+    #[doc(alias = <span class="string">"get_screen"</span>)]
     </span><span class="kw">fn </span>screen(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/screen/struct.Screen.html">gdk::Screen</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_style_context_get_screen(
@@ -1736,8 +1731,8 @@
     ///
     /// [`None`] or the section where a value
     /// for `property` was defined
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_section&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_section&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_section"</span>)]
+    #[doc(alias = <span class="string">"get_section"</span>)]
     </span><span class="kw">fn </span>section(<span class="kw-2">&amp;</span><span class="self">self</span>, property: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="css_section.rs.html#8-20">CssSection</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_style_context_get_section(
@@ -1757,9 +1752,9 @@
     /// # Returns
     ///
     /// the state flags
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_state&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_state&quot;</span>)]
-    </span><span class="kw">fn </span>state(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#1702-1752">StateFlags</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_state"</span>)]
+    #[doc(alias = <span class="string">"get_state"</span>)]
+    </span><span class="kw">fn </span>state(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#1622-1672">StateFlags</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_style_context_get_state(
                 <a class="self" href="#616">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1767,8 +1762,8 @@
         }
     }
 
-    <span class="comment">//#[doc(alias = &quot;gtk_style_context_get_style&quot;)]
-    //#[doc(alias = &quot;get_style&quot;)]
+    <span class="comment">//#[doc(alias = "gtk_style_context_get_style")]
+    //#[doc(alias = "get_style")]
     //fn style(&amp;self, : /*Unknown conversion*//*Unimplemented*/Basic: VarArgs) {
     //    unsafe { TODO: call ffi:gtk_style_context_get_style() }
     //}
@@ -1785,8 +1780,8 @@
     ///
     /// ## `value`
     /// Return location for the property value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_get_style_property&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_style_property&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_get_style_property"</span>)]
+    #[doc(alias = <span class="string">"get_style_property"</span>)]
     </span><span class="kw">fn </span>style_property(<span class="kw-2">&amp;</span><span class="self">self</span>, property_name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::uninitialized();
@@ -1799,14 +1794,14 @@
         }
     }
 
-    <span class="comment">//#[doc(alias = &quot;gtk_style_context_get_style_valist&quot;)]
-    //#[doc(alias = &quot;get_style_valist&quot;)]
+    <span class="comment">//#[doc(alias = "gtk_style_context_get_style_valist")]
+    //#[doc(alias = "get_style_valist")]
     //fn style_valist(&amp;self, args: /*Unknown conversion*//*Unimplemented*/Unsupported) {
     //    unsafe { TODO: call ffi:gtk_style_context_get_style_valist() }
     //}
 
-    //#[doc(alias = &quot;gtk_style_context_get_valist&quot;)]
-    //#[doc(alias = &quot;get_valist&quot;)]
+    //#[doc(alias = "gtk_style_context_get_valist")]
+    //#[doc(alias = "get_valist")]
     //fn valist(&amp;self, state: StateFlags, args: /*Unknown conversion*//*Unimplemented*/Unsupported) {
     //    unsafe { TODO: call ffi:gtk_style_context_get_valist() }
     //}
@@ -1819,7 +1814,7 @@
     /// # Returns
     ///
     /// [`true`] if `self` has `class_name` defined
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_has_class&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_has_class"</span>)]
     </span><span class="kw">fn </span>has_class(<span class="kw-2">&amp;</span><span class="self">self</span>, class_name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_style_context_has_class(
@@ -1837,7 +1832,7 @@
     ///  strings with the currently defined classes. The contents
     ///  of the list are owned by GTK+, but you must free the list
     ///  itself with `g_list_free()` when you are done with it.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_list_classes&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_list_classes"</span>)]
     </span><span class="kw">fn </span>list_classes(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibPtrContainer.html">FromGlibPtrContainer::from_glib_container</a>(ffi::gtk_style_context_list_classes(
@@ -1856,7 +1851,7 @@
     ///
     /// ## `color`
     /// Return location for the looked up color
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_lookup_color&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_lookup_color"</span>)]
     </span><span class="kw">fn </span>lookup_color(<span class="kw-2">&amp;</span><span class="self">self</span>, color_name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/rgba/struct.RGBA.html">gdk::RGBA</a>&gt; {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>color = gdk::RGBA::uninitialized();
@@ -1876,7 +1871,7 @@
     <span class="doccomment">/// Removes `class_name` from `self`.
     /// ## `class_name`
     /// class name to remove
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_remove_class&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_remove_class"</span>)]
     </span><span class="kw">fn </span>remove_class(<span class="kw-2">&amp;</span><span class="self">self</span>, class_name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_remove_class(
@@ -1889,8 +1884,8 @@
     <span class="doccomment">/// Removes `provider` from the style providers list in `self`.
     /// ## `provider`
     /// a [`StyleProvider`][crate::StyleProvider]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_remove_provider&quot;</span>)]
-    </span><span class="kw">fn </span>remove_provider(<span class="kw-2">&amp;</span><span class="self">self</span>, provider: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_provider.rs.html#9-22">StyleProvider</a>&gt;) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_remove_provider"</span>)]
+    </span><span class="kw">fn </span>remove_provider(<span class="kw-2">&amp;</span><span class="self">self</span>, provider: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_provider.rs.html#8-21">StyleProvider</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_remove_provider(
                 <a class="self" href="#747">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1901,7 +1896,7 @@
 
     <span class="doccomment">/// Restores `self` state to a previous stage.
     /// See [`save()`][Self::save()].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_restore&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_restore"</span>)]
     </span><span class="kw">fn </span>restore(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_restore(<a class="self" href="#759">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -1915,7 +1910,7 @@
     ///
     /// The matching call to [`restore()`][Self::restore()] must be done
     /// before GTK returns to the main loop.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_save&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_save"</span>)]
     </span><span class="kw">fn </span>save(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_save(<a class="self" href="#773">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -1931,7 +1926,7 @@
     /// call this yourself.
     /// ## `frame_clock`
     /// a [`gdk::FrameClock`][crate::gdk::FrameClock]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_set_frame_clock&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_set_frame_clock"</span>)]
     </span><span class="kw">fn </span>set_frame_clock(<span class="kw-2">&amp;</span><span class="self">self</span>, frame_clock: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_set_frame_clock(
@@ -1953,8 +1948,8 @@
     /// ## `sides`
     /// sides where rendered elements are visually connected to
     ///  other elements
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_set_junction_sides&quot;</span>)]
-    </span><span class="kw">fn </span>set_junction_sides(<span class="kw-2">&amp;</span><span class="self">self</span>, sides: <a href="flags.rs.html#1255-1288">JunctionSides</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_set_junction_sides"</span>)]
+    </span><span class="kw">fn </span>set_junction_sides(<span class="kw-2">&amp;</span><span class="self">self</span>, sides: <a href="flags.rs.html#1195-1228">JunctionSides</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_set_junction_sides(
                 <a class="self" href="#811">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1972,7 +1967,7 @@
     /// [`WidgetExt::style_context()`][crate::prelude::WidgetExt::style_context()], the parent will be set for you.
     /// ## `parent`
     /// the new parent or [`None`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_set_parent&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_set_parent"</span>)]
     </span><span class="kw">fn </span>set_parent(<span class="kw-2">&amp;</span><span class="self">self</span>, parent: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="#16-115">StyleContext</a>&gt;&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_set_parent(
@@ -1991,8 +1986,8 @@
     /// this yourself.
     /// ## `path`
     /// a [`WidgetPath`][crate::WidgetPath]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_set_path&quot;</span>)]
-    </span><span class="kw">fn </span>set_path(<span class="kw-2">&amp;</span><span class="self">self</span>, path: <span class="kw-2">&amp;</span><a href="widget_path.rs.html#9-73">WidgetPath</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_set_path"</span>)]
+    </span><span class="kw">fn </span>set_path(<span class="kw-2">&amp;</span><span class="self">self</span>, path: <span class="kw-2">&amp;</span><a href="widget_path.rs.html#8-72">WidgetPath</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_set_path(<a class="self" href="#849">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#849">path</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
         }
@@ -2001,7 +1996,7 @@
     <span class="doccomment">/// Sets the scale to use when getting image assets for the style.
     /// ## `scale`
     /// scale
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_set_scale&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_set_scale"</span>)]
     </span><span class="kw">fn </span>set_scale(<span class="kw-2">&amp;</span><span class="self">self</span>, scale: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_set_scale(<a class="self" href="#859">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#859">scale</a>);
@@ -2018,7 +2013,7 @@
     /// call this yourself.
     /// ## `screen`
     /// a [`gdk::Screen`][crate::gdk::Screen]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_set_screen&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_set_screen"</span>)]
     </span><span class="kw">fn </span>set_screen(<span class="kw-2">&amp;</span><span class="self">self</span>, screen: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/screen/struct.Screen.html">gdk::Screen</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_set_screen(
@@ -2031,8 +2026,8 @@
     <span class="doccomment">/// Sets the state to be used for style matching.
     /// ## `flags`
     /// state to represent
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_set_state&quot;</span>)]
-    </span><span class="kw">fn </span>set_state(<span class="kw-2">&amp;</span><span class="self">self</span>, flags: <a href="flags.rs.html#1702-1752">StateFlags</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_set_state"</span>)]
+    </span><span class="kw">fn </span>set_state(<span class="kw-2">&amp;</span><span class="self">self</span>, flags: <a href="flags.rs.html#1622-1672">StateFlags</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_style_context_set_state(<a class="self" href="#889">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#889">flags</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
         }
@@ -2054,8 +2049,8 @@
     /// # Returns
     ///
     /// a newly allocated string representing `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_style_context_to_string&quot;</span>)]
-    </span><span class="kw">fn </span>to_string(<span class="kw-2">&amp;</span><span class="self">self</span>, flags: <a href="flags.rs.html#1834-1851">StyleContextPrintFlags</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_style_context_to_string"</span>)]
+    </span><span class="kw">fn </span>to_string(<span class="kw-2">&amp;</span><span class="self">self</span>, flags: <a href="flags.rs.html#1749-1766">StyleContextPrintFlags</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_full(ffi::gtk_style_context_to_string(
                 <a class="self" href="#912">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -2064,22 +2059,22 @@
         }
     }
 
-    <span class="kw">fn </span>direction(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="enums.rs.html#9893-9905">TextDirection</a> {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#921">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;direction&quot;</span>)
+    <span class="kw">fn </span>direction(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="enums.rs.html#8720-8732">TextDirection</a> {
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#921">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"direction"</span>)
     }
 
-    <span class="kw">fn </span>set_direction(<span class="kw-2">&amp;</span><span class="self">self</span>, direction: <a href="enums.rs.html#9893-9905">TextDirection</a>) {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#925">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;direction&quot;</span>, <a href="#925">direction</a>)
+    <span class="kw">fn </span>set_direction(<span class="kw-2">&amp;</span><span class="self">self</span>, direction: <a href="enums.rs.html#8720-8732">TextDirection</a>) {
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#925">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"direction"</span>, <a href="#925">direction</a>)
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;paint-clock&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"paint-clock"</span>)]
     </span><span class="kw">fn </span>paint_clock(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>&gt; {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#930">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;paint-clock&quot;</span>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#930">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"paint-clock"</span>)
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;paint-clock&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"paint-clock"</span>)]
     </span><span class="kw">fn </span>set_paint_clock(<span class="kw-2">&amp;</span><span class="self">self</span>, paint_clock: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="../../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>&gt;) {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#935">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;paint-clock&quot;</span>, <a href="#935">paint_clock</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#935">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"paint-clock"</span>, <a href="#935">paint_clock</a>)
     }
 
     <span class="doccomment">/// The ::changed signal is emitted when there is a change in the
@@ -2089,9 +2084,9 @@
     /// [`style-updated`][struct@crate::Widget#style-updated] signal/vfunc might be more convenient to use.
     ///
     /// This signal is useful when using the theming layer standalone.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>changed_trampoline&lt;P: IsA&lt;<a href="#16-115">StyleContext</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"changed"</span>)]
+    </span><span class="kw">fn </span>connect_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>changed_trampoline&lt;P: IsA&lt;<a href="#16-115">StyleContext</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkStyleContext.html">ffi::GtkStyleContext</a>,
             f: glib::ffi::gpointer,
         ) {
@@ -2102,8 +2097,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#947">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#947">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#956">f</a>),
@@ -2111,11 +2106,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;direction&quot;</span>)]
-    </span><span class="kw">fn </span>connect_direction_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_direction_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"direction"</span>)]
+    </span><span class="kw">fn </span>connect_direction_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_direction_trampoline&lt;
             P: IsA&lt;<a href="#16-115">StyleContext</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkStyleContext.html">ffi::GtkStyleContext</a>,
             _param_spec: glib::ffi::gpointer,
@@ -2128,8 +2123,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#969">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#969">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::direction\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::direction\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_direction_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#982">f</a>),
@@ -2137,11 +2132,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;paint-clock&quot;</span>)]
-    </span><span class="kw">fn </span>connect_paint_clock_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_paint_clock_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"paint-clock"</span>)]
+    </span><span class="kw">fn </span>connect_paint_clock_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_paint_clock_trampoline&lt;
             P: IsA&lt;<a href="#16-115">StyleContext</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkStyleContext.html">ffi::GtkStyleContext</a>,
             _param_spec: glib::ffi::gpointer,
@@ -2154,8 +2149,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#995">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#995">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::paint-clock\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::paint-clock\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_paint_clock_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#1008">f</a>),
@@ -2163,9 +2158,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;parent&quot;</span>)]
-    </span><span class="kw">fn </span>connect_parent_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_parent_trampoline&lt;P: IsA&lt;<a href="#16-115">StyleContext</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"parent"</span>)]
+    </span><span class="kw">fn </span>connect_parent_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_parent_trampoline&lt;P: IsA&lt;<a href="#16-115">StyleContext</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkStyleContext.html">ffi::GtkStyleContext</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -2177,8 +2172,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#1021">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#1021">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::parent\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::parent\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_parent_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#1031">f</a>),
@@ -2186,9 +2181,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;screen&quot;</span>)]
-    </span><span class="kw">fn </span>connect_screen_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_screen_trampoline&lt;P: IsA&lt;<a href="#16-115">StyleContext</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"screen"</span>)]
+    </span><span class="kw">fn </span>connect_screen_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_screen_trampoline&lt;P: IsA&lt;<a href="#16-115">StyleContext</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkStyleContext.html">ffi::GtkStyleContext</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -2200,8 +2195,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#1044">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#1044">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::screen\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::screen\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_screen_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#1054">f</a>),
@@ -2211,10 +2206,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#16-115">StyleContext</a>&gt;&gt; <a href="#280-1065">StyleContextExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#16-115">StyleContext</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#1070">f</a>.write_str(<span class="string">&quot;StyleContext&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

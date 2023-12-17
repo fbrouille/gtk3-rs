@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/stack_switcher.rs`."><title>stack_switcher.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/stack_switcher.rs`."><title>stack_switcher.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -420,12 +421,12 @@
 <a href="#347" id="347">347</a>
 </pre></div><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.
 
-</span><span class="kw">use </span><a href="auto/enums.rs.html#27-49"><span class="kw">crate</span>::Align</a>;
-<span class="kw">use </span><a href="auto/enums.rs.html#449-461"><span class="kw">crate</span>::BaselinePosition</a>;
+</span><span class="kw">use </span><a href="auto/enums.rs.html#26-48"><span class="kw">crate</span>::Align</a>;
+<span class="kw">use </span><a href="auto/enums.rs.html#399-411"><span class="kw">crate</span>::BaselinePosition</a>;
 <span class="kw">use </span><a href="auto/container.rs.html#14-1335"><span class="kw">crate</span>::Container</a>;
-<span class="kw">use </span><a href="auto/enums.rs.html#3102-3126"><span class="kw">crate</span>::IconSize</a>;
-<span class="kw">use </span><a href="auto/enums.rs.html#4998-5007"><span class="kw">crate</span>::Orientation</a>;
-<span class="kw">use </span><a href="auto/enums.rs.html#7818-7830"><span class="kw">crate</span>::ResizeMode</a>;
+<span class="kw">use </span><a href="auto/enums.rs.html#2741-2765"><span class="kw">crate</span>::IconSize</a>;
+<span class="kw">use </span><a href="auto/enums.rs.html#4407-4416"><span class="kw">crate</span>::Orientation</a>;
+<span class="kw">use </span><a href="auto/enums.rs.html#6901-6913"><span class="kw">crate</span>::ResizeMode</a>;
 <span class="kw">use </span><a href="auto/stack.rs.html#13-364"><span class="kw">crate</span>::Stack</a>;
 <span class="kw">use </span><a href="auto/stack_switcher.rs.html#13-363"><span class="kw">crate</span>::StackSwitcher</a>;
 <span class="kw">use </span><a href="auto/widget.rs.html#17-1520"><span class="kw">crate</span>::Widget</a>;
@@ -442,23 +443,23 @@
     <span class="kw">impl</span>&lt;T: glib::IsA&lt;<a href="auto/stack_switcher.rs.html#13-363"><span class="kw">crate</span>::StackSwitcher</a>&gt;&gt; <a href="#21">Sealed</a> <span class="kw">for </span>T {}
 }
 
-<span class="kw">pub trait </span><a href="../../gtk/prelude/trait.StackSwitcherExtManual.html">StackSwitcherExtManual</a>: IsA&lt;<a href="auto/stack_switcher.rs.html#13-363">StackSwitcher</a>&gt; + <a href="#21">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
-    <span class="attr">#[doc(alias = <span class="string">&quot;icon-size&quot;</span>)]
-    </span><span class="kw">fn </span>icon_size(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="auto/enums.rs.html#3102-3126">IconSize</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a class="self" href="#27">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">property</a>::&lt;<a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;(<span class="string">&quot;icon-size&quot;</span>)) }
+<span class="kw">pub trait </span><a href="../../gtk/prelude/trait.StackSwitcherExtManual.html">StackSwitcherExtManual</a>: IsA&lt;<a href="auto/stack_switcher.rs.html#13-363">StackSwitcher</a>&gt; + <a href="#21">sealed::Sealed</a> + <span class="lifetime">'static </span>{
+    <span class="attr">#[doc(alias = <span class="string">"icon-size"</span>)]
+    </span><span class="kw">fn </span>icon_size(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="auto/enums.rs.html#2741-2765">IconSize</a> {
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a class="self" href="#27">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">property</a>::&lt;<a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;(<span class="string">"icon-size"</span>)) }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;icon-size&quot;</span>)]
-    </span><span class="kw">fn </span>set_icon_size(<span class="kw-2">&amp;</span><span class="self">self</span>, icon_size: <a href="auto/enums.rs.html#3102-3126">IconSize</a>) {
+    <span class="attr">#[doc(alias = <span class="string">"icon-size"</span>)]
+    </span><span class="kw">fn </span>set_icon_size(<span class="kw-2">&amp;</span><span class="self">self</span>, icon_size: <a href="auto/enums.rs.html#2741-2765">IconSize</a>) {
         <a class="self" href="#32">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>()
-            .<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">set_property</a>(<span class="string">&quot;icon-size&quot;</span>, <a href="#32">icon_size</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            .<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">set_property</a>(<span class="string">"icon-size"</span>, <a href="#32">icon_size</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;icon-size&quot;</span>)]
-    </span><span class="kw">fn </span>connect_icon_size_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_icon_size_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"icon-size"</span>)]
+    </span><span class="kw">fn </span>connect_icon_size_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_icon_size_trampoline&lt;
             P: IsA&lt;<a href="auto/stack_switcher.rs.html#13-363">StackSwitcher</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../gtk_sys/struct.GtkStackSwitcher.html">ffi::GtkStackSwitcher</a>,
             _param_spec: glib::ffi::gpointer,
@@ -471,8 +472,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#38">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#38">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::icon-size\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::icon-size\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_icon_size_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#51">f</a>),
@@ -495,9 +496,9 @@
 
 <span class="comment">// rustdoc-stripper-ignore-next
 </span><span class="doccomment">/// A builder for generating a [`StackSwitcher`].
-</span><span class="attr">#[must_use = <span class="string">&quot;The builder must be built to be used&quot;</span>]
+</span><span class="attr">#[must_use = <span class="string">"The builder must be built to be used"</span>]
 </span><span class="kw">pub struct </span><a href="../../gtk/builders/struct.StackSwitcherBuilder.html">StackSwitcherBuilder</a> {
-    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">&#39;static</span>, <a href="auto/stack_switcher.rs.html#13-363">StackSwitcher</a>&gt;,
+    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">'static</span>, <a href="auto/stack_switcher.rs.html#13-363">StackSwitcher</a>&gt;,
 }
 
 <span class="kw">impl </span><a href="#79-81">StackSwitcherBuilder</a> {
@@ -509,258 +510,258 @@
         }
     }
 
-    <span class="kw">pub fn </span>icon_size(<span class="self">self</span>, icon_size: <a href="auto/enums.rs.html#3102-3126">IconSize</a>) -&gt; <span class="self">Self </span>{
+    <span class="kw">pub fn </span>icon_size(<span class="self">self</span>, icon_size: <a href="auto/enums.rs.html#2741-2765">IconSize</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#92">self</a>.builder.property(<span class="string">&quot;icon-size&quot;</span>, <a href="#92">icon_size</a>),
+            builder: <a class="self" href="#92">self</a>.builder.property(<span class="string">"icon-size"</span>, <a href="#92">icon_size</a>),
         }
     }
 
     <span class="kw">pub fn </span>stack&lt;P: IsA&lt;<a href="auto/stack.rs.html#13-364">Stack</a>&gt;&gt;(<span class="self">self</span>, stack: <span class="kw-2">&amp;</span>P) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#98">self</a>.builder.property(<span class="string">&quot;stack&quot;</span>, <a href="#98">stack</a>),
+            builder: <a class="self" href="#98">self</a>.builder.property(<span class="string">"stack"</span>, <a href="#98">stack</a>),
         }
     }
 
-    <span class="kw">pub fn </span>baseline_position(<span class="self">self</span>, baseline_position: <a href="auto/enums.rs.html#449-461">BaselinePosition</a>) -&gt; <span class="self">Self </span>{
+    <span class="kw">pub fn </span>baseline_position(<span class="self">self</span>, baseline_position: <a href="auto/enums.rs.html#399-411">BaselinePosition</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             builder: <span class="self"><a href="#104">self</a>
                 </span>.builder
-                .property(<span class="string">&quot;baseline-position&quot;</span>, <a href="#104">baseline_position</a>),
+                .property(<span class="string">"baseline-position"</span>, <a href="#104">baseline_position</a>),
         }
     }
 
     <span class="kw">pub fn </span>homogeneous(<span class="self">self</span>, homogeneous: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#112">self</a>.builder.property(<span class="string">&quot;homogeneous&quot;</span>, <a href="#112">homogeneous</a>),
+            builder: <a class="self" href="#112">self</a>.builder.property(<span class="string">"homogeneous"</span>, <a href="#112">homogeneous</a>),
         }
     }
 
     <span class="kw">pub fn </span>spacing(<span class="self">self</span>, spacing: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#118">self</a>.builder.property(<span class="string">&quot;spacing&quot;</span>, <a href="#118">spacing</a>),
+            builder: <a class="self" href="#118">self</a>.builder.property(<span class="string">"spacing"</span>, <a href="#118">spacing</a>),
         }
     }
 
     <span class="kw">pub fn </span>border_width(<span class="self">self</span>, border_width: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#124">self</a>.builder.property(<span class="string">&quot;border-width&quot;</span>, <a href="#124">border_width</a>),
+            builder: <a class="self" href="#124">self</a>.builder.property(<span class="string">"border-width"</span>, <a href="#124">border_width</a>),
         }
     }
 
     <span class="kw">pub fn </span>child&lt;P: IsA&lt;<a href="auto/widget.rs.html#17-1520">Widget</a>&gt;&gt;(<span class="self">self</span>, child: <span class="kw-2">&amp;</span>P) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#130">self</a>.builder.property(<span class="string">&quot;child&quot;</span>, <a href="#130">child</a>),
+            builder: <a class="self" href="#130">self</a>.builder.property(<span class="string">"child"</span>, <a href="#130">child</a>),
         }
     }
 
-    <span class="kw">pub fn </span>resize_mode(<span class="self">self</span>, resize_mode: <a href="auto/enums.rs.html#7818-7830">ResizeMode</a>) -&gt; <span class="self">Self </span>{
+    <span class="kw">pub fn </span>resize_mode(<span class="self">self</span>, resize_mode: <a href="auto/enums.rs.html#6901-6913">ResizeMode</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#136">self</a>.builder.property(<span class="string">&quot;resize-mode&quot;</span>, <a href="#136">resize_mode</a>),
+            builder: <a class="self" href="#136">self</a>.builder.property(<span class="string">"resize-mode"</span>, <a href="#136">resize_mode</a>),
         }
     }
 
     <span class="kw">pub fn </span>app_paintable(<span class="self">self</span>, app_paintable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#142">self</a>.builder.property(<span class="string">&quot;app-paintable&quot;</span>, <a href="#142">app_paintable</a>),
+            builder: <a class="self" href="#142">self</a>.builder.property(<span class="string">"app-paintable"</span>, <a href="#142">app_paintable</a>),
         }
     }
 
     <span class="kw">pub fn </span>can_default(<span class="self">self</span>, can_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#148">self</a>.builder.property(<span class="string">&quot;can-default&quot;</span>, <a href="#148">can_default</a>),
+            builder: <a class="self" href="#148">self</a>.builder.property(<span class="string">"can-default"</span>, <a href="#148">can_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>can_focus(<span class="self">self</span>, can_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#154">self</a>.builder.property(<span class="string">&quot;can-focus&quot;</span>, <a href="#154">can_focus</a>),
+            builder: <a class="self" href="#154">self</a>.builder.property(<span class="string">"can-focus"</span>, <a href="#154">can_focus</a>),
         }
     }
 
     <span class="kw">pub fn </span>events(<span class="self">self</span>, events: <a href="../../gdk/auto/flags/struct.EventMask.html">gdk::EventMask</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#160">self</a>.builder.property(<span class="string">&quot;events&quot;</span>, <a href="#160">events</a>),
+            builder: <a class="self" href="#160">self</a>.builder.property(<span class="string">"events"</span>, <a href="#160">events</a>),
         }
     }
 
     <span class="kw">pub fn </span>expand(<span class="self">self</span>, expand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#166">self</a>.builder.property(<span class="string">&quot;expand&quot;</span>, <a href="#166">expand</a>),
+            builder: <a class="self" href="#166">self</a>.builder.property(<span class="string">"expand"</span>, <a href="#166">expand</a>),
         }
     }
 
     <span class="kw">pub fn </span>focus_on_click(<span class="self">self</span>, focus_on_click: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#172">self</a>.builder.property(<span class="string">&quot;focus-on-click&quot;</span>, <a href="#172">focus_on_click</a>),
+            builder: <a class="self" href="#172">self</a>.builder.property(<span class="string">"focus-on-click"</span>, <a href="#172">focus_on_click</a>),
         }
     }
 
-    <span class="kw">pub fn </span>halign(<span class="self">self</span>, halign: <a href="auto/enums.rs.html#27-49">Align</a>) -&gt; <span class="self">Self </span>{
+    <span class="kw">pub fn </span>halign(<span class="self">self</span>, halign: <a href="auto/enums.rs.html#26-48">Align</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#178">self</a>.builder.property(<span class="string">&quot;halign&quot;</span>, <a href="#178">halign</a>),
+            builder: <a class="self" href="#178">self</a>.builder.property(<span class="string">"halign"</span>, <a href="#178">halign</a>),
         }
     }
 
     <span class="kw">pub fn </span>has_default(<span class="self">self</span>, has_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#184">self</a>.builder.property(<span class="string">&quot;has-default&quot;</span>, <a href="#184">has_default</a>),
+            builder: <a class="self" href="#184">self</a>.builder.property(<span class="string">"has-default"</span>, <a href="#184">has_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>has_focus(<span class="self">self</span>, has_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#190">self</a>.builder.property(<span class="string">&quot;has-focus&quot;</span>, <a href="#190">has_focus</a>),
+            builder: <a class="self" href="#190">self</a>.builder.property(<span class="string">"has-focus"</span>, <a href="#190">has_focus</a>),
         }
     }
 
     <span class="kw">pub fn </span>has_tooltip(<span class="self">self</span>, has_tooltip: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#196">self</a>.builder.property(<span class="string">&quot;has-tooltip&quot;</span>, <a href="#196">has_tooltip</a>),
+            builder: <a class="self" href="#196">self</a>.builder.property(<span class="string">"has-tooltip"</span>, <a href="#196">has_tooltip</a>),
         }
     }
 
     <span class="kw">pub fn </span>height_request(<span class="self">self</span>, height_request: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#202">self</a>.builder.property(<span class="string">&quot;height-request&quot;</span>, <a href="#202">height_request</a>),
+            builder: <a class="self" href="#202">self</a>.builder.property(<span class="string">"height-request"</span>, <a href="#202">height_request</a>),
         }
     }
 
     <span class="kw">pub fn </span>hexpand(<span class="self">self</span>, hexpand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#208">self</a>.builder.property(<span class="string">&quot;hexpand&quot;</span>, <a href="#208">hexpand</a>),
+            builder: <a class="self" href="#208">self</a>.builder.property(<span class="string">"hexpand"</span>, <a href="#208">hexpand</a>),
         }
     }
 
     <span class="kw">pub fn </span>hexpand_set(<span class="self">self</span>, hexpand_set: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#214">self</a>.builder.property(<span class="string">&quot;hexpand-set&quot;</span>, <a href="#214">hexpand_set</a>),
+            builder: <a class="self" href="#214">self</a>.builder.property(<span class="string">"hexpand-set"</span>, <a href="#214">hexpand_set</a>),
         }
     }
 
     <span class="attr">#[allow(clippy::wrong_self_convention)]
     </span><span class="kw">pub fn </span>is_focus(<span class="self">self</span>, is_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#221">self</a>.builder.property(<span class="string">&quot;is-focus&quot;</span>, <a href="#221">is_focus</a>),
+            builder: <a class="self" href="#221">self</a>.builder.property(<span class="string">"is-focus"</span>, <a href="#221">is_focus</a>),
         }
     }
 
     <span class="kw">pub fn </span>margin(<span class="self">self</span>, margin: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#227">self</a>.builder.property(<span class="string">&quot;margin&quot;</span>, <a href="#227">margin</a>),
+            builder: <a class="self" href="#227">self</a>.builder.property(<span class="string">"margin"</span>, <a href="#227">margin</a>),
         }
     }
 
     <span class="kw">pub fn </span>margin_bottom(<span class="self">self</span>, margin_bottom: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#233">self</a>.builder.property(<span class="string">&quot;margin-bottom&quot;</span>, <a href="#233">margin_bottom</a>),
+            builder: <a class="self" href="#233">self</a>.builder.property(<span class="string">"margin-bottom"</span>, <a href="#233">margin_bottom</a>),
         }
     }
 
     <span class="kw">pub fn </span>margin_end(<span class="self">self</span>, margin_end: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#239">self</a>.builder.property(<span class="string">&quot;margin-end&quot;</span>, <a href="#239">margin_end</a>),
+            builder: <a class="self" href="#239">self</a>.builder.property(<span class="string">"margin-end"</span>, <a href="#239">margin_end</a>),
         }
     }
 
     <span class="kw">pub fn </span>margin_start(<span class="self">self</span>, margin_start: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#245">self</a>.builder.property(<span class="string">&quot;margin-start&quot;</span>, <a href="#245">margin_start</a>),
+            builder: <a class="self" href="#245">self</a>.builder.property(<span class="string">"margin-start"</span>, <a href="#245">margin_start</a>),
         }
     }
 
     <span class="kw">pub fn </span>margin_top(<span class="self">self</span>, margin_top: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#251">self</a>.builder.property(<span class="string">&quot;margin-top&quot;</span>, <a href="#251">margin_top</a>),
+            builder: <a class="self" href="#251">self</a>.builder.property(<span class="string">"margin-top"</span>, <a href="#251">margin_top</a>),
         }
     }
 
     <span class="kw">pub fn </span>name(<span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#257">self</a>.builder.property(<span class="string">&quot;name&quot;</span>, <a href="#257">name</a>),
+            builder: <a class="self" href="#257">self</a>.builder.property(<span class="string">"name"</span>, <a href="#257">name</a>),
         }
     }
 
     <span class="kw">pub fn </span>no_show_all(<span class="self">self</span>, no_show_all: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#263">self</a>.builder.property(<span class="string">&quot;no-show-all&quot;</span>, <a href="#263">no_show_all</a>),
+            builder: <a class="self" href="#263">self</a>.builder.property(<span class="string">"no-show-all"</span>, <a href="#263">no_show_all</a>),
         }
     }
 
     <span class="kw">pub fn </span>opacity(<span class="self">self</span>, opacity: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#269">self</a>.builder.property(<span class="string">&quot;opacity&quot;</span>, <a href="#269">opacity</a>),
+            builder: <a class="self" href="#269">self</a>.builder.property(<span class="string">"opacity"</span>, <a href="#269">opacity</a>),
         }
     }
 
     <span class="kw">pub fn </span>parent&lt;P: IsA&lt;<a href="auto/container.rs.html#14-1335">Container</a>&gt;&gt;(<span class="self">self</span>, parent: <span class="kw-2">&amp;</span>P) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#275">self</a>.builder.property(<span class="string">&quot;parent&quot;</span>, <a href="#275">parent</a>),
+            builder: <a class="self" href="#275">self</a>.builder.property(<span class="string">"parent"</span>, <a href="#275">parent</a>),
         }
     }
 
     <span class="kw">pub fn </span>receives_default(<span class="self">self</span>, receives_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#281">self</a>.builder.property(<span class="string">&quot;receives-default&quot;</span>, <a href="#281">receives_default</a>),
+            builder: <a class="self" href="#281">self</a>.builder.property(<span class="string">"receives-default"</span>, <a href="#281">receives_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>sensitive(<span class="self">self</span>, sensitive: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#287">self</a>.builder.property(<span class="string">&quot;sensitive&quot;</span>, <a href="#287">sensitive</a>),
+            builder: <a class="self" href="#287">self</a>.builder.property(<span class="string">"sensitive"</span>, <a href="#287">sensitive</a>),
         }
     }
 
     <span class="kw">pub fn </span>tooltip_markup(<span class="self">self</span>, tooltip_markup: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#293">self</a>.builder.property(<span class="string">&quot;tooltip-markup&quot;</span>, <a href="#293">tooltip_markup</a>),
+            builder: <a class="self" href="#293">self</a>.builder.property(<span class="string">"tooltip-markup"</span>, <a href="#293">tooltip_markup</a>),
         }
     }
 
     <span class="kw">pub fn </span>tooltip_text(<span class="self">self</span>, tooltip_text: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#299">self</a>.builder.property(<span class="string">&quot;tooltip-text&quot;</span>, <a href="#299">tooltip_text</a>),
+            builder: <a class="self" href="#299">self</a>.builder.property(<span class="string">"tooltip-text"</span>, <a href="#299">tooltip_text</a>),
         }
     }
 
-    <span class="kw">pub fn </span>valign(<span class="self">self</span>, valign: <a href="auto/enums.rs.html#27-49">Align</a>) -&gt; <span class="self">Self </span>{
+    <span class="kw">pub fn </span>valign(<span class="self">self</span>, valign: <a href="auto/enums.rs.html#26-48">Align</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#305">self</a>.builder.property(<span class="string">&quot;valign&quot;</span>, <a href="#305">valign</a>),
+            builder: <a class="self" href="#305">self</a>.builder.property(<span class="string">"valign"</span>, <a href="#305">valign</a>),
         }
     }
 
     <span class="kw">pub fn </span>vexpand(<span class="self">self</span>, vexpand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#311">self</a>.builder.property(<span class="string">&quot;vexpand&quot;</span>, <a href="#311">vexpand</a>),
+            builder: <a class="self" href="#311">self</a>.builder.property(<span class="string">"vexpand"</span>, <a href="#311">vexpand</a>),
         }
     }
 
     <span class="kw">pub fn </span>vexpand_set(<span class="self">self</span>, vexpand_set: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#317">self</a>.builder.property(<span class="string">&quot;vexpand*set&quot;</span>, <a href="#317">vexpand_set</a>),
+            builder: <a class="self" href="#317">self</a>.builder.property(<span class="string">"vexpand*set"</span>, <a href="#317">vexpand_set</a>),
         }
     }
 
     <span class="kw">pub fn </span>visible(<span class="self">self</span>, visible: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#323">self</a>.builder.property(<span class="string">&quot;visible&quot;</span>, <a href="#323">visible</a>),
+            builder: <a class="self" href="#323">self</a>.builder.property(<span class="string">"visible"</span>, <a href="#323">visible</a>),
         }
     }
 
     <span class="kw">pub fn </span>width_request(<span class="self">self</span>, width_request: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#329">self</a>.builder.property(<span class="string">&quot;width-request&quot;</span>, <a href="#329">width_request</a>),
+            builder: <a class="self" href="#329">self</a>.builder.property(<span class="string">"width-request"</span>, <a href="#329">width_request</a>),
         }
     }
 
-    <span class="kw">pub fn </span>orientation(<span class="self">self</span>, orientation: <a href="auto/enums.rs.html#4998-5007">Orientation</a>) -&gt; <span class="self">Self </span>{
+    <span class="kw">pub fn </span>orientation(<span class="self">self</span>, orientation: <a href="auto/enums.rs.html#4407-4416">Orientation</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#335">self</a>.builder.property(<span class="string">&quot;orientation&quot;</span>, <a href="#335">orientation</a>),
+            builder: <a class="self" href="#335">self</a>.builder.property(<span class="string">"orientation"</span>, <a href="#335">orientation</a>),
         }
     }
 
     <span class="comment">// rustdoc-stripper-ignore-next
     </span><span class="doccomment">/// Build the [`StackSwitcher`].
-    </span><span class="attr">#[must_use = <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]
+    </span><span class="attr">#[must_use = <span class="string">"Building the object from the builder is usually expensive and is not expected to have side effects"</span>]
     </span><span class="kw">pub fn </span>build(<span class="self">self</span>) -&gt; <a href="auto/stack_switcher.rs.html#13-363">StackSwitcher</a> {
         <a class="self" href="#344">self</a>.builder.build()
     }

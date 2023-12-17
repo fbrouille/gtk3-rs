@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/actionable.rs`."><title>actionable.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/actionable.rs`."><title>actionable.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -571,23 +572,17 @@
 <a href="#498" id="498">498</a>
 <a href="#499" id="499">499</a>
 <a href="#500" id="500">500</a>
-<a href="#501" id="501">501</a>
-<a href="#502" id="502">502</a>
-<a href="#503" id="503">503</a>
-<a href="#504" id="504">504</a>
-<a href="#505" id="505">505</a>
-<a href="#506" id="506">506</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
-</span><span class="kw">use crate</span>::{<a href="buildable.rs.html#9-32">Buildable</a>, <a href="widget.rs.html#17-1520">Widget</a>};
+</span><span class="kw">use crate</span>::{<a href="buildable.rs.html#8-31">Buildable</a>, <a href="widget.rs.html#17-1520">Widget</a>};
 <span class="kw">use </span>glib::{
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// This interface provides a convenient way of associating widgets with
@@ -707,7 +702,7 @@
     ///
     ///
     /// #### `margin`
-    ///  Sets all four sides&#39; margin at once. If read, returns max
+    ///  Sets all four sides' margin at once. If read, returns max
     /// margin on any side.
     ///
     /// Readable | Writeable
@@ -716,7 +711,7 @@
     /// #### `margin-bottom`
     ///  Margin on bottom side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -727,7 +722,7 @@
     ///  Margin on end of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -737,7 +732,7 @@
     /// #### `margin-left`
     ///  Margin on left side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -747,7 +742,7 @@
     /// #### `margin-right`
     ///  Margin on right side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -758,7 +753,7 @@
     ///  Margin on start of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -768,7 +763,7 @@
     /// #### `margin-top`
     ///  Margin on top side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -876,7 +871,7 @@
     ///
     ///
     /// #### `window`
-    ///  The widget&#39;s window if it is realized, [`None`] otherwise.
+    ///  The widget's window if it is realized, [`None`] otherwise.
     ///
     /// Readable
     /// &lt;/details&gt;
@@ -884,8 +879,8 @@
     /// # Implements
     ///
     /// [`ActionableExt`][trait@crate::prelude::ActionableExt], [`WidgetExt`][trait@crate::prelude::WidgetExt], [`trait@glib::ObjectExt`], [`BuildableExt`][trait@crate::prelude::BuildableExt], [`WidgetExtManual`][trait@crate::prelude::WidgetExtManual], [`BuildableExtManual`][trait@crate::prelude::BuildableExtManual]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;GtkActionable&quot;</span>)]
-    </span><span class="kw">pub struct </span><a href="../../../gtk/struct.Actionable.html">Actionable</a>(Interface&lt;<a href="../../../gtk_sys/struct.GtkActionable.html">ffi::GtkActionable</a>, <a href="../../../gtk_sys/struct.GtkActionableInterface.html">ffi::GtkActionableInterface</a>&gt;) @requires <a href="widget.rs.html#17-1520">Widget</a>, <a href="buildable.rs.html#9-32">Buildable</a>;
+    </span><span class="attr">#[doc(alias = <span class="string">"GtkActionable"</span>)]
+    </span><span class="kw">pub struct </span><a href="../../../gtk/struct.Actionable.html">Actionable</a>(Interface&lt;<a href="../../../gtk_sys/struct.GtkActionable.html">ffi::GtkActionable</a>, <a href="../../../gtk_sys/struct.GtkActionableInterface.html">ffi::GtkActionableInterface</a>&gt;) @requires <a href="widget.rs.html#17-1520">Widget</a>, <a href="buildable.rs.html#8-31">Buildable</a>;
 
     <span class="kw">match fn </span>{
         type_ =&gt; || ffi::gtk_actionable_get_type(),
@@ -893,7 +888,7 @@
 }
 
 <span class="kw">impl </span><a href="#13-314">Actionable</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#13-314">Actionable</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#13-314">Actionable</a>&gt; = <span class="prelude-val">None</span>;
 }
 
 <span class="kw">mod </span>sealed {
@@ -906,7 +901,7 @@
 /// # Implementors
 ///
 /// [`Actionable`][struct@crate::Actionable], [`Button`][struct@crate::Button], [`CheckButton`][struct@crate::CheckButton], [`CheckMenuItem`][struct@crate::CheckMenuItem], [`ColorButton`][struct@crate::ColorButton], [`FontButton`][struct@crate::FontButton], [`LinkButton`][struct@crate::LinkButton], [`ListBoxRow`][struct@crate::ListBoxRow], [`LockButton`][struct@crate::LockButton], [`MenuButton`][struct@crate::MenuButton], [`MenuItem`][struct@crate::MenuItem], [`MenuToolButton`][struct@crate::MenuToolButton], [`ModelButton`][struct@crate::ModelButton], [`RadioButton`][struct@crate::RadioButton], [`RadioMenuItem`][struct@crate::RadioMenuItem], [`RadioToolButton`][struct@crate::RadioToolButton], [`ScaleButton`][struct@crate::ScaleButton], [`SeparatorMenuItem`][struct@crate::SeparatorMenuItem], [`Switch`][struct@crate::Switch], [`ToggleButton`][struct@crate::ToggleButton], [`ToggleToolButton`][struct@crate::ToggleToolButton], [`ToolButton`][struct@crate::ToolButton], [`VolumeButton`][struct@crate::VolumeButton]
-</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.ActionableExt.html">ActionableExt</a>: IsA&lt;<a href="#13-314">Actionable</a>&gt; + <a href="#321">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.ActionableExt.html">ActionableExt</a>: IsA&lt;<a href="#13-314">Actionable</a>&gt; + <a href="#321">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Gets the action name for `self`.
     ///
     /// See [`set_action_name()`][Self::set_action_name()] for more information.
@@ -914,8 +909,8 @@
     /// # Returns
     ///
     /// the action name, or [`None`] if none is set
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_actionable_get_action_name&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_action_name&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_actionable_get_action_name"</span>)]
+    #[doc(alias = <span class="string">"get_action_name"</span>)]
     </span><span class="kw">fn </span>action_name(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_actionable_get_action_name(
@@ -931,8 +926,8 @@
     /// # Returns
     ///
     /// the current target value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_actionable_get_action_target_value&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_action_target_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_actionable_get_action_target_value"</span>)]
+    #[doc(alias = <span class="string">"get_action_target_value"</span>)]
     </span><span class="kw">fn </span>action_target_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/variant/struct.Variant.html">glib::Variant</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_actionable_get_action_target_value(
@@ -954,7 +949,7 @@
     /// associated with the window.
     /// ## `action_name`
     /// an action name, or [`None`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_actionable_set_action_name&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_actionable_set_action_name"</span>)]
     </span><span class="kw">fn </span>set_action_name(<span class="kw-2">&amp;</span><span class="self">self</span>, action_name: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_actionable_set_action_name(
@@ -964,7 +959,7 @@
         }
     }
 
-    <span class="comment">//#[doc(alias = &quot;gtk_actionable_set_action_target&quot;)]
+    <span class="comment">//#[doc(alias = "gtk_actionable_set_action_target")]
     //fn set_action_target(&amp;self, format_string: &amp;str, : /*Unknown conversion*//*Unimplemented*/Basic: VarArgs) {
     //    unsafe { TODO: call ffi:gtk_actionable_set_action_target() }
     //}
@@ -990,7 +985,7 @@
     /// rendered inactive).
     /// ## `target_value`
     /// a [`glib::Variant`][struct@crate::glib::Variant] to set as the target value, or [`None`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_actionable_set_action_target_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_actionable_set_action_target_value"</span>)]
     </span><span class="kw">fn </span>set_action_target_value(<span class="kw-2">&amp;</span><span class="self">self</span>, target_value: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/variant/struct.Variant.html">glib::Variant</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_actionable_set_action_target_value(
@@ -1007,13 +1002,13 @@
     /// `g_action_parse_detailed_name()`.
     ///
     /// (Note that prior to version 3.22.25,
-    /// this function is only usable for actions with a simple &quot;s&quot; target, and
-    /// `detailed_action_name` must be of the form `&quot;action::target&quot;` where
+    /// this function is only usable for actions with a simple "s" target, and
+    /// `detailed_action_name` must be of the form `"action::target"` where
     /// `action` is the action name and `target` is the string to use
     /// as the target.)
     /// ## `detailed_action_name`
     /// the detailed action name
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_actionable_set_detailed_action_name&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_actionable_set_detailed_action_name"</span>)]
     </span><span class="kw">fn </span>set_detailed_action_name(<span class="kw-2">&amp;</span><span class="self">self</span>, detailed_action_name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_actionable_set_detailed_action_name(
@@ -1023,11 +1018,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;action-name&quot;</span>)]
-    </span><span class="kw">fn </span>connect_action_name_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_action_name_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"action-name"</span>)]
+    </span><span class="kw">fn </span>connect_action_name_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_action_name_trampoline&lt;
             P: IsA&lt;<a href="#13-314">Actionable</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkActionable.html">ffi::GtkActionable</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1040,8 +1035,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#448">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#448">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::action-name\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::action-name\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_action_name_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#461">f</a>),
@@ -1049,11 +1044,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;action-target&quot;</span>)]
-    </span><span class="kw">fn </span>connect_action_target_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_action_target_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"action-target"</span>)]
+    </span><span class="kw">fn </span>connect_action_target_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_action_target_trampoline&lt;
             P: IsA&lt;<a href="#13-314">Actionable</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkActionable.html">ffi::GtkActionable</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1066,8 +1061,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#474">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#474">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::action-target\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::action-target\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_action_target_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#487">f</a>),
@@ -1077,10 +1072,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#13-314">Actionable</a>&gt;&gt; <a href="#330-498">ActionableExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#13-314">Actionable</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#503">f</a>.write_str(<span class="string">&quot;Actionable&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

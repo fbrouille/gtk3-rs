@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk/src/window.rs`."><title>window.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gdk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk/src/window.rs`."><title>window.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gdk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -434,9 +435,9 @@
 <a href="#361" id="361">361</a>
 </pre></div><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.
 
-</span><span class="kw">use </span><a href="auto/cursor.rs.html#9-29"><span class="kw">crate</span>::Cursor</a>;
-<span class="kw">use </span><a href="auto/flags.rs.html#362-472"><span class="kw">crate</span>::EventMask</a>;
-<span class="kw">use </span><a href="auto/visual.rs.html#9-18"><span class="kw">crate</span>::Visual</a>;
+</span><span class="kw">use </span><a href="auto/cursor.rs.html#8-28"><span class="kw">crate</span>::Cursor</a>;
+<span class="kw">use </span><a href="auto/flags.rs.html#346-456"><span class="kw">crate</span>::EventMask</a>;
+<span class="kw">use </span><a href="auto/visual.rs.html#8-17"><span class="kw">crate</span>::Visual</a>;
 <span class="kw">use </span><a href="auto/window.rs.html#20-101"><span class="kw">crate</span>::Window</a>;
 <span class="kw">use </span>cairo::{<a class="self" href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/index.html">self</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/surface/struct.Surface.html">Surface</a>};
 <span class="kw">use </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html">glib::object::IsA</a>;
@@ -444,21 +445,21 @@
 <span class="kw">use </span>libc::{c_char, c_int};
 <span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/core/ptr/index.html">std::ptr</a>;
 
-<span class="kw">use crate</span>::{<a href="auto/enums.rs.html#4536-4565">WindowType</a>, <a href="auto/enums.rs.html#4688-4739">WindowTypeHint</a>, <a href="auto/enums.rs.html#4880-4889">WindowWindowClass</a>};
+<span class="kw">use crate</span>::{<a href="auto/enums.rs.html#3964-3993">WindowType</a>, <a href="auto/enums.rs.html#4098-4149">WindowTypeHint</a>, <a href="auto/enums.rs.html#4265-4274">WindowWindowClass</a>};
 
 <span class="kw">pub struct </span><a href="../../gdk/struct.WindowAttr.html">WindowAttr</a> {
     <span class="kw">pub </span>title: <span class="prelude-ty">Option</span>&lt;<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>&gt;,
-    <span class="kw">pub </span>event_mask: <a href="auto/flags.rs.html#362-472">EventMask</a>,
+    <span class="kw">pub </span>event_mask: <a href="auto/flags.rs.html#346-456">EventMask</a>,
     <span class="kw">pub </span>x: <span class="prelude-ty">Option</span>&lt;<a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;,
     <span class="kw">pub </span>y: <span class="prelude-ty">Option</span>&lt;<a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;,
     <span class="kw">pub </span>width: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
     <span class="kw">pub </span>height: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
-    <span class="kw">pub </span>wclass: <a href="auto/enums.rs.html#4880-4889">WindowWindowClass</a>,
-    <span class="kw">pub </span>visual: <span class="prelude-ty">Option</span>&lt;<a href="auto/visual.rs.html#9-18">Visual</a>&gt;,
-    <span class="kw">pub </span>window_type: <a href="auto/enums.rs.html#4536-4565">WindowType</a>,
-    <span class="kw">pub </span>cursor: <span class="prelude-ty">Option</span>&lt;<a href="auto/cursor.rs.html#9-29">Cursor</a>&gt;,
+    <span class="kw">pub </span>wclass: <a href="auto/enums.rs.html#4265-4274">WindowWindowClass</a>,
+    <span class="kw">pub </span>visual: <span class="prelude-ty">Option</span>&lt;<a href="auto/visual.rs.html#8-17">Visual</a>&gt;,
+    <span class="kw">pub </span>window_type: <a href="auto/enums.rs.html#3964-3993">WindowType</a>,
+    <span class="kw">pub </span>cursor: <span class="prelude-ty">Option</span>&lt;<a href="auto/cursor.rs.html#8-28">Cursor</a>&gt;,
     <span class="kw">pub </span>override_redirect: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
-    <span class="kw">pub </span>type_hint: <span class="prelude-ty">Option</span>&lt;<a href="auto/enums.rs.html#4688-4739">WindowTypeHint</a>&gt;,
+    <span class="kw">pub </span>type_hint: <span class="prelude-ty">Option</span>&lt;<a href="auto/enums.rs.html#4098-4149">WindowTypeHint</a>&gt;,
 }
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html">Default</a> <span class="kw">for </span><a href="#15-28">WindowAttr</a> {
@@ -471,9 +472,9 @@
             y: <span class="prelude-val">None</span>,
             width: <span class="number">400</span>,
             height: <span class="number">300</span>,
-            wclass: <a href="auto/enums.rs.html#4883">WindowWindowClass::InputOutput</a>,
+            wclass: <a href="auto/enums.rs.html#4268">WindowWindowClass::InputOutput</a>,
             visual: <span class="prelude-val">None</span>,
-            window_type: <a href="auto/enums.rs.html#4543">WindowType::Toplevel</a>,
+            window_type: <a href="auto/enums.rs.html#3971">WindowType::Toplevel</a>,
             cursor: <span class="prelude-val">None</span>,
             override_redirect: <span class="bool-val">false</span>,
             type_hint: <span class="prelude-val">None</span>,
@@ -482,7 +483,7 @@
 }
 
 <span class="kw">impl </span><a href="#15-28">WindowAttr</a> {
-    <span class="attr">#[doc(alias = <span class="string">&quot;get_mask&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"get_mask"</span>)]
     </span><span class="kw">fn </span>mask(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>mask: ffi::GdkWindowAttributesType = <span class="number">0</span>;
         <span class="kw">if </span><span class="self">self</span>.title.is_some() {
@@ -511,22 +512,22 @@
 }
 
 <span class="attr">#[allow(clippy::type_complexity)]
-</span><span class="kw">impl</span>&lt;<span class="lifetime">&#39;a</span>&gt; ToGlibPtr&lt;<span class="lifetime">&#39;a</span>, <span class="kw-2">*mut </span>ffi::GdkWindowAttr&gt; <span class="kw">for </span><a href="#15-28">WindowAttr</a> {
+</span><span class="kw">impl</span>&lt;<span class="lifetime">'a</span>&gt; ToGlibPtr&lt;<span class="lifetime">'a</span>, <span class="kw-2">*mut </span><a href="../../gdk_sys/struct.GdkWindowAttr.html">ffi::GdkWindowAttr</a>&gt; <span class="kw">for </span><a href="#15-28">WindowAttr</a> {
     <span class="kw">type </span>Storage = (
-        Box&lt;ffi::GdkWindowAttr&gt;,
-        Stash&lt;<span class="lifetime">&#39;a</span>, <span class="kw-2">*mut </span>ffi::GdkVisual, <span class="prelude-ty">Option</span>&lt;<a href="auto/visual.rs.html#9-18">Visual</a>&gt;&gt;,
-        Stash&lt;<span class="lifetime">&#39;a</span>, <span class="kw-2">*mut </span>ffi::GdkCursor, <span class="prelude-ty">Option</span>&lt;<a href="auto/cursor.rs.html#9-29">Cursor</a>&gt;&gt;,
-        Stash&lt;<span class="lifetime">&#39;a</span>, <span class="kw-2">*const </span>c_char, <span class="prelude-ty">Option</span>&lt;<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>&gt;&gt;,
+        Box&lt;<a href="../../gdk_sys/struct.GdkWindowAttr.html">ffi::GdkWindowAttr</a>&gt;,
+        Stash&lt;<span class="lifetime">'a</span>, <span class="kw-2">*mut </span><a href="../../gdk_sys/struct.GdkVisual.html">ffi::GdkVisual</a>, <span class="prelude-ty">Option</span>&lt;<a href="auto/visual.rs.html#8-17">Visual</a>&gt;&gt;,
+        Stash&lt;<span class="lifetime">'a</span>, <span class="kw-2">*mut </span><a href="../../gdk_sys/struct.GdkCursor.html">ffi::GdkCursor</a>, <span class="prelude-ty">Option</span>&lt;<a href="auto/cursor.rs.html#8-28">Cursor</a>&gt;&gt;,
+        Stash&lt;<span class="lifetime">'a</span>, <span class="kw-2">*const </span>c_char, <span class="prelude-ty">Option</span>&lt;<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>&gt;&gt;,
     );
 
-    <span class="kw">fn </span>to_glib_none(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span><span class="self">self</span>) -&gt; Stash&lt;<span class="lifetime">&#39;a</span>, <span class="kw-2">*mut </span>ffi::GdkWindowAttr, <span class="self">Self</span>&gt; {
+    <span class="kw">fn </span>to_glib_none(<span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="self">self</span>) -&gt; Stash&lt;<span class="lifetime">'a</span>, <span class="kw-2">*mut </span><a href="../../gdk_sys/struct.GdkWindowAttr.html">ffi::GdkWindowAttr</a>, <span class="self">Self</span>&gt; {
         <span class="kw">let </span>title = <a class="self" href="#88">self</a>.title.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>();
         <span class="kw">let </span>visual = <a class="self" href="#88">self</a>.visual.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>();
         <span class="kw">let </span>cursor = <a class="self" href="#88">self</a>.cursor.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>();
 
-        <span class="kw">let </span><span class="kw-2">mut </span>attrs = Box::new(ffi::GdkWindowAttr {
+        <span class="kw">let </span><span class="kw-2">mut </span>attrs = Box::new(<a href="../../gdk_sys/struct.GdkWindowAttr.html">ffi::GdkWindowAttr</a> {
             title: <a href="#89">title</a>.<span class="number">0 </span><span class="kw">as </span><span class="kw-2">*mut </span>c_char,
-            event_mask: <a class="self" href="#88">self</a>.event_mask.<a href="auto/flags.rs.html#362-472">bits</a>() <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+            event_mask: <a class="self" href="#88">self</a>.event_mask.<a href="auto/flags.rs.html#346-456">bits</a>() <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
             x: <a class="self" href="#88">self</a>.x.unwrap_or(<span class="number">0</span>),
             y: <a class="self" href="#88">self</a>.y.unwrap_or(<span class="number">0</span>),
             width: <a class="self" href="#88">self</a>.width,
@@ -538,7 +539,7 @@
             wmclass_name: ptr::null_mut(),
             wmclass_class: ptr::null_mut(),
             override_redirect: <a class="self" href="#88">self</a>.override_redirect.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>(),
-            type_hint: <a class="self" href="#88">self</a>.type_hint.unwrap_or(<a href="auto/enums.rs.html#4691">WindowTypeHint::Normal</a>).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>(),
+            type_hint: <a class="self" href="#88">self</a>.type_hint.unwrap_or(<a href="auto/enums.rs.html#4101">WindowTypeHint::Normal</a>).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>(),
         });
 
         Stash(<span class="kw-2">&amp;mut *</span><a href="#93">attrs</a>, (<a href="#93">attrs</a>, <a href="#90">visual</a>, <a href="#91">cursor</a>, <a href="#89">title</a>))
@@ -562,7 +563,7 @@
     /// # Returns
     ///
     /// the new [`Window`][crate::Window]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_window_new&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_window_new"</span>)]
     </span><span class="kw">pub fn </span>new(parent: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="auto/window.rs.html#20-101">Window</a>&gt;, attributes: <span class="kw-2">&amp;</span><a href="#15-28">WindowAttr</a>) -&gt; <a href="auto/window.rs.html#20-101">Window</a> {
         <a class="macro" href="rt.rs.html#16-26">assert_initialized_main_thread!</a>();
         <span class="kw">unsafe </span>{
@@ -599,7 +600,7 @@
     /// This function always returns a valid pointer, but it will return a
     /// pointer to a “nil” surface if `other` is already in an error state
     /// or any other error occurs.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_window_create_similar_surface&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_window_create_similar_surface"</span>)]
     </span><span class="kw">pub fn </span>create_similar_surface(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         content: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/enums/enum.Content.html">cairo::Content</a>,
@@ -646,7 +647,7 @@
     /// ```
     ///
     /// Note that unlike `cairo_surface_create_similar_image()`, the new
-    /// surface&#39;s device scale is set to `scale`, or to the scale factor of
+    /// surface's device scale is set to `scale`, or to the scale factor of
     /// `self` if `scale` is 0.
     /// ## `format`
     /// the format for the new surface
@@ -666,7 +667,7 @@
     /// This function always returns a valid pointer, but it will return a
     /// pointer to a “nil” surface if `other` is already in an error state
     /// or any other error occurs.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_window_create_similar_image_surface&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_window_create_similar_image_surface"</span>)]
     </span><span class="kw">pub fn </span>create_similar_image_surface(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         format: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/enums/enum.Format.html">cairo::Format</a>,
@@ -691,8 +692,8 @@
     <span class="kw">impl</span>&lt;T: glib::IsA&lt;<a href="auto/window.rs.html#20-101"><span class="kw">crate</span>::Window</a>&gt;&gt; <a href="#256">Sealed</a> <span class="kw">for </span>T {}
 }
 
-<span class="kw">pub trait </span><a href="../../gdk/prelude/trait.WindowExtManual.html">WindowExtManual</a>: IsA&lt;<a href="auto/window.rs.html#20-101">Window</a>&gt; + <a href="#256">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
-    <span class="attr">#[doc(alias = <span class="string">&quot;gdk_window_set_user_data&quot;</span>)]
+<span class="kw">pub trait </span><a href="../../gdk/prelude/trait.WindowExtManual.html">WindowExtManual</a>: IsA&lt;<a href="auto/window.rs.html#20-101">Window</a>&gt; + <a href="#256">sealed::Sealed</a> + <span class="lifetime">'static </span>{
+    <span class="attr">#[doc(alias = <span class="string">"gdk_window_set_user_data"</span>)]
     </span><span class="kw">unsafe fn </span>set_user_data&lt;T&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, user_data: <span class="kw-2">&amp;mut </span>T) {
         ffi::gdk_window_set_user_data(
             <a class="self" href="#262">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -701,22 +702,22 @@
     }
 
     <span class="attr">#[allow(clippy::mut_from_ref)]
-    #[doc(alias = <span class="string">&quot;gdk_window_get_user_data&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_user_data&quot;</span>)]
+    #[doc(alias = <span class="string">"gdk_window_get_user_data"</span>)]
+    #[doc(alias = <span class="string">"get_user_data"</span>)]
     </span><span class="kw">unsafe fn </span>user_data&lt;T&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>T {
         <span class="kw">let </span><span class="kw-2">mut </span>pointer = ::std::ptr::null_mut();
         ffi::gdk_window_get_user_data(<a class="self" href="#272">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <span class="kw-2">&amp;mut </span><a href="#273">pointer</a>);
         <span class="kw-2">&amp;mut *</span>(<a href="#273">pointer</a> <span class="kw">as </span><span class="kw-2">*mut </span>T)
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;gdk_get_default_root_window&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_default_root_window&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"gdk_get_default_root_window"</span>)]
+    #[doc(alias = <span class="string">"get_default_root_window"</span>)]
     </span><span class="kw">fn </span>default_root_window() -&gt; <a href="auto/window.rs.html#20-101">Window</a> {
         <a class="macro" href="rt.rs.html#16-26">assert_initialized_main_thread!</a>();
         <span class="kw">unsafe </span>{ from_glib_none(ffi::gdk_get_default_root_window()) }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;gdk_offscreen_window_set_embedder&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"gdk_offscreen_window_set_embedder"</span>)]
     </span><span class="kw">fn </span>offscreen_window_set_embedder(<span class="kw-2">&amp;</span><span class="self">self</span>, embedder: <span class="kw-2">&amp;</span><a href="auto/window.rs.html#20-101">Window</a>) {
         <span class="kw">unsafe </span>{
             ffi::gdk_offscreen_window_set_embedder(
@@ -726,7 +727,7 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;gdk_offscreen_window_get_embedder&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"gdk_offscreen_window_get_embedder"</span>)]
     </span><span class="kw">fn </span>offscreen_window_get_embedder(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="auto/window.rs.html#20-101">Window</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_none(ffi::gdk_offscreen_window_get_embedder(
@@ -735,7 +736,7 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;gdk_offscreen_window_get_surface&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"gdk_offscreen_window_get_surface"</span>)]
     </span><span class="kw">fn </span>offscreen_window_get_surface(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/surface/struct.Surface.html">Surface</a>&gt; {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">unsafe </span>{
@@ -745,8 +746,8 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;gdk_pixbuf_get_from_window&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_pixbuf&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"gdk_pixbuf_get_from_window"</span>)]
+    #[doc(alias = <span class="string">"get_pixbuf"</span>)]
     </span><span class="kw">fn </span>pixbuf(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         src_x: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
@@ -766,8 +767,8 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;gdk_window_get_background_pattern&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_background_pattern&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"gdk_window_get_background_pattern"</span>)]
+    #[doc(alias = <span class="string">"get_background_pattern"</span>)]
     </span><span class="kw">fn </span>background_pattern(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/patterns/struct.Pattern.html">cairo::Pattern</a>&gt; {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>ret = ffi::gdk_window_get_background_pattern(<a class="self" href="#337">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -779,7 +780,7 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;gdk_window_set_background_pattern&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"gdk_window_set_background_pattern"</span>)]
     </span><span class="kw">fn </span>set_background_pattern(<span class="kw-2">&amp;</span><span class="self">self</span>, pattern: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/patterns/struct.Pattern.html">cairo::Pattern</a>&gt;) {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>ptr = <span class="kw">if let </span><span class="prelude-val">Some</span>(pattern) = <a href="#349">pattern</a> {

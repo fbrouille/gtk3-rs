@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk/sys/src/lib.rs`."><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gdk_sys" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk/sys/src/lib.rs`."><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gdk_sys" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -8750,45 +8751,45 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#2854-2880">GdkEvent</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#2883">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEvent @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.type_ })
-            .field(<span class="string">&quot;any&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.any })
-            .field(<span class="string">&quot;expose&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.expose })
-            .field(<span class="string">&quot;visibility&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.visibility })
-            .field(<span class="string">&quot;motion&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.motion })
-            .field(<span class="string">&quot;button&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.button })
-            .field(<span class="string">&quot;touch&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.touch })
-            .field(<span class="string">&quot;scroll&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.scroll })
-            .field(<span class="string">&quot;key&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.key })
-            .field(<span class="string">&quot;crossing&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.crossing })
-            .field(<span class="string">&quot;focus_change&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.focus_change })
-            .field(<span class="string">&quot;configure&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.configure })
-            .field(<span class="string">&quot;property&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.property })
-            .field(<span class="string">&quot;selection&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.selection })
-            .field(<span class="string">&quot;owner_change&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.owner_change })
-            .field(<span class="string">&quot;proximity&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.proximity })
-            .field(<span class="string">&quot;dnd&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.dnd })
-            .field(<span class="string">&quot;window_state&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.window_state })
-            .field(<span class="string">&quot;setting&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.setting })
-            .field(<span class="string">&quot;grab_broken&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.grab_broken })
-            .field(<span class="string">&quot;touchpad_swipe&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.touchpad_swipe })
-            .field(<span class="string">&quot;touchpad_pinch&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.touchpad_pinch })
-            .field(<span class="string">&quot;pad_button&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.pad_button })
-            .field(<span class="string">&quot;pad_axis&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.pad_axis })
-            .field(<span class="string">&quot;pad_group_mode&quot;</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.pad_group_mode })
+        <a href="#2883">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEvent @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.type_ })
+            .field(<span class="string">"any"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.any })
+            .field(<span class="string">"expose"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.expose })
+            .field(<span class="string">"visibility"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.visibility })
+            .field(<span class="string">"motion"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.motion })
+            .field(<span class="string">"button"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.button })
+            .field(<span class="string">"touch"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.touch })
+            .field(<span class="string">"scroll"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.scroll })
+            .field(<span class="string">"key"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.key })
+            .field(<span class="string">"crossing"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.crossing })
+            .field(<span class="string">"focus_change"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.focus_change })
+            .field(<span class="string">"configure"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.configure })
+            .field(<span class="string">"property"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.property })
+            .field(<span class="string">"selection"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.selection })
+            .field(<span class="string">"owner_change"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.owner_change })
+            .field(<span class="string">"proximity"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.proximity })
+            .field(<span class="string">"dnd"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.dnd })
+            .field(<span class="string">"window_state"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.window_state })
+            .field(<span class="string">"setting"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.setting })
+            .field(<span class="string">"grab_broken"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.grab_broken })
+            .field(<span class="string">"touchpad_swipe"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.touchpad_swipe })
+            .field(<span class="string">"touchpad_pinch"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.touchpad_pinch })
+            .field(<span class="string">"pad_button"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.pad_button })
+            .field(<span class="string">"pad_axis"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.pad_axis })
+            .field(<span class="string">"pad_group_mode"</span>, <span class="kw">unsafe </span>{ <span class="kw-2">&amp;</span><a class="self" href="#2883">self</a>.pad_group_mode })
             .finish()
     }
 }
 
 <span class="comment">// Callbacks
-</span><span class="kw">pub type </span><a href="../../gdk_sys/type.GdkEventFunc.html">GdkEventFunc</a> = <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#2854-2880">GdkEvent</a>, gpointer)&gt;;
+</span><span class="kw">pub type </span><a href="../../gdk_sys/type.GdkEventFunc.html">GdkEventFunc</a> = <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#2854-2880">GdkEvent</a>, gpointer)&gt;;
 <span class="kw">pub type </span><a href="../../gdk_sys/type.GdkFilterFunc.html">GdkFilterFunc</a> =
-    <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#24">GdkXEvent</a>, <span class="kw-2">*mut </span><a href="#2854-2880">GdkEvent</a>, gpointer) -&gt; <a href="#222">GdkFilterReturn</a>&gt;;
+    <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#24">GdkXEvent</a>, <span class="kw-2">*mut </span><a href="#2854-2880">GdkEvent</a>, gpointer) -&gt; <a href="#222">GdkFilterReturn</a>&gt;;
 <span class="kw">pub type </span><a href="../../gdk_sys/type.GdkSeatGrabPrepareFunc.html">GdkSeatGrabPrepareFunc</a> =
-    <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4096-4098">GdkSeat</a>, <span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, gpointer)&gt;;
-<span class="kw">pub type </span><a href="../../gdk_sys/type.GdkWindowChildFunc.html">GdkWindowChildFunc</a> = <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, gpointer) -&gt; gboolean&gt;;
+    <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4096-4098">GdkSeat</a>, <span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, gpointer)&gt;;
+<span class="kw">pub type </span><a href="../../gdk_sys/type.GdkWindowChildFunc.html">GdkWindowChildFunc</a> = <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, gpointer) -&gt; gboolean&gt;;
 <span class="kw">pub type </span><a href="../../gdk_sys/type.GdkWindowInvalidateHandlerFunc.html">GdkWindowInvalidateHandlerFunc</a> =
-    <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, <span class="kw-2">*mut </span>cairo::cairo_region_t)&gt;;
+    <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, <span class="kw-2">*mut </span>cairo::cairo_region_t)&gt;;
 
 <span class="comment">// Records
 </span><span class="attr">#[repr(C)]
@@ -8810,11 +8811,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#2935-2940">GdkColor</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#2943">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkColor @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;pixel&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#2943">self</a>.pixel)
-            .field(<span class="string">&quot;red&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#2943">self</a>.red)
-            .field(<span class="string">&quot;green&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#2943">self</a>.green)
-            .field(<span class="string">&quot;blue&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#2943">self</a>.blue)
+        <a href="#2943">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkColor @ {self:p}"</span>))
+            .field(<span class="string">"pixel"</span>, <span class="kw-2">&amp;</span><a class="self" href="#2943">self</a>.pixel)
+            .field(<span class="string">"red"</span>, <span class="kw-2">&amp;</span><a class="self" href="#2943">self</a>.red)
+            .field(<span class="string">"green"</span>, <span class="kw-2">&amp;</span><a class="self" href="#2943">self</a>.green)
+            .field(<span class="string">"blue"</span>, <span class="kw-2">&amp;</span><a class="self" href="#2943">self</a>.blue)
             .finish()
     }
 }
@@ -8845,10 +8846,10 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#2971-2975">GdkEventAny</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#2978">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventAny @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#2978">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#2978">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#2978">self</a>.send_event)
+        <a href="#2978">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventAny @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#2978">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#2978">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#2978">self</a>.send_event)
             .finish()
     }
 }
@@ -8872,19 +8873,19 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#2989-3002">GdkEventButton</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3005">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventButton @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.time)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.y)
-            .field(<span class="string">&quot;axes&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.axes)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.state)
-            .field(<span class="string">&quot;button&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.button)
-            .field(<span class="string">&quot;device&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.device)
-            .field(<span class="string">&quot;x_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.x_root)
-            .field(<span class="string">&quot;y_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.y_root)
+        <a href="#3005">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventButton @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.time)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.y)
+            .field(<span class="string">"axes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.axes)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.state)
+            .field(<span class="string">"button"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.button)
+            .field(<span class="string">"device"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.device)
+            .field(<span class="string">"x_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.x_root)
+            .field(<span class="string">"y_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3005">self</a>.y_root)
             .finish()
     }
 }
@@ -8903,14 +8904,14 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3025-3033">GdkEventConfigure</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3036">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventConfigure @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.send_event)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.y)
-            .field(<span class="string">&quot;width&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.width)
-            .field(<span class="string">&quot;height&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.height)
+        <a href="#3036">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventConfigure @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.send_event)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.y)
+            .field(<span class="string">"width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.width)
+            .field(<span class="string">"height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3036">self</a>.height)
             .finish()
     }
 }
@@ -8935,20 +8936,20 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3051-3065">GdkEventCrossing</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3068">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventCrossing @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.send_event)
-            .field(<span class="string">&quot;subwindow&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.subwindow)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.time)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.y)
-            .field(<span class="string">&quot;x_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.x_root)
-            .field(<span class="string">&quot;y_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.y_root)
-            .field(<span class="string">&quot;mode&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.mode)
-            .field(<span class="string">&quot;detail&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.detail)
-            .field(<span class="string">&quot;focus&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.focus)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.state)
+        <a href="#3068">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventCrossing @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.send_event)
+            .field(<span class="string">"subwindow"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.subwindow)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.time)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.y)
+            .field(<span class="string">"x_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.x_root)
+            .field(<span class="string">"y_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.y_root)
+            .field(<span class="string">"mode"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.mode)
+            .field(<span class="string">"detail"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.detail)
+            .field(<span class="string">"focus"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.focus)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3068">self</a>.state)
             .finish()
     }
 }
@@ -8967,14 +8968,14 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3089-3097">GdkEventDND</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3100">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventDND @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.send_event)
-            .field(<span class="string">&quot;context&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.context)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.time)
-            .field(<span class="string">&quot;x_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.x_root)
-            .field(<span class="string">&quot;y_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.y_root)
+        <a href="#3100">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventDND @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.send_event)
+            .field(<span class="string">"context"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.context)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.time)
+            .field(<span class="string">"x_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.x_root)
+            .field(<span class="string">"y_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3100">self</a>.y_root)
             .finish()
     }
 }
@@ -8992,13 +8993,13 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3115-3122">GdkEventExpose</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3125">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventExpose @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.send_event)
-            .field(<span class="string">&quot;area&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.area)
-            .field(<span class="string">&quot;region&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.region)
-            .field(<span class="string">&quot;count&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.count)
+        <a href="#3125">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventExpose @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.send_event)
+            .field(<span class="string">"area"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.area)
+            .field(<span class="string">"region"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.region)
+            .field(<span class="string">"count"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3125">self</a>.count)
             .finish()
     }
 }
@@ -9014,11 +9015,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3139-3144">GdkEventFocus</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3147">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventFocus @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3147">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3147">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3147">self</a>.send_event)
-            .field(<span class="string">&quot;in_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3147">self</a>.in_)
+        <a href="#3147">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventFocus @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3147">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3147">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3147">self</a>.send_event)
+            .field(<span class="string">"in_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3147">self</a>.in_)
             .finish()
     }
 }
@@ -9036,13 +9037,13 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3159-3166">GdkEventGrabBroken</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3169">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventGrabBroken @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.send_event)
-            .field(<span class="string">&quot;keyboard&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.keyboard)
-            .field(<span class="string">&quot;implicit&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.implicit)
-            .field(<span class="string">&quot;grab_window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.grab_window)
+        <a href="#3169">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventGrabBroken @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.send_event)
+            .field(<span class="string">"keyboard"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.keyboard)
+            .field(<span class="string">"implicit"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.implicit)
+            .field(<span class="string">"grab_window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3169">self</a>.grab_window)
             .finish()
     }
 }
@@ -9065,18 +9066,18 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3183-3195">GdkEventKey</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3198">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventKey @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.time)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.state)
-            .field(<span class="string">&quot;keyval&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.keyval)
-            .field(<span class="string">&quot;length&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.length)
-            .field(<span class="string">&quot;string&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.string)
-            .field(<span class="string">&quot;hardware_keycode&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.hardware_keycode)
-            .field(<span class="string">&quot;group&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.group)
-            .field(<span class="string">&quot;is_modifier&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.is_modifier)
+        <a href="#3198">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventKey @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.time)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.state)
+            .field(<span class="string">"keyval"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.keyval)
+            .field(<span class="string">"length"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.length)
+            .field(<span class="string">"string"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.string)
+            .field(<span class="string">"hardware_keycode"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.hardware_keycode)
+            .field(<span class="string">"group"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.group)
+            .field(<span class="string">"is_modifier"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3198">self</a>.is_modifier)
             .finish()
     }
 }
@@ -9100,19 +9101,19 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3217-3230">GdkEventMotion</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3233">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventMotion @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.time)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.y)
-            .field(<span class="string">&quot;axes&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.axes)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.state)
-            .field(<span class="string">&quot;is_hint&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.is_hint)
-            .field(<span class="string">&quot;device&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.device)
-            .field(<span class="string">&quot;x_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.x_root)
-            .field(<span class="string">&quot;y_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.y_root)
+        <a href="#3233">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventMotion @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.time)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.y)
+            .field(<span class="string">"axes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.axes)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.state)
+            .field(<span class="string">"is_hint"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.is_hint)
+            .field(<span class="string">"device"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.device)
+            .field(<span class="string">"x_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.x_root)
+            .field(<span class="string">"y_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3233">self</a>.y_root)
             .finish()
     }
 }
@@ -9132,15 +9133,15 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3253-3262">GdkEventOwnerChange</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3265">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventOwnerChange @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.send_event)
-            .field(<span class="string">&quot;owner&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.owner)
-            .field(<span class="string">&quot;reason&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.reason)
-            .field(<span class="string">&quot;selection&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.selection)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.time)
-            .field(<span class="string">&quot;selection_time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.selection_time)
+        <a href="#3265">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventOwnerChange @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.send_event)
+            .field(<span class="string">"owner"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.owner)
+            .field(<span class="string">"reason"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.reason)
+            .field(<span class="string">"selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.selection)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.time)
+            .field(<span class="string">"selection_time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3265">self</a>.selection_time)
             .finish()
     }
 }
@@ -9160,15 +9161,15 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3281-3290">GdkEventPadAxis</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3293">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventPadAxis @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.time)
-            .field(<span class="string">&quot;group&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.group)
-            .field(<span class="string">&quot;index&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.index)
-            .field(<span class="string">&quot;mode&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.mode)
-            .field(<span class="string">&quot;value&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.value)
+        <a href="#3293">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventPadAxis @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.time)
+            .field(<span class="string">"group"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.group)
+            .field(<span class="string">"index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.index)
+            .field(<span class="string">"mode"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.mode)
+            .field(<span class="string">"value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3293">self</a>.value)
             .finish()
     }
 }
@@ -9187,14 +9188,14 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3309-3317">GdkEventPadButton</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3320">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventPadButton @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.time)
-            .field(<span class="string">&quot;group&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.group)
-            .field(<span class="string">&quot;button&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.button)
-            .field(<span class="string">&quot;mode&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.mode)
+        <a href="#3320">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventPadButton @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.time)
+            .field(<span class="string">"group"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.group)
+            .field(<span class="string">"button"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.button)
+            .field(<span class="string">"mode"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3320">self</a>.mode)
             .finish()
     }
 }
@@ -9212,13 +9213,13 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3335-3342">GdkEventPadGroupMode</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3345">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventPadGroupMode @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.time)
-            .field(<span class="string">&quot;group&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.group)
-            .field(<span class="string">&quot;mode&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.mode)
+        <a href="#3345">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventPadGroupMode @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.time)
+            .field(<span class="string">"group"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.group)
+            .field(<span class="string">"mode"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3345">self</a>.mode)
             .finish()
     }
 }
@@ -9236,13 +9237,13 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3359-3366">GdkEventProperty</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3369">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventProperty @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.send_event)
-            .field(<span class="string">&quot;atom&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.atom)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.time)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.state)
+        <a href="#3369">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventProperty @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.send_event)
+            .field(<span class="string">"atom"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.atom)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.time)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3369">self</a>.state)
             .finish()
     }
 }
@@ -9259,12 +9260,12 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3383-3389">GdkEventProximity</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3392">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventProximity @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.time)
-            .field(<span class="string">&quot;device&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.device)
+        <a href="#3392">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventProximity @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.time)
+            .field(<span class="string">"device"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3392">self</a>.device)
             .finish()
     }
 }
@@ -9290,21 +9291,21 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3405-3420">GdkEventScroll</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3423">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventScroll @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.time)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.y)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.state)
-            .field(<span class="string">&quot;direction&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.direction)
-            .field(<span class="string">&quot;device&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.device)
-            .field(<span class="string">&quot;x_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.x_root)
-            .field(<span class="string">&quot;y_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.y_root)
-            .field(<span class="string">&quot;delta_x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.delta_x)
-            .field(<span class="string">&quot;delta_y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.delta_y)
-            .field(<span class="string">&quot;is_stop&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.is_stop)
+        <a href="#3423">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventScroll @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.time)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.y)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.state)
+            .field(<span class="string">"direction"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.direction)
+            .field(<span class="string">"device"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.device)
+            .field(<span class="string">"x_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.x_root)
+            .field(<span class="string">"y_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.y_root)
+            .field(<span class="string">"delta_x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.delta_x)
+            .field(<span class="string">"delta_y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.delta_y)
+            .field(<span class="string">"is_stop"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3423">self</a>.is_stop)
             .finish()
     }
 }
@@ -9324,15 +9325,15 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3445-3454">GdkEventSelection</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3457">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventSelection @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.send_event)
-            .field(<span class="string">&quot;selection&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.selection)
-            .field(<span class="string">&quot;target&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.target)
-            .field(<span class="string">&quot;property&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.property)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.time)
-            .field(<span class="string">&quot;requestor&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.requestor)
+        <a href="#3457">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventSelection @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.send_event)
+            .field(<span class="string">"selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.selection)
+            .field(<span class="string">"target"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.target)
+            .field(<span class="string">"property"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.property)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.time)
+            .field(<span class="string">"requestor"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3457">self</a>.requestor)
             .finish()
     }
 }
@@ -9345,7 +9346,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3472-3475">GdkEventSequence</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3478">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventSequence @ {self:p}&quot;</span>))
+        <a href="#3478">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventSequence @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9362,12 +9363,12 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3486-3492">GdkEventSetting</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3495">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventSetting @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.send_event)
-            .field(<span class="string">&quot;action&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.action)
-            .field(<span class="string">&quot;name&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.name)
+        <a href="#3495">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventSetting @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.send_event)
+            .field(<span class="string">"action"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.action)
+            .field(<span class="string">"name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3495">self</a>.name)
             .finish()
     }
 }
@@ -9392,20 +9393,20 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3508-3522">GdkEventTouch</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3525">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventTouch @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.send_event)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.time)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.y)
-            .field(<span class="string">&quot;axes&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.axes)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.state)
-            .field(<span class="string">&quot;sequence&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.sequence)
-            .field(<span class="string">&quot;emulating_pointer&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.emulating_pointer)
-            .field(<span class="string">&quot;device&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.device)
-            .field(<span class="string">&quot;x_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.x_root)
-            .field(<span class="string">&quot;y_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.y_root)
+        <a href="#3525">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventTouch @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.send_event)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.time)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.y)
+            .field(<span class="string">"axes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.axes)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.state)
+            .field(<span class="string">"sequence"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.sequence)
+            .field(<span class="string">"emulating_pointer"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.emulating_pointer)
+            .field(<span class="string">"device"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.device)
+            .field(<span class="string">"x_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.x_root)
+            .field(<span class="string">"y_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3525">self</a>.y_root)
             .finish()
     }
 }
@@ -9432,22 +9433,22 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3546-3562">GdkEventTouchpadPinch</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3565">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventTouchpadPinch @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.send_event)
-            .field(<span class="string">&quot;phase&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.phase)
-            .field(<span class="string">&quot;n_fingers&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.n_fingers)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.time)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.y)
-            .field(<span class="string">&quot;dx&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.dx)
-            .field(<span class="string">&quot;dy&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.dy)
-            .field(<span class="string">&quot;angle_delta&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.angle_delta)
-            .field(<span class="string">&quot;scale&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.scale)
-            .field(<span class="string">&quot;x_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.x_root)
-            .field(<span class="string">&quot;y_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.y_root)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.state)
+        <a href="#3565">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventTouchpadPinch @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.send_event)
+            .field(<span class="string">"phase"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.phase)
+            .field(<span class="string">"n_fingers"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.n_fingers)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.time)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.y)
+            .field(<span class="string">"dx"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.dx)
+            .field(<span class="string">"dy"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.dy)
+            .field(<span class="string">"angle_delta"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.angle_delta)
+            .field(<span class="string">"scale"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.scale)
+            .field(<span class="string">"x_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.x_root)
+            .field(<span class="string">"y_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.y_root)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3565">self</a>.state)
             .finish()
     }
 }
@@ -9472,20 +9473,20 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3588-3602">GdkEventTouchpadSwipe</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3605">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventTouchpadSwipe @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.send_event)
-            .field(<span class="string">&quot;phase&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.phase)
-            .field(<span class="string">&quot;n_fingers&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.n_fingers)
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.time)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.y)
-            .field(<span class="string">&quot;dx&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.dx)
-            .field(<span class="string">&quot;dy&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.dy)
-            .field(<span class="string">&quot;x_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.x_root)
-            .field(<span class="string">&quot;y_root&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.y_root)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.state)
+        <a href="#3605">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventTouchpadSwipe @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.send_event)
+            .field(<span class="string">"phase"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.phase)
+            .field(<span class="string">"n_fingers"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.n_fingers)
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.time)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.y)
+            .field(<span class="string">"dx"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.dx)
+            .field(<span class="string">"dy"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.dy)
+            .field(<span class="string">"x_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.x_root)
+            .field(<span class="string">"y_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.y_root)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3605">self</a>.state)
             .finish()
     }
 }
@@ -9501,11 +9502,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3626-3631">GdkEventVisibility</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3634">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventVisibility @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3634">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3634">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3634">self</a>.send_event)
-            .field(<span class="string">&quot;state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3634">self</a>.state)
+        <a href="#3634">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventVisibility @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3634">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3634">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3634">self</a>.send_event)
+            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3634">self</a>.state)
             .finish()
     }
 }
@@ -9522,12 +9523,12 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3646-3652">GdkEventWindowState</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3655">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkEventWindowState @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;type_&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.type_)
-            .field(<span class="string">&quot;window&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.window)
-            .field(<span class="string">&quot;send_event&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.send_event)
-            .field(<span class="string">&quot;changed_mask&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.changed_mask)
-            .field(<span class="string">&quot;new_window_state&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.new_window_state)
+        <a href="#3655">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkEventWindowState @ {self:p}"</span>))
+            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.type_)
+            .field(<span class="string">"window"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.window)
+            .field(<span class="string">"send_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.send_event)
+            .field(<span class="string">"changed_mask"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.changed_mask)
+            .field(<span class="string">"new_window_state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3655">self</a>.new_window_state)
             .finish()
     }
 }
@@ -9556,7 +9557,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3683-3686">GdkFrameTimings</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3689">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkFrameTimings @ {self:p}&quot;</span>))
+        <a href="#3689">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkFrameTimings @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9579,18 +9580,18 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3697-3709">GdkGeometry</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3712">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkGeometry @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;min_width&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.min_width)
-            .field(<span class="string">&quot;min_height&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.min_height)
-            .field(<span class="string">&quot;max_width&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.max_width)
-            .field(<span class="string">&quot;max_height&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.max_height)
-            .field(<span class="string">&quot;base_width&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.base_width)
-            .field(<span class="string">&quot;base_height&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.base_height)
-            .field(<span class="string">&quot;width_inc&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.width_inc)
-            .field(<span class="string">&quot;height_inc&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.height_inc)
-            .field(<span class="string">&quot;min_aspect&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.min_aspect)
-            .field(<span class="string">&quot;max_aspect&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.max_aspect)
-            .field(<span class="string">&quot;win_gravity&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.win_gravity)
+        <a href="#3712">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkGeometry @ {self:p}"</span>))
+            .field(<span class="string">"min_width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.min_width)
+            .field(<span class="string">"min_height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.min_height)
+            .field(<span class="string">"max_width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.max_width)
+            .field(<span class="string">"max_height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.max_height)
+            .field(<span class="string">"base_width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.base_width)
+            .field(<span class="string">"base_height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.base_height)
+            .field(<span class="string">"width_inc"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.width_inc)
+            .field(<span class="string">"height_inc"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.height_inc)
+            .field(<span class="string">"min_aspect"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.min_aspect)
+            .field(<span class="string">"max_aspect"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.max_aspect)
+            .field(<span class="string">"win_gravity"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3712">self</a>.win_gravity)
             .finish()
     }
 }
@@ -9605,10 +9606,10 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3731-3735">GdkKeymapKey</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3738">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkKeymapKey @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;keycode&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3738">self</a>.keycode)
-            .field(<span class="string">&quot;group&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3738">self</a>.group)
-            .field(<span class="string">&quot;level&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3738">self</a>.level)
+        <a href="#3738">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkKeymapKey @ {self:p}"</span>))
+            .field(<span class="string">"keycode"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3738">self</a>.keycode)
+            .field(<span class="string">"group"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3738">self</a>.group)
+            .field(<span class="string">"level"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3738">self</a>.level)
             .finish()
     }
 }
@@ -9630,9 +9631,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3757-3760">GdkPoint</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3763">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkPoint @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3763">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3763">self</a>.y)
+        <a href="#3763">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkPoint @ {self:p}"</span>))
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3763">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3763">self</a>.y)
             .finish()
     }
 }
@@ -9648,11 +9649,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3773-3778">GdkRGBA</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3781">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkRGBA @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;red&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3781">self</a>.red)
-            .field(<span class="string">&quot;green&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3781">self</a>.green)
-            .field(<span class="string">&quot;blue&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3781">self</a>.blue)
-            .field(<span class="string">&quot;alpha&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3781">self</a>.alpha)
+        <a href="#3781">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkRGBA @ {self:p}"</span>))
+            .field(<span class="string">"red"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3781">self</a>.red)
+            .field(<span class="string">"green"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3781">self</a>.green)
+            .field(<span class="string">"blue"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3781">self</a>.blue)
+            .field(<span class="string">"alpha"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3781">self</a>.alpha)
             .finish()
     }
 }
@@ -9668,11 +9669,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3793-3798">GdkRectangle</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3801">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkRectangle @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3801">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3801">self</a>.y)
-            .field(<span class="string">&quot;width&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3801">self</a>.width)
-            .field(<span class="string">&quot;height&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3801">self</a>.height)
+        <a href="#3801">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkRectangle @ {self:p}"</span>))
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3801">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3801">self</a>.y)
+            .field(<span class="string">"width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3801">self</a>.width)
+            .field(<span class="string">"height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3801">self</a>.height)
             .finish()
     }
 }
@@ -9686,8 +9687,8 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3813-3816">GdkTimeCoord</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3819">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkTimeCoord @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;time&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3819">self</a>.time)
+        <a href="#3819">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkTimeCoord @ {self:p}"</span>))
+            .field(<span class="string">"time"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3819">self</a>.time)
             .finish()
     }
 }
@@ -9713,21 +9714,21 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3828-3843">GdkWindowAttr</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3846">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkWindowAttr @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;title&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.title)
-            .field(<span class="string">&quot;event_mask&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.event_mask)
-            .field(<span class="string">&quot;x&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.x)
-            .field(<span class="string">&quot;y&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.y)
-            .field(<span class="string">&quot;width&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.width)
-            .field(<span class="string">&quot;height&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.height)
-            .field(<span class="string">&quot;wclass&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.wclass)
-            .field(<span class="string">&quot;visual&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.visual)
-            .field(<span class="string">&quot;window_type&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.window_type)
-            .field(<span class="string">&quot;cursor&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.cursor)
-            .field(<span class="string">&quot;wmclass_name&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.wmclass_name)
-            .field(<span class="string">&quot;wmclass_class&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.wmclass_class)
-            .field(<span class="string">&quot;override_redirect&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.override_redirect)
-            .field(<span class="string">&quot;type_hint&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.type_hint)
+        <a href="#3846">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkWindowAttr @ {self:p}"</span>))
+            .field(<span class="string">"title"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.title)
+            .field(<span class="string">"event_mask"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.event_mask)
+            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.x)
+            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.y)
+            .field(<span class="string">"width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.width)
+            .field(<span class="string">"height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.height)
+            .field(<span class="string">"wclass"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.wclass)
+            .field(<span class="string">"visual"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.visual)
+            .field(<span class="string">"window_type"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.window_type)
+            .field(<span class="string">"cursor"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.cursor)
+            .field(<span class="string">"wmclass_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.wmclass_name)
+            .field(<span class="string">"wmclass_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.wmclass_class)
+            .field(<span class="string">"override_redirect"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.override_redirect)
+            .field(<span class="string">"type_hint"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3846">self</a>.type_hint)
             .finish()
     }
 }
@@ -9737,41 +9738,41 @@
 </span><span class="kw">pub struct </span><a href="../../gdk_sys/struct.GdkWindowClass.html">GdkWindowClass</a> {
     <span class="kw">pub </span>parent_class: gobject::GObjectClass,
     <span class="kw">pub </span>pick_embedded_child:
-        <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, c_double, c_double) -&gt; <span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>&gt;,
+        <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, c_double, c_double) -&gt; <span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>&gt;,
     <span class="kw">pub </span>to_embedder: <span class="prelude-ty">Option</span>&lt;
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, c_double, c_double, <span class="kw-2">*mut </span>c_double, <span class="kw-2">*mut </span>c_double),
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, c_double, c_double, <span class="kw-2">*mut </span>c_double, <span class="kw-2">*mut </span>c_double),
     &gt;,
     <span class="kw">pub </span>from_embedder: <span class="prelude-ty">Option</span>&lt;
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, c_double, c_double, <span class="kw-2">*mut </span>c_double, <span class="kw-2">*mut </span>c_double),
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, c_double, c_double, <span class="kw-2">*mut </span>c_double, <span class="kw-2">*mut </span>c_double),
     &gt;,
     <span class="kw">pub </span>create_surface:
-        <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, c_int, c_int) -&gt; <span class="kw-2">*mut </span>cairo::cairo_surface_t&gt;,
-    <span class="kw">pub </span>_gdk_reserved1: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;,
-    <span class="kw">pub </span>_gdk_reserved2: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;,
-    <span class="kw">pub </span>_gdk_reserved3: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;,
-    <span class="kw">pub </span>_gdk_reserved4: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;,
-    <span class="kw">pub </span>_gdk_reserved5: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;,
-    <span class="kw">pub </span>_gdk_reserved6: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;,
-    <span class="kw">pub </span>_gdk_reserved7: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;,
-    <span class="kw">pub </span>_gdk_reserved8: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;,
+        <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>, c_int, c_int) -&gt; <span class="kw-2">*mut </span>cairo::cairo_surface_t&gt;,
+    <span class="kw">pub </span>_gdk_reserved1: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;,
+    <span class="kw">pub </span>_gdk_reserved2: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;,
+    <span class="kw">pub </span>_gdk_reserved3: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;,
+    <span class="kw">pub </span>_gdk_reserved4: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;,
+    <span class="kw">pub </span>_gdk_reserved5: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;,
+    <span class="kw">pub </span>_gdk_reserved6: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;,
+    <span class="kw">pub </span>_gdk_reserved7: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;,
+    <span class="kw">pub </span>_gdk_reserved8: <span class="prelude-ty">Option</span>&lt;<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;,
 }
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3868-3888">GdkWindowClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3891">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkWindowClass @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;parent_class&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.parent_class)
-            .field(<span class="string">&quot;pick_embedded_child&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.pick_embedded_child)
-            .field(<span class="string">&quot;to_embedder&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.to_embedder)
-            .field(<span class="string">&quot;from_embedder&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.from_embedder)
-            .field(<span class="string">&quot;create_surface&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.create_surface)
-            .field(<span class="string">&quot;_gdk_reserved1&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved1)
-            .field(<span class="string">&quot;_gdk_reserved2&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved2)
-            .field(<span class="string">&quot;_gdk_reserved3&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved3)
-            .field(<span class="string">&quot;_gdk_reserved4&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved4)
-            .field(<span class="string">&quot;_gdk_reserved5&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved5)
-            .field(<span class="string">&quot;_gdk_reserved6&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved6)
-            .field(<span class="string">&quot;_gdk_reserved7&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved7)
-            .field(<span class="string">&quot;_gdk_reserved8&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved8)
+        <a href="#3891">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkWindowClass @ {self:p}"</span>))
+            .field(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.parent_class)
+            .field(<span class="string">"pick_embedded_child"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.pick_embedded_child)
+            .field(<span class="string">"to_embedder"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.to_embedder)
+            .field(<span class="string">"from_embedder"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.from_embedder)
+            .field(<span class="string">"create_surface"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>.create_surface)
+            .field(<span class="string">"_gdk_reserved1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved1)
+            .field(<span class="string">"_gdk_reserved2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved2)
+            .field(<span class="string">"_gdk_reserved3"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved3)
+            .field(<span class="string">"_gdk_reserved4"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved4)
+            .field(<span class="string">"_gdk_reserved5"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved5)
+            .field(<span class="string">"_gdk_reserved6"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved6)
+            .field(<span class="string">"_gdk_reserved7"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved7)
+            .field(<span class="string">"_gdk_reserved8"</span>, <span class="kw-2">&amp;</span><a class="self" href="#3891">self</a>._gdk_reserved8)
             .finish()
     }
 }
@@ -9793,7 +9794,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3920-3923">GdkAppLaunchContext</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3926">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkAppLaunchContext @ {self:p}&quot;</span>))
+        <a href="#3926">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkAppLaunchContext @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9806,7 +9807,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3933-3936">GdkCursor</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3939">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkCursor @ {self:p}&quot;</span>)).finish()
+        <a href="#3939">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkCursor @ {self:p}"</span>)).finish()
     }
 }
 
@@ -9818,7 +9819,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3945-3948">GdkDevice</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3951">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkDevice @ {self:p}&quot;</span>)).finish()
+        <a href="#3951">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkDevice @ {self:p}"</span>)).finish()
     }
 }
 
@@ -9830,7 +9831,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3957-3960">GdkDeviceManager</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3963">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkDeviceManager @ {self:p}&quot;</span>))
+        <a href="#3963">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkDeviceManager @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9843,7 +9844,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3970-3973">GdkDeviceTool</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3976">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkDeviceTool @ {self:p}&quot;</span>))
+        <a href="#3976">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkDeviceTool @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9856,7 +9857,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3983-3986">GdkDisplay</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#3989">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkDisplay @ {self:p}&quot;</span>)).finish()
+        <a href="#3989">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkDisplay @ {self:p}"</span>)).finish()
     }
 }
 
@@ -9868,7 +9869,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#3995-3998">GdkDisplayManager</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4001">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkDisplayManager @ {self:p}&quot;</span>))
+        <a href="#4001">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkDisplayManager @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9881,7 +9882,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4008-4011">GdkDragContext</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4014">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkDragContext @ {self:p}&quot;</span>))
+        <a href="#4014">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkDragContext @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9894,7 +9895,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4021-4024">GdkDrawingContext</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4027">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkDrawingContext @ {self:p}&quot;</span>))
+        <a href="#4027">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkDrawingContext @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9907,7 +9908,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4034-4037">GdkFrameClock</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4040">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkFrameClock @ {self:p}&quot;</span>))
+        <a href="#4040">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkFrameClock @ {self:p}"</span>))
             .finish()
     }
 }
@@ -9920,7 +9921,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4047-4050">GdkGLContext</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4053">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkGLContext @ {self:p}&quot;</span>)).finish()
+        <a href="#4053">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkGLContext @ {self:p}"</span>)).finish()
     }
 }
 
@@ -9932,7 +9933,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4059-4062">GdkKeymap</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4065">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkKeymap @ {self:p}&quot;</span>)).finish()
+        <a href="#4065">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkKeymap @ {self:p}"</span>)).finish()
     }
 }
 
@@ -9944,7 +9945,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4071-4074">GdkMonitor</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4077">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkMonitor @ {self:p}&quot;</span>)).finish()
+        <a href="#4077">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkMonitor @ {self:p}"</span>)).finish()
     }
 }
 
@@ -9956,7 +9957,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4083-4086">GdkScreen</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4089">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkScreen @ {self:p}&quot;</span>)).finish()
+        <a href="#4089">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkScreen @ {self:p}"</span>)).finish()
     }
 }
 
@@ -9968,8 +9969,8 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4096-4098">GdkSeat</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4101">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkSeat @ {self:p}&quot;</span>))
-            .field(<span class="string">&quot;parent_instance&quot;</span>, <span class="kw-2">&amp;</span><a class="self" href="#4101">self</a>.parent_instance)
+        <a href="#4101">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkSeat @ {self:p}"</span>))
+            .field(<span class="string">"parent_instance"</span>, <span class="kw-2">&amp;</span><a class="self" href="#4101">self</a>.parent_instance)
             .finish()
     }
 }
@@ -9982,7 +9983,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4109-4112">GdkVisual</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4115">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkVisual @ {self:p}&quot;</span>)).finish()
+        <a href="#4115">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkVisual @ {self:p}"</span>)).finish()
     }
 }
 
@@ -9994,7 +9995,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4121-4124">GdkWindow</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#4127">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;GdkWindow @ {self:p}&quot;</span>)).finish()
+        <a href="#4127">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"GdkWindow @ {self:p}"</span>)).finish()
     }
 }
 
@@ -10007,12 +10008,12 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#4134-4137">GdkDevicePad</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a class="macro" href="https://doc.rust-lang.org/nightly/core/macro.write.html">write!</a>(<a href="#4140">f</a>, <span class="string">&quot;GdkDevicePad @ {self:p}&quot;</span>)
+        <a class="macro" href="https://doc.rust-lang.org/nightly/core/macro.write.html">write!</a>(<a href="#4140">f</a>, <span class="string">"GdkDevicePad @ {self:p}"</span>)
     }
 }
 
-<span class="attr">#[link(name = <span class="string">&quot;gdk-3&quot;</span>)]
-</span><span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="attr">#[link(name = <span class="string">"gdk-3"</span>)]
+</span><span class="kw">extern </span><span class="string">"C" </span>{
 
     <span class="comment">//=========================================================================
     // GdkAxisUse
@@ -11201,8 +11202,8 @@
         width: c_int,
         height: c_int,
     );
-    <span class="attr">#[cfg(feature = <span class="string">&quot;v3_24&quot;</span>)]
-    #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">&quot;v3_24&quot;</span>)))]
+    <span class="attr">#[cfg(feature = <span class="string">"v3_24"</span>)]
+    #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v3_24"</span>)))]
     </span><span class="kw">pub fn </span>gdk_window_move_to_rect(
         window: <span class="kw-2">*mut </span><a href="#4121-4124">GdkWindow</a>,
         rect: <span class="kw-2">*const </span><a href="#3793-3798">GdkRectangle</a>,

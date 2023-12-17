@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/adjustment.rs`."><title>adjustment.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/adjustment.rs`."><title>adjustment.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -730,12 +731,6 @@
 <a href="#657" id="657">657</a>
 <a href="#658" id="658">658</a>
 <a href="#659" id="659">659</a>
-<a href="#660" id="660">660</a>
-<a href="#661" id="661">661</a>
-<a href="#662" id="662">662</a>
-<a href="#663" id="663">663</a>
-<a href="#664" id="664">664</a>
-<a href="#665" id="665">665</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
@@ -745,7 +740,7 @@
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// The [`Adjustment`][crate::Adjustment] object represents a value which has an associated lower
@@ -818,7 +813,7 @@
     /// # Implements
     ///
     /// [`AdjustmentExt`][trait@crate::prelude::AdjustmentExt], [`trait@glib::ObjectExt`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;GtkAdjustment&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"GtkAdjustment"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.Adjustment.html">Adjustment</a>(Object&lt;<a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>, <a href="../../../gtk_sys/struct.GtkAdjustmentClass.html">ffi::GtkAdjustmentClass</a>&gt;);
 
     <span class="kw">match fn </span>{
@@ -827,7 +822,7 @@
 }
 
 <span class="kw">impl </span><a href="#12-89">Adjustment</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#12-89">Adjustment</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#12-89">Adjustment</a>&gt; = <span class="prelude-val">None</span>;
 
     <span class="doccomment">/// Creates a new [`Adjustment`][crate::Adjustment].
     /// ## `value`
@@ -846,7 +841,7 @@
     /// # Returns
     ///
     /// a new [`Adjustment`][crate::Adjustment]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_new&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_new"</span>)]
     </span><span class="kw">pub fn </span>new(
         value: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
         lower: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
@@ -887,9 +882,9 @@
 </span><span class="doccomment">/// A [builder-pattern] type to construct [`Adjustment`] objects.
 ///
 /// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html
-</span><span class="attr">#[must_use = <span class="string">&quot;The builder must be built to be used&quot;</span>]
+</span><span class="attr">#[must_use = <span class="string">"The builder must be built to be used"</span>]
 </span><span class="kw">pub struct </span><a href="../../../gtk/builders/struct.AdjustmentBuilder.html">AdjustmentBuilder</a> {
-    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">&#39;static</span>, <a href="#12-89">Adjustment</a>&gt;,
+    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">'static</span>, <a href="#12-89">Adjustment</a>&gt;,
 }
 
 <span class="kw">impl </span><a href="#153-155">AdjustmentBuilder</a> {
@@ -902,14 +897,14 @@
     <span class="doccomment">/// The minimum value of the adjustment.
     </span><span class="kw">pub fn </span>lower(<span class="self">self</span>, lower: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#165">self</a>.builder.property(<span class="string">&quot;lower&quot;</span>, <a href="#165">lower</a>),
+            builder: <a class="self" href="#165">self</a>.builder.property(<span class="string">"lower"</span>, <a href="#165">lower</a>),
         }
     }
 
     <span class="doccomment">/// The page increment of the adjustment.
     </span><span class="kw">pub fn </span>page_increment(<span class="self">self</span>, page_increment: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#172">self</a>.builder.property(<span class="string">&quot;page-increment&quot;</span>, <a href="#172">page_increment</a>),
+            builder: <a class="self" href="#172">self</a>.builder.property(<span class="string">"page-increment"</span>, <a href="#172">page_increment</a>),
         }
     }
 
@@ -919,14 +914,14 @@
     /// [`SpinButton`][crate::SpinButton].
     </span><span class="kw">pub fn </span>page_size(<span class="self">self</span>, page_size: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#182">self</a>.builder.property(<span class="string">&quot;page-size&quot;</span>, <a href="#182">page_size</a>),
+            builder: <a class="self" href="#182">self</a>.builder.property(<span class="string">"page-size"</span>, <a href="#182">page_size</a>),
         }
     }
 
     <span class="doccomment">/// The step increment of the adjustment.
     </span><span class="kw">pub fn </span>step_increment(<span class="self">self</span>, step_increment: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#189">self</a>.builder.property(<span class="string">&quot;step-increment&quot;</span>, <a href="#189">step_increment</a>),
+            builder: <a class="self" href="#189">self</a>.builder.property(<span class="string">"step-increment"</span>, <a href="#189">step_increment</a>),
         }
     }
 
@@ -936,20 +931,20 @@
     /// property is nonzero.
     </span><span class="kw">pub fn </span>upper(<span class="self">self</span>, upper: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#199">self</a>.builder.property(<span class="string">&quot;upper&quot;</span>, <a href="#199">upper</a>),
+            builder: <a class="self" href="#199">self</a>.builder.property(<span class="string">"upper"</span>, <a href="#199">upper</a>),
         }
     }
 
     <span class="doccomment">/// The value of the adjustment.
     </span><span class="kw">pub fn </span>value(<span class="self">self</span>, value: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#206">self</a>.builder.property(<span class="string">&quot;value&quot;</span>, <a href="#206">value</a>),
+            builder: <a class="self" href="#206">self</a>.builder.property(<span class="string">"value"</span>, <a href="#206">value</a>),
         }
     }
 
     <span class="comment">// rustdoc-stripper-ignore-next
     </span><span class="doccomment">/// Build the [`Adjustment`].
-    </span><span class="attr">#[must_use = <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]
+    </span><span class="attr">#[must_use = <span class="string">"Building the object from the builder is usually expensive and is not expected to have side effects"</span>]
     </span><span class="kw">pub fn </span>build(<span class="self">self</span>) -&gt; <a href="#12-89">Adjustment</a> {
         <a class="self" href="#215">self</a>.builder.build()
     }
@@ -965,7 +960,7 @@
 /// # Implementors
 ///
 /// [`Adjustment`][struct@crate::Adjustment]
-</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.AdjustmentExt.html">AdjustmentExt</a>: IsA&lt;<a href="#12-89">Adjustment</a>&gt; + <a href="#221">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.AdjustmentExt.html">AdjustmentExt</a>: IsA&lt;<a href="#12-89">Adjustment</a>&gt; + <a href="#221">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Updates the [`value`][struct@crate::Adjustment#value] property to ensure that the range
     /// between `lower` and `upper` is in the current page (i.e. between
     /// [`value`][struct@crate::Adjustment#value] and [`value`][struct@crate::Adjustment#value] + [`page-size`][struct@crate::Adjustment#page-size]).
@@ -977,7 +972,7 @@
     /// the lower value
     /// ## `upper`
     /// the upper value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_clamp_page&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_clamp_page"</span>)]
     </span><span class="kw">fn </span>clamp_page(<span class="kw-2">&amp;</span><span class="self">self</span>, lower: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, upper: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_adjustment_clamp_page(<a class="self" href="#243">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#243">lower</a>, <a href="#243">upper</a>);
@@ -1002,7 +997,7 @@
     /// the new page increment
     /// ## `page_size`
     /// the new page size
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_configure&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_configure"</span>)]
     </span><span class="kw">fn </span>configure(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         value: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
@@ -1030,8 +1025,8 @@
     /// # Returns
     ///
     /// The current minimum value of the adjustment
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_get_lower&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_lower&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_get_lower"</span>)]
+    #[doc(alias = <span class="string">"get_lower"</span>)]
     </span><span class="kw">fn </span>lower(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_adjustment_get_lower(<a class="self" href="#297">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1041,8 +1036,8 @@
     /// # Returns
     ///
     /// the minimum increment of `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_get_minimum_increment&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_minimum_increment&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_get_minimum_increment"</span>)]
+    #[doc(alias = <span class="string">"get_minimum_increment"</span>)]
     </span><span class="kw">fn </span>minimum_increment(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_adjustment_get_minimum_increment(<a class="self" href="#308">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1052,8 +1047,8 @@
     /// # Returns
     ///
     /// The current page increment of the adjustment
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_get_page_increment&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_page_increment&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_get_page_increment"</span>)]
+    #[doc(alias = <span class="string">"get_page_increment"</span>)]
     </span><span class="kw">fn </span>page_increment(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_adjustment_get_page_increment(<a class="self" href="#319">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1063,8 +1058,8 @@
     /// # Returns
     ///
     /// The current page size of the adjustment
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_get_page_size&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_page_size&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_get_page_size"</span>)]
+    #[doc(alias = <span class="string">"get_page_size"</span>)]
     </span><span class="kw">fn </span>page_size(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_adjustment_get_page_size(<a class="self" href="#330">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1074,8 +1069,8 @@
     /// # Returns
     ///
     /// The current step increment of the adjustment.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_get_step_increment&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_step_increment&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_get_step_increment"</span>)]
+    #[doc(alias = <span class="string">"get_step_increment"</span>)]
     </span><span class="kw">fn </span>step_increment(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_adjustment_get_step_increment(<a class="self" href="#341">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1085,8 +1080,8 @@
     /// # Returns
     ///
     /// The current maximum value of the adjustment
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_get_upper&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_upper&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_get_upper"</span>)]
+    #[doc(alias = <span class="string">"get_upper"</span>)]
     </span><span class="kw">fn </span>upper(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_adjustment_get_upper(<a class="self" href="#352">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1097,8 +1092,8 @@
     /// # Returns
     ///
     /// The current value of the adjustment
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_get_value&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_get_value"</span>)]
+    #[doc(alias = <span class="string">"get_value"</span>)]
     </span><span class="kw">fn </span>value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_adjustment_get_value(<a class="self" href="#364">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1118,7 +1113,7 @@
     /// of compressing [`changed`][struct@crate::Adjustment#changed] emissions.
     /// ## `lower`
     /// the new minimum value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_set_lower&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_set_lower"</span>)]
     </span><span class="kw">fn </span>set_lower(<span class="kw-2">&amp;</span><span class="self">self</span>, lower: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_adjustment_set_lower(<a class="self" href="#384">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#384">lower</a>);
@@ -1132,7 +1127,7 @@
     /// multiple adjustment properties.
     /// ## `page_increment`
     /// the new page increment
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_set_page_increment&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_set_page_increment"</span>)]
     </span><span class="kw">fn </span>set_page_increment(<span class="kw-2">&amp;</span><span class="self">self</span>, page_increment: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_adjustment_set_page_increment(<a class="self" href="#398">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#398">page_increment</a>);
@@ -1146,7 +1141,7 @@
     /// multiple adjustment properties.
     /// ## `page_size`
     /// the new page size
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_set_page_size&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_set_page_size"</span>)]
     </span><span class="kw">fn </span>set_page_size(<span class="kw-2">&amp;</span><span class="self">self</span>, page_size: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_adjustment_set_page_size(<a class="self" href="#412">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#412">page_size</a>);
@@ -1160,7 +1155,7 @@
     /// multiple adjustment properties.
     /// ## `step_increment`
     /// the new step increment
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_set_step_increment&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_set_step_increment"</span>)]
     </span><span class="kw">fn </span>set_step_increment(<span class="kw-2">&amp;</span><span class="self">self</span>, step_increment: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_adjustment_set_step_increment(<a class="self" href="#426">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#426">step_increment</a>);
@@ -1177,7 +1172,7 @@
     /// multiple adjustment properties.
     /// ## `upper`
     /// the new maximum value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_set_upper&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_set_upper"</span>)]
     </span><span class="kw">fn </span>set_upper(<span class="kw-2">&amp;</span><span class="self">self</span>, upper: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_adjustment_set_upper(<a class="self" href="#443">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#443">upper</a>);
@@ -1192,7 +1187,7 @@
     /// [`upper`][struct@crate::Adjustment#upper] - [`page-size`][struct@crate::Adjustment#page-size].
     /// ## `value`
     /// the new value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_adjustment_set_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_adjustment_set_value"</span>)]
     </span><span class="kw">fn </span>set_value(<span class="kw-2">&amp;</span><span class="self">self</span>, value: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_adjustment_set_value(<a class="self" href="#458">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#458">value</a>);
@@ -1201,9 +1196,9 @@
 
     <span class="doccomment">/// Emitted when one or more of the [`Adjustment`][crate::Adjustment] properties have been
     /// changed, other than the [`value`][struct@crate::Adjustment#value] property.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>changed_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"changed"</span>)]
+    </span><span class="kw">fn </span>connect_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>changed_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>,
             f: glib::ffi::gpointer,
         ) {
@@ -1214,8 +1209,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#467">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#467">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#476">f</a>),
@@ -1224,9 +1219,9 @@
     }
 
     <span class="doccomment">/// Emitted when the [`value`][struct@crate::Adjustment#value] property has been changed.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;value-changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_value_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>value_changed_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"value-changed"</span>)]
+    </span><span class="kw">fn </span>connect_value_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>value_changed_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>,
             f: glib::ffi::gpointer,
         ) {
@@ -1237,8 +1232,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#490">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#490">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;value-changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"value-changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     value_changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#499">f</a>),
@@ -1246,9 +1241,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;lower&quot;</span>)]
-    </span><span class="kw">fn </span>connect_lower_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_lower_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"lower"</span>)]
+    </span><span class="kw">fn </span>connect_lower_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_lower_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -1260,8 +1255,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#512">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#512">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::lower\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::lower\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_lower_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#522">f</a>),
@@ -1269,11 +1264,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;page-increment&quot;</span>)]
-    </span><span class="kw">fn </span>connect_page_increment_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_page_increment_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"page-increment"</span>)]
+    </span><span class="kw">fn </span>connect_page_increment_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_page_increment_trampoline&lt;
             P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1286,8 +1281,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#535">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#535">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::page-increment\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::page-increment\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_page_increment_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#548">f</a>),
@@ -1295,11 +1290,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;page-size&quot;</span>)]
-    </span><span class="kw">fn </span>connect_page_size_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_page_size_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"page-size"</span>)]
+    </span><span class="kw">fn </span>connect_page_size_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_page_size_trampoline&lt;
             P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1312,8 +1307,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#561">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#561">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::page-size\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::page-size\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_page_size_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#574">f</a>),
@@ -1321,11 +1316,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;step-increment&quot;</span>)]
-    </span><span class="kw">fn </span>connect_step_increment_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_step_increment_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"step-increment"</span>)]
+    </span><span class="kw">fn </span>connect_step_increment_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_step_increment_trampoline&lt;
             P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1338,8 +1333,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#587">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#587">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::step-increment\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::step-increment\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_step_increment_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#600">f</a>),
@@ -1347,9 +1342,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;upper&quot;</span>)]
-    </span><span class="kw">fn </span>connect_upper_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_upper_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"upper"</span>)]
+    </span><span class="kw">fn </span>connect_upper_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_upper_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -1361,8 +1356,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#613">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#613">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::upper\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::upper\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_upper_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#623">f</a>),
@@ -1370,9 +1365,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;value&quot;</span>)]
-    </span><span class="kw">fn </span>connect_value_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_value_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"value"</span>)]
+    </span><span class="kw">fn </span>connect_value_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_value_trampoline&lt;P: IsA&lt;<a href="#12-89">Adjustment</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkAdjustment.html">ffi::GtkAdjustment</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -1384,8 +1379,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#636">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#636">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::value\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::value\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_value_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#646">f</a>),
@@ -1395,10 +1390,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#12-89">Adjustment</a>&gt;&gt; <a href="#230-657">AdjustmentExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#12-89">Adjustment</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#662">f</a>.write_str(<span class="string">&quot;Adjustment&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

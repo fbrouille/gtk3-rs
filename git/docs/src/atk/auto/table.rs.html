@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `atk/src/auto/table.rs`."><title>table.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="atk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `atk/src/auto/table.rs`."><title>table.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="atk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -870,12 +871,6 @@
 <a href="#797" id="797">797</a>
 <a href="#798" id="798">798</a>
 <a href="#799" id="799">799</a>
-<a href="#800" id="800">800</a>
-<a href="#801" id="801">801</a>
-<a href="#802" id="802">802</a>
-<a href="#803" id="803">803</a>
-<a href="#804" id="804">804</a>
-<a href="#805" id="805">805</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
@@ -886,7 +881,7 @@
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// The ATK interface implemented for UI components which contain tabular or row/column information.
@@ -894,15 +889,15 @@
     /// [`Table`][crate::Table] should be implemented by components which present
     /// elements ordered via rows and columns. It may also be used to
     /// present tree-structured information if the nodes of the trees can
-    /// be said to contain multiple &quot;columns&quot;. Individual elements of an
-    /// [`Table`][crate::Table] are typically referred to as &quot;cells&quot;. Those cells should
-    /// implement the interface [`TableCell`][crate::TableCell], but `Atk` doesn&#39;t require
+    /// be said to contain multiple "columns". Individual elements of an
+    /// [`Table`][crate::Table] are typically referred to as "cells". Those cells should
+    /// implement the interface [`TableCell`][crate::TableCell], but `Atk` doesn't require
     /// them to be direct children of the current [`Table`][crate::Table]. They can be
     /// grand-children, grand-grand-children etc. [`Table`][crate::Table] provides the
     /// API needed to get a individual cell based on the row and column
     /// numbers.
     ///
-    /// Children of [`Table`][crate::Table] are frequently &quot;lightweight&quot; objects, that
+    /// Children of [`Table`][crate::Table] are frequently "lightweight" objects, that
     /// is, they may not have backing widgets in the host UI toolkit. They
     /// are therefore often transient.
     ///
@@ -924,21 +919,21 @@
     ///
     ///
     /// #### `column-deleted`
-    ///  The &quot;column-deleted&quot; signal is emitted by an object which
+    ///  The "column-deleted" signal is emitted by an object which
     /// implements the AtkTable interface when a column is deleted.
     ///
     ///
     ///
     ///
     /// #### `column-inserted`
-    ///  The &quot;column-inserted&quot; signal is emitted by an object which
+    ///  The "column-inserted" signal is emitted by an object which
     /// implements the AtkTable interface when a column is inserted.
     ///
     ///
     ///
     ///
     /// #### `column-reordered`
-    ///  The &quot;column-reordered&quot; signal is emitted by an object which
+    ///  The "column-reordered" signal is emitted by an object which
     /// implements the AtkTable interface when the columns are
     /// reordered.
     ///
@@ -946,7 +941,7 @@
     ///
     ///
     /// #### `model-changed`
-    ///  The &quot;model-changed&quot; signal is emitted by an object which
+    ///  The "model-changed" signal is emitted by an object which
     /// implements the AtkTable interface when the model displayed by
     /// the table changes.
     ///
@@ -954,21 +949,21 @@
     ///
     ///
     /// #### `row-deleted`
-    ///  The &quot;row-deleted&quot; signal is emitted by an object which
+    ///  The "row-deleted" signal is emitted by an object which
     /// implements the AtkTable interface when a row is deleted.
     ///
     ///
     ///
     ///
     /// #### `row-inserted`
-    ///  The &quot;row-inserted&quot; signal is emitted by an object which
+    ///  The "row-inserted" signal is emitted by an object which
     /// implements the AtkTable interface when a row is inserted.
     ///
     ///
     ///
     ///
     /// #### `row-reordered`
-    ///  The &quot;row-reordered&quot; signal is emitted by an object which
+    ///  The "row-reordered" signal is emitted by an object which
     /// implements the AtkTable interface when the rows are
     /// reordered.
     ///
@@ -977,7 +972,7 @@
     /// # Implements
     ///
     /// [`TableExt`][trait@crate::prelude::TableExt], [`TableExtManual`][trait@crate::prelude::TableExtManual]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;AtkTable&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"AtkTable"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../atk/struct.Table.html">Table</a>(Interface&lt;ffi::AtkTable, ffi::AtkTableIface&gt;);
 
     <span class="kw">match fn </span>{
@@ -986,7 +981,7 @@
 }
 
 <span class="kw">impl </span><a href="#13-108">Table</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#13-108">Table</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#13-108">Table</a>&gt; = <span class="prelude-val">None</span>;
 }
 
 <span class="kw">mod </span>sealed {
@@ -999,7 +994,7 @@
 /// # Implementors
 ///
 /// [`NoOpObject`][struct@crate::NoOpObject], [`Table`][struct@crate::Table]
-</span><span class="kw">pub trait </span><a href="../../../atk/prelude/trait.TableExt.html">TableExt</a>: IsA&lt;<a href="#13-108">Table</a>&gt; + <a href="#115">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../atk/prelude/trait.TableExt.html">TableExt</a>: IsA&lt;<a href="#13-108">Table</a>&gt; + <a href="#115">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Adds the specified `column` to the selection.
     /// ## `column`
     /// a `gint` representing a column in `self`
@@ -1008,7 +1003,7 @@
     ///
     /// a gboolean representing if the column was successfully added to
     /// the selection, or 0 if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_add_column_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_add_column_selection"</span>)]
     </span><span class="kw">fn </span>add_column_selection(<span class="kw-2">&amp;</span><span class="self">self</span>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_table_add_column_selection(
@@ -1026,7 +1021,7 @@
     ///
     /// a gboolean representing if row was successfully added to selection,
     /// or 0 if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_add_row_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_add_row_selection"</span>)]
     </span><span class="kw">fn </span>add_row_selection(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_table_add_row_selection(
@@ -1042,8 +1037,8 @@
     ///
     /// a AtkObject* representing the
     /// table caption, or [`None`] if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_caption&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_caption&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_caption"</span>)]
+    #[doc(alias = <span class="string">"get_caption"</span>)]
     </span><span class="kw">fn </span>caption(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="object.rs.html#13-195">Object</a>&gt; {
         <span class="kw">unsafe </span>{ from_glib_none(ffi::atk_table_get_caption(<a class="self" href="#169">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -1060,8 +1055,8 @@
     ///
     /// a gint representing the column at the specified index,
     /// or -1 if the table does not implement this method.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_column_at_index&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_column_at_index&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_column_at_index"</span>)]
+    #[doc(alias = <span class="string">"get_column_at_index"</span>)]
     </span><span class="kw">fn </span>column_at_index(<span class="kw-2">&amp;</span><span class="self">self</span>, index_: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_table_get_column_at_index(<a class="self" href="#187">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#187">index_</a>) }
     }
@@ -1074,8 +1069,8 @@
     ///
     /// a gchar* representing the column description, or [`None`]
     /// if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_column_description&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_column_description&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_column_description"</span>)]
+    #[doc(alias = <span class="string">"get_column_description"</span>)]
     </span><span class="kw">fn </span>column_description(<span class="kw-2">&amp;</span><span class="self">self</span>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_none(ffi::atk_table_get_column_description(
@@ -1096,8 +1091,8 @@
     ///
     /// a gint representing the column extent at specified position, or 0
     /// if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_column_extent_at&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_column_extent_at&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_column_extent_at"</span>)]
+    #[doc(alias = <span class="string">"get_column_extent_at"</span>)]
     </span><span class="kw">fn </span>column_extent_at(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_table_get_column_extent_at(<a class="self" href="#223">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#223">row</a>, <a href="#223">column</a>) }
     }
@@ -1111,8 +1106,8 @@
     /// a AtkObject* representing the
     /// specified column header, or [`None`] if value does not implement this
     /// interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_column_header&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_column_header&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_column_header"</span>)]
+    #[doc(alias = <span class="string">"get_column_header"</span>)]
     </span><span class="kw">fn </span>column_header(<span class="kw-2">&amp;</span><span class="self">self</span>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="object.rs.html#13-195">Object</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_none(ffi::atk_table_get_column_header(
@@ -1139,8 +1134,8 @@
     /// a `gint` representing the index at specified position.
     /// The value -1 is returned if the object at row,column is not a child
     /// of table or table does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_index_at&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_index_at&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_index_at"</span>)]
+    #[doc(alias = <span class="string">"get_index_at"</span>)]
     </span><span class="kw">fn </span>index_at(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_table_get_index_at(<a class="self" href="#266">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#266">row</a>, <a href="#266">column</a>) }
     }
@@ -1151,8 +1146,8 @@
     ///
     /// a gint representing the number of columns, or 0
     /// if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_n_columns&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_n_columns&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_n_columns"</span>)]
+    #[doc(alias = <span class="string">"get_n_columns"</span>)]
     </span><span class="kw">fn </span>n_columns(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_table_get_n_columns(<a class="self" href="#278">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1163,8 +1158,8 @@
     ///
     /// a gint representing the number of rows, or 0
     /// if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_n_rows&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_n_rows&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_n_rows"</span>)]
+    #[doc(alias = <span class="string">"get_n_rows"</span>)]
     </span><span class="kw">fn </span>n_rows(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_table_get_n_rows(<a class="self" href="#290">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1181,8 +1176,8 @@
     ///
     /// a gint representing the row at the specified index,
     /// or -1 if the table does not implement this method.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_row_at_index&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_row_at_index&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_row_at_index"</span>)]
+    #[doc(alias = <span class="string">"get_row_at_index"</span>)]
     </span><span class="kw">fn </span>row_at_index(<span class="kw-2">&amp;</span><span class="self">self</span>, index_: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_table_get_row_at_index(<a class="self" href="#308">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#308">index_</a>) }
     }
@@ -1195,8 +1190,8 @@
     ///
     /// a gchar* representing the row description, or
     /// [`None`] if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_row_description&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_row_description&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_row_description"</span>)]
+    #[doc(alias = <span class="string">"get_row_description"</span>)]
     </span><span class="kw">fn </span>row_description(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_none(ffi::atk_table_get_row_description(
@@ -1217,8 +1212,8 @@
     ///
     /// a gint representing the row extent at specified position, or 0
     /// if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_row_extent_at&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_row_extent_at&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_row_extent_at"</span>)]
+    #[doc(alias = <span class="string">"get_row_extent_at"</span>)]
     </span><span class="kw">fn </span>row_extent_at(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_table_get_row_extent_at(<a class="self" href="#344">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#344">row</a>, <a href="#344">column</a>) }
     }
@@ -1232,8 +1227,8 @@
     /// a AtkObject* representing the
     /// specified row header, or [`None`] if value does not implement this
     /// interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_row_header&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_row_header&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_row_header"</span>)]
+    #[doc(alias = <span class="string">"get_row_header"</span>)]
     </span><span class="kw">fn </span>row_header(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="object.rs.html#13-195">Object</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_none(ffi::atk_table_get_row_header(
@@ -1249,8 +1244,8 @@
     ///
     /// a AtkObject* representing a summary description
     /// of the table, or zero if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_get_summary&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_summary&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_get_summary"</span>)]
+    #[doc(alias = <span class="string">"get_summary"</span>)]
     </span><span class="kw">fn </span>summary(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="object.rs.html#13-195">Object</a>&gt; {
         <span class="kw">unsafe </span>{ from_glib_full(ffi::atk_table_get_summary(<a class="self" href="#376">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -1264,7 +1259,7 @@
     ///
     /// a gboolean representing if the column is selected, or 0
     /// if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_is_column_selected&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_is_column_selected"</span>)]
     </span><span class="kw">fn </span>is_column_selected(<span class="kw-2">&amp;</span><span class="self">self</span>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_table_is_column_selected(
@@ -1283,7 +1278,7 @@
     ///
     /// a gboolean representing if the row is selected, or 0
     /// if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_is_row_selected&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_is_row_selected"</span>)]
     </span><span class="kw">fn </span>is_row_selected(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_table_is_row_selected(
@@ -1304,7 +1299,7 @@
     ///
     /// a gboolean representing if the cell is selected, or 0
     /// if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_is_selected&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_is_selected"</span>)]
     </span><span class="kw">fn </span>is_selected(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_table_is_selected(
@@ -1326,7 +1321,7 @@
     ///
     /// an [`Object`][crate::Object] representing the referred
     /// to accessible
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_ref_at&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_ref_at"</span>)]
     </span><span class="kw">fn </span>ref_at(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="object.rs.html#13-195">Object</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_full(ffi::atk_table_ref_at(
@@ -1345,7 +1340,7 @@
     ///
     /// a gboolean representing if the column was successfully removed from
     /// the selection, or 0 if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_remove_column_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_remove_column_selection"</span>)]
     </span><span class="kw">fn </span>remove_column_selection(<span class="kw-2">&amp;</span><span class="self">self</span>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_table_remove_column_selection(
@@ -1363,7 +1358,7 @@
     ///
     /// a gboolean representing if the row was successfully removed from
     /// the selection, or 0 if value does not implement this interface.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_remove_row_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_remove_row_selection"</span>)]
     </span><span class="kw">fn </span>remove_row_selection(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_table_remove_row_selection(
@@ -1376,7 +1371,7 @@
     <span class="doccomment">/// Sets the caption for the table.
     /// ## `caption`
     /// a [`Object`][crate::Object] representing the caption to set for `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_set_caption&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_set_caption"</span>)]
     </span><span class="kw">fn </span>set_caption(<span class="kw-2">&amp;</span><span class="self">self</span>, caption: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="object.rs.html#13-195">Object</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::atk_table_set_caption(
@@ -1392,7 +1387,7 @@
     /// ## `description`
     /// a `gchar` representing the description text
     /// to set for the specified `column` of the `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_set_column_description&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_set_column_description"</span>)]
     </span><span class="kw">fn </span>set_column_description(<span class="kw-2">&amp;</span><span class="self">self</span>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, description: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
             ffi::atk_table_set_column_description(
@@ -1408,7 +1403,7 @@
     /// a `gint` representing a column in `self`
     /// ## `header`
     /// an [`Table`][crate::Table]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_set_column_header&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_set_column_header"</span>)]
     </span><span class="kw">fn </span>set_column_header(<span class="kw-2">&amp;</span><span class="self">self</span>, column: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, header: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="object.rs.html#13-195">Object</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::atk_table_set_column_header(
@@ -1425,7 +1420,7 @@
     /// ## `description`
     /// a `gchar` representing the description text
     /// to set for the specified `row` of `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_set_row_description&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_set_row_description"</span>)]
     </span><span class="kw">fn </span>set_row_description(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, description: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
             ffi::atk_table_set_row_description(
@@ -1441,7 +1436,7 @@
     /// a `gint` representing a row in `self`
     /// ## `header`
     /// an [`Table`][crate::Table]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_set_row_header&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_set_row_header"</span>)]
     </span><span class="kw">fn </span>set_row_header(<span class="kw-2">&amp;</span><span class="self">self</span>, row: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, header: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="object.rs.html#13-195">Object</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::atk_table_set_row_header(
@@ -1456,7 +1451,7 @@
     /// ## `accessible`
     /// an [`Object`][crate::Object] representing the summary description
     /// to set for `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_table_set_summary&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_table_set_summary"</span>)]
     </span><span class="kw">fn </span>set_summary(<span class="kw-2">&amp;</span><span class="self">self</span>, accessible: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="object.rs.html#13-195">Object</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::atk_table_set_summary(
@@ -1466,17 +1461,17 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;column-deleted&quot; signal is emitted by an object which
+    <span class="doccomment">/// The "column-deleted" signal is emitted by an object which
     /// implements the AtkTable interface when a column is deleted.
     /// ## `arg1`
     /// The index of the first column deleted.
     /// ## `arg2`
     /// The number of columns deleted.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;column-deleted&quot;</span>)]
-    </span><span class="kw">fn </span>connect_column_deleted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>column_deleted_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"column-deleted"</span>)]
+    </span><span class="kw">fn </span>connect_column_deleted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>column_deleted_trampoline&lt;
             P: IsA&lt;<a href="#13-108">Table</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkTable,
             arg1: libc::c_int,
@@ -1490,8 +1485,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#598">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#598">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;column-deleted\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"column-deleted\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     column_deleted_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#612">f</a>),
@@ -1499,17 +1494,17 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;column-inserted&quot; signal is emitted by an object which
+    <span class="doccomment">/// The "column-inserted" signal is emitted by an object which
     /// implements the AtkTable interface when a column is inserted.
     /// ## `arg1`
     /// The index of the column inserted.
     /// ## `arg2`
     /// The number of colums inserted.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;column-inserted&quot;</span>)]
-    </span><span class="kw">fn </span>connect_column_inserted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>column_inserted_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"column-inserted"</span>)]
+    </span><span class="kw">fn </span>connect_column_inserted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>column_inserted_trampoline&lt;
             P: IsA&lt;<a href="#13-108">Table</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkTable,
             arg1: libc::c_int,
@@ -1523,8 +1518,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#631">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#631">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;column-inserted\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"column-inserted\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     column_inserted_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#645">f</a>),
@@ -1532,12 +1527,12 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;column-reordered&quot; signal is emitted by an object which
+    <span class="doccomment">/// The "column-reordered" signal is emitted by an object which
     /// implements the AtkTable interface when the columns are
     /// reordered.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;column-reordered&quot;</span>)]
-    </span><span class="kw">fn </span>connect_column_reordered&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>column_reordered_trampoline&lt;P: IsA&lt;<a href="#13-108">Table</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"column-reordered"</span>)]
+    </span><span class="kw">fn </span>connect_column_reordered&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>column_reordered_trampoline&lt;P: IsA&lt;<a href="#13-108">Table</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkTable,
             f: glib::ffi::gpointer,
         ) {
@@ -1548,8 +1543,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#661">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#661">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;column-reordered\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"column-reordered\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     column_reordered_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#670">f</a>),
@@ -1557,12 +1552,12 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;model-changed&quot; signal is emitted by an object which
+    <span class="doccomment">/// The "model-changed" signal is emitted by an object which
     /// implements the AtkTable interface when the model displayed by
     /// the table changes.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;model-changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_model_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>model_changed_trampoline&lt;P: IsA&lt;<a href="#13-108">Table</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"model-changed"</span>)]
+    </span><span class="kw">fn </span>connect_model_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>model_changed_trampoline&lt;P: IsA&lt;<a href="#13-108">Table</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkTable,
             f: glib::ffi::gpointer,
         ) {
@@ -1573,8 +1568,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#686">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#686">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;model-changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"model-changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     model_changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#695">f</a>),
@@ -1582,17 +1577,17 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;row-deleted&quot; signal is emitted by an object which
+    <span class="doccomment">/// The "row-deleted" signal is emitted by an object which
     /// implements the AtkTable interface when a row is deleted.
     /// ## `arg1`
     /// The index of the first row deleted.
     /// ## `arg2`
     /// The number of rows deleted.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;row-deleted&quot;</span>)]
-    </span><span class="kw">fn </span>connect_row_deleted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>row_deleted_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"row-deleted"</span>)]
+    </span><span class="kw">fn </span>connect_row_deleted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>row_deleted_trampoline&lt;
             P: IsA&lt;<a href="#13-108">Table</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkTable,
             arg1: libc::c_int,
@@ -1606,8 +1601,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#714">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#714">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;row-deleted\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"row-deleted\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     row_deleted_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#728">f</a>),
@@ -1615,17 +1610,17 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;row-inserted&quot; signal is emitted by an object which
+    <span class="doccomment">/// The "row-inserted" signal is emitted by an object which
     /// implements the AtkTable interface when a row is inserted.
     /// ## `arg1`
     /// The index of the first row inserted.
     /// ## `arg2`
     /// The number of rows inserted.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;row-inserted&quot;</span>)]
-    </span><span class="kw">fn </span>connect_row_inserted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>row_inserted_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"row-inserted"</span>)]
+    </span><span class="kw">fn </span>connect_row_inserted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>row_inserted_trampoline&lt;
             P: IsA&lt;<a href="#13-108">Table</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkTable,
             arg1: libc::c_int,
@@ -1639,8 +1634,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#747">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#747">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;row-inserted\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"row-inserted\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     row_inserted_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#761">f</a>),
@@ -1648,12 +1643,12 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;row-reordered&quot; signal is emitted by an object which
+    <span class="doccomment">/// The "row-reordered" signal is emitted by an object which
     /// implements the AtkTable interface when the rows are
     /// reordered.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;row-reordered&quot;</span>)]
-    </span><span class="kw">fn </span>connect_row_reordered&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>row_reordered_trampoline&lt;P: IsA&lt;<a href="#13-108">Table</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"row-reordered"</span>)]
+    </span><span class="kw">fn </span>connect_row_reordered&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>row_reordered_trampoline&lt;P: IsA&lt;<a href="#13-108">Table</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkTable,
             f: glib::ffi::gpointer,
         ) {
@@ -1664,8 +1659,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#777">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#777">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;row-reordered\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"row-reordered\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     row_reordered_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#786">f</a>),
@@ -1675,10 +1670,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#13-108">Table</a>&gt;&gt; <a href="#124-797">TableExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#13-108">Table</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#802">f</a>.write_str(<span class="string">&quot;Table&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

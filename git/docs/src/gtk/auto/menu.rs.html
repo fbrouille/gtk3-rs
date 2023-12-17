@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/menu.rs`."><title>menu.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/menu.rs`."><title>menu.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -2874,25 +2875,19 @@
 <a href="#2801" id="2801">2801</a>
 <a href="#2802" id="2802">2802</a>
 <a href="#2803" id="2803">2803</a>
-<a href="#2804" id="2804">2804</a>
-<a href="#2805" id="2805">2805</a>
-<a href="#2806" id="2806">2806</a>
-<a href="#2807" id="2807">2807</a>
-<a href="#2808" id="2808">2808</a>
-<a href="#2809" id="2809">2809</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
 </span><span class="kw">use crate</span>::{
-    <a href="accel_group.rs.html#12-68">AccelGroup</a>, <a href="enums.rs.html#27-49">Align</a>, <a href="buildable.rs.html#9-32">Buildable</a>, <a href="container.rs.html#14-1335">Container</a>, <a href="menu_item.rs.html#13-1283">MenuItem</a>, <a href="menu_shell.rs.html#13-1219">MenuShell</a>, <a href="enums.rs.html#7818-7830">ResizeMode</a>, <a href="enums.rs.html#8208-8259">ScrollType</a>, <a href="widget.rs.html#17-1520">Widget</a>,
+    <a href="accel_group.rs.html#12-68">AccelGroup</a>, <a href="enums.rs.html#26-48">Align</a>, <a href="buildable.rs.html#8-31">Buildable</a>, <a href="container.rs.html#14-1335">Container</a>, <a href="menu_item.rs.html#13-1283">MenuItem</a>, <a href="menu_shell.rs.html#13-1219">MenuShell</a>, <a href="enums.rs.html#6901-6913">ResizeMode</a>, <a href="enums.rs.html#7243-7294">ScrollType</a>, <a href="widget.rs.html#17-1520">Widget</a>,
 };
 <span class="kw">use </span>glib::{
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// A [`Menu`][crate::Menu] is a [`MenuShell`][crate::MenuShell] that implements a drop down menu
@@ -2919,7 +2914,7 @@
     ///
     /// ```C
     ///   // connect our handler which will popup the menu
-    ///   g_signal_connect_swapped (window, &quot;button_press_event&quot;,
+    ///   g_signal_connect_swapped (window, "button_press_event",
     /// G_CALLBACK (my_popup_handler), menu);
     /// ```
     ///
@@ -2940,7 +2935,7 @@
     ///   g_return_val_if_fail (GTK_IS_MENU (widget), FALSE);
     ///   g_return_val_if_fail (event != NULL, FALSE);
     ///
-    ///   // The &quot;widget&quot; is the menu that was supplied when
+    ///   // The "widget" is the menu that was supplied when
     ///   // g_signal_connect_swapped() was called.
     ///   menu = GTK_MENU (widget);
     ///
@@ -3028,7 +3023,7 @@
     ///
     ///
     /// #### `menu-type-hint`
-    ///  The [`gdk::WindowTypeHint`][crate::gdk::WindowTypeHint] to use for the menu&#39;s [`gdk::Window`][crate::gdk::Window].
+    ///  The [`gdk::WindowTypeHint`][crate::gdk::WindowTypeHint] to use for the menu's [`gdk::Window`][crate::gdk::Window].
     ///
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`anchor-hints`][struct@crate::Menu#anchor-hints],
@@ -3206,7 +3201,7 @@
     ///
     ///
     /// #### `margin`
-    ///  Sets all four sides&#39; margin at once. If read, returns max
+    ///  Sets all four sides' margin at once. If read, returns max
     /// margin on any side.
     ///
     /// Readable | Writeable
@@ -3215,7 +3210,7 @@
     /// #### `margin-bottom`
     ///  Margin on bottom side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -3226,7 +3221,7 @@
     ///  Margin on end of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -3236,7 +3231,7 @@
     /// #### `margin-left`
     ///  Margin on left side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -3246,7 +3241,7 @@
     /// #### `margin-right`
     ///  Margin on right side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -3257,7 +3252,7 @@
     ///  Margin on start of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -3267,7 +3262,7 @@
     /// #### `margin-top`
     ///  Margin on top side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -3375,7 +3370,7 @@
     ///
     ///
     /// #### `window`
-    ///  The widget&#39;s window if it is realized, [`None`] otherwise.
+    ///  The widget's window if it is realized, [`None`] otherwise.
     ///
     /// Readable
     /// &lt;/details&gt;
@@ -3403,7 +3398,7 @@
     ///
     /// ![](popup-slide.png)
     ///
-    /// The blue menu is `menu`&#39;s ideal position, the green menu is `flipped_rect`,
+    /// The blue menu is `menu`'s ideal position, the green menu is `flipped_rect`,
     /// and the red menu is `final_rect`.
     ///
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
@@ -3535,7 +3530,7 @@
     /// #### `child-notify`
     ///  The ::child-notify signal is emitted for each
     /// [child property][child-properties] that has
-    /// changed on an object. The signal&#39;s detail holds the property name.
+    /// changed on an object. The signal's detail holds the property name.
     ///
     /// Detailed
     ///
@@ -3550,7 +3545,7 @@
     ///
     /// #### `configure-event`
     ///  The ::configure-event signal will be emitted when the size, position or
-    /// stacking of the `widget`&#39;s window has changed.
+    /// stacking of the `widget`'s window has changed.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::STRUCTURE_MASK`][crate::gdk::EventMask::STRUCTURE_MASK] mask. GDK will enable this mask
@@ -3623,7 +3618,7 @@
     ///  The ::drag-data-delete signal is emitted on the drag source when a drag
     /// with the action [`gdk::DragAction::MOVE`][crate::gdk::DragAction::MOVE] is successfully completed. The signal
     /// handler is responsible for deleting the data that has been dropped. What
-    /// &quot;delete&quot; means depends on the context of the drag operation.
+    /// "delete" means depends on the context of the drag operation.
     ///
     ///
     ///
@@ -3687,7 +3682,7 @@
     ///                                            GTK_DIALOG_DESTROY_WITH_PARENT,
     ///                                            GTK_MESSAGE_INFO,
     ///                                            GTK_BUTTONS_YES_NO,
-    ///                                            &quot;Move the data ?\n&quot;);
+    ///                                            "Move the data ?\n");
     ///           response = gtk_dialog_run (GTK_DIALOG (dialog));
     ///           gtk_widget_destroy (dialog);
     ///
@@ -3734,7 +3729,7 @@
     ///  The ::drag-failed signal is emitted on the drag source when a drag has
     /// failed. The signal handler may hook custom code to handle a failed DnD
     /// operation based on the type of error, it returns [`true`] is the failure has
-    /// been already handled (not showing the default &quot;drag operation failed&quot;
+    /// been already handled (not showing the default "drag operation failed"
     /// animation), otherwise it returns [`false`].
     ///
     ///
@@ -3763,7 +3758,7 @@
     /// handler is responsible for providing the necessary information for
     /// displaying feedback to the user, by calling `gdk_drag_status()`.
     ///
-    /// If the decision whether the drop will be accepted or rejected can&#39;t be
+    /// If the decision whether the drop will be accepted or rejected can't be
     /// made based solely on the cursor position and the type of the data, the
     /// handler may inspect the dragged data by calling [`WidgetExt::drag_get_data()`][crate::prelude::WidgetExt::drag_get_data()] and
     /// defer the `gdk_drag_status()` call to the [`drag-data-received`][struct@crate::Widget#drag-data-received]
@@ -3774,7 +3769,7 @@
     /// Also note that there is no drag-enter signal. The drag receiver has to
     /// keep track of whether he has received any drag-motion signals since the
     /// last [`drag-leave`][struct@crate::Widget#drag-leave] and if not, treat the drag-motion signal as
-    /// an &quot;enter&quot; signal. Upon an &quot;enter&quot;, the handler will typically highlight
+    /// an "enter" signal. Upon an "enter", the handler will typically highlight
     /// the drop site with [`WidgetExt::drag_highlight()`][crate::prelude::WidgetExt::drag_highlight()].
     ///
     ///
@@ -3851,18 +3846,18 @@
     ///
     /// #### `draw`
     ///  This signal is emitted when a widget is supposed to render itself.
-    /// The `widget`&#39;s top left corner must be painted at the origin of
+    /// The `widget`'s top left corner must be painted at the origin of
     /// the passed in context and be sized to the values returned by
     /// [`WidgetExt::allocated_width()`][crate::prelude::WidgetExt::allocated_width()] and
     /// [`WidgetExt::allocated_height()`][crate::prelude::WidgetExt::allocated_height()].
     ///
     /// Signal handlers connected to this signal can modify the cairo
-    /// context passed as `cr` in any way they like and don&#39;t need to
+    /// context passed as `cr` in any way they like and don't need to
     /// restore it. The signal emission takes care of calling `cairo_save()`
     /// before and `cairo_restore()` after invoking the handler.
     ///
     /// The signal handler will get a `cr` with a clip region already set to the
-    /// widget&#39;s dirty region, i.e. to the area that needs repainting. Complicated
+    /// widget's dirty region, i.e. to the area that needs repainting. Complicated
     /// widgets that want to avoid redrawing themselves completely can get the full
     /// extents of the clip region with `gdk_cairo_get_clip_rectangle()`, or they can
     /// get a finer-grained representation of the dirty region with
@@ -3873,7 +3868,7 @@
     ///
     /// #### `enter-notify-event`
     ///  The ::enter-notify-event will be emitted when the pointer enters
-    /// the `widget`&#39;s window.
+    /// the `widget`'s window.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::ENTER_NOTIFY_MASK`][crate::gdk::EventMask::ENTER_NOTIFY_MASK] mask.
@@ -3907,7 +3902,7 @@
     ///
     /// #### `focus-in-event`
     ///  The ::focus-in-event signal will be emitted when the keyboard focus
-    /// enters the `widget`&#39;s window.
+    /// enters the `widget`'s window.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::FOCUS_CHANGE_MASK`][crate::gdk::EventMask::FOCUS_CHANGE_MASK] mask.
@@ -3917,7 +3912,7 @@
     ///
     /// #### `focus-out-event`
     ///  The ::focus-out-event signal will be emitted when the keyboard focus
-    /// leaves the `widget`&#39;s window.
+    /// leaves the `widget`'s window.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::FOCUS_CHANGE_MASK`][crate::gdk::EventMask::FOCUS_CHANGE_MASK] mask.
@@ -4002,7 +3997,7 @@
     ///
     /// #### `leave-notify-event`
     ///  The ::leave-notify-event will be emitted when the pointer leaves
-    /// the `widget`&#39;s window.
+    /// the `widget`'s window.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::LEAVE_NOTIFY_MASK`][crate::gdk::EventMask::LEAVE_NOTIFY_MASK] mask.
@@ -4027,7 +4022,7 @@
     ///
     ///
     /// #### `map-event`
-    ///  The ::map-event signal will be emitted when the `widget`&#39;s window is
+    ///  The ::map-event signal will be emitted when the `widget`'s window is
     /// mapped. A window is mapped when it becomes visible on the screen.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
@@ -4046,7 +4041,7 @@
     ///
     /// #### `motion-notify-event`
     ///  The ::motion-notify-event signal is emitted when the pointer moves
-    /// over the widget&#39;s [`gdk::Window`][crate::gdk::Window].
+    /// over the widget's [`gdk::Window`][crate::gdk::Window].
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget
     /// needs to enable the [`gdk::EventMask::POINTER_MOTION_MASK`][crate::gdk::EventMask::POINTER_MOTION_MASK] mask.
@@ -4081,7 +4076,7 @@
     ///
     /// #### `property-notify-event`
     ///  The ::property-notify-event signal will be emitted when a property on
-    /// the `widget`&#39;s window has been changed or deleted.
+    /// the `widget`'s window has been changed or deleted.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::PROPERTY_CHANGE_MASK`][crate::gdk::EventMask::PROPERTY_CHANGE_MASK] mask.
@@ -4109,7 +4104,7 @@
     ///
     /// #### `query-tooltip`
     ///  Emitted when [`has-tooltip`][struct@crate::Widget#has-tooltip] is [`true`] and the hover timeout
-    /// has expired with the cursor hovering &quot;above&quot; `widget`; or emitted when `widget` got
+    /// has expired with the cursor hovering "above" `widget`; or emitted when `widget` got
     /// focus in keyboard mode.
     ///
     /// Using the given coordinates, the signal handler should determine
@@ -4154,7 +4149,7 @@
     ///
     /// #### `selection-clear-event`
     ///  The ::selection-clear-event signal will be emitted when the
-    /// the `widget`&#39;s window has lost ownership of a selection.
+    /// the `widget`'s window has lost ownership of a selection.
     ///
     ///
     ///
@@ -4174,7 +4169,7 @@
     /// #### `selection-request-event`
     ///  The ::selection-request-event signal will be emitted when
     /// another client requests ownership of the selection owned by
-    /// the `widget`&#39;s window.
+    /// the `widget`'s window.
     ///
     ///
     ///
@@ -4222,7 +4217,7 @@
     ///
     /// #### `style-updated`
     ///  The ::style-updated signal is a convenience signal that is emitted when the
-    /// [`changed`][struct@crate::StyleContext#changed] signal is emitted on the `widget`&#39;s associated
+    /// [`changed`][struct@crate::StyleContext#changed] signal is emitted on the `widget`'s associated
     /// [`StyleContext`][crate::StyleContext] as returned by [`WidgetExt::style_context()`][crate::prelude::WidgetExt::style_context()].
     ///
     /// Note that style-modifying functions like `gtk_widget_override_color()` also
@@ -4247,7 +4242,7 @@
     ///
     ///
     /// #### `unmap-event`
-    ///  The ::unmap-event signal will be emitted when the `widget`&#39;s window is
+    ///  The ::unmap-event signal will be emitted when the `widget`'s window is
     /// unmapped. A window is unmapped when it becomes invisible on the screen.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
@@ -4267,7 +4262,7 @@
     ///
     ///
     /// #### `visibility-notify-event`
-    ///  The ::visibility-notify-event will be emitted when the `widget`&#39;s
+    ///  The ::visibility-notify-event will be emitted when the `widget`'s
     /// window is obscured or unobscured.
     ///
     /// To receive this signal the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
@@ -4290,8 +4285,8 @@
     /// # Implements
     ///
     /// [`GtkMenuExt`][trait@crate::prelude::GtkMenuExt], [`MenuShellExt`][trait@crate::prelude::MenuShellExt], [`ContainerExt`][trait@crate::prelude::ContainerExt], [`WidgetExt`][trait@crate::prelude::WidgetExt], [`trait@glib::ObjectExt`], [`BuildableExt`][trait@crate::prelude::BuildableExt], [`GtkMenuExtManual`][trait@crate::prelude::GtkMenuExtManual], [`ContainerExtManual`][trait@crate::prelude::ContainerExtManual], [`WidgetExtManual`][trait@crate::prelude::WidgetExtManual], [`BuildableExtManual`][trait@crate::prelude::BuildableExtManual]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;GtkMenu&quot;</span>)]
-    </span><span class="kw">pub struct </span><a href="../../../gtk/struct.Menu.html">Menu</a>(Object&lt;<a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>, <a href="../../../gtk_sys/struct.GtkMenuClass.html">ffi::GtkMenuClass</a>&gt;) @extends <a href="menu_shell.rs.html#13-1219">MenuShell</a>, <a href="container.rs.html#14-1335">Container</a>, <a href="widget.rs.html#17-1520">Widget</a>, @implements <a href="buildable.rs.html#9-32">Buildable</a>;
+    </span><span class="attr">#[doc(alias = <span class="string">"GtkMenu"</span>)]
+    </span><span class="kw">pub struct </span><a href="../../../gtk/struct.Menu.html">Menu</a>(Object&lt;<a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>, <a href="../../../gtk_sys/struct.GtkMenuClass.html">ffi::GtkMenuClass</a>&gt;) @extends <a href="menu_shell.rs.html#13-1219">MenuShell</a>, <a href="container.rs.html#14-1335">Container</a>, <a href="widget.rs.html#17-1520">Widget</a>, @implements <a href="buildable.rs.html#8-31">Buildable</a>;
 
     <span class="kw">match fn </span>{
         type_ =&gt; || ffi::gtk_menu_get_type(),
@@ -4299,14 +4294,14 @@
 }
 
 <span class="kw">impl </span><a href="#15-1417">Menu</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#15-1417">Menu</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#15-1417">Menu</a>&gt; = <span class="prelude-val">None</span>;
 
     <span class="doccomment">/// Creates a new [`Menu`][crate::Menu]
     ///
     /// # Returns
     ///
     /// a new [`Menu`][crate::Menu]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_new&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_new"</span>)]
     </span><span class="kw">pub fn </span>new() -&gt; <a href="#15-1417">Menu</a> {
         <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
         <span class="kw">unsafe </span>{ Widget::from_glib_none(ffi::gtk_menu_new()).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">unsafe_cast</a>() }
@@ -4320,7 +4315,7 @@
     /// by means of being attached to a widget (see `gtk_menu_attach_to_widget()`)
     /// that is contained within the `GtkApplicationWindows` widget hierarchy.
     ///
-    /// Actions can also be added using [`WidgetExt::insert_action_group()`][crate::prelude::WidgetExt::insert_action_group()] on the menu&#39;s
+    /// Actions can also be added using [`WidgetExt::insert_action_group()`][crate::prelude::WidgetExt::insert_action_group()] on the menu's
     /// attach widget or on any of its parent widgets.
     /// ## `model`
     /// a [`gio::MenuModel`][crate::gio::MenuModel]
@@ -4328,8 +4323,8 @@
     /// # Returns
     ///
     /// a new [`Menu`][crate::Menu]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_new_from_model&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;new_from_model&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_new_from_model"</span>)]
+    #[doc(alias = <span class="string">"new_from_model"</span>)]
     </span><span class="kw">pub fn </span>from_model(model: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/gio/auto/menu_model/struct.MenuModel.html">gio::MenuModel</a>&gt;) -&gt; <a href="#15-1417">Menu</a> {
         <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
         <span class="kw">unsafe </span>{
@@ -4357,8 +4352,8 @@
     ///
     /// the list
     ///  of menus attached to his widget.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_get_for_attach_widget&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_for_attach_widget&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_get_for_attach_widget"</span>)]
+    #[doc(alias = <span class="string">"get_for_attach_widget"</span>)]
     </span><span class="kw">pub fn </span>for_attach_widget(widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;) -&gt; Vec&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt; {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">unsafe </span>{
@@ -4379,9 +4374,9 @@
 </span><span class="doccomment">/// A [builder-pattern] type to construct [`Menu`] objects.
 ///
 /// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html
-</span><span class="attr">#[must_use = <span class="string">&quot;The builder must be built to be used&quot;</span>]
+</span><span class="attr">#[must_use = <span class="string">"The builder must be built to be used"</span>]
 </span><span class="kw">pub struct </span><a href="../../../gtk/builders/struct.MenuBuilder.html">MenuBuilder</a> {
-    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">&#39;static</span>, <a href="#15-1417">Menu</a>&gt;,
+    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">'static</span>, <a href="#15-1417">Menu</a>&gt;,
 }
 
 <span class="kw">impl </span><a href="#1501-1503">MenuBuilder</a> {
@@ -4396,14 +4391,14 @@
         <span class="self">Self </span>{
             builder: <span class="self"><a href="#1513">self</a>
                 </span>.builder
-                .property(<span class="string">&quot;accel-group&quot;</span>, <a href="#1513">accel_group</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
+                .property(<span class="string">"accel-group"</span>, <a href="#1513">accel_group</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
         }
     }
 
     <span class="doccomment">/// An accel path used to conveniently construct accel paths of child items.
     </span><span class="kw">pub fn </span>accel_path(<span class="self">self</span>, accel_path: <span class="kw">impl </span>Into&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1522">self</a>.builder.property(<span class="string">&quot;accel-path&quot;</span>, <a href="#1522">accel_path</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
+            builder: <a class="self" href="#1522">self</a>.builder.property(<span class="string">"accel-path"</span>, <a href="#1522">accel_path</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
         }
     }
 
@@ -4411,7 +4406,7 @@
     /// menu item is selected.
     </span><span class="kw">pub fn </span>active(<span class="self">self</span>, active: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1530">self</a>.builder.property(<span class="string">&quot;active&quot;</span>, <a href="#1530">active</a>),
+            builder: <a class="self" href="#1530">self</a>.builder.property(<span class="string">"active"</span>, <a href="#1530">active</a>),
         }
     }
 
@@ -4431,7 +4426,7 @@
     /// [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
     </span><span class="kw">pub fn </span>anchor_hints(<span class="self">self</span>, anchor_hints: <a href="../../../gdk/auto/flags/struct.AnchorHints.html">gdk::AnchorHints</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1550">self</a>.builder.property(<span class="string">&quot;anchor-hints&quot;</span>, <a href="#1550">anchor_hints</a>),
+            builder: <a class="self" href="#1550">self</a>.builder.property(<span class="string">"anchor-hints"</span>, <a href="#1550">anchor_hints</a>),
         }
     }
 
@@ -4442,25 +4437,25 @@
         <span class="self">Self </span>{
             builder: <span class="self"><a href="#1559">self</a>
                 </span>.builder
-                .property(<span class="string">&quot;attach-widget&quot;</span>, <a href="#1559">attach_widget</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
+                .property(<span class="string">"attach-widget"</span>, <a href="#1559">attach_widget</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
         }
     }
 
-    <span class="doccomment">/// The [`gdk::WindowTypeHint`][crate::gdk::WindowTypeHint] to use for the menu&#39;s [`gdk::Window`][crate::gdk::Window].
+    <span class="doccomment">/// The [`gdk::WindowTypeHint`][crate::gdk::WindowTypeHint] to use for the menu's [`gdk::Window`][crate::gdk::Window].
     ///
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`anchor-hints`][struct@crate::Menu#anchor-hints],
     /// [`rect-anchor-dx`][struct@crate::Menu#rect-anchor-dx], [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], and [`popped-up`][struct@crate::Menu#popped-up].
     </span><span class="kw">pub fn </span>menu_type_hint(<span class="self">self</span>, menu_type_hint: <a href="../../../gdk/auto/enums/enum.WindowTypeHint.html">gdk::WindowTypeHint</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1572">self</a>.builder.property(<span class="string">&quot;menu-type-hint&quot;</span>, <a href="#1572">menu_type_hint</a>),
+            builder: <a class="self" href="#1572">self</a>.builder.property(<span class="string">"menu-type-hint"</span>, <a href="#1572">menu_type_hint</a>),
         }
     }
 
     <span class="doccomment">/// The monitor the menu will be popped up on.
     </span><span class="kw">pub fn </span>monitor(<span class="self">self</span>, monitor: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1579">self</a>.builder.property(<span class="string">&quot;monitor&quot;</span>, <a href="#1579">monitor</a>),
+            builder: <a class="self" href="#1579">self</a>.builder.property(<span class="string">"monitor"</span>, <a href="#1579">monitor</a>),
         }
     }
 
@@ -4472,7 +4467,7 @@
     /// [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
     </span><span class="kw">pub fn </span>rect_anchor_dx(<span class="self">self</span>, rect_anchor_dx: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1591">self</a>.builder.property(<span class="string">&quot;rect-anchor-dx&quot;</span>, <a href="#1591">rect_anchor_dx</a>),
+            builder: <a class="self" href="#1591">self</a>.builder.property(<span class="string">"rect-anchor-dx"</span>, <a href="#1591">rect_anchor_dx</a>),
         }
     }
 
@@ -4483,7 +4478,7 @@
     /// [`rect-anchor-dx`][struct@crate::Menu#rect-anchor-dx], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
     </span><span class="kw">pub fn </span>rect_anchor_dy(<span class="self">self</span>, rect_anchor_dy: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1602">self</a>.builder.property(<span class="string">&quot;rect-anchor-dy&quot;</span>, <a href="#1602">rect_anchor_dy</a>),
+            builder: <a class="self" href="#1602">self</a>.builder.property(<span class="string">"rect-anchor-dy"</span>, <a href="#1602">rect_anchor_dy</a>),
         }
     }
 
@@ -4498,7 +4493,7 @@
         <span class="self">Self </span>{
             builder: <span class="self"><a href="#1615">self</a>
                 </span>.builder
-                .property(<span class="string">&quot;reserve-toggle-size&quot;</span>, <a href="#1615">reserve_toggle_size</a>),
+                .property(<span class="string">"reserve-toggle-size"</span>, <a href="#1615">reserve_toggle_size</a>),
         }
     }
 
@@ -4507,56 +4502,56 @@
     /// [`MenuShellExt::takes_focus()`][crate::prelude::MenuShellExt::takes_focus()].
     </span><span class="kw">pub fn </span>take_focus(<span class="self">self</span>, take_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1626">self</a>.builder.property(<span class="string">&quot;take-focus&quot;</span>, <a href="#1626">take_focus</a>),
+            builder: <a class="self" href="#1626">self</a>.builder.property(<span class="string">"take-focus"</span>, <a href="#1626">take_focus</a>),
         }
     }
 
     <span class="kw">pub fn </span>border_width(<span class="self">self</span>, border_width: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1632">self</a>.builder.property(<span class="string">&quot;border-width&quot;</span>, <a href="#1632">border_width</a>),
+            builder: <a class="self" href="#1632">self</a>.builder.property(<span class="string">"border-width"</span>, <a href="#1632">border_width</a>),
         }
     }
 
     <span class="kw">pub fn </span>child(<span class="self">self</span>, child: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1638">self</a>.builder.property(<span class="string">&quot;child&quot;</span>, <a href="#1638">child</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
+            builder: <a class="self" href="#1638">self</a>.builder.property(<span class="string">"child"</span>, <a href="#1638">child</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
         }
     }
 
-    <span class="kw">pub fn </span>resize_mode(<span class="self">self</span>, resize_mode: <a href="enums.rs.html#7818-7830">ResizeMode</a>) -&gt; <span class="self">Self </span>{
+    <span class="kw">pub fn </span>resize_mode(<span class="self">self</span>, resize_mode: <a href="enums.rs.html#6901-6913">ResizeMode</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1644">self</a>.builder.property(<span class="string">&quot;resize-mode&quot;</span>, <a href="#1644">resize_mode</a>),
+            builder: <a class="self" href="#1644">self</a>.builder.property(<span class="string">"resize-mode"</span>, <a href="#1644">resize_mode</a>),
         }
     }
 
     <span class="kw">pub fn </span>app_paintable(<span class="self">self</span>, app_paintable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1650">self</a>.builder.property(<span class="string">&quot;app-paintable&quot;</span>, <a href="#1650">app_paintable</a>),
+            builder: <a class="self" href="#1650">self</a>.builder.property(<span class="string">"app-paintable"</span>, <a href="#1650">app_paintable</a>),
         }
     }
 
     <span class="kw">pub fn </span>can_default(<span class="self">self</span>, can_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1656">self</a>.builder.property(<span class="string">&quot;can-default&quot;</span>, <a href="#1656">can_default</a>),
+            builder: <a class="self" href="#1656">self</a>.builder.property(<span class="string">"can-default"</span>, <a href="#1656">can_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>can_focus(<span class="self">self</span>, can_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1662">self</a>.builder.property(<span class="string">&quot;can-focus&quot;</span>, <a href="#1662">can_focus</a>),
+            builder: <a class="self" href="#1662">self</a>.builder.property(<span class="string">"can-focus"</span>, <a href="#1662">can_focus</a>),
         }
     }
 
     <span class="kw">pub fn </span>events(<span class="self">self</span>, events: <a href="../../../gdk/auto/flags/struct.EventMask.html">gdk::EventMask</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1668">self</a>.builder.property(<span class="string">&quot;events&quot;</span>, <a href="#1668">events</a>),
+            builder: <a class="self" href="#1668">self</a>.builder.property(<span class="string">"events"</span>, <a href="#1668">events</a>),
         }
     }
 
     <span class="doccomment">/// Whether to expand in both directions. Setting this sets both [`hexpand`][struct@crate::Widget#hexpand] and [`vexpand`][struct@crate::Widget#vexpand]
     </span><span class="kw">pub fn </span>expand(<span class="self">self</span>, expand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1675">self</a>.builder.property(<span class="string">&quot;expand&quot;</span>, <a href="#1675">expand</a>),
+            builder: <a class="self" href="#1675">self</a>.builder.property(<span class="string">"expand"</span>, <a href="#1675">expand</a>),
         }
     }
 
@@ -4568,26 +4563,26 @@
     /// GtkComboBox) implemented this property individually.
     </span><span class="kw">pub fn </span>focus_on_click(<span class="self">self</span>, focus_on_click: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1687">self</a>.builder.property(<span class="string">&quot;focus-on-click&quot;</span>, <a href="#1687">focus_on_click</a>),
+            builder: <a class="self" href="#1687">self</a>.builder.property(<span class="string">"focus-on-click"</span>, <a href="#1687">focus_on_click</a>),
         }
     }
 
     <span class="doccomment">/// How to distribute horizontal space if widget gets extra space, see [`Align`][crate::Align]
-    </span><span class="kw">pub fn </span>halign(<span class="self">self</span>, halign: <a href="enums.rs.html#27-49">Align</a>) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>halign(<span class="self">self</span>, halign: <a href="enums.rs.html#26-48">Align</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1694">self</a>.builder.property(<span class="string">&quot;halign&quot;</span>, <a href="#1694">halign</a>),
+            builder: <a class="self" href="#1694">self</a>.builder.property(<span class="string">"halign"</span>, <a href="#1694">halign</a>),
         }
     }
 
     <span class="kw">pub fn </span>has_default(<span class="self">self</span>, has_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1700">self</a>.builder.property(<span class="string">&quot;has-default&quot;</span>, <a href="#1700">has_default</a>),
+            builder: <a class="self" href="#1700">self</a>.builder.property(<span class="string">"has-default"</span>, <a href="#1700">has_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>has_focus(<span class="self">self</span>, has_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1706">self</a>.builder.property(<span class="string">&quot;has-focus&quot;</span>, <a href="#1706">has_focus</a>),
+            builder: <a class="self" href="#1706">self</a>.builder.property(<span class="string">"has-focus"</span>, <a href="#1706">has_focus</a>),
         }
     }
 
@@ -4602,99 +4597,99 @@
     /// property is set to [`false`] again.
     </span><span class="kw">pub fn </span>has_tooltip(<span class="self">self</span>, has_tooltip: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1721">self</a>.builder.property(<span class="string">&quot;has-tooltip&quot;</span>, <a href="#1721">has_tooltip</a>),
+            builder: <a class="self" href="#1721">self</a>.builder.property(<span class="string">"has-tooltip"</span>, <a href="#1721">has_tooltip</a>),
         }
     }
 
     <span class="kw">pub fn </span>height_request(<span class="self">self</span>, height_request: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1727">self</a>.builder.property(<span class="string">&quot;height-request&quot;</span>, <a href="#1727">height_request</a>),
+            builder: <a class="self" href="#1727">self</a>.builder.property(<span class="string">"height-request"</span>, <a href="#1727">height_request</a>),
         }
     }
 
     <span class="doccomment">/// Whether to expand horizontally. See [`WidgetExt::set_hexpand()`][crate::prelude::WidgetExt::set_hexpand()].
     </span><span class="kw">pub fn </span>hexpand(<span class="self">self</span>, hexpand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1734">self</a>.builder.property(<span class="string">&quot;hexpand&quot;</span>, <a href="#1734">hexpand</a>),
+            builder: <a class="self" href="#1734">self</a>.builder.property(<span class="string">"hexpand"</span>, <a href="#1734">hexpand</a>),
         }
     }
 
     <span class="doccomment">/// Whether to use the [`hexpand`][struct@crate::Widget#hexpand] property. See [`WidgetExt::is_hexpand_set()`][crate::prelude::WidgetExt::is_hexpand_set()].
     </span><span class="kw">pub fn </span>hexpand_set(<span class="self">self</span>, hexpand_set: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1741">self</a>.builder.property(<span class="string">&quot;hexpand-set&quot;</span>, <a href="#1741">hexpand_set</a>),
+            builder: <a class="self" href="#1741">self</a>.builder.property(<span class="string">"hexpand-set"</span>, <a href="#1741">hexpand_set</a>),
         }
     }
 
     <span class="kw">pub fn </span>is_focus(<span class="self">self</span>, is_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1747">self</a>.builder.property(<span class="string">&quot;is-focus&quot;</span>, <a href="#1747">is_focus</a>),
+            builder: <a class="self" href="#1747">self</a>.builder.property(<span class="string">"is-focus"</span>, <a href="#1747">is_focus</a>),
         }
     }
 
-    <span class="doccomment">/// Sets all four sides&#39; margin at once. If read, returns max
+    <span class="doccomment">/// Sets all four sides' margin at once. If read, returns max
     /// margin on any side.
     </span><span class="kw">pub fn </span>margin(<span class="self">self</span>, margin: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1755">self</a>.builder.property(<span class="string">&quot;margin&quot;</span>, <a href="#1755">margin</a>),
+            builder: <a class="self" href="#1755">self</a>.builder.property(<span class="string">"margin"</span>, <a href="#1755">margin</a>),
         }
     }
 
     <span class="doccomment">/// Margin on bottom side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     </span><span class="kw">pub fn </span>margin_bottom(<span class="self">self</span>, margin_bottom: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1766">self</a>.builder.property(<span class="string">&quot;margin-bottom&quot;</span>, <a href="#1766">margin_bottom</a>),
+            builder: <a class="self" href="#1766">self</a>.builder.property(<span class="string">"margin-bottom"</span>, <a href="#1766">margin_bottom</a>),
         }
     }
 
     <span class="doccomment">/// Margin on end of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     </span><span class="kw">pub fn </span>margin_end(<span class="self">self</span>, margin_end: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1778">self</a>.builder.property(<span class="string">&quot;margin-end&quot;</span>, <a href="#1778">margin_end</a>),
+            builder: <a class="self" href="#1778">self</a>.builder.property(<span class="string">"margin-end"</span>, <a href="#1778">margin_end</a>),
         }
     }
 
     <span class="doccomment">/// Margin on start of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     </span><span class="kw">pub fn </span>margin_start(<span class="self">self</span>, margin_start: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1790">self</a>.builder.property(<span class="string">&quot;margin-start&quot;</span>, <a href="#1790">margin_start</a>),
+            builder: <a class="self" href="#1790">self</a>.builder.property(<span class="string">"margin-start"</span>, <a href="#1790">margin_start</a>),
         }
     }
 
     <span class="doccomment">/// Margin on top side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     </span><span class="kw">pub fn </span>margin_top(<span class="self">self</span>, margin_top: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1801">self</a>.builder.property(<span class="string">&quot;margin-top&quot;</span>, <a href="#1801">margin_top</a>),
+            builder: <a class="self" href="#1801">self</a>.builder.property(<span class="string">"margin-top"</span>, <a href="#1801">margin_top</a>),
         }
     }
 
     <span class="kw">pub fn </span>name(<span class="self">self</span>, name: <span class="kw">impl </span>Into&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1807">self</a>.builder.property(<span class="string">&quot;name&quot;</span>, <a href="#1807">name</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
+            builder: <a class="self" href="#1807">self</a>.builder.property(<span class="string">"name"</span>, <a href="#1807">name</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
         }
     }
 
     <span class="kw">pub fn </span>no_show_all(<span class="self">self</span>, no_show_all: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1813">self</a>.builder.property(<span class="string">&quot;no-show-all&quot;</span>, <a href="#1813">no_show_all</a>),
+            builder: <a class="self" href="#1813">self</a>.builder.property(<span class="string">"no-show-all"</span>, <a href="#1813">no_show_all</a>),
         }
     }
 
@@ -4704,25 +4699,25 @@
     /// Before 3.8 this was only available in GtkWindow
     </span><span class="kw">pub fn </span>opacity(<span class="self">self</span>, opacity: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1823">self</a>.builder.property(<span class="string">&quot;opacity&quot;</span>, <a href="#1823">opacity</a>),
+            builder: <a class="self" href="#1823">self</a>.builder.property(<span class="string">"opacity"</span>, <a href="#1823">opacity</a>),
         }
     }
 
     <span class="kw">pub fn </span>parent(<span class="self">self</span>, parent: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="container.rs.html#14-1335">Container</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1829">self</a>.builder.property(<span class="string">&quot;parent&quot;</span>, <a href="#1829">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
+            builder: <a class="self" href="#1829">self</a>.builder.property(<span class="string">"parent"</span>, <a href="#1829">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
         }
     }
 
     <span class="kw">pub fn </span>receives_default(<span class="self">self</span>, receives_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1835">self</a>.builder.property(<span class="string">&quot;receives-default&quot;</span>, <a href="#1835">receives_default</a>),
+            builder: <a class="self" href="#1835">self</a>.builder.property(<span class="string">"receives-default"</span>, <a href="#1835">receives_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>sensitive(<span class="self">self</span>, sensitive: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1841">self</a>.builder.property(<span class="string">&quot;sensitive&quot;</span>, <a href="#1841">sensitive</a>),
+            builder: <a class="self" href="#1841">self</a>.builder.property(<span class="string">"sensitive"</span>, <a href="#1841">sensitive</a>),
         }
     }
 
@@ -4741,7 +4736,7 @@
         <span class="self">Self </span>{
             builder: <span class="self"><a href="#1858">self</a>
                 </span>.builder
-                .property(<span class="string">&quot;tooltip-markup&quot;</span>, <a href="#1858">tooltip_markup</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
+                .property(<span class="string">"tooltip-markup"</span>, <a href="#1858">tooltip_markup</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
         }
     }
 
@@ -4758,46 +4753,46 @@
     /// are set, the last one wins.
     </span><span class="kw">pub fn </span>tooltip_text(<span class="self">self</span>, tooltip_text: <span class="kw">impl </span>Into&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1877">self</a>.builder.property(<span class="string">&quot;tooltip-text&quot;</span>, <a href="#1877">tooltip_text</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
+            builder: <a class="self" href="#1877">self</a>.builder.property(<span class="string">"tooltip-text"</span>, <a href="#1877">tooltip_text</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
         }
     }
 
     <span class="doccomment">/// How to distribute vertical space if widget gets extra space, see [`Align`][crate::Align]
-    </span><span class="kw">pub fn </span>valign(<span class="self">self</span>, valign: <a href="enums.rs.html#27-49">Align</a>) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>valign(<span class="self">self</span>, valign: <a href="enums.rs.html#26-48">Align</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1884">self</a>.builder.property(<span class="string">&quot;valign&quot;</span>, <a href="#1884">valign</a>),
+            builder: <a class="self" href="#1884">self</a>.builder.property(<span class="string">"valign"</span>, <a href="#1884">valign</a>),
         }
     }
 
     <span class="doccomment">/// Whether to expand vertically. See [`WidgetExt::set_vexpand()`][crate::prelude::WidgetExt::set_vexpand()].
     </span><span class="kw">pub fn </span>vexpand(<span class="self">self</span>, vexpand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1891">self</a>.builder.property(<span class="string">&quot;vexpand&quot;</span>, <a href="#1891">vexpand</a>),
+            builder: <a class="self" href="#1891">self</a>.builder.property(<span class="string">"vexpand"</span>, <a href="#1891">vexpand</a>),
         }
     }
 
     <span class="doccomment">/// Whether to use the [`vexpand`][struct@crate::Widget#vexpand] property. See [`WidgetExt::is_vexpand_set()`][crate::prelude::WidgetExt::is_vexpand_set()].
     </span><span class="kw">pub fn </span>vexpand_set(<span class="self">self</span>, vexpand_set: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1898">self</a>.builder.property(<span class="string">&quot;vexpand-set&quot;</span>, <a href="#1898">vexpand_set</a>),
+            builder: <a class="self" href="#1898">self</a>.builder.property(<span class="string">"vexpand-set"</span>, <a href="#1898">vexpand_set</a>),
         }
     }
 
     <span class="kw">pub fn </span>visible(<span class="self">self</span>, visible: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1904">self</a>.builder.property(<span class="string">&quot;visible&quot;</span>, <a href="#1904">visible</a>),
+            builder: <a class="self" href="#1904">self</a>.builder.property(<span class="string">"visible"</span>, <a href="#1904">visible</a>),
         }
     }
 
     <span class="kw">pub fn </span>width_request(<span class="self">self</span>, width_request: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1910">self</a>.builder.property(<span class="string">&quot;width-request&quot;</span>, <a href="#1910">width_request</a>),
+            builder: <a class="self" href="#1910">self</a>.builder.property(<span class="string">"width-request"</span>, <a href="#1910">width_request</a>),
         }
     }
 
     <span class="comment">// rustdoc-stripper-ignore-next
     </span><span class="doccomment">/// Build the [`Menu`].
-    </span><span class="attr">#[must_use = <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]
+    </span><span class="attr">#[must_use = <span class="string">"Building the object from the builder is usually expensive and is not expected to have side effects"</span>]
     </span><span class="kw">pub fn </span>build(<span class="self">self</span>) -&gt; <a href="#15-1417">Menu</a> {
         <a class="self" href="#1919">self</a>.builder.build()
     }
@@ -4813,7 +4808,7 @@
 /// # Implementors
 ///
 /// [`Menu`][struct@crate::Menu], [`RecentChooserMenu`][struct@crate::RecentChooserMenu]
-</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.GtkMenuExt.html">GtkMenuExt</a>: IsA&lt;<a href="#15-1417">Menu</a>&gt; + <a href="#1925">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.GtkMenuExt.html">GtkMenuExt</a>: IsA&lt;<a href="#15-1417">Menu</a>&gt; + <a href="#1925">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Adds a new [`MenuItem`][crate::MenuItem] to a (table) menu. The number of “cells” that
     /// an item will occupy is specified by `left_attach`, `right_attach`,
     /// `top_attach` and `bottom_attach`. These each represent the leftmost,
@@ -4831,7 +4826,7 @@
     /// The row number to attach the top of the item to
     /// ## `bottom_attach`
     /// The row number to attach the bottom of the item to
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_attach&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_attach"</span>)]
     </span><span class="kw">fn </span>attach(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         child: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;,
@@ -4855,7 +4850,7 @@
     <span class="doccomment">/// Detaches the menu from the widget to which it had been attached.
     /// This function will call the callback function, `detacher`, provided
     /// when the `gtk_menu_attach_to_widget()` function was called.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_detach&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_detach"</span>)]
     </span><span class="kw">fn </span>detach(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_detach(<a class="self" href="#1977">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -4868,8 +4863,8 @@
     /// # Returns
     ///
     /// the [`AccelGroup`][crate::AccelGroup] associated with the menu
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_get_accel_group&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_accel_group&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_get_accel_group"</span>)]
+    #[doc(alias = <span class="string">"get_accel_group"</span>)]
     </span><span class="kw">fn </span>accel_group(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="accel_group.rs.html#12-68">AccelGroup</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_menu_get_accel_group(
@@ -4883,8 +4878,8 @@
     /// # Returns
     ///
     /// the accelerator path set on the menu.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_get_accel_path&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_accel_path&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_get_accel_path"</span>)]
+    #[doc(alias = <span class="string">"get_accel_path"</span>)]
     </span><span class="kw">fn </span>accel_path(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_menu_get_accel_path(<a class="self" href="#2006">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -4897,8 +4892,8 @@
     /// the [`MenuItem`][crate::MenuItem] that was last selected
     ///  in the menu. If a selection has not yet been made, the
     ///  first menu item is selected.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_get_active&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_active&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_get_active"</span>)]
+    #[doc(alias = <span class="string">"get_active"</span>)]
     </span><span class="kw">fn </span>active(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt; {
         <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_menu_get_active(<a class="self" href="#2020">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -4908,8 +4903,8 @@
     /// # Returns
     ///
     /// the [`Widget`][crate::Widget] that the menu is attached to
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_get_attach_widget&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_attach_widget&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_get_attach_widget"</span>)]
+    #[doc(alias = <span class="string">"get_attach_widget"</span>)]
     </span><span class="kw">fn </span>attach_widget(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_menu_get_attach_widget(
@@ -4924,8 +4919,8 @@
     ///
     /// the number of the monitor on which the menu should
     ///  be popped up or -1, if no monitor has been set
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_get_monitor&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_monitor&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_get_monitor"</span>)]
+    #[doc(alias = <span class="string">"get_monitor"</span>)]
     </span><span class="kw">fn </span>monitor(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_menu_get_monitor(<a class="self" href="#2047">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -4936,8 +4931,8 @@
     /// # Returns
     ///
     /// Whether the menu reserves toggle space
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_get_reserve_toggle_size&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_reserve_toggle_size&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_get_reserve_toggle_size"</span>)]
+    #[doc(alias = <span class="string">"get_reserve_toggle_size"</span>)]
     </span><span class="kw">fn </span>must_reserve_toggle_size(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_menu_get_reserve_toggle_size(
@@ -4949,7 +4944,7 @@
     <span class="doccomment">/// Places `self` on the given monitor.
     /// ## `monitor`
     /// the monitor to place the menu on
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_place_on_monitor&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_place_on_monitor"</span>)]
     </span><span class="kw">fn </span>place_on_monitor(<span class="kw-2">&amp;</span><span class="self">self</span>, monitor: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/monitor/struct.Monitor.html">gdk::Monitor</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_place_on_monitor(
@@ -4960,7 +4955,7 @@
     }
 
     <span class="doccomment">/// Removes the menu from the screen.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_popdown&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_popdown"</span>)]
     </span><span class="kw">fn </span>popdown(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_popdown(<a class="self" href="#2082">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -4981,8 +4976,8 @@
     /// out how it was actually positioned.
     /// ## `trigger_event`
     /// the `GdkEvent` that initiated this request or
-    ///  [`None`] if it&#39;s the current event
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_popup_at_pointer&quot;</span>)]
+    ///  [`None`] if it's the current event
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_popup_at_pointer"</span>)]
     </span><span class="kw">fn </span>popup_at_pointer(<span class="kw-2">&amp;</span><span class="self">self</span>, trigger_event: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="../../../gdk/event/struct.Event.html">gdk::Event</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_popup_at_pointer(
@@ -5015,13 +5010,13 @@
     /// ## `rect`
     /// the [`gdk::Rectangle`][crate::gdk::Rectangle] to align `self` with
     /// ## `rect_anchor`
-    /// the point on `rect` to align with `self`&#39;s anchor point
+    /// the point on `rect` to align with `self`'s anchor point
     /// ## `menu_anchor`
-    /// the point on `self` to align with `rect`&#39;s anchor point
+    /// the point on `self` to align with `rect`'s anchor point
     /// ## `trigger_event`
     /// the `GdkEvent` that initiated this request or
-    ///  [`None`] if it&#39;s the current event
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_popup_at_rect&quot;</span>)]
+    ///  [`None`] if it's the current event
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_popup_at_rect"</span>)]
     </span><span class="kw">fn </span>popup_at_rect(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         rect_window: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/window/struct.Window.html">gdk::Window</a>,
@@ -5065,13 +5060,13 @@
     /// ## `widget`
     /// the [`Widget`][crate::Widget] to align `self` with
     /// ## `widget_anchor`
-    /// the point on `widget` to align with `self`&#39;s anchor point
+    /// the point on `widget` to align with `self`'s anchor point
     /// ## `menu_anchor`
-    /// the point on `self` to align with `widget`&#39;s anchor point
+    /// the point on `self` to align with `widget`'s anchor point
     /// ## `trigger_event`
     /// the `GdkEvent` that initiated this request or
-    ///  [`None`] if it&#39;s the current event
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_popup_at_widget&quot;</span>)]
+    ///  [`None`] if it's the current event
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_popup_at_widget"</span>)]
     </span><span class="kw">fn </span>popup_at_widget(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;,
@@ -5097,7 +5092,7 @@
     /// ## `position`
     /// the new position to place `child`.
     ///  Positions are numbered from 0 to n - 1
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_reorder_child&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_reorder_child"</span>)]
     </span><span class="kw">fn </span>reorder_child(<span class="kw-2">&amp;</span><span class="self">self</span>, child: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;, position: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_reorder_child(
@@ -5109,7 +5104,7 @@
     }
 
     <span class="doccomment">/// Repositions the menu according to its position function.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_reposition&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_reposition"</span>)]
     </span><span class="kw">fn </span>reposition(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_reposition(<a class="self" href="#2231">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -5124,7 +5119,7 @@
     /// ## `accel_group`
     /// the [`AccelGroup`][crate::AccelGroup] to be associated
     ///  with the menu.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_set_accel_group&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_set_accel_group"</span>)]
     </span><span class="kw">fn </span>set_accel_group(<span class="kw-2">&amp;</span><span class="self">self</span>, accel_group: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="accel_group.rs.html#12-68">AccelGroup</a>&gt;&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_set_accel_group(
@@ -5144,9 +5139,9 @@
     /// purpose, automatically gets an accel path assigned.
     ///
     /// For example, a menu containing menu items “New” and “Exit”, will, after
-    /// `gtk_menu_set_accel_path (menu, &quot;`&lt;Gnumeric-Sheet&gt;`/File&quot;);` has been
-    /// called, assign its items the accel paths: `&quot;`&lt;Gnumeric-Sheet&gt;`/File/New&quot;`
-    /// and `&quot;`&lt;Gnumeric-Sheet&gt;`/File/Exit&quot;`.
+    /// `gtk_menu_set_accel_path (menu, "`&lt;Gnumeric-Sheet&gt;`/File");` has been
+    /// called, assign its items the accel paths: `"`&lt;Gnumeric-Sheet&gt;`/File/New"`
+    /// and `"`&lt;Gnumeric-Sheet&gt;`/File/Exit"`.
     ///
     /// Assigning accel paths to menu items then enables the user to change
     /// their accelerators at runtime. More details about accelerator paths
@@ -5157,7 +5152,7 @@
     /// it first with `g_intern_static_string()`.
     /// ## `accel_path`
     /// a valid accelerator path, or [`None`] to unset the path
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_set_accel_path&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_set_accel_path"</span>)]
     </span><span class="kw">fn </span>set_accel_path(<span class="kw-2">&amp;</span><span class="self">self</span>, accel_path: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_set_accel_path(
@@ -5172,7 +5167,7 @@
     /// ## `index`
     /// the index of the menu item to select. Index values are
     ///  from 0 to n-1
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_set_active&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_set_active"</span>)]
     </span><span class="kw">fn </span>set_active(<span class="kw-2">&amp;</span><span class="self">self</span>, index: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_set_active(<a class="self" href="#2294">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#2294">index</a>);
@@ -5191,7 +5186,7 @@
     /// ## `monitor_num`
     /// the number of the monitor on which the menu should
     ///  be popped up
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_set_monitor&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_set_monitor"</span>)]
     </span><span class="kw">fn </span>set_monitor(<span class="kw-2">&amp;</span><span class="self">self</span>, monitor_num: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_set_monitor(<a class="self" href="#2313">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#2313">monitor_num</a>);
@@ -5202,7 +5197,7 @@
     /// or icons, regardless of their actual presence.
     /// ## `reserve_toggle_size`
     /// whether to reserve size for toggles
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_set_reserve_toggle_size&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_set_reserve_toggle_size"</span>)]
     </span><span class="kw">fn </span>set_reserve_toggle_size(<span class="kw-2">&amp;</span><span class="self">self</span>, reserve_toggle_size: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_set_reserve_toggle_size(
@@ -5216,7 +5211,7 @@
     /// ## `screen`
     /// a [`gdk::Screen`][crate::gdk::Screen], or [`None`] if the screen should be
     ///  determined by the widget the menu is attached to
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_menu_set_screen&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_menu_set_screen"</span>)]
     </span><span class="kw">fn </span>set_screen(<span class="kw-2">&amp;</span><span class="self">self</span>, screen: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="../../../gdk/auto/screen/struct.Screen.html">gdk::Screen</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_menu_set_screen(<a class="self" href="#2338">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#2338">screen</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -5237,9 +5232,9 @@
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`rect-anchor-dx`][struct@crate::Menu#rect-anchor-dx],
     /// [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;anchor-hints&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"anchor-hints"</span>)]
     </span><span class="kw">fn </span>anchor_hints(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="../../../gdk/auto/flags/struct.AnchorHints.html">gdk::AnchorHints</a> {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#2359">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;anchor-hints&quot;</span>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#2359">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"anchor-hints"</span>)
     }
 
     <span class="doccomment">/// Positioning hints for aligning the menu relative to a rectangle.
@@ -5256,37 +5251,37 @@
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`rect-anchor-dx`][struct@crate::Menu#rect-anchor-dx],
     /// [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;anchor-hints&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"anchor-hints"</span>)]
     </span><span class="kw">fn </span>set_anchor_hints(<span class="kw-2">&amp;</span><span class="self">self</span>, anchor_hints: <a href="../../../gdk/auto/flags/struct.AnchorHints.html">gdk::AnchorHints</a>) {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2378">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;anchor-hints&quot;</span>, <a href="#2378">anchor_hints</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2378">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"anchor-hints"</span>, <a href="#2378">anchor_hints</a>)
     }
 
     <span class="doccomment">/// The widget the menu is attached to. Setting this property attaches
     /// the menu without a `GtkMenuDetachFunc`. If you need to use a detacher,
     /// use `gtk_menu_attach_to_widget()` directly.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;attach-widget&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"attach-widget"</span>)]
     </span><span class="kw">fn </span>set_attach_widget&lt;P: IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, attach_widget: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span>P&gt;) {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2386">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;attach-widget&quot;</span>, <a href="#2386">attach_widget</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2386">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"attach-widget"</span>, <a href="#2386">attach_widget</a>)
     }
 
-    <span class="doccomment">/// The [`gdk::WindowTypeHint`][crate::gdk::WindowTypeHint] to use for the menu&#39;s [`gdk::Window`][crate::gdk::Window].
+    <span class="doccomment">/// The [`gdk::WindowTypeHint`][crate::gdk::WindowTypeHint] to use for the menu's [`gdk::Window`][crate::gdk::Window].
     ///
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`anchor-hints`][struct@crate::Menu#anchor-hints],
     /// [`rect-anchor-dx`][struct@crate::Menu#rect-anchor-dx], [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], and [`popped-up`][struct@crate::Menu#popped-up].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;menu-type-hint&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"menu-type-hint"</span>)]
     </span><span class="kw">fn </span>menu_type_hint(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="../../../gdk/auto/enums/enum.WindowTypeHint.html">gdk::WindowTypeHint</a> {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#2396">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;menu-type-hint&quot;</span>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#2396">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"menu-type-hint"</span>)
     }
 
-    <span class="doccomment">/// The [`gdk::WindowTypeHint`][crate::gdk::WindowTypeHint] to use for the menu&#39;s [`gdk::Window`][crate::gdk::Window].
+    <span class="doccomment">/// The [`gdk::WindowTypeHint`][crate::gdk::WindowTypeHint] to use for the menu's [`gdk::Window`][crate::gdk::Window].
     ///
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`anchor-hints`][struct@crate::Menu#anchor-hints],
     /// [`rect-anchor-dx`][struct@crate::Menu#rect-anchor-dx], [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], and [`popped-up`][struct@crate::Menu#popped-up].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;menu-type-hint&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"menu-type-hint"</span>)]
     </span><span class="kw">fn </span>set_menu_type_hint(<span class="kw-2">&amp;</span><span class="self">self</span>, menu_type_hint: <a href="../../../gdk/auto/enums/enum.WindowTypeHint.html">gdk::WindowTypeHint</a>) {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2406">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;menu-type-hint&quot;</span>, <a href="#2406">menu_type_hint</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2406">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"menu-type-hint"</span>, <a href="#2406">menu_type_hint</a>)
     }
 
     <span class="doccomment">/// Horizontal offset to apply to the menu, i.e. the rectangle or widget
@@ -5295,9 +5290,9 @@
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`anchor-hints`][struct@crate::Menu#anchor-hints],
     /// [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;rect-anchor-dx&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"rect-anchor-dx"</span>)]
     </span><span class="kw">fn </span>rect_anchor_dx(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#2417">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;rect-anchor-dx&quot;</span>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#2417">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"rect-anchor-dx"</span>)
     }
 
     <span class="doccomment">/// Horizontal offset to apply to the menu, i.e. the rectangle or widget
@@ -5306,9 +5301,9 @@
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`anchor-hints`][struct@crate::Menu#anchor-hints],
     /// [`rect-anchor-dy`][struct@crate::Menu#rect-anchor-dy], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;rect-anchor-dx&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"rect-anchor-dx"</span>)]
     </span><span class="kw">fn </span>set_rect_anchor_dx(<span class="kw-2">&amp;</span><span class="self">self</span>, rect_anchor_dx: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2428">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;rect-anchor-dx&quot;</span>, <a href="#2428">rect_anchor_dx</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2428">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"rect-anchor-dx"</span>, <a href="#2428">rect_anchor_dx</a>)
     }
 
     <span class="doccomment">/// Vertical offset to apply to the menu, i.e. the rectangle or widget anchor.
@@ -5316,9 +5311,9 @@
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`anchor-hints`][struct@crate::Menu#anchor-hints],
     /// [`rect-anchor-dx`][struct@crate::Menu#rect-anchor-dx], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;rect-anchor-dy&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"rect-anchor-dy"</span>)]
     </span><span class="kw">fn </span>rect_anchor_dy(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#2438">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;rect-anchor-dy&quot;</span>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#2438">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"rect-anchor-dy"</span>)
     }
 
     <span class="doccomment">/// Vertical offset to apply to the menu, i.e. the rectangle or widget anchor.
@@ -5326,94 +5321,94 @@
     /// See gtk_menu_popup_at_rect (), gtk_menu_popup_at_widget (),
     /// gtk_menu_popup_at_pointer (), [`anchor-hints`][struct@crate::Menu#anchor-hints],
     /// [`rect-anchor-dx`][struct@crate::Menu#rect-anchor-dx], [`menu-type-hint`][struct@crate::Menu#menu-type-hint], and [`popped-up`][struct@crate::Menu#popped-up].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;rect-anchor-dy&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"rect-anchor-dy"</span>)]
     </span><span class="kw">fn </span>set_rect_anchor_dy(<span class="kw-2">&amp;</span><span class="self">self</span>, rect_anchor_dy: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2448">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;rect-anchor-dy&quot;</span>, <a href="#2448">rect_anchor_dy</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::set_property</a>(<a class="self" href="#2448">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"rect-anchor-dy"</span>, <a href="#2448">rect_anchor_dy</a>)
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;item.bottom-attach&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"item.bottom-attach"</span>)]
     </span><span class="kw">fn </span>item_bottom_attach&lt;T: IsA&lt;<a href="menu_item.rs.html#13-1283">MenuItem</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, item: <span class="kw-2">&amp;</span>T) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <a href="../container.rs.html#44-53"><span class="kw">crate</span>::prelude::ContainerExtManual::child_property</a>(
             <a class="self" href="#2453">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(),
             <span class="kw-2">&amp;</span><a href="#2453">item</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>(),
-            <span class="string">&quot;bottom-attach&quot;</span>,
+            <span class="string">"bottom-attach"</span>,
         )
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;item.bottom-attach&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"item.bottom-attach"</span>)]
     </span><span class="kw">fn </span>set_item_bottom_attach&lt;T: IsA&lt;<a href="menu_item.rs.html#13-1283">MenuItem</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, item: <span class="kw-2">&amp;</span>T, bottom_attach: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <a href="../container.rs.html#63-101"><span class="kw">crate</span>::prelude::ContainerExtManual::child_set_property</a>(
             <a class="self" href="#2462">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(),
             <span class="kw-2">&amp;</span><a href="#2462">item</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>(),
-            <span class="string">&quot;bottom-attach&quot;</span>,
+            <span class="string">"bottom-attach"</span>,
             <span class="kw-2">&amp;</span><a href="#2462">bottom_attach</a>,
         )
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;item.left-attach&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"item.left-attach"</span>)]
     </span><span class="kw">fn </span>item_left_attach&lt;T: IsA&lt;<a href="menu_item.rs.html#13-1283">MenuItem</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, item: <span class="kw-2">&amp;</span>T) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <a href="../container.rs.html#44-53"><span class="kw">crate</span>::prelude::ContainerExtManual::child_property</a>(
             <a class="self" href="#2472">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(),
             <span class="kw-2">&amp;</span><a href="#2472">item</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>(),
-            <span class="string">&quot;left-attach&quot;</span>,
+            <span class="string">"left-attach"</span>,
         )
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;item.left-attach&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"item.left-attach"</span>)]
     </span><span class="kw">fn </span>set_item_left_attach&lt;T: IsA&lt;<a href="menu_item.rs.html#13-1283">MenuItem</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, item: <span class="kw-2">&amp;</span>T, left_attach: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <a href="../container.rs.html#63-101"><span class="kw">crate</span>::prelude::ContainerExtManual::child_set_property</a>(
             <a class="self" href="#2481">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(),
             <span class="kw-2">&amp;</span><a href="#2481">item</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>(),
-            <span class="string">&quot;left-attach&quot;</span>,
+            <span class="string">"left-attach"</span>,
             <span class="kw-2">&amp;</span><a href="#2481">left_attach</a>,
         )
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;item.right-attach&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"item.right-attach"</span>)]
     </span><span class="kw">fn </span>item_right_attach&lt;T: IsA&lt;<a href="menu_item.rs.html#13-1283">MenuItem</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, item: <span class="kw-2">&amp;</span>T) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <a href="../container.rs.html#44-53"><span class="kw">crate</span>::prelude::ContainerExtManual::child_property</a>(
             <a class="self" href="#2491">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(),
             <span class="kw-2">&amp;</span><a href="#2491">item</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>(),
-            <span class="string">&quot;right-attach&quot;</span>,
+            <span class="string">"right-attach"</span>,
         )
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;item.right-attach&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"item.right-attach"</span>)]
     </span><span class="kw">fn </span>set_item_right_attach&lt;T: IsA&lt;<a href="menu_item.rs.html#13-1283">MenuItem</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, item: <span class="kw-2">&amp;</span>T, right_attach: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <a href="../container.rs.html#63-101"><span class="kw">crate</span>::prelude::ContainerExtManual::child_set_property</a>(
             <a class="self" href="#2500">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(),
             <span class="kw-2">&amp;</span><a href="#2500">item</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>(),
-            <span class="string">&quot;right-attach&quot;</span>,
+            <span class="string">"right-attach"</span>,
             <span class="kw-2">&amp;</span><a href="#2500">right_attach</a>,
         )
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;item.top-attach&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"item.top-attach"</span>)]
     </span><span class="kw">fn </span>item_top_attach&lt;T: IsA&lt;<a href="menu_item.rs.html#13-1283">MenuItem</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, item: <span class="kw-2">&amp;</span>T) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <a href="../container.rs.html#44-53"><span class="kw">crate</span>::prelude::ContainerExtManual::child_property</a>(
             <a class="self" href="#2510">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(),
             <span class="kw-2">&amp;</span><a href="#2510">item</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>(),
-            <span class="string">&quot;top-attach&quot;</span>,
+            <span class="string">"top-attach"</span>,
         )
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;item.top-attach&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"item.top-attach"</span>)]
     </span><span class="kw">fn </span>set_item_top_attach&lt;T: IsA&lt;<a href="menu_item.rs.html#13-1283">MenuItem</a>&gt;&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, item: <span class="kw-2">&amp;</span>T, top_attach: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <a href="../container.rs.html#63-101"><span class="kw">crate</span>::prelude::ContainerExtManual::child_set_property</a>(
             <a class="self" href="#2519">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(),
             <span class="kw-2">&amp;</span><a href="#2519">item</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>(),
-            <span class="string">&quot;top-attach&quot;</span>,
+            <span class="string">"top-attach"</span>,
             <span class="kw-2">&amp;</span><a href="#2519">top_attach</a>,
         )
     }
 
     <span class="doccomment">/// ## `scroll_type`
     /// a [`ScrollType`][crate::ScrollType]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;move-scroll&quot;</span>)]
-    </span><span class="kw">fn </span>connect_move_scroll&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="enums.rs.html#8208-8259">ScrollType</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>move_scroll_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"move-scroll"</span>)]
+    </span><span class="kw">fn </span>connect_move_scroll&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="enums.rs.html#7243-7294">ScrollType</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>move_scroll_trampoline&lt;
             P: IsA&lt;<a href="#15-1417">Menu</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <a href="enums.rs.html#8208-8259">ScrollType</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <a href="enums.rs.html#7243-7294">ScrollType</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             scroll_type: <a href="../../../gtk_sys/type.GtkScrollType.html">ffi::GtkScrollType</a>,
@@ -5429,8 +5424,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2531">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2531">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;move-scroll\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"move-scroll\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     move_scroll_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2547">f</a>),
@@ -5438,19 +5433,19 @@
         }
     }
 
-    <span class="kw">fn </span>emit_move_scroll(<span class="kw-2">&amp;</span><span class="self">self</span>, scroll_type: <a href="enums.rs.html#8208-8259">ScrollType</a>) {
-        <a class="self" href="#2559">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">emit_by_name</a>::&lt;()&gt;(<span class="string">&quot;move-scroll&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><a href="#2559">scroll_type</a>]);
+    <span class="kw">fn </span>emit_move_scroll(<span class="kw-2">&amp;</span><span class="self">self</span>, scroll_type: <a href="enums.rs.html#7243-7294">ScrollType</a>) {
+        <a class="self" href="#2559">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">emit_by_name</a>::&lt;()&gt;(<span class="string">"move-scroll"</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><a href="#2559">scroll_type</a>]);
     }
 
-    <span class="comment">//#[doc(alias = &quot;popped-up&quot;)]
+    <span class="comment">//#[doc(alias = "popped-up")]
     //fn connect_popped_up&lt;Unsupported or ignored types&gt;(&amp;self, f: F) -&gt; SignalHandlerId {
     //    Unimplemented flipped_rect: *.Pointer
     //    Unimplemented final_rect: *.Pointer
     //}
 
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;accel-group&quot;</span>)]
-    </span><span class="kw">fn </span>connect_accel_group_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_accel_group_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"accel-group"</span>)]
+    </span><span class="kw">fn </span>connect_accel_group_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_accel_group_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5462,8 +5457,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2570">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2570">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::accel-group\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::accel-group\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_accel_group_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2580">f</a>),
@@ -5471,9 +5466,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;accel-path&quot;</span>)]
-    </span><span class="kw">fn </span>connect_accel_path_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_accel_path_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"accel-path"</span>)]
+    </span><span class="kw">fn </span>connect_accel_path_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_accel_path_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5485,8 +5480,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2593">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2593">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::accel-path\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::accel-path\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_accel_path_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2603">f</a>),
@@ -5494,9 +5489,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;active&quot;</span>)]
-    </span><span class="kw">fn </span>connect_active_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_active_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"active"</span>)]
+    </span><span class="kw">fn </span>connect_active_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_active_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5508,8 +5503,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2616">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2616">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::active\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::active\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_active_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2626">f</a>),
@@ -5517,9 +5512,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;anchor-hints&quot;</span>)]
-    </span><span class="kw">fn </span>connect_anchor_hints_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_anchor_hints_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"anchor-hints"</span>)]
+    </span><span class="kw">fn </span>connect_anchor_hints_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_anchor_hints_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5531,8 +5526,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2639">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2639">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::anchor-hints\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::anchor-hints\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_anchor_hints_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2649">f</a>),
@@ -5540,9 +5535,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;attach-widget&quot;</span>)]
-    </span><span class="kw">fn </span>connect_attach_widget_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_attach_widget_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"attach-widget"</span>)]
+    </span><span class="kw">fn </span>connect_attach_widget_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_attach_widget_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5554,8 +5549,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2662">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2662">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::attach-widget\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::attach-widget\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_attach_widget_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2672">f</a>),
@@ -5563,9 +5558,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;menu-type-hint&quot;</span>)]
-    </span><span class="kw">fn </span>connect_menu_type_hint_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_menu_type_hint_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"menu-type-hint"</span>)]
+    </span><span class="kw">fn </span>connect_menu_type_hint_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_menu_type_hint_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5577,8 +5572,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2685">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2685">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::menu-type-hint\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::menu-type-hint\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_menu_type_hint_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2695">f</a>),
@@ -5586,9 +5581,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;monitor&quot;</span>)]
-    </span><span class="kw">fn </span>connect_monitor_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_monitor_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"monitor"</span>)]
+    </span><span class="kw">fn </span>connect_monitor_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_monitor_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5600,8 +5595,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2708">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2708">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::monitor\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::monitor\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_monitor_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2718">f</a>),
@@ -5609,9 +5604,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;rect-anchor-dx&quot;</span>)]
-    </span><span class="kw">fn </span>connect_rect_anchor_dx_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_rect_anchor_dx_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"rect-anchor-dx"</span>)]
+    </span><span class="kw">fn </span>connect_rect_anchor_dx_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_rect_anchor_dx_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5623,8 +5618,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2731">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2731">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::rect-anchor-dx\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::rect-anchor-dx\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_rect_anchor_dx_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2741">f</a>),
@@ -5632,9 +5627,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;rect-anchor-dy&quot;</span>)]
-    </span><span class="kw">fn </span>connect_rect_anchor_dy_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_rect_anchor_dy_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"rect-anchor-dy"</span>)]
+    </span><span class="kw">fn </span>connect_rect_anchor_dy_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_rect_anchor_dy_trampoline&lt;P: IsA&lt;<a href="#15-1417">Menu</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -5646,8 +5641,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2754">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2754">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::rect-anchor-dy\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::rect-anchor-dy\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_rect_anchor_dy_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2764">f</a>),
@@ -5655,11 +5650,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;reserve-toggle-size&quot;</span>)]
-    </span><span class="kw">fn </span>connect_reserve_toggle_size_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_reserve_toggle_size_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"reserve-toggle-size"</span>)]
+    </span><span class="kw">fn </span>connect_reserve_toggle_size_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_reserve_toggle_size_trampoline&lt;
             P: IsA&lt;<a href="#15-1417">Menu</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkMenu.html">ffi::GtkMenu</a>,
             _param_spec: glib::ffi::gpointer,
@@ -5672,8 +5667,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2777">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2777">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::reserve-toggle-size\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::reserve-toggle-size\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_reserve_toggle_size_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2790">f</a>),
@@ -5683,10 +5678,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#15-1417">Menu</a>&gt;&gt; <a href="#1934-2801">GtkMenuExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#15-1417">Menu</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#2806">f</a>.write_str(<span class="string">&quot;Menu&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

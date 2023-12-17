@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/functions.rs`."><title>functions.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/functions.rs`."><title>functions.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -2387,11 +2388,11 @@
 // DO NOT EDIT
 
 </span><span class="kw">use crate</span>::{
-    <a href="accel_group.rs.html#12-68">AccelGroup</a>, <a href="enums.rs.html#4998-5007">Orientation</a>, <a href="page_setup.rs.html#9-67">PageSetup</a>, <a href="enums.rs.html#6079-6094">PositionType</a>, <a href="print_settings.rs.html#12-35">PrintSettings</a>, <a href="selection_data.rs.html#9-18">SelectionData</a>, <a href="style_context.rs.html#16-115">StyleContext</a>,
-    <a href="text_buffer.rs.html#13-239">TextBuffer</a>, <a href="enums.rs.html#9893-9905">TextDirection</a>, <a href="tree_model.rs.html#13-276">TreeModel</a>, <a href="tree_path.rs.html#8-17">TreePath</a>, <a href="widget.rs.html#17-1520">Widget</a>, <a href="window.rs.html#16-1427">Window</a>,
+    <a href="accel_group.rs.html#12-68">AccelGroup</a>, <a href="enums.rs.html#4407-4416">Orientation</a>, <a href="page_setup.rs.html#8-66">PageSetup</a>, <a href="enums.rs.html#5361-5376">PositionType</a>, <a href="print_settings.rs.html#11-34">PrintSettings</a>, <a href="selection_data.rs.html#8-17">SelectionData</a>, <a href="style_context.rs.html#16-115">StyleContext</a>,
+    <a href="text_buffer.rs.html#13-239">TextBuffer</a>, <a href="enums.rs.html#8720-8732">TextDirection</a>, <a href="tree_model.rs.html#13-276">TreeModel</a>, <a href="tree_path.rs.html#7-16">TreePath</a>, <a href="widget.rs.html#17-1520">Widget</a>, <a href="window.rs.html#16-1427">Window</a>,
 };
 <span class="kw">use </span>glib::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>};
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/core/mem/index.html">mem</a>, <a href="https://doc.rust-lang.org/nightly/core/ptr/index.html">ptr</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <span class="doccomment">/// Finds the first accelerator in any [`AccelGroup`][crate::AccelGroup] attached
 /// to `object` that matches `accel_key` and `accel_mods`, and
@@ -2408,7 +2409,7 @@
 ///
 /// [`true`] if an accelerator was activated and handled
 ///  this keypress
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accel_groups_activate&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accel_groups_activate"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accel_groups_activate.html">accel_groups_activate</a>(
     object: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/struct.Object.html">glib::Object</a>&gt;,
     accel_key: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
@@ -2432,7 +2433,7 @@
 ///
 /// a list of
 ///  all accel groups which are attached to `object`
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accel_groups_from_object&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accel_groups_from_object"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accel_groups_from_object.html">accel_groups_from_object</a>(object: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/struct.Object.html">glib::Object</a>&gt;) -&gt; Vec&lt;<a href="accel_group.rs.html#12-68">AccelGroup</a>&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
@@ -2450,7 +2451,7 @@
 /// # Returns
 ///
 /// the default accelerator modifier mask
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accelerator_get_default_mod_mask&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accelerator_get_default_mod_mask"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accelerator_get_default_mod_mask.html">accelerator_get_default_mod_mask</a>() -&gt; <a href="../../../gdk/auto/flags/struct.ModifierType.html">gdk::ModifierType</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_accelerator_get_default_mod_mask()) }
@@ -2466,7 +2467,7 @@
 /// # Returns
 ///
 /// a newly-allocated string representing the accelerator.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accelerator_get_label&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accelerator_get_label"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accelerator_get_label.html">accelerator_get_label</a>(
     accelerator_key: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
     accelerator_mods: <a href="../../../gdk/auto/flags/struct.ModifierType.html">gdk::ModifierType</a>,
@@ -2499,7 +2500,7 @@
 /// # Returns
 ///
 /// a newly-allocated string representing the accelerator.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accelerator_get_label_with_keycode&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accelerator_get_label_with_keycode"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accelerator_get_label_with_keycode.html">accelerator_get_label_with_keycode</a>(
     display: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="../../../gdk/auto/display/struct.Display.html">gdk::Display</a>&gt;,
     accelerator_key: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
@@ -2531,7 +2532,7 @@
 /// # Returns
 ///
 /// a newly-allocated accelerator name
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accelerator_name&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accelerator_name"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accelerator_name.html">accelerator_name</a>(
     accelerator_key: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
     accelerator_mods: <a href="../../../gdk/auto/flags/struct.ModifierType.html">gdk::ModifierType</a>,
@@ -2562,7 +2563,7 @@
 /// # Returns
 ///
 /// a newly allocated accelerator name.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accelerator_name_with_keycode&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accelerator_name_with_keycode"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accelerator_name_with_keycode.html">accelerator_name_with_keycode</a>(
     display: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="../../../gdk/auto/display/struct.Display.html">gdk::Display</a>&gt;,
     accelerator_key: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
@@ -2605,12 +2606,12 @@
 /// ## `accelerator_mods`
 /// return location for accelerator
 ///  modifier mask, [`None`]
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accelerator_parse&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accelerator_parse"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accelerator_parse.html">accelerator_parse</a>(accelerator: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; (<a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, <a href="../../../gdk/auto/flags/struct.ModifierType.html">gdk::ModifierType</a>) {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>accelerator_key = mem::MaybeUninit::uninit();
-        <span class="kw">let </span><span class="kw-2">mut </span>accelerator_mods = mem::MaybeUninit::uninit();
+        <span class="kw">let </span><span class="kw-2">mut </span>accelerator_key = std::mem::MaybeUninit::uninit();
+        <span class="kw">let </span><span class="kw-2">mut </span>accelerator_mods = std::mem::MaybeUninit::uninit();
         ffi::gtk_accelerator_parse(
             <a href="#225">accelerator</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
             <a href="#228">accelerator_key</a>.as_mut_ptr(),
@@ -2637,7 +2638,7 @@
 /// before using any accelerator groups.
 /// ## `default_mod_mask`
 /// accelerator modifier mask
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accelerator_set_default_mod_mask&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accelerator_set_default_mod_mask"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accelerator_set_default_mod_mask.html">accelerator_set_default_mod_mask</a>(default_mod_mask: <a href="../../../gdk/auto/flags/struct.ModifierType.html">gdk::ModifierType</a>) {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
@@ -2648,7 +2649,7 @@
 <span class="doccomment">/// Determines whether a given keyval and modifier mask constitute
 /// a valid keyboard accelerator. For example, the `GDK_KEY_a` keyval
 /// plus [`gdk::ModifierType::CONTROL_MASK`][crate::gdk::ModifierType::CONTROL_MASK] is valid - this is a “Ctrl+a” accelerator.
-/// But, you can&#39;t, for instance, use the `GDK_KEY_Control_L` keyval
+/// But, you can't, for instance, use the `GDK_KEY_Control_L` keyval
 /// as an accelerator.
 /// ## `keyval`
 /// a GDK keyval
@@ -2658,7 +2659,7 @@
 /// # Returns
 ///
 /// [`true`] if the accelerator is valid
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_accelerator_valid&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_accelerator_valid"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.accelerator_valid.html">accelerator_valid</a>(keyval: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, modifiers: <a href="../../../gdk/auto/flags/struct.ModifierType.html">gdk::ModifierType</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_accelerator_valid(<a href="#278">keyval</a>, <a href="#278">modifiers</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>())) }
@@ -2676,7 +2677,7 @@
 /// # Returns
 ///
 /// [`true`] if a binding was found and activated
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_bindings_activate&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_bindings_activate"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.bindings_activate.html">bindings_activate</a>(
     object: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/struct.Object.html">glib::Object</a>&gt;,
     keyval: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
@@ -2702,7 +2703,7 @@
 /// # Returns
 ///
 /// [`true`] if a matching key binding was found
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_bindings_activate_event&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_bindings_activate_event"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.bindings_activate_event.html">bindings_activate_event</a>(object: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/struct.Object.html">glib::Object</a>&gt;, event: <span class="kw-2">&amp;mut </span><a href="../../../gdk/event_key/struct.EventKey.html">gdk::EventKey</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
@@ -2731,7 +2732,7 @@
 /// # Returns
 ///
 /// [`true`] if `window` should be drawn
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_cairo_should_draw_window&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_cairo_should_draw_window"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.cairo_should_draw_window.html">cairo_should_draw_window</a>(cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>, window: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/window/struct.Window.html">gdk::Window</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
@@ -2757,7 +2758,7 @@
 /// the widget the context is currently centered for
 /// ## `window`
 /// the window to transform the context to
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_cairo_transform_to_window&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_cairo_transform_to_window"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.cairo_transform_to_window.html">cairo_transform_to_window</a>(
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
     widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;,
@@ -2808,7 +2809,7 @@
 ///  given version, or a string describing the version mismatch.
 ///  The returned string is owned by GTK+ and should not be modified
 ///  or freed.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_check_version&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_check_version"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.check_version.html">check_version</a>(
     required_major: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
     required_minor: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
@@ -2834,7 +2835,7 @@
 /// a [`gdk::Device`][crate::gdk::Device] to grab on.
 /// ## `block_others`
 /// [`true`] to prevent other devices to interact with `widget`.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_device_grab_add&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_device_grab_add"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.device_grab_add.html">device_grab_add</a>(widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;, device: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/device/struct.Device.html">gdk::Device</a>, block_others: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -2854,7 +2855,7 @@
 /// a [`Widget`][crate::Widget]
 /// ## `device`
 /// a [`gdk::Device`][crate::gdk::Device]
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_device_grab_remove&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_device_grab_remove"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.device_grab_remove.html">device_grab_remove</a>(widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;, device: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/device/struct.Device.html">gdk::Device</a>) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -2864,13 +2865,13 @@
 
 <span class="doccomment">/// Prevents `gtk_init()`, `gtk_init_check()`, `gtk_init_with_args()` and
 /// `gtk_parse_args()` from automatically
-/// calling `setlocale (LC_ALL, &quot;&quot;)`. You would
+/// calling `setlocale (LC_ALL, "")`. You would
 /// want to use this function if you wanted to set the locale for
 /// your program to something other than the user’s locale, or if
 /// you wanted to set different values for different locale categories.
 ///
 /// Most programs should not need to call this function.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_disable_setlocale&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_disable_setlocale"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.disable_setlocale.html">disable_setlocale</a>() {
     <a class="macro" href="../rt.rs.html#38-44">assert_not_initialized!</a>();
     <span class="kw">unsafe </span>{
@@ -2878,7 +2879,7 @@
     }
 }
 
-<span class="comment">//#[doc(alias = &quot;gtk_distribute_natural_allocation&quot;)]
+<span class="comment">//#[doc(alias = "gtk_distribute_natural_allocation")]
 //pub fn distribute_natural_allocation(extra_space: i32, n_requested_sizes: u32, sizes: /*Ignored*/&amp;mut RequestedSize) -&gt; i32 {
 //    unsafe { TODO: call ffi:gtk_distribute_natural_allocation() }
 //}
@@ -2906,14 +2907,14 @@
 /// # Returns
 ///
 /// [`true`] if any events are pending, [`false`] otherwise
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_events_pending&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_events_pending"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.events_pending.html">events_pending</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_events_pending()) }
 }
 
-<span class="attr">#[doc(alias = <span class="string">&quot;gtk_false&quot;</span>)]
-#[doc(alias = <span class="string">&quot;false&quot;</span>)]
+<span class="attr">#[doc(alias = <span class="string">"gtk_false"</span>)]
+#[doc(alias = <span class="string">"false"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.false_.html">false_</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_false()) }
@@ -2921,14 +2922,14 @@
 
 <span class="doccomment">/// Returns the binary age as passed to `libtool`
 /// when building the GTK+ library the process is running against.
-/// If `libtool` means nothing to you, don&#39;t
+/// If `libtool` means nothing to you, don't
 /// worry about it.
 ///
 /// # Returns
 ///
 /// the binary age of the GTK+ library
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_binary_age&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_binary_age&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_binary_age"</span>)]
+#[doc(alias = <span class="string">"get_binary_age"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.binary_age.html">binary_age</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{ ffi::gtk_get_binary_age() }
@@ -2945,8 +2946,8 @@
 /// a copy of the current event, or
 ///  [`None`] if there is no current event. The returned event must be
 ///  freed with `gdk_event_free()`.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_current_event&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_current_event&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_current_event"</span>)]
+#[doc(alias = <span class="string">"get_current_event"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.current_event.html">current_event</a>() -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/event/struct.Event.html">gdk::Event</a>&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ from_glib_full(ffi::gtk_get_current_event()) }
@@ -2958,8 +2959,8 @@
 /// # Returns
 ///
 /// a [`gdk::Device`][crate::gdk::Device], or [`None`]
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_current_event_device&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_current_event_device&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_current_event_device"</span>)]
+#[doc(alias = <span class="string">"get_current_event_device"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.current_event_device.html">current_event_device</a>() -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/device/struct.Device.html">gdk::Device</a>&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_get_current_event_device()) }
@@ -2976,12 +2977,12 @@
 ///
 /// ## `state`
 /// a location to store the state of the current event
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_current_event_state&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_current_event_state&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_current_event_state"</span>)]
+#[doc(alias = <span class="string">"get_current_event_state"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.current_event_state.html">current_event_state</a>() -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/flags/struct.ModifierType.html">gdk::ModifierType</a>&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>state = mem::MaybeUninit::uninit();
+        <span class="kw">let </span><span class="kw-2">mut </span>state = std::mem::MaybeUninit::uninit();
         <span class="kw">let </span>ret = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_get_current_event_state(<a href="#600">state</a>.as_mut_ptr()));
         <span class="kw">if </span>ret {
             <span class="prelude-val">Some</span>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#600">state</a>.assume_init()))
@@ -2998,8 +2999,8 @@
 ///
 /// the timestamp from the current event,
 ///  or `GDK_CURRENT_TIME`.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_current_event_time&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_current_event_time&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_current_event_time"</span>)]
+#[doc(alias = <span class="string">"get_current_event_time"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.current_event_time.html">current_event_time</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ ffi::gtk_get_current_event_time() }
@@ -3013,8 +3014,8 @@
 /// # Returns
 ///
 /// the GTK+ debug flags.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_debug_flags&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_debug_flags&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_debug_flags"</span>)]
+#[doc(alias = <span class="string">"get_debug_flags"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.debug_flags.html">debug_flags</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ ffi::gtk_get_debug_flags() }
@@ -3033,8 +3034,8 @@
 ///
 /// the default language as a [`pango::Language`][crate::pango::Language],
 ///  must not be freed
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_default_language&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_default_language&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_default_language"</span>)]
+#[doc(alias = <span class="string">"get_default_language"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.default_language.html">default_language</a>() -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/pango/auto/language/struct.Language.html">pango::Language</a>&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_get_default_language()) }
@@ -3050,8 +3051,8 @@
 ///
 /// the widget that originally
 ///  received `event`, or [`None`]
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_event_widget&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_event_widget&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_event_widget"</span>)]
+#[doc(alias = <span class="string">"get_event_widget"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.event_widget.html">event_widget</a>(event: <span class="kw-2">&amp;mut </span><a href="../../../gdk/event/struct.Event.html">gdk::Event</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_get_event_widget(<a href="#671">event</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>)) }
@@ -3059,14 +3060,14 @@
 
 <span class="doccomment">/// Returns the interface age as passed to `libtool`
 /// when building the GTK+ library the process is running against.
-/// If `libtool` means nothing to you, don&#39;t
+/// If `libtool` means nothing to you, don't
 /// worry about it.
 ///
 /// # Returns
 ///
 /// the interface age of the GTK+ library
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_interface_age&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_interface_age&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_interface_age"</span>)]
+#[doc(alias = <span class="string">"get_interface_age"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.interface_age.html">interface_age</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{ ffi::gtk_get_interface_age() }
@@ -3101,9 +3102,9 @@
 /// # Returns
 ///
 /// the [`TextDirection`][crate::TextDirection] of the current locale
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_locale_direction&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_locale_direction&quot;</span>)]
-</span><span class="kw">pub fn </span><a href="../../../gtk/fn.locale_direction.html">locale_direction</a>() -&gt; <a href="enums.rs.html#9893-9905">TextDirection</a> {
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_locale_direction"</span>)]
+#[doc(alias = <span class="string">"get_locale_direction"</span>)]
+</span><span class="kw">pub fn </span><a href="../../../gtk/fn.locale_direction.html">locale_direction</a>() -&gt; <a href="enums.rs.html#8720-8732">TextDirection</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_get_locale_direction()) }
 }
@@ -3119,8 +3120,8 @@
 /// # Returns
 ///
 /// the major version number of the GTK+ library
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_major_version&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_major_version&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_major_version"</span>)]
+#[doc(alias = <span class="string">"get_major_version"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.major_version.html">major_version</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{ ffi::gtk_get_major_version() }
@@ -3137,8 +3138,8 @@
 /// # Returns
 ///
 /// the micro version number of the GTK+ library
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_micro_version&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_micro_version&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_micro_version"</span>)]
+#[doc(alias = <span class="string">"get_micro_version"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.micro_version.html">micro_version</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{ ffi::gtk_get_micro_version() }
@@ -3155,15 +3156,15 @@
 /// # Returns
 ///
 /// the minor version number of the GTK+ library
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_get_minor_version&quot;</span>)]
-#[doc(alias = <span class="string">&quot;get_minor_version&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_get_minor_version"</span>)]
+#[doc(alias = <span class="string">"get_minor_version"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.minor_version.html">minor_version</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{ ffi::gtk_get_minor_version() }
 }
 
-<span class="comment">//#[doc(alias = &quot;gtk_get_option_group&quot;)]
-//#[doc(alias = &quot;get_option_group&quot;)]
+<span class="comment">//#[doc(alias = "gtk_get_option_group")]
+//#[doc(alias = "get_option_group")]
 //pub fn option_group(open_default_display: bool) -&gt; /*Ignored*/Option&lt;glib::OptionGroup&gt; {
 //    unsafe { TODO: call ffi:gtk_get_option_group() }
 //}
@@ -3174,7 +3175,7 @@
 ///
 /// The widget which currently
 ///  has the grab or [`None`] if no grab is active
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_grab_get_current&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_grab_get_current"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.grab_get_current.html">grab_get_current</a>() -&gt; <span class="prelude-ty">Option</span>&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_grab_get_current()) }
@@ -3184,7 +3185,7 @@
 ///
 /// You can nest calls to [`main()`][crate::main()]. In that case `gtk_main_quit()`
 /// will make the innermost invocation of the main loop return.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_main&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_main"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.main.html">main</a>() {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
@@ -3230,7 +3231,7 @@
 /// 5. After finishing the delivery the event is popped from the event stack.
 /// ## `event`
 /// An event to process (normally passed by GDK)
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_main_do_event&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_main_do_event"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.main_do_event.html">main_do_event</a>(event: <span class="kw-2">&amp;mut </span><a href="../../../gdk/event/struct.Event.html">gdk::Event</a>) {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
@@ -3249,7 +3250,7 @@
 ///
 /// [`true`] if `gtk_main_quit()` has been called for the
 ///  innermost mainloop
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_main_iteration&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_main_iteration"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.main_iteration.html">main_iteration</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_main_iteration()) }
@@ -3265,7 +3266,7 @@
 ///
 /// [`true`] if `gtk_main_quit()` has been called for the
 ///  innermost mainloop
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_main_iteration_do&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_main_iteration_do"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.main_iteration_do.html">main_iteration_do</a>(blocking: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_main_iteration_do(<a href="#885">blocking</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>())) }
@@ -3277,7 +3278,7 @@
 ///
 /// the nesting level of the current invocation
 ///  of the main loop
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_main_level&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_main_level"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.main_level.html">main_level</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ ffi::gtk_main_level() }
@@ -3301,12 +3302,12 @@
 /// # Returns
 ///
 /// a new [`PageSetup`][crate::PageSetup]
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_print_run_page_setup_dialog&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_print_run_page_setup_dialog"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.print_run_page_setup_dialog.html">print_run_page_setup_dialog</a>(
     parent: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="window.rs.html#16-1427">Window</a>&gt;&gt;,
-    page_setup: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="page_setup.rs.html#9-67">PageSetup</a>&gt;,
-    settings: <span class="kw-2">&amp;</span><a href="print_settings.rs.html#12-35">PrintSettings</a>,
-) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="page_setup.rs.html#9-67">PageSetup</a>&gt; {
+    page_setup: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="page_setup.rs.html#8-66">PageSetup</a>&gt;,
+    settings: <span class="kw-2">&amp;</span><a href="print_settings.rs.html#11-34">PrintSettings</a>,
+) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="page_setup.rs.html#8-66">PageSetup</a>&gt; {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
         from_glib_full(ffi::gtk_print_run_page_setup_dialog(
@@ -3331,16 +3332,16 @@
 /// ## `done_cb`
 /// a function to call when the user saves
 ///  the modified page setup
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_print_run_page_setup_dialog_async&quot;</span>)]
-</span><span class="kw">pub fn </span><a href="../../../gtk/fn.print_run_page_setup_dialog_async.html">print_run_page_setup_dialog_async</a>&lt;P: FnOnce(<span class="kw-2">&amp;</span><a href="page_setup.rs.html#9-67">PageSetup</a>) + <a href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html">Send</a> + <a href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html">Sync</a> + <span class="lifetime">&#39;static</span>&gt;(
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_print_run_page_setup_dialog_async"</span>)]
+</span><span class="kw">pub fn </span><a href="../../../gtk/fn.print_run_page_setup_dialog_async.html">print_run_page_setup_dialog_async</a>&lt;P: FnOnce(<span class="kw-2">&amp;</span><a href="page_setup.rs.html#8-66">PageSetup</a>) + <a href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html">Send</a> + <a href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html">Sync</a> + <span class="lifetime">'static</span>&gt;(
     parent: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="window.rs.html#16-1427">Window</a>&gt;&gt;,
-    page_setup: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="page_setup.rs.html#9-67">PageSetup</a>&gt;,
-    settings: <span class="kw-2">&amp;</span><a href="print_settings.rs.html#12-35">PrintSettings</a>,
+    page_setup: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="page_setup.rs.html#8-66">PageSetup</a>&gt;,
+    settings: <span class="kw-2">&amp;</span><a href="print_settings.rs.html#11-34">PrintSettings</a>,
     done_cb: P,
 ) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">let </span>done_cb_data: Box_&lt;P&gt; = Box_::new(<a href="#955">done_cb</a>);
-    <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>done_cb_func&lt;P: FnOnce(<span class="kw-2">&amp;</span><a href="page_setup.rs.html#9-67">PageSetup</a>) + <a href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html">Send</a> + <a href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html">Sync</a> + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>done_cb_func&lt;P: FnOnce(<span class="kw-2">&amp;</span><a href="page_setup.rs.html#8-66">PageSetup</a>) + <a href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html">Send</a> + <a href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html">Sync</a> + <span class="lifetime">'static</span>&gt;(
         page_setup: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkPageSetup.html">ffi::GtkPageSetup</a>,
         data: glib::ffi::gpointer,
     ) {
@@ -3383,7 +3384,7 @@
 /// a [`Widget`][crate::Widget]
 /// ## `event`
 /// an event
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_propagate_event&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_propagate_event"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.propagate_event.html">propagate_event</a>(widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;, event: <span class="kw-2">&amp;mut </span><a href="../../../gdk/event/struct.Event.html">gdk::Event</a>) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -3406,7 +3407,7 @@
 /// rectangle width
 /// ## `height`
 /// rectangle height
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_activity&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_activity"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_activity.html">render_activity</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3445,7 +3446,7 @@
 /// Y origin of the render area
 /// ## `size`
 /// square side for render area
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_arrow&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_arrow"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_arrow.html">render_arrow</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3485,7 +3486,7 @@
 /// rectangle width
 /// ## `height`
 /// rectangle height
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_background&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_background"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_background.html">render_background</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3526,7 +3527,7 @@
 ///
 /// ## `out_clip`
 /// return location for the clip
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_background_get_clip&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_background_get_clip"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_background_get_clip.html">render_background_get_clip</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     x: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
@@ -3570,7 +3571,7 @@
 /// rectangle width
 /// ## `height`
 /// rectangle height
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_check&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_check"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_check.html">render_check</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3611,7 +3612,7 @@
 /// rectangle width
 /// ## `height`
 /// rectangle height
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_expander&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_expander"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_expander.html">render_expander</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3654,7 +3655,7 @@
 /// rectangle height
 /// ## `gap_side`
 /// side where the gap is
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_extension&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_extension"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_extension.html">render_extension</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3662,7 +3663,7 @@
     y: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
     width: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
     height: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
-    gap_side: <a href="enums.rs.html#6079-6094">PositionType</a>,
+    gap_side: <a href="enums.rs.html#5361-5376">PositionType</a>,
 ) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -3695,7 +3696,7 @@
 /// rectangle width
 /// ## `height`
 /// rectangle height
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_focus&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_focus"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_focus.html">render_focus</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3735,7 +3736,7 @@
 /// rectangle width
 /// ## `height`
 /// rectangle height
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_frame&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_frame"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_frame.html">render_frame</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3788,9 +3789,9 @@
 /// initial coordinate (X or Y depending on `gap_side`) for the gap
 /// ## `xy1_gap`
 /// end coordinate (X or Y depending on `gap_side`) for the gap
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;v3_24&quot;</span>, deprecated = <span class="string">&quot;Since 3.24&quot;</span>)]
+</span><span class="attr">#[cfg_attr(feature = <span class="string">"v3_24"</span>, deprecated = <span class="string">"Since 3.24"</span>)]
 #[allow(deprecated)]
-#[doc(alias = <span class="string">&quot;gtk_render_frame_gap&quot;</span>)]
+#[doc(alias = <span class="string">"gtk_render_frame_gap"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_frame_gap.html">render_frame_gap</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3798,7 +3799,7 @@
     y: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
     width: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
     height: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
-    gap_side: <a href="enums.rs.html#6079-6094">PositionType</a>,
+    gap_side: <a href="enums.rs.html#5361-5376">PositionType</a>,
     xy0_gap: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
     xy1_gap: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
 ) {
@@ -3837,7 +3838,7 @@
 /// rectangle width
 /// ## `height`
 /// rectangle height
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_handle&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_handle"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_handle.html">render_handle</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3877,7 +3878,7 @@
 /// X position for the `pixbuf`
 /// ## `y`
 /// Y position for the `pixbuf`
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_icon&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_icon"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_icon.html">render_icon</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3908,7 +3909,7 @@
 /// X position for the `icon`
 /// ## `y`
 /// Y position for the `incon`
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_icon_surface&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_icon_surface"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_icon_surface.html">render_icon_surface</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3943,7 +3944,7 @@
 /// the index in the [`pango::Layout`][crate::pango::Layout]
 /// ## `direction`
 /// the [`pango::Direction`][crate::pango::Direction] of the text
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_insertion_cursor&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_insertion_cursor"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_insertion_cursor.html">render_insertion_cursor</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -3978,7 +3979,7 @@
 /// Y origin
 /// ## `layout`
 /// the [`pango::Layout`][crate::pango::Layout] to render
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_layout&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_layout"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_layout.html">render_layout</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -4011,7 +4012,7 @@
 /// X coordinate for the end of the line
 /// ## `y1`
 /// Y coordinate for the end of the line
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_line&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_line"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_line.html">render_line</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -4052,7 +4053,7 @@
 /// rectangle width
 /// ## `height`
 /// rectangle height
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_option&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_option"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_option.html">render_option</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -4095,7 +4096,7 @@
 /// rectangle height
 /// ## `orientation`
 /// orientation of the slider
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_render_slider&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_render_slider"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.render_slider.html">render_slider</a>(
     context: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="style_context.rs.html#16-115">StyleContext</a>&gt;,
     cr: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/context/struct.Context.html">cairo::Context</a>,
@@ -4103,7 +4104,7 @@
     y: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
     width: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
     height: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>,
-    orientation: <a href="enums.rs.html#4998-5007">Orientation</a>,
+    orientation: <a href="enums.rs.html#4407-4416">Orientation</a>,
 ) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -4141,13 +4142,13 @@
 ///
 /// ## `v`
 /// Return value for the value component
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_rgb_to_hsv&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_rgb_to_hsv"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.rgb_to_hsv.html">rgb_to_hsv</a>(r: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, g: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, b: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; (<a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>h = mem::MaybeUninit::uninit();
-        <span class="kw">let </span><span class="kw-2">mut </span>s = mem::MaybeUninit::uninit();
-        <span class="kw">let </span><span class="kw-2">mut </span>v = mem::MaybeUninit::uninit();
+        <span class="kw">let </span><span class="kw-2">mut </span>h = std::mem::MaybeUninit::uninit();
+        <span class="kw">let </span><span class="kw-2">mut </span>s = std::mem::MaybeUninit::uninit();
+        <span class="kw">let </span><span class="kw-2">mut </span>v = std::mem::MaybeUninit::uninit();
         ffi::gtk_rgb_to_hsv(<a href="#1761">r</a>, <a href="#1761">g</a>, <a href="#1761">b</a>, <a href="#1764">h</a>.as_mut_ptr(), <a href="#1765">s</a>.as_mut_ptr(), <a href="#1766">v</a>.as_mut_ptr());
         (<a href="#1764">h</a>.assume_init(), <a href="#1765">s</a>.assume_init(), <a href="#1766">v</a>.assume_init())
     }
@@ -4163,7 +4164,7 @@
 /// target to add.
 /// ## `info`
 /// A unsigned integer which will be passed back to the application.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_selection_add_target&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_selection_add_target"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.selection_add_target.html">selection_add_target</a>(
     widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;,
     selection: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>,
@@ -4187,7 +4188,7 @@
 /// a [`Widget`][crate::Widget]
 /// ## `selection`
 /// an atom representing a selection
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_selection_clear_targets&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_selection_clear_targets"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.selection_clear_targets.html">selection_clear_targets</a>(widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;, selection: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -4215,7 +4216,7 @@
 /// [`true`] if requested succeeded. [`false`] if we could not process
 ///  request. (e.g., there was already a request in process for
 ///  this widget).
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_selection_convert&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_selection_convert"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.selection_convert.html">selection_convert</a>(
     widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;,
     selection: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>,
@@ -4245,7 +4246,7 @@
 /// # Returns
 ///
 /// [`true`] if the operation succeeded
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_selection_owner_set&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_selection_owner_set"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.selection_owner_set.html">selection_owner_set</a>(
     widget: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;&gt;,
     selection: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>,
@@ -4275,7 +4276,7 @@
 /// # Returns
 ///
 /// TRUE if the operation succeeded
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_selection_owner_set_for_display&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_selection_owner_set_for_display"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.selection_owner_set_for_display.html">selection_owner_set_for_display</a>(
     display: <span class="kw-2">&amp;</span><a href="../../../gdk/auto/display/struct.Display.html">gdk::Display</a>,
     widget: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;&gt;,
@@ -4299,7 +4300,7 @@
 /// called by applications.
 /// ## `widget`
 /// a [`Widget`][crate::Widget]
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_selection_remove_all&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_selection_remove_all"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.selection_remove_all.html">selection_remove_all</a>(widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -4308,7 +4309,7 @@
 }
 
 <span class="doccomment">/// Sets the GTK+ debug flags.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_set_debug_flags&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_set_debug_flags"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.set_debug_flags.html">set_debug_flags</a>(flags: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
@@ -4316,7 +4317,7 @@
     }
 }
 
-<span class="comment">//#[doc(alias = &quot;gtk_show_about_dialog&quot;)]
+<span class="comment">//#[doc(alias = "gtk_show_about_dialog")]
 //pub fn show_about_dialog(parent: Option&lt;&amp;impl IsA&lt;Window&gt;&gt;, first_property_name: &amp;str, : /*Unknown conversion*//*Unimplemented*/Basic: VarArgs) {
 //    unsafe { TODO: call ffi:gtk_show_about_dialog() }
 //}
@@ -4346,7 +4347,7 @@
 /// # Returns
 ///
 /// [`true`] on success, [`false`] on error
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_show_uri_on_window&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_show_uri_on_window"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.show_uri_on_window.html">show_uri_on_window</a>(
     parent: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="window.rs.html#16-1427">Window</a>&gt;&gt;,
     uri: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>,
@@ -4354,7 +4355,7 @@
 ) -&gt; <span class="prelude-ty">Result</span>&lt;(), <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html">glib::Error</a>&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>error = ptr::null_mut();
+        <span class="kw">let </span><span class="kw-2">mut </span>error = std::ptr::null_mut();
         <span class="kw">let </span>is_ok = ffi::gtk_show_uri_on_window(
             <a href="#1967">parent</a>.map(|p| <a href="#1975">p</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>()).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
             <a href="#1968">uri</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -4382,7 +4383,7 @@
 ///
 /// [`true`] if `targets` include a suitable target for images,
 ///  otherwise [`false`].
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_targets_include_image&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_targets_include_image"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.targets_include_image.html">targets_include_image</a>(targets: <span class="kw-2">&amp;</span>[<a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>], writable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">let </span>n_targets = <a href="#2002">targets</a>.len() <span class="kw">as _</span>;
@@ -4406,7 +4407,7 @@
 ///
 /// [`true`] if `targets` include a suitable target for rich text,
 ///  otherwise [`false`].
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_targets_include_rich_text&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_targets_include_rich_text"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.targets_include_rich_text.html">targets_include_rich_text</a>(targets: <span class="kw-2">&amp;</span>[<a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>], buffer: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_buffer.rs.html#13-239">TextBuffer</a>&gt;) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">let </span>n_targets = <a href="#2026">targets</a>.len() <span class="kw">as _</span>;
@@ -4428,7 +4429,7 @@
 ///
 /// [`true`] if `targets` include a suitable target for text,
 ///  otherwise [`false`].
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_targets_include_text&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_targets_include_text"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.targets_include_text.html">targets_include_text</a>(targets: <span class="kw-2">&amp;</span>[<a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>]) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">let </span>n_targets = <a href="#2048">targets</a>.len() <span class="kw">as _</span>;
@@ -4449,7 +4450,7 @@
 ///
 /// [`true`] if `targets` include a suitable target for uri lists,
 ///  otherwise [`false`].
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_targets_include_uri&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_targets_include_uri"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.targets_include_uri.html">targets_include_uri</a>(targets: <span class="kw-2">&amp;</span>[<a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>]) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">let </span>n_targets = <a href="#2069">targets</a>.len() <span class="kw">as _</span>;
@@ -4465,7 +4466,7 @@
 /// widget with a text string matching `label_pattern`.
 /// The `label_pattern` may contain asterisks “*” and question marks “?” as
 /// placeholders, `g_pattern_match()` is used for the matching.
-/// Note that locales other than &quot;C“ tend to alter (translate” label strings,
+/// Note that locales other than "C“ tend to alter (translate” label strings,
 /// so this function is genrally only useful in test programs with
 /// predetermined locales, see `gtk_test_init()` for more details.
 /// ## `widget`
@@ -4476,7 +4477,7 @@
 /// # Returns
 ///
 /// a GtkLabel widget if any is found.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_test_find_label&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_test_find_label"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.test_find_label.html">test_find_label</a>(widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;, label_pattern: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt; {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -4502,7 +4503,7 @@
 /// # Returns
 ///
 /// a widget of type `widget_type` if any is found.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_test_find_sibling&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_test_find_sibling"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.test_find_sibling.html">test_find_sibling</a>(
     base_widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;,
     widget_type: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::types::Type</a>,
@@ -4533,7 +4534,7 @@
 /// # Returns
 ///
 /// a valid widget if any is found or [`None`].
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_test_find_widget&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_test_find_widget"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.test_find_widget.html">test_find_widget</a>(
     widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;,
     label_pattern: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>,
@@ -4549,7 +4550,7 @@
     }
 }
 
-<span class="comment">//#[doc(alias = &quot;gtk_test_list_all_types&quot;)]
+<span class="comment">//#[doc(alias = "gtk_test_list_all_types")]
 //pub fn test_list_all_types() -&gt; /*Unimplemented*/CArray TypeId { ns_id: 0, id: 30 } {
 //    unsafe { TODO: call ffi:gtk_test_list_all_types() }
 //}
@@ -4557,7 +4558,7 @@
 </span><span class="doccomment">/// Force registration of all core Gtk+ and Gdk object types.
 /// This allowes to refer to any of those object types via
 /// `g_type_from_name()` after calling this function.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_test_register_all_types&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_test_register_all_types"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.test_register_all_types.html">test_register_all_types</a>() {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
@@ -4583,7 +4584,7 @@
 /// # Returns
 ///
 /// whether all actions neccessary for the key event simulation were carried out successfully.
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_test_widget_send_key&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_test_widget_send_key"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.test_widget_send_key.html">test_widget_send_key</a>(
     widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;,
     keyval: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
@@ -4608,7 +4609,7 @@
 /// server.
 /// ## `widget`
 /// the widget to wait for
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_test_widget_wait_for_draw&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_test_widget_wait_for_draw"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.test_widget_wait_for_draw.html">test_widget_wait_for_draw</a>(widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;) {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -4620,7 +4621,7 @@
 /// `GTK_TREE_MODEL_ROW`. Normally called from a drag_data_received handler.
 /// This function can only be used if `selection_data` originates from the same
 /// process that’s calling this function, because a pointer to the tree model
-/// is being passed around. If you aren’t in the same process, then you&#39;ll
+/// is being passed around. If you aren’t in the same process, then you'll
 /// get memory corruption. In the [`TreeDragDest`][crate::TreeDragDest] drag_data_received handler,
 /// you can assume that selection data of type `GTK_TREE_MODEL_ROW` is
 /// in from the current process. The returned path must be freed with
@@ -4638,14 +4639,14 @@
 ///
 /// ## `path`
 /// row in `tree_model`
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_tree_get_row_drag_data&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_tree_get_row_drag_data"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.tree_get_row_drag_data.html">tree_get_row_drag_data</a>(
-    selection_data: <span class="kw-2">&amp;</span><a href="selection_data.rs.html#9-18">SelectionData</a>,
-) -&gt; <span class="prelude-ty">Option</span>&lt;(<span class="prelude-ty">Option</span>&lt;<a href="tree_model.rs.html#13-276">TreeModel</a>&gt;, <span class="prelude-ty">Option</span>&lt;<a href="tree_path.rs.html#8-17">TreePath</a>&gt;)&gt; {
+    selection_data: <span class="kw-2">&amp;</span><a href="selection_data.rs.html#8-17">SelectionData</a>,
+) -&gt; <span class="prelude-ty">Option</span>&lt;(<span class="prelude-ty">Option</span>&lt;<a href="tree_model.rs.html#13-276">TreeModel</a>&gt;, <span class="prelude-ty">Option</span>&lt;<a href="tree_path.rs.html#7-16">TreePath</a>&gt;)&gt; {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>tree_model = ptr::null_mut();
-        <span class="kw">let </span><span class="kw-2">mut </span>path = ptr::null_mut();
+        <span class="kw">let </span><span class="kw-2">mut </span>tree_model = std::ptr::null_mut();
+        <span class="kw">let </span><span class="kw-2">mut </span>path = std::ptr::null_mut();
         <span class="kw">let </span>ret = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_tree_get_row_drag_data(
             mut_override(<a href="#2259">selection_data</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>),
             <span class="kw-2">&amp;mut </span><a href="#2263">tree_model</a>,
@@ -4671,11 +4672,11 @@
 /// # Returns
 ///
 /// [`true`] if the [`SelectionData`][crate::SelectionData] had the proper target type to allow us to set a tree row
-</span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_tree_set_row_drag_data&quot;</span>)]
+</span><span class="attr">#[doc(alias = <span class="string">"gtk_tree_set_row_drag_data"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.tree_set_row_drag_data.html">tree_set_row_drag_data</a>(
-    selection_data: <span class="kw-2">&amp;</span><a href="selection_data.rs.html#9-18">SelectionData</a>,
+    selection_data: <span class="kw-2">&amp;</span><a href="selection_data.rs.html#8-17">SelectionData</a>,
     tree_model: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="tree_model.rs.html#13-276">TreeModel</a>&gt;,
-    path: <span class="kw-2">&amp;mut </span><a href="tree_path.rs.html#8-17">TreePath</a>,
+    path: <span class="kw-2">&amp;mut </span><a href="tree_path.rs.html#7-16">TreePath</a>,
 ) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">unsafe </span>{
@@ -4687,8 +4688,8 @@
     }
 }
 
-<span class="attr">#[doc(alias = <span class="string">&quot;gtk_true&quot;</span>)]
-#[doc(alias = <span class="string">&quot;true&quot;</span>)]
+<span class="attr">#[doc(alias = <span class="string">"gtk_true"</span>)]
+#[doc(alias = <span class="string">"true"</span>)]
 </span><span class="kw">pub fn </span><a href="../../../gtk/fn.true_.html">true_</a>() -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
     <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
     <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_true()) }

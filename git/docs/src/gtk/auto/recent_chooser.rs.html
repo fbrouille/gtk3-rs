@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/recent_chooser.rs`."><title>recent_chooser.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/recent_chooser.rs`."><title>recent_chooser.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -1010,23 +1011,17 @@
 <a href="#937" id="937">937</a>
 <a href="#938" id="938">938</a>
 <a href="#939" id="939">939</a>
-<a href="#940" id="940">940</a>
-<a href="#941" id="941">941</a>
-<a href="#942" id="942">942</a>
-<a href="#943" id="943">943</a>
-<a href="#944" id="944">944</a>
-<a href="#945" id="945">945</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
-</span><span class="kw">use crate</span>::{<a href="recent_filter.rs.html#9-72">RecentFilter</a>, <a href="recent_info.rs.html#8-22">RecentInfo</a>, <a href="enums.rs.html#7573-7592">RecentSortType</a>};
+</span><span class="kw">use crate</span>::{<a href="recent_filter.rs.html#8-71">RecentFilter</a>, <a href="recent_info.rs.html#7-21">RecentInfo</a>, <a href="enums.rs.html#6685-6704">RecentSortType</a>};
 <span class="kw">use </span>glib::{
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/mem/index.html">mem</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>, <a href="https://doc.rust-lang.org/nightly/core/ptr/index.html">ptr</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// [`RecentChooser`][crate::RecentChooser] is an interface that can be implemented by widgets
@@ -1108,7 +1103,7 @@
     ///
     ///
     /// #### `item-activated`
-    ///  This signal is emitted when the user &quot;activates&quot; a recent item
+    ///  This signal is emitted when the user "activates" a recent item
     /// in the recent chooser. This can happen by double-clicking on an item
     /// in the recently used resources list, or by pressing
     /// `Enter`.
@@ -1127,7 +1122,7 @@
     /// # Implements
     ///
     /// [`RecentChooserExt`][trait@crate::prelude::RecentChooserExt]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;GtkRecentChooser&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"GtkRecentChooser"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.RecentChooser.html">RecentChooser</a>(Interface&lt;<a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>, <a href="../../../gtk_sys/struct.GtkRecentChooserIface.html">ffi::GtkRecentChooserIface</a>&gt;);
 
     <span class="kw">match fn </span>{
@@ -1136,7 +1131,7 @@
 }
 
 <span class="kw">impl </span><a href="#13-118">RecentChooser</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#13-118">RecentChooser</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#13-118">RecentChooser</a>&gt; = <span class="prelude-val">None</span>;
 }
 
 <span class="kw">mod </span>sealed {
@@ -1149,15 +1144,15 @@
 /// # Implementors
 ///
 /// [`RecentChooserDialog`][struct@crate::RecentChooserDialog], [`RecentChooserMenu`][struct@crate::RecentChooserMenu], [`RecentChooserWidget`][struct@crate::RecentChooserWidget], [`RecentChooser`][struct@crate::RecentChooser]
-</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.RecentChooserExt.html">RecentChooserExt</a>: IsA&lt;<a href="#13-118">RecentChooser</a>&gt; + <a href="#125">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.RecentChooserExt.html">RecentChooserExt</a>: IsA&lt;<a href="#13-118">RecentChooser</a>&gt; + <a href="#125">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Adds `filter` to the list of [`RecentFilter`][crate::RecentFilter] objects held by `self`.
     ///
     /// If no previous filter objects were defined, this function will call
     /// [`set_filter()`][Self::set_filter()].
     /// ## `filter`
     /// a [`RecentFilter`][crate::RecentFilter]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_add_filter&quot;</span>)]
-    </span><span class="kw">fn </span>add_filter(<span class="kw-2">&amp;</span><span class="self">self</span>, filter: <span class="kw-2">&amp;</span><a href="recent_filter.rs.html#9-72">RecentFilter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_add_filter"</span>)]
+    </span><span class="kw">fn </span>add_filter(<span class="kw-2">&amp;</span><span class="self">self</span>, filter: <span class="kw-2">&amp;</span><a href="recent_filter.rs.html#8-71">RecentFilter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_add_filter(
                 <a class="self" href="#142">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1172,9 +1167,9 @@
     ///
     /// a [`RecentInfo`][crate::RecentInfo]. Use `gtk_recent_info_unref()` when
     ///  when you have finished using it.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_current_item&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_current_item&quot;</span>)]
-    </span><span class="kw">fn </span>current_item(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="recent_info.rs.html#8-22">RecentInfo</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_current_item"</span>)]
+    #[doc(alias = <span class="string">"get_current_item"</span>)]
+    </span><span class="kw">fn </span>current_item(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="recent_info.rs.html#7-21">RecentInfo</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_full(ffi::gtk_recent_chooser_get_current_item(
                 <a class="self" href="#159">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1187,8 +1182,8 @@
     /// # Returns
     ///
     /// a newly allocated string holding a URI.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_current_uri&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_current_uri&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_current_uri"</span>)]
+    #[doc(alias = <span class="string">"get_current_uri"</span>)]
     </span><span class="kw">fn </span>current_uri(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_full(ffi::gtk_recent_chooser_get_current_uri(
@@ -1203,9 +1198,9 @@
     /// # Returns
     ///
     /// a [`RecentFilter`][crate::RecentFilter] object.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_filter&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_filter&quot;</span>)]
-    </span><span class="kw">fn </span>filter(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="recent_filter.rs.html#9-72">RecentFilter</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_filter"</span>)]
+    #[doc(alias = <span class="string">"get_filter"</span>)]
+    </span><span class="kw">fn </span>filter(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="recent_filter.rs.html#8-71">RecentFilter</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_recent_chooser_get_filter(
                 <a class="self" href="#190">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1224,9 +1219,9 @@
     ///  list of [`RecentInfo`][crate::RecentInfo] objects. You should
     ///  use `gtk_recent_info_unref()` on every item of the list, and then free
     ///  the list itself using `g_list_free()`.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_items&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_items&quot;</span>)]
-    </span><span class="kw">fn </span>items(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="recent_info.rs.html#8-22">RecentInfo</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_items"</span>)]
+    #[doc(alias = <span class="string">"get_items"</span>)]
+    </span><span class="kw">fn </span>items(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="recent_info.rs.html#7-21">RecentInfo</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibPtrContainer.html">FromGlibPtrContainer::from_glib_full</a>(ffi::gtk_recent_chooser_get_items(
                 <a class="self" href="#211">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1241,8 +1236,8 @@
     ///
     /// A positive integer, or -1 meaning that all items are
     ///  returned.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_limit&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_limit&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_limit"</span>)]
+    #[doc(alias = <span class="string">"get_limit"</span>)]
     </span><span class="kw">fn </span>limit(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_recent_chooser_get_limit(<a class="self" href="#228">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1253,8 +1248,8 @@
     /// # Returns
     ///
     /// [`true`] if only local resources should be shown.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_local_only&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_local_only&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_local_only"</span>)]
+    #[doc(alias = <span class="string">"get_local_only"</span>)]
     </span><span class="kw">fn </span>is_local_only(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_recent_chooser_get_local_only(
@@ -1268,8 +1263,8 @@
     /// # Returns
     ///
     /// [`true`] if `self` can select more than one item.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_select_multiple&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_select_multiple&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_select_multiple"</span>)]
+    #[doc(alias = <span class="string">"get_select_multiple"</span>)]
     </span><span class="kw">fn </span>selects_multiple(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_recent_chooser_get_select_multiple(
@@ -1283,8 +1278,8 @@
     /// # Returns
     ///
     /// [`true`] if the icons should be displayed, [`false`] otherwise.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_show_icons&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_show_icons&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_show_icons"</span>)]
+    #[doc(alias = <span class="string">"get_show_icons"</span>)]
     </span><span class="kw">fn </span>shows_icons(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_recent_chooser_get_show_icons(
@@ -1300,8 +1295,8 @@
     ///
     /// [`true`] if the resources not found should be displayed, and
     ///  [`false`] otheriwse.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_show_not_found&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_show_not_found&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_show_not_found"</span>)]
+    #[doc(alias = <span class="string">"get_show_not_found"</span>)]
     </span><span class="kw">fn </span>shows_not_found(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_recent_chooser_get_show_not_found(
@@ -1317,8 +1312,8 @@
     ///
     /// [`true`] if the recent chooser should show private items,
     ///  [`false`] otherwise.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_show_private&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_show_private&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_show_private"</span>)]
+    #[doc(alias = <span class="string">"get_show_private"</span>)]
     </span><span class="kw">fn </span>shows_private(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_recent_chooser_get_show_private(
@@ -1334,8 +1329,8 @@
     ///
     /// [`true`] if the recent chooser should show tooltips,
     ///  [`false`] otherwise.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_show_tips&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_show_tips&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_show_tips"</span>)]
+    #[doc(alias = <span class="string">"get_show_tips"</span>)]
     </span><span class="kw">fn </span>shows_tips(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_recent_chooser_get_show_tips(
@@ -1349,9 +1344,9 @@
     /// # Returns
     ///
     /// the sorting order of the `self`.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_sort_type&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_sort_type&quot;</span>)]
-    </span><span class="kw">fn </span>sort_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="enums.rs.html#7573-7592">RecentSortType</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_sort_type"</span>)]
+    #[doc(alias = <span class="string">"get_sort_type"</span>)]
+    </span><span class="kw">fn </span>sort_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="enums.rs.html#6685-6704">RecentSortType</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_recent_chooser_get_sort_type(
                 <a class="self" href="#336">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1371,11 +1366,11 @@
     ///
     ///  A newly allocated, [`None`]-terminated array of strings. Use
     ///  `g_strfreev()` to free it.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_get_uris&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_uris&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_get_uris"</span>)]
+    #[doc(alias = <span class="string">"get_uris"</span>)]
     </span><span class="kw">fn </span>uris(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>length = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>length = std::mem::MaybeUninit::uninit();
             <span class="kw">let </span>ret = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibContainer.html">FromGlibContainer::from_glib_full_num</a>(
                 ffi::gtk_recent_chooser_get_uris(
                     <a class="self" href="#358">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1394,8 +1389,8 @@
     /// A singly linked list
     ///  of [`RecentFilter`][crate::RecentFilter] objects. You
     ///  should just free the returned list using `g_slist_free()`.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_list_filters&quot;</span>)]
-    </span><span class="kw">fn </span>list_filters(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="recent_filter.rs.html#9-72">RecentFilter</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_list_filters"</span>)]
+    </span><span class="kw">fn </span>list_filters(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="recent_filter.rs.html#8-71">RecentFilter</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibPtrContainer.html">FromGlibPtrContainer::from_glib_container</a>(ffi::gtk_recent_chooser_list_filters(
                 <a class="self" href="#380">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1406,8 +1401,8 @@
     <span class="doccomment">/// Removes `filter` from the list of [`RecentFilter`][crate::RecentFilter] objects held by `self`.
     /// ## `filter`
     /// a [`RecentFilter`][crate::RecentFilter]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_remove_filter&quot;</span>)]
-    </span><span class="kw">fn </span>remove_filter(<span class="kw-2">&amp;</span><span class="self">self</span>, filter: <span class="kw-2">&amp;</span><a href="recent_filter.rs.html#9-72">RecentFilter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_remove_filter"</span>)]
+    </span><span class="kw">fn </span>remove_filter(<span class="kw-2">&amp;</span><span class="self">self</span>, filter: <span class="kw-2">&amp;</span><a href="recent_filter.rs.html#8-71">RecentFilter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_remove_filter(
                 <a class="self" href="#392">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1418,7 +1413,7 @@
 
     <span class="doccomment">/// Selects all the items inside `self`, if the `self` supports
     /// multiple selection.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_select_all&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_select_all"</span>)]
     </span><span class="kw">fn </span>select_all(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_select_all(<a class="self" href="#404">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -1432,10 +1427,10 @@
     /// # Returns
     ///
     /// [`true`] if `uri` was found.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_select_uri&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_select_uri"</span>)]
     </span><span class="kw">fn </span>select_uri(<span class="kw-2">&amp;</span><span class="self">self</span>, uri: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="prelude-ty">Result</span>&lt;(), <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html">glib::Error</a>&gt; {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>error = ptr::null_mut();
+            <span class="kw">let </span><span class="kw-2">mut </span>error = std::ptr::null_mut();
             <span class="kw">let </span>is_ok = ffi::gtk_recent_chooser_select_uri(
                 <a class="self" href="#418">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#418">uri</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1457,10 +1452,10 @@
     /// # Returns
     ///
     /// [`true`] if the URI was found.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_current_uri&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_current_uri"</span>)]
     </span><span class="kw">fn </span>set_current_uri(<span class="kw-2">&amp;</span><span class="self">self</span>, uri: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="prelude-ty">Result</span>&lt;(), <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html">glib::Error</a>&gt; {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>error = ptr::null_mut();
+            <span class="kw">let </span><span class="kw-2">mut </span>error = std::ptr::null_mut();
             <span class="kw">let </span>is_ok = ffi::gtk_recent_chooser_set_current_uri(
                 <a class="self" href="#443">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#443">uri</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1479,8 +1474,8 @@
     /// to affect the displayed recently used resources.
     /// ## `filter`
     /// a [`RecentFilter`][crate::RecentFilter]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_filter&quot;</span>)]
-    </span><span class="kw">fn </span>set_filter(<span class="kw-2">&amp;</span><span class="self">self</span>, filter: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="recent_filter.rs.html#9-72">RecentFilter</a>&gt;) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_filter"</span>)]
+    </span><span class="kw">fn </span>set_filter(<span class="kw-2">&amp;</span><span class="self">self</span>, filter: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="recent_filter.rs.html#8-71">RecentFilter</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_filter(
                 <a class="self" href="#465">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1493,7 +1488,7 @@
     /// [`items()`][Self::items()] and [`uris()`][Self::uris()].
     /// ## `limit`
     /// a positive integer, or -1 for all items
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_limit&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_limit"</span>)]
     </span><span class="kw">fn </span>set_limit(<span class="kw-2">&amp;</span><span class="self">self</span>, limit: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_limit(<a class="self" href="#479">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#479">limit</a>);
@@ -1506,7 +1501,7 @@
     /// to be accessible through the operating system native file system.
     /// ## `local_only`
     /// [`true`] if only local files can be shown
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_local_only&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_local_only"</span>)]
     </span><span class="kw">fn </span>set_local_only(<span class="kw-2">&amp;</span><span class="self">self</span>, local_only: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_local_only(
@@ -1519,7 +1514,7 @@
     <span class="doccomment">/// Sets whether `self` can select multiple items.
     /// ## `select_multiple`
     /// [`true`] if `self` can select more than one item
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_select_multiple&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_select_multiple"</span>)]
     </span><span class="kw">fn </span>set_select_multiple(<span class="kw-2">&amp;</span><span class="self">self</span>, select_multiple: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_select_multiple(
@@ -1533,7 +1528,7 @@
     /// displaying it.
     /// ## `show_icons`
     /// whether to show an icon near the resource
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_show_icons&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_show_icons"</span>)]
     </span><span class="kw">fn </span>set_show_icons(<span class="kw-2">&amp;</span><span class="self">self</span>, show_icons: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_show_icons(
@@ -1547,7 +1542,7 @@
     /// it didn’t find. This only applies to local resources.
     /// ## `show_not_found`
     /// whether to show the local items we didn’t find
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_show_not_found&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_show_not_found"</span>)]
     </span><span class="kw">fn </span>set_show_not_found(<span class="kw-2">&amp;</span><span class="self">self</span>, show_not_found: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_show_not_found(
@@ -1560,7 +1555,7 @@
     <span class="doccomment">/// Whether to show recently used resources marked registered as private.
     /// ## `show_private`
     /// [`true`] to show private items, [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_show_private&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_show_private"</span>)]
     </span><span class="kw">fn </span>set_show_private(<span class="kw-2">&amp;</span><span class="self">self</span>, show_private: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_show_private(
@@ -1574,7 +1569,7 @@
     /// recently used resource in a [`RecentChooser`][crate::RecentChooser] widget.
     /// ## `show_tips`
     /// [`true`] if tooltips should be shown
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_show_tips&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_show_tips"</span>)]
     </span><span class="kw">fn </span>set_show_tips(<span class="kw-2">&amp;</span><span class="self">self</span>, show_tips: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_show_tips(
@@ -1598,10 +1593,10 @@
     /// user data to pass to `sort_func`, or [`None`]
     /// ## `data_destroy`
     /// destroy notifier for `sort_data`, or [`None`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_sort_func&quot;</span>)]
-    </span><span class="kw">fn </span>set_sort_func&lt;P: Fn(<span class="kw-2">&amp;</span><a href="recent_info.rs.html#8-22">RecentInfo</a>, <span class="kw-2">&amp;</span><a href="recent_info.rs.html#8-22">RecentInfo</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, sort_func: P) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_sort_func"</span>)]
+    </span><span class="kw">fn </span>set_sort_func&lt;P: Fn(<span class="kw-2">&amp;</span><a href="recent_info.rs.html#7-21">RecentInfo</a>, <span class="kw-2">&amp;</span><a href="recent_info.rs.html#7-21">RecentInfo</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, sort_func: P) {
         <span class="kw">let </span>sort_func_data: Box_&lt;P&gt; = Box_::new(<a href="#584">sort_func</a>);
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>sort_func_func&lt;P: Fn(<span class="kw-2">&amp;</span><a href="recent_info.rs.html#8-22">RecentInfo</a>, <span class="kw-2">&amp;</span><a href="recent_info.rs.html#8-22">RecentInfo</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> + <span class="lifetime">&#39;static</span>&gt;(
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>sort_func_func&lt;P: Fn(<span class="kw-2">&amp;</span><a href="recent_info.rs.html#7-21">RecentInfo</a>, <span class="kw-2">&amp;</span><a href="recent_info.rs.html#7-21">RecentInfo</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> + <span class="lifetime">'static</span>&gt;(
             a: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentInfo.html">ffi::GtkRecentInfo</a>,
             b: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentInfo.html">ffi::GtkRecentInfo</a>,
             user_data: glib::ffi::gpointer,
@@ -1612,7 +1607,7 @@
             (<span class="kw-2">*</span><a href="#593">callback</a>)(<span class="kw-2">&amp;</span><a href="#591">a</a>, <span class="kw-2">&amp;</span><a href="#592">b</a>)
         }
         <span class="kw">let </span>sort_func = <span class="prelude-val">Some</span>(sort_func_func::&lt;P&gt; <span class="kw">as _</span>);
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>data_destroy_func&lt;P: Fn(<span class="kw-2">&amp;</span><a href="recent_info.rs.html#8-22">RecentInfo</a>, <span class="kw-2">&amp;</span><a href="recent_info.rs.html#8-22">RecentInfo</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> + <span class="lifetime">&#39;static</span>&gt;(
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>data_destroy_func&lt;P: Fn(<span class="kw-2">&amp;</span><a href="recent_info.rs.html#7-21">RecentInfo</a>, <span class="kw-2">&amp;</span><a href="recent_info.rs.html#7-21">RecentInfo</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> + <span class="lifetime">'static</span>&gt;(
             data: glib::ffi::gpointer,
         ) {
             <span class="kw">let </span>_callback: Box_&lt;P&gt; = Box_::from_raw(<a href="#598">data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>);
@@ -1633,8 +1628,8 @@
     /// `self`.
     /// ## `sort_type`
     /// sort order that the chooser should use
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_set_sort_type&quot;</span>)]
-    </span><span class="kw">fn </span>set_sort_type(<span class="kw-2">&amp;</span><span class="self">self</span>, sort_type: <a href="enums.rs.html#7573-7592">RecentSortType</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_set_sort_type"</span>)]
+    </span><span class="kw">fn </span>set_sort_type(<span class="kw-2">&amp;</span><span class="self">self</span>, sort_type: <a href="enums.rs.html#6685-6704">RecentSortType</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_set_sort_type(
                 <a class="self" href="#619">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1644,7 +1639,7 @@
     }
 
     <span class="doccomment">/// Unselects all the items inside `self`.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_unselect_all&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_unselect_all"</span>)]
     </span><span class="kw">fn </span>unselect_all(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_unselect_all(<a class="self" href="#630">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -1654,7 +1649,7 @@
     <span class="doccomment">/// Unselects `uri` inside `self`.
     /// ## `uri`
     /// a URI
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_recent_chooser_unselect_uri&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_recent_chooser_unselect_uri"</span>)]
     </span><span class="kw">fn </span>unselect_uri(<span class="kw-2">&amp;</span><span class="self">self</span>, uri: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_recent_chooser_unselect_uri(
@@ -1664,15 +1659,15 @@
         }
     }
 
-    <span class="doccomment">/// This signal is emitted when the user &quot;activates&quot; a recent item
+    <span class="doccomment">/// This signal is emitted when the user "activates" a recent item
     /// in the recent chooser. This can happen by double-clicking on an item
     /// in the recently used resources list, or by pressing
     /// `Enter`.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;item-activated&quot;</span>)]
-    </span><span class="kw">fn </span>connect_item_activated&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>item_activated_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"item-activated"</span>)]
+    </span><span class="kw">fn </span>connect_item_activated&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>item_activated_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             f: glib::ffi::gpointer,
@@ -1684,8 +1679,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#654">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#654">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;item-activated\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"item-activated\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     item_activated_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#666">f</a>),
@@ -1697,11 +1692,11 @@
     /// selected recently used resources. This can happen when a user
     /// modifies the selection with the mouse or the keyboard, or when
     /// explicitly calling functions to change the selection.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;selection-changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_selection_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>selection_changed_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"selection-changed"</span>)]
+    </span><span class="kw">fn </span>connect_selection_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>selection_changed_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             f: glib::ffi::gpointer,
@@ -1713,8 +1708,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#683">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#683">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;selection-changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"selection-changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     selection_changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#695">f</a>),
@@ -1722,11 +1717,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;filter&quot;</span>)]
-    </span><span class="kw">fn </span>connect_filter_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_filter_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"filter"</span>)]
+    </span><span class="kw">fn </span>connect_filter_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_filter_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1739,8 +1734,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#708">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#708">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::filter\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::filter\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_filter_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#721">f</a>),
@@ -1748,9 +1743,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;limit&quot;</span>)]
-    </span><span class="kw">fn </span>connect_limit_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_limit_trampoline&lt;P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"limit"</span>)]
+    </span><span class="kw">fn </span>connect_limit_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_limit_trampoline&lt;P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -1762,8 +1757,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#734">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#734">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::limit\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::limit\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_limit_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#744">f</a>),
@@ -1771,11 +1766,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;local-only&quot;</span>)]
-    </span><span class="kw">fn </span>connect_local_only_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_local_only_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"local-only"</span>)]
+    </span><span class="kw">fn </span>connect_local_only_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_local_only_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1788,8 +1783,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#757">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#757">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::local-only\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::local-only\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_local_only_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#770">f</a>),
@@ -1797,11 +1792,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;select-multiple&quot;</span>)]
-    </span><span class="kw">fn </span>connect_select_multiple_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_select_multiple_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"select-multiple"</span>)]
+    </span><span class="kw">fn </span>connect_select_multiple_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_select_multiple_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1814,8 +1809,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#783">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#783">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::select-multiple\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::select-multiple\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_select_multiple_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#796">f</a>),
@@ -1823,11 +1818,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;show-icons&quot;</span>)]
-    </span><span class="kw">fn </span>connect_show_icons_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_show_icons_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"show-icons"</span>)]
+    </span><span class="kw">fn </span>connect_show_icons_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_show_icons_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1840,8 +1835,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#809">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#809">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::show-icons\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::show-icons\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_show_icons_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#822">f</a>),
@@ -1849,11 +1844,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;show-not-found&quot;</span>)]
-    </span><span class="kw">fn </span>connect_show_not_found_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_show_not_found_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"show-not-found"</span>)]
+    </span><span class="kw">fn </span>connect_show_not_found_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_show_not_found_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1866,8 +1861,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#835">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#835">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::show-not-found\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::show-not-found\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_show_not_found_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#848">f</a>),
@@ -1875,11 +1870,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;show-private&quot;</span>)]
-    </span><span class="kw">fn </span>connect_show_private_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_show_private_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"show-private"</span>)]
+    </span><span class="kw">fn </span>connect_show_private_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_show_private_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1892,8 +1887,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#861">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#861">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::show-private\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::show-private\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_show_private_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#874">f</a>),
@@ -1901,11 +1896,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;show-tips&quot;</span>)]
-    </span><span class="kw">fn </span>connect_show_tips_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_show_tips_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"show-tips"</span>)]
+    </span><span class="kw">fn </span>connect_show_tips_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_show_tips_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1918,8 +1913,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#887">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#887">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::show-tips\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::show-tips\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_show_tips_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#900">f</a>),
@@ -1927,11 +1922,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;sort-type&quot;</span>)]
-    </span><span class="kw">fn </span>connect_sort_type_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_sort_type_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"sort-type"</span>)]
+    </span><span class="kw">fn </span>connect_sort_type_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_sort_type_trampoline&lt;
             P: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkRecentChooser.html">ffi::GtkRecentChooser</a>,
             _param_spec: glib::ffi::gpointer,
@@ -1944,8 +1939,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#913">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#913">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::sort-type\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::sort-type\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_sort_type_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#926">f</a>),
@@ -1955,10 +1950,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#13-118">RecentChooser</a>&gt;&gt; <a href="#134-937">RecentChooserExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#13-118">RecentChooser</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#942">f</a>.write_str(<span class="string">&quot;RecentChooser&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

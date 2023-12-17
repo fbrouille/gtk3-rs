@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/widget.rs`."><title>widget.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/widget.rs`."><title>widget.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -514,7 +515,7 @@
 <span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/core/ptr/index.html">std::ptr</a>;
 
 <span class="kw">use </span><a href="lib.rs.html#154"><span class="kw">crate</span>::prelude</a>::<span class="kw-2">*</span>;
-<span class="kw">use crate</span>::{<a href="auto/flags.rs.html#423-454">DestDefaults</a>, <a href="../../gtk/struct.Rectangle.html">Rectangle</a>, <a href="target_entry.rs.html#14-18">TargetEntry</a>, <a href="auto/widget.rs.html#17-1520">Widget</a>};
+<span class="kw">use crate</span>::{<a href="auto/flags.rs.html#402-433">DestDefaults</a>, <a href="../../gtk/struct.Rectangle.html">Rectangle</a>, <a href="target_entry.rs.html#14-18">TargetEntry</a>, <a href="auto/widget.rs.html#17-1520">Widget</a>};
 
 <span class="kw">pub struct </span><a href="../../gtk/struct.TickCallbackId.html">TickCallbackId</a> {
     id: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
@@ -522,7 +523,7 @@
 }
 
 <span class="kw">impl </span><a href="#13-16">TickCallbackId</a> {
-    <span class="attr">#[doc(alias = <span class="string">&quot;gtk_widget_remove_tick_callback&quot;</span>)]
+    <span class="attr">#[doc(alias = <span class="string">"gtk_widget_remove_tick_callback"</span>)]
     </span><span class="kw">pub fn </span>remove(<span class="self">self</span>) {
         <span class="kw">if let </span><span class="prelude-val">Some</span>(widget) = <a class="self" href="#20">self</a>.widget.upgrade() {
             <span class="kw">unsafe </span>{
@@ -537,7 +538,7 @@
     <span class="kw">impl</span>&lt;T: glib::IsA&lt;<a href="auto/widget.rs.html#17-1520"><span class="kw">crate</span>::Widget</a>&gt;&gt; <a href="#30">Sealed</a> <span class="kw">for </span>T {}
 }
 
-<span class="kw">pub trait </span><a href="../../gtk/prelude/trait.WidgetExtManual.html">WidgetExtManual</a>: IsA&lt;<a href="auto/widget.rs.html#17-1520">Widget</a>&gt; + <a href="#30">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+<span class="kw">pub trait </span><a href="../../gtk/prelude/trait.WidgetExtManual.html">WidgetExtManual</a>: IsA&lt;<a href="auto/widget.rs.html#17-1520">Widget</a>&gt; + <a href="#30">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Sets a widget as a potential drop destination, and adds default behaviors.
     ///
     /// The default behaviors listed in `flags` have an effect similar
@@ -590,8 +591,8 @@
     ///  [`WidgetExt::drag_dest_get_target_list()`][crate::prelude::WidgetExt::drag_dest_get_target_list()] and [`WidgetExt::drag_dest_find_target()`][crate::prelude::WidgetExt::drag_dest_find_target()].
     /// ## `actions`
     /// a bitmask of possible actions for a drop onto this `self`.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_drag_dest_set&quot;</span>)]
-    </span><span class="kw">fn </span>drag_dest_set(<span class="kw-2">&amp;</span><span class="self">self</span>, flags: <a href="auto/flags.rs.html#423-454">DestDefaults</a>, targets: <span class="kw-2">&amp;</span>[<a href="target_entry.rs.html#14-18">TargetEntry</a>], actions: <a href="../../gdk/auto/flags/struct.DragAction.html">DragAction</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_drag_dest_set"</span>)]
+    </span><span class="kw">fn </span>drag_dest_set(<span class="kw-2">&amp;</span><span class="self">self</span>, flags: <a href="auto/flags.rs.html#402-433">DestDefaults</a>, targets: <span class="kw-2">&amp;</span>[<a href="target_entry.rs.html#14-18">TargetEntry</a>], actions: <a href="../../gdk/auto/flags/struct.DragAction.html">DragAction</a>) {
         <span class="kw">let </span>stashes: Vec&lt;<span class="kw">_</span>&gt; = <a href="#88">targets</a>.iter().<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html">map</a>(|e| <a href="#89">e</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>()).<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html">collect</a>();
         <span class="kw">let </span>t: Vec&lt;<span class="kw">_</span>&gt; = <a href="#89">stashes</a>.iter().<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html">map</a>(|stash| <span class="kw">unsafe </span>{ <span class="kw-2">*</span><a href="#90">stash</a>.<span class="number">0 </span>}).<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html">collect</a>();
         <span class="kw">let </span>t_ptr: <span class="kw-2">*mut </span><a href="../../gtk_sys/struct.GtkTargetEntry.html">ffi::GtkTargetEntry</a> = <span class="kw">if </span>!t.is_empty() {
@@ -619,7 +620,7 @@
     ///  that the drag will support, may be [`None`]
     /// ## `actions`
     /// the bitmask of possible actions for a drag from this widget
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_drag_source_set&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_drag_source_set"</span>)]
     </span><span class="kw">fn </span>drag_source_set(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         start_button_mask: <a href="../../gdk/auto/flags/struct.ModifierType.html">ModifierType</a>,
@@ -658,7 +659,7 @@
     /// ## `intersection`
     /// rectangle to store
     ///  intersection of `self` and `area`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_widget_intersect&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_intersect"</span>)]
     </span><span class="kw">fn </span>intersect(<span class="kw-2">&amp;</span><span class="self">self</span>, area: <span class="kw-2">&amp;</span><a href="../../gtk/struct.Rectangle.html">Rectangle</a>, <span class="kw-2">mut </span>intersection: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;mut </span><a href="../../gtk/struct.Rectangle.html">Rectangle</a>&gt;) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_intersect(
@@ -669,7 +670,7 @@
         }
     }
 
-    <span class="doccomment">/// The ::map-event signal will be emitted when the `widget`&#39;s window is
+    <span class="doccomment">/// The ::map-event signal will be emitted when the `widget`'s window is
     /// mapped. A window is mapped when it becomes visible on the screen.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
@@ -682,16 +683,16 @@
     ///
     /// [`true`] to stop other handlers from being invoked for the event.
     ///  [`false`] to propagate the event further.
-    </span><span class="kw">fn </span>connect_map_event&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="../../gdk/event/struct.Event.html">Event</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="kw">fn </span>connect_map_event&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="../../gdk/event/struct.Event.html">Event</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>event_any_trampoline&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>event_any_trampoline&lt;
             T,
-            F: Fn(<span class="kw-2">&amp;</span>T, <span class="kw-2">&amp;</span><a href="../../gdk/event/struct.Event.html">Event</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>T, <span class="kw-2">&amp;</span><a href="../../gdk/event/struct.Event.html">Event</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../gtk_sys/struct.GtkWidget.html">ffi::GtkWidget</a>,
-            event: <span class="kw-2">*mut </span>gdk::ffi::GdkEventAny,
+            event: <span class="kw-2">*mut </span><a href="../../gdk_sys/struct.GdkEventAny.html">gdk::ffi::GdkEventAny</a>,
             f: <span class="kw-2">&amp;</span>F,
         ) -&gt; gboolean
         <span class="kw">where
@@ -707,8 +708,8 @@
             <span class="kw">let </span>f: Box&lt;F&gt; = Box::new(<a href="#181">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#180">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0 </span><span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;map-event\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"map-event\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     event_any_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box::into_raw(<a href="#201">f</a>),
@@ -716,7 +717,7 @@
         }
     }
 
-    <span class="doccomment">/// The ::unmap-event signal will be emitted when the `widget`&#39;s window is
+    <span class="doccomment">/// The ::unmap-event signal will be emitted when the `widget`'s window is
     /// unmapped. A window is unmapped when it becomes invisible on the screen.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
@@ -729,16 +730,16 @@
     ///
     /// [`true`] to stop other handlers from being invoked for the event.
     ///  [`false`] to propagate the event further.
-    </span><span class="kw">fn </span>connect_unmap_event&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="../../gdk/event/struct.Event.html">Event</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="kw">fn </span>connect_unmap_event&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="../../gdk/event/struct.Event.html">Event</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>event_any_trampoline&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>event_any_trampoline&lt;
             T,
-            F: Fn(<span class="kw-2">&amp;</span>T, <span class="kw-2">&amp;</span><a href="../../gdk/event/struct.Event.html">Event</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>T, <span class="kw-2">&amp;</span><a href="../../gdk/event/struct.Event.html">Event</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../gtk_sys/struct.GtkWidget.html">ffi::GtkWidget</a>,
-            event: <span class="kw-2">*mut </span>gdk::ffi::GdkEventAny,
+            event: <span class="kw-2">*mut </span><a href="../../gdk_sys/struct.GdkEventAny.html">gdk::ffi::GdkEventAny</a>,
             f: <span class="kw-2">&amp;</span>F,
         ) -&gt; gboolean
         <span class="kw">where
@@ -754,8 +755,8 @@
             <span class="kw">let </span>f: Box&lt;F&gt; = Box::new(<a href="#228">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#227">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0 </span><span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;unmap-event\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"unmap-event\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     event_any_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box::into_raw(<a href="#248">f</a>),
@@ -781,7 +782,7 @@
     /// trying to display isolated frames at particular times.
     ///
     /// This is a more convenient alternative to connecting directly to the
-    /// [`update`][struct@crate::gdk::FrameClock#update] signal of [`gdk::FrameClock`][crate::gdk::FrameClock], since you don&#39;t
+    /// [`update`][struct@crate::gdk::FrameClock#update] signal of [`gdk::FrameClock`][crate::gdk::FrameClock], since you don't
     /// have to worry about when a [`gdk::FrameClock`][crate::gdk::FrameClock] is assigned to a widget.
     /// ## `callback`
     /// function to call for updating animations
@@ -792,19 +793,19 @@
     ///
     /// an id for the connection of this callback. Remove the callback
     ///  by passing it to `gtk_widget_remove_tick_callback()`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_widget_add_tick_callback&quot;</span>)]
-    </span><span class="kw">fn </span>add_tick_callback&lt;P: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/control_flow/enum.ControlFlow.html">glib::ControlFlow</a> + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_add_tick_callback"</span>)]
+    </span><span class="kw">fn </span>add_tick_callback&lt;P: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/control_flow/enum.ControlFlow.html">glib::ControlFlow</a> + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         callback: P,
     ) -&gt; <a href="#13-16">TickCallbackId</a> {
         <span class="kw">let </span>callback_data: Box&lt;P&gt; = Box::new(<a href="#292">callback</a>);
 
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>callback_func&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>callback_func&lt;
             O: IsA&lt;<a href="auto/widget.rs.html#17-1520">Widget</a>&gt;,
-            P: Fn(<span class="kw-2">&amp;</span>O, <span class="kw-2">&amp;</span><a href="../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/control_flow/enum.ControlFlow.html">glib::ControlFlow</a> + <span class="lifetime">&#39;static</span>,
+            P: Fn(<span class="kw-2">&amp;</span>O, <span class="kw-2">&amp;</span><a href="../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/control_flow/enum.ControlFlow.html">glib::ControlFlow</a> + <span class="lifetime">'static</span>,
         &gt;(
             widget: <span class="kw-2">*mut </span><a href="../../gtk_sys/struct.GtkWidget.html">ffi::GtkWidget</a>,
-            frame_clock: <span class="kw-2">*mut </span>gdk::ffi::GdkFrameClock,
+            frame_clock: <span class="kw-2">*mut </span><a href="../../gdk_sys/struct.GdkFrameClock.html">gdk::ffi::GdkFrameClock</a>,
             user_data: glib::ffi::gpointer,
         ) -&gt; glib::ffi::gboolean {
             <span class="kw">let </span>widget: Borrowed&lt;<a href="auto/widget.rs.html#17-1520">Widget</a>&gt; = from_glib_borrow(<a href="#300">widget</a>);
@@ -815,9 +816,9 @@
         }
         <span class="kw">let </span>callback = <span class="prelude-val">Some</span>(callback_func::&lt;<span class="self">Self</span>, P&gt; <span class="kw">as _</span>);
 
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_func&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_func&lt;
             O: IsA&lt;<a href="auto/widget.rs.html#17-1520">Widget</a>&gt;,
-            P: Fn(<span class="kw-2">&amp;</span>O, <span class="kw-2">&amp;</span><a href="../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/control_flow/enum.ControlFlow.html">glib::ControlFlow</a> + <span class="lifetime">&#39;static</span>,
+            P: Fn(<span class="kw-2">&amp;</span>O, <span class="kw-2">&amp;</span><a href="../../gdk/auto/frame_clock/struct.FrameClock.html">gdk::FrameClock</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/control_flow/enum.ControlFlow.html">glib::ControlFlow</a> + <span class="lifetime">'static</span>,
         &gt;(
             data: glib::ffi::gpointer,
         ) {
@@ -844,7 +845,7 @@
     /// [input handling overview][event-masks] for details.
     /// ## `events`
     /// an event mask, see [`gdk::EventMask`][crate::gdk::EventMask]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_widget_add_events&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_add_events"</span>)]
     </span><span class="kw">fn </span>add_events(<span class="kw-2">&amp;</span><span class="self">self</span>, events: <a href="../../gdk/auto/flags/struct.EventMask.html">gdk::EventMask</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_widget_add_events(<a class="self" href="#342">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#342">events</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>() <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>);
@@ -862,8 +863,8 @@
     /// # Returns
     ///
     /// event mask for `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_widget_get_events&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_events&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_get_events"</span>)]
+    #[doc(alias = <span class="string">"get_events"</span>)]
     </span><span class="kw">fn </span>events(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="../../gdk/auto/flags/struct.EventMask.html">gdk::EventMask</a> {
         <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_get_events(<a class="self" href="#361">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) }
     }
@@ -881,7 +882,7 @@
     /// box.
     /// ## `events`
     /// event mask
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_widget_set_events&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_set_events"</span>)]
     </span><span class="kw">fn </span>set_events(<span class="kw-2">&amp;</span><span class="self">self</span>, events: <a href="../../gdk/auto/flags/struct.EventMask.html">gdk::EventMask</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_widget_set_events(<a class="self" href="#379">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#379">events</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>() <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>);
@@ -894,9 +895,9 @@
     /// # Safety
     ///
     /// This will not necessarily entirely remove the widget from existence but
-    /// you must *NOT* query the widget&#39;s state subsequently.  Do not call this
+    /// you must *NOT* query the widget's state subsequently.  Do not call this
     /// yourself unless you really mean to.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_widget_destroy&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_destroy"</span>)]
     </span><span class="kw">unsafe fn </span>destroy(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         ffi::gtk_widget_destroy(<a class="self" href="#394">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
     }
@@ -912,7 +913,7 @@
     /// # Returns
     ///
     /// [`true`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_widget_hide_on_delete&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_hide_on_delete"</span>)]
     </span><span class="kw">fn </span>hide_on_delete(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> {
         <span class="kw">unsafe </span>{
             glib::Propagation::from_glib(ffi::gtk_widget_hide_on_delete(

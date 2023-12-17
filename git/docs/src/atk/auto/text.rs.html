@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `atk/src/auto/text.rs`."><title>text.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="atk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `atk/src/auto/text.rs`."><title>text.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="atk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -954,26 +955,20 @@
 <a href="#881" id="881">881</a>
 <a href="#882" id="882">882</a>
 <a href="#883" id="883">883</a>
-<a href="#884" id="884">884</a>
-<a href="#885" id="885">885</a>
-<a href="#886" id="886">886</a>
-<a href="#887" id="887">887</a>
-<a href="#888" id="888">888</a>
-<a href="#889" id="889">889</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
-</span><span class="attr">#[cfg(feature = <span class="string">&quot;v2_32&quot;</span>)]
-#[cfg_attr(docsrs, doc(cfg(feature = <span class="string">&quot;v2_32&quot;</span>)))]
-</span><span class="kw">use </span><a href="enums.rs.html#1675-1707"><span class="kw">crate</span>::ScrollType</a>;
-<span class="kw">use crate</span>::{<a href="enums.rs.html#13-27">CoordType</a>, <a href="enums.rs.html#2594-2625">TextBoundary</a>, <a href="enums.rs.html#2743-2758">TextClipType</a>, <a href="enums.rs.html#2868-2895">TextGranularity</a>, <a href="text_range.rs.html#5-15">TextRange</a>, <a href="../text_rectangle.rs.html#9-14">TextRectangle</a>};
+</span><span class="attr">#[cfg(feature = <span class="string">"v2_32"</span>)]
+#[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v2_32"</span>)))]
+</span><span class="kw">use </span><a href="enums.rs.html#1452-1484"><span class="kw">crate</span>::ScrollType</a>;
+<span class="kw">use crate</span>::{<a href="enums.rs.html#12-26">CoordType</a>, <a href="enums.rs.html#2254-2285">TextBoundary</a>, <a href="enums.rs.html#2385-2400">TextClipType</a>, <a href="enums.rs.html#2495-2522">TextGranularity</a>, <a href="text_range.rs.html#5-15">TextRange</a>, <a href="../text_rectangle.rs.html#9-14">TextRectangle</a>};
 <span class="kw">use </span>glib::{
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/mem/index.html">mem</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// The ATK interface implemented by components with text content.
@@ -984,7 +979,7 @@
     /// unattributed, and very brief may expose that content via
     /// `atk_object_get_name` instead; however if the text is editable,
     /// multi-line, typically longer than three or four words, attributed,
-    /// selectable, or if the object already uses the &#39;name&#39; ATK property
+    /// selectable, or if the object already uses the 'name' ATK property
     /// for other information, the [`Text`][crate::Text] interface should be used to
     /// expose the text content. In the case of editable text content,
     /// [`EditableText`][crate::EditableText] (a subtype of the [`Text`][crate::Text] interface) should be
@@ -1002,7 +997,7 @@
     ///
     ///
     /// #### `text-attributes-changed`
-    ///  The &quot;text-attributes-changed&quot; signal is emitted when the text
+    ///  The "text-attributes-changed" signal is emitted when the text
     /// attributes of the text of an object which implements AtkText
     /// changes.
     ///
@@ -1010,7 +1005,7 @@
     ///
     ///
     /// #### `text-caret-moved`
-    ///  The &quot;text-caret-moved&quot; signal is emitted when the caret
+    ///  The "text-caret-moved" signal is emitted when the caret
     /// position of the text of an object which implements AtkText
     /// changes.
     ///
@@ -1018,35 +1013,35 @@
     ///
     ///
     /// #### `text-changed`
-    ///  The &quot;text-changed&quot; signal is emitted when the text of the
+    ///  The "text-changed" signal is emitted when the text of the
     /// object which implements the AtkText interface changes, This
-    /// signal will have a detail which is either &quot;insert&quot; or
-    /// &quot;delete&quot; which identifies whether the text change was an
+    /// signal will have a detail which is either "insert" or
+    /// "delete" which identifies whether the text change was an
     /// insertion or a deletion.
     ///
     /// Detailed
     ///
     ///
     /// #### `text-insert`
-    ///  The &quot;text-insert&quot; signal is emitted when a new text is
+    ///  The "text-insert" signal is emitted when a new text is
     /// inserted. If the signal was not triggered by the user
-    /// (e.g. typing or pasting text), the &quot;system&quot; detail should be
+    /// (e.g. typing or pasting text), the "system" detail should be
     /// included.
     ///
     /// Detailed
     ///
     ///
     /// #### `text-remove`
-    ///  The &quot;text-remove&quot; signal is emitted when a new text is
+    ///  The "text-remove" signal is emitted when a new text is
     /// removed. If the signal was not triggered by the user
-    /// (e.g. typing or pasting text), the &quot;system&quot; detail should be
+    /// (e.g. typing or pasting text), the "system" detail should be
     /// included.
     ///
     /// Detailed
     ///
     ///
     /// #### `text-selection-changed`
-    ///  The &quot;text-selection-changed&quot; signal is emitted when the
+    ///  The "text-selection-changed" signal is emitted when the
     /// selected text of an object which implements AtkText changes.
     ///
     ///
@@ -1054,7 +1049,7 @@
     /// # Implements
     ///
     /// [`TextExt`][trait@crate::prelude::TextExt]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;AtkText&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"AtkText"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../atk/struct.Text.html">Text</a>(Interface&lt;ffi::AtkText, ffi::AtkTextIface&gt;);
 
     <span class="kw">match fn </span>{
@@ -1063,7 +1058,7 @@
 }
 
 <span class="kw">impl </span><a href="#16-101">Text</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#16-101">Text</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#16-101">Text</a>&gt; = <span class="prelude-val">None</span>;
 }
 
 <span class="kw">mod </span>sealed {
@@ -1076,7 +1071,7 @@
 /// # Implementors
 ///
 /// [`NoOpObject`][struct@crate::NoOpObject], [`Text`][struct@crate::Text]
-</span><span class="kw">pub trait </span><a href="../../../atk/prelude/trait.TextExt.html">TextExt</a>: IsA&lt;<a href="#16-101">Text</a>&gt; + <a href="#108">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../atk/prelude/trait.TextExt.html">TextExt</a>: IsA&lt;<a href="#16-101">Text</a>&gt; + <a href="#108">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Adds a selection bounded by the specified offsets.
     /// ## `start_offset`
     /// the starting character offset of the selected region
@@ -1086,7 +1081,7 @@
     /// # Returns
     ///
     /// [`true`] if successful, [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_add_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_add_selection"</span>)]
     </span><span class="kw">fn </span>add_selection(<span class="kw-2">&amp;</span><span class="self">self</span>, start_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, end_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_text_add_selection(
@@ -1111,14 +1106,14 @@
     ///
     /// Array of AtkTextRange. The last
     ///  element of the array returned by this function will be NULL.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_bounded_ranges&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_bounded_ranges&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_bounded_ranges"</span>)]
+    #[doc(alias = <span class="string">"get_bounded_ranges"</span>)]
     </span><span class="kw">fn </span>bounded_ranges(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         rect: <span class="kw-2">&amp;mut </span><a href="../text_rectangle.rs.html#9-14">TextRectangle</a>,
-        coord_type: <a href="enums.rs.html#13-27">CoordType</a>,
-        x_clip_type: <a href="enums.rs.html#2743-2758">TextClipType</a>,
-        y_clip_type: <a href="enums.rs.html#2743-2758">TextClipType</a>,
+        coord_type: <a href="enums.rs.html#12-26">CoordType</a>,
+        x_clip_type: <a href="enums.rs.html#2385-2400">TextClipType</a>,
+        y_clip_type: <a href="enums.rs.html#2385-2400">TextClipType</a>,
     ) -&gt; Vec&lt;<a href="text_range.rs.html#5-15">TextRange</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibPtrContainer.html">FromGlibPtrContainer::from_glib_full</a>(ffi::atk_text_get_bounded_ranges(
@@ -1138,8 +1133,8 @@
     /// the character offset of the position of the caret or -1 if
     ///  the caret is not located inside the element or in the case of
     ///  any other failure.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_caret_offset&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_caret_offset&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_caret_offset"</span>)]
+    #[doc(alias = <span class="string">"get_caret_offset"</span>)]
     </span><span class="kw">fn </span>caret_offset(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_text_get_caret_offset(<a class="self" href="#181">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1151,15 +1146,15 @@
     /// # Returns
     ///
     /// the character at `offset` or 0 in the case of failure.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_character_at_offset&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_character_at_offset&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_character_at_offset"</span>)]
+    #[doc(alias = <span class="string">"get_character_at_offset"</span>)]
     </span><span class="kw">fn </span>character_at_offset(<span class="kw-2">&amp;</span><span class="self">self</span>, offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.char.html">char</a> {
         <span class="kw">unsafe </span>{
             <a href="https://doc.rust-lang.org/nightly/core/convert/trait.TryFrom.html">std::convert::TryFrom::try_from</a>(ffi::atk_text_get_character_at_offset(
                 <a class="self" href="#194">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#194">offset</a>,
             ))
-            .expect(<span class="string">&quot;conversion from an invalid Unicode value attempted&quot;</span>)
+            .expect(<span class="string">"conversion from an invalid Unicode value attempted"</span>)
         }
     }
 
@@ -1168,8 +1163,8 @@
     /// # Returns
     ///
     /// the number of characters or -1 in case of failure.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_character_count&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_character_count&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_character_count"</span>)]
+    #[doc(alias = <span class="string">"get_character_count"</span>)]
     </span><span class="kw">fn </span>character_count(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_text_get_character_count(<a class="self" href="#211">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -1198,14 +1193,14 @@
     ///
     /// ## `height`
     /// Pointer for the height of the bounding box
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_character_extents&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_character_extents&quot;</span>)]
-    </span><span class="kw">fn </span>character_extents(<span class="kw-2">&amp;</span><span class="self">self</span>, offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, coords: <a href="enums.rs.html#13-27">CoordType</a>) -&gt; (<a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_character_extents"</span>)]
+    #[doc(alias = <span class="string">"get_character_extents"</span>)]
+    </span><span class="kw">fn </span>character_extents(<span class="kw-2">&amp;</span><span class="self">self</span>, offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, coords: <a href="enums.rs.html#12-26">CoordType</a>) -&gt; (<a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>x = mem::MaybeUninit::uninit();
-            <span class="kw">let </span><span class="kw-2">mut </span>y = mem::MaybeUninit::uninit();
-            <span class="kw">let </span><span class="kw-2">mut </span>width = mem::MaybeUninit::uninit();
-            <span class="kw">let </span><span class="kw-2">mut </span>height = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>x = std::mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>y = std::mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>width = std::mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>height = std::mem::MaybeUninit::uninit();
             ffi::atk_text_get_character_extents(
                 <a class="self" href="#241">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#241">offset</a>,
@@ -1224,8 +1219,8 @@
         }
     }
 
-    <span class="comment">//#[doc(alias = &quot;atk_text_get_default_attributes&quot;)]
-    //#[doc(alias = &quot;get_default_attributes&quot;)]
+    <span class="comment">//#[doc(alias = "atk_text_get_default_attributes")]
+    //#[doc(alias = "get_default_attributes")]
     //fn default_attributes(&amp;self) -&gt; /*Ignored*/Option&lt;AttributeSet&gt; {
     //    unsafe { TODO: call ffi:atk_text_get_default_attributes() }
     //}
@@ -1235,14 +1230,14 @@
     /// # Returns
     ///
     /// The number of selected regions, or -1 in the case of failure.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_n_selections&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_n_selections&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_n_selections"</span>)]
+    #[doc(alias = <span class="string">"get_n_selections"</span>)]
     </span><span class="kw">fn </span>n_selections(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::atk_text_get_n_selections(<a class="self" href="#278">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
 
     <span class="doccomment">/// Gets the offset of the character located at coordinates `x` and `y`. `x` and `y`
-    /// are interpreted as being relative to the screen or this widget&#39;s window
+    /// are interpreted as being relative to the screen or this widget's window
     /// depending on `coords`.
     /// ## `x`
     /// screen x-position of character
@@ -1256,9 +1251,9 @@
     ///
     /// the offset to the character which is located at the specified
     ///  `x` and `y` coordinates of -1 in case of failure.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_offset_at_point&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_offset_at_point&quot;</span>)]
-    </span><span class="kw">fn </span>offset_at_point(<span class="kw-2">&amp;</span><span class="self">self</span>, x: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, y: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, coords: <a href="enums.rs.html#13-27">CoordType</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_offset_at_point"</span>)]
+    #[doc(alias = <span class="string">"get_offset_at_point"</span>)]
+    </span><span class="kw">fn </span>offset_at_point(<span class="kw-2">&amp;</span><span class="self">self</span>, x: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, y: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, coords: <a href="enums.rs.html#12-26">CoordType</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{
             ffi::atk_text_get_offset_at_point(
                 <a class="self" href="#299">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1287,13 +1282,13 @@
     ///
     /// ## `rect`
     /// A pointer to a AtkTextRectangle which is filled in by this function.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_range_extents&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_range_extents&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_range_extents"</span>)]
+    #[doc(alias = <span class="string">"get_range_extents"</span>)]
     </span><span class="kw">fn </span>range_extents(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         start_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
         end_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
-        coord_type: <a href="enums.rs.html#13-27">CoordType</a>,
+        coord_type: <a href="enums.rs.html#12-26">CoordType</a>,
     ) -&gt; <a href="../text_rectangle.rs.html#9-14">TextRectangle</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>rect = TextRectangle::uninitialized();
@@ -1308,8 +1303,8 @@
         }
     }
 
-    <span class="comment">//#[doc(alias = &quot;atk_text_get_run_attributes&quot;)]
-    //#[doc(alias = &quot;get_run_attributes&quot;)]
+    <span class="comment">//#[doc(alias = "atk_text_get_run_attributes")]
+    //#[doc(alias = "get_run_attributes")]
     //fn run_attributes(&amp;self, offset: i32) -&gt; (/*Ignored*/AttributeSet, i32, i32) {
     //    unsafe { TODO: call ffi:atk_text_get_run_attributes() }
     //}
@@ -1333,12 +1328,12 @@
     /// ## `end_offset`
     /// passes back the ending character offset (offset immediately past)
     /// of the selected region
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_selection&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_selection"</span>)]
+    #[doc(alias = <span class="string">"get_selection"</span>)]
     </span><span class="kw">fn </span>selection(<span class="kw-2">&amp;</span><span class="self">self</span>, selection_num: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; (<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>start_offset = mem::MaybeUninit::uninit();
-            <span class="kw">let </span><span class="kw-2">mut </span>end_offset = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>start_offset = std::mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>end_offset = std::mem::MaybeUninit::uninit();
             <span class="kw">let </span>ret = from_glib_full(ffi::atk_text_get_selection(
                 <a class="self" href="#376">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#376">selection_num</a>,
@@ -1398,16 +1393,16 @@
     /// ## `end_offset`
     /// the offset of the first character after the returned string,
     ///  or -1 in the case of error (e.g. invalid offset, not implemented)
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_string_at_offset&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_string_at_offset&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_string_at_offset"</span>)]
+    #[doc(alias = <span class="string">"get_string_at_offset"</span>)]
     </span><span class="kw">fn </span>string_at_offset(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
-        granularity: <a href="enums.rs.html#2868-2895">TextGranularity</a>,
+        granularity: <a href="enums.rs.html#2495-2522">TextGranularity</a>,
     ) -&gt; (<span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt;, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>start_offset = mem::MaybeUninit::uninit();
-            <span class="kw">let </span><span class="kw-2">mut </span>end_offset = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>start_offset = std::mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>end_offset = std::mem::MaybeUninit::uninit();
             <span class="kw">let </span>ret = from_glib_full(ffi::atk_text_get_string_at_offset(
                 <a class="self" href="#442">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#443">offset</a>,
@@ -1430,8 +1425,8 @@
     /// a newly allocated string containing the text from `start_offset` up
     ///  to, but not including `end_offset`. Use `g_free()` to free the returned
     ///  string.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_text&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_text&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_text"</span>)]
+    #[doc(alias = <span class="string">"get_text"</span>)]
     </span><span class="kw">fn </span>text(<span class="kw-2">&amp;</span><span class="self">self</span>, start_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, end_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
             from_glib_full(ffi::atk_text_get_text(
@@ -1488,16 +1483,16 @@
     /// ## `end_offset`
     /// the offset of the first character after the
     ///  returned substring
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_get_text_at_offset&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_text_at_offset&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_get_text_at_offset"</span>)]
+    #[doc(alias = <span class="string">"get_text_at_offset"</span>)]
     </span><span class="kw">fn </span>text_at_offset(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
-        boundary_type: <a href="enums.rs.html#2594-2625">TextBoundary</a>,
+        boundary_type: <a href="enums.rs.html#2254-2285">TextBoundary</a>,
     ) -&gt; (<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>start_offset = mem::MaybeUninit::uninit();
-            <span class="kw">let </span><span class="kw-2">mut </span>end_offset = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>start_offset = std::mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>end_offset = std::mem::MaybeUninit::uninit();
             <span class="kw">let </span>ret = from_glib_full(ffi::atk_text_get_text_at_offset(
                 <a class="self" href="#532">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#533">offset</a>,
@@ -1520,7 +1515,7 @@
     /// # Returns
     ///
     /// [`true`] if successful, [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_remove_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_remove_selection"</span>)]
     </span><span class="kw">fn </span>remove_selection(<span class="kw-2">&amp;</span><span class="self">self</span>, selection_num: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_text_remove_selection(
@@ -1541,10 +1536,10 @@
     /// # Returns
     ///
     /// whether scrolling was successful.
-    </span><span class="attr">#[cfg(feature = <span class="string">&quot;v2_32&quot;</span>)]
-    #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">&quot;v2_32&quot;</span>)))]
-    #[doc(alias = <span class="string">&quot;atk_text_scroll_substring_to&quot;</span>)]
-    </span><span class="kw">fn </span>scroll_substring_to(<span class="kw-2">&amp;</span><span class="self">self</span>, start_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, end_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, type_: <a href="enums.rs.html#1675-1707">ScrollType</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
+    </span><span class="attr">#[cfg(feature = <span class="string">"v2_32"</span>)]
+    #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v2_32"</span>)))]
+    #[doc(alias = <span class="string">"atk_text_scroll_substring_to"</span>)]
+    </span><span class="kw">fn </span>scroll_substring_to(<span class="kw-2">&amp;</span><span class="self">self</span>, start_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, end_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, type_: <a href="enums.rs.html#1452-1484">ScrollType</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_text_scroll_substring_to(
                 <a class="self" href="#585">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -1572,14 +1567,14 @@
     /// # Returns
     ///
     /// whether scrolling was successful.
-    </span><span class="attr">#[cfg(feature = <span class="string">&quot;v2_32&quot;</span>)]
-    #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">&quot;v2_32&quot;</span>)))]
-    #[doc(alias = <span class="string">&quot;atk_text_scroll_substring_to_point&quot;</span>)]
+    </span><span class="attr">#[cfg(feature = <span class="string">"v2_32"</span>)]
+    #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v2_32"</span>)))]
+    #[doc(alias = <span class="string">"atk_text_scroll_substring_to_point"</span>)]
     </span><span class="kw">fn </span>scroll_substring_to_point(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         start_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
         end_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
-        coords: <a href="enums.rs.html#13-27">CoordType</a>,
+        coords: <a href="enums.rs.html#12-26">CoordType</a>,
         x: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
         y: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
     ) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
@@ -1606,8 +1601,8 @@
     /// focusable node following the new caret position.
     ///
     /// Calling this method should also scroll the application viewport in a way
-    /// that matches the behavior of the application&#39;s typical caret motion or tab
-    /// navigation as closely as possible. This also means that if the application&#39;s
+    /// that matches the behavior of the application's typical caret motion or tab
+    /// navigation as closely as possible. This also means that if the application's
     /// caret motion or focus navigation does not trigger a scroll operation, this
     /// method should not trigger one either. If the application does not have a caret
     /// motion or focus navigation operation, this method should try to scroll the new
@@ -1618,7 +1613,7 @@
     /// # Returns
     ///
     /// [`true`] if successful, [`false`] otherwise.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_set_caret_offset&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_set_caret_offset"</span>)]
     </span><span class="kw">fn </span>set_caret_offset(<span class="kw-2">&amp;</span><span class="self">self</span>, offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_text_set_caret_offset(
@@ -1644,7 +1639,7 @@
     /// # Returns
     ///
     /// [`true`] if successful, [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_text_set_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_text_set_selection"</span>)]
     </span><span class="kw">fn </span>set_selection(<span class="kw-2">&amp;</span><span class="self">self</span>, selection_num: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, start_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, end_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_text_set_selection(
@@ -1656,14 +1651,14 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;text-attributes-changed&quot; signal is emitted when the text
+    <span class="doccomment">/// The "text-attributes-changed" signal is emitted when the text
     /// attributes of the text of an object which implements AtkText
     /// changes.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;text-attributes-changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_text_attributes_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>text_attributes_changed_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"text-attributes-changed"</span>)]
+    </span><span class="kw">fn </span>connect_text_attributes_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>text_attributes_changed_trampoline&lt;
             P: IsA&lt;<a href="#16-101">Text</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkText,
             f: glib::ffi::gpointer,
@@ -1675,8 +1670,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#701">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#701">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;text-attributes-changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"text-attributes-changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     text_attributes_changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#713">f</a>),
@@ -1684,14 +1679,14 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;text-caret-moved&quot; signal is emitted when the caret
+    <span class="doccomment">/// The "text-caret-moved" signal is emitted when the caret
     /// position of the text of an object which implements AtkText
     /// changes.
     /// ## `arg1`
     /// The new position of the text caret.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;text-caret-moved&quot;</span>)]
-    </span><span class="kw">fn </span>connect_text_caret_moved&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>text_caret_moved_trampoline&lt;P: IsA&lt;<a href="#16-101">Text</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"text-caret-moved"</span>)]
+    </span><span class="kw">fn </span>connect_text_caret_moved&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>text_caret_moved_trampoline&lt;P: IsA&lt;<a href="#16-101">Text</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkText,
             arg1: libc::c_int,
             f: glib::ffi::gpointer,
@@ -1703,8 +1698,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#731">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#731">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;text-caret-moved\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"text-caret-moved\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     text_caret_moved_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#741">f</a>),
@@ -1712,9 +1707,9 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;text-insert&quot; signal is emitted when a new text is
+    <span class="doccomment">/// The "text-insert" signal is emitted when a new text is
     /// inserted. If the signal was not triggered by the user
-    /// (e.g. typing or pasting text), the &quot;system&quot; detail should be
+    /// (e.g. typing or pasting text), the "system" detail should be
     /// included.
     /// ## `arg1`
     /// The position (character offset) of the insertion.
@@ -1722,15 +1717,15 @@
     /// The length (in characters) of text inserted.
     /// ## `arg3`
     /// The new text inserted
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;text-insert&quot;</span>)]
-    </span><span class="kw">fn </span>connect_text_insert&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"text-insert"</span>)]
+    </span><span class="kw">fn </span>connect_text_insert&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         detail: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>text_insert_trampoline&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>text_insert_trampoline&lt;
             P: IsA&lt;<a href="#16-101">Text</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkText,
             arg1: libc::c_int,
@@ -1748,14 +1743,14 @@
         }
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#767">f</a>);
-            <span class="kw">let </span>detailed_signal_name = <a href="#766">detail</a>.map(|name| <a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;text-insert::{name}\0&quot;</span>));
+            <span class="kw">let </span>detailed_signal_name = <a href="#766">detail</a>.map(|name| <a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"text-insert::{name}\0"</span>));
             <span class="kw">let </span>signal_name: <span class="kw-2">&amp;</span>[<a href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>] = <a href="#789">detailed_signal_name</a>
                 .as_ref()
-                .map_or(<span class="kw-2">&amp;</span><span class="string">b&quot;text-insert\0&quot;</span>[..], |n| <a href="#792">n</a>.as_bytes());
+                .map_or(<span class="kw-2">&amp;</span><span class="string">b"text-insert\0"</span>[..], |n| <a href="#792">n</a>.as_bytes());
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#765">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
                 <a href="#790">signal_name</a>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     text_insert_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#788">f</a>),
@@ -1763,9 +1758,9 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;text-remove&quot; signal is emitted when a new text is
+    <span class="doccomment">/// The "text-remove" signal is emitted when a new text is
     /// removed. If the signal was not triggered by the user
-    /// (e.g. typing or pasting text), the &quot;system&quot; detail should be
+    /// (e.g. typing or pasting text), the "system" detail should be
     /// included.
     /// ## `arg1`
     /// The position (character offset) of the removal.
@@ -1773,15 +1768,15 @@
     /// The length (in characters) of text removed.
     /// ## `arg3`
     /// The old text removed
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;text-remove&quot;</span>)]
-    </span><span class="kw">fn </span>connect_text_remove&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"text-remove"</span>)]
+    </span><span class="kw">fn </span>connect_text_remove&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         detail: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>text_remove_trampoline&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>text_remove_trampoline&lt;
             P: IsA&lt;<a href="#16-101">Text</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkText,
             arg1: libc::c_int,
@@ -1799,14 +1794,14 @@
         }
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#818">f</a>);
-            <span class="kw">let </span>detailed_signal_name = <a href="#817">detail</a>.map(|name| <a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">&quot;text-remove::{name}\0&quot;</span>));
+            <span class="kw">let </span>detailed_signal_name = <a href="#817">detail</a>.map(|name| <a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"text-remove::{name}\0"</span>));
             <span class="kw">let </span>signal_name: <span class="kw-2">&amp;</span>[<a href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>] = <a href="#840">detailed_signal_name</a>
                 .as_ref()
-                .map_or(<span class="kw-2">&amp;</span><span class="string">b&quot;text-remove\0&quot;</span>[..], |n| <a href="#843">n</a>.as_bytes());
+                .map_or(<span class="kw-2">&amp;</span><span class="string">b"text-remove\0"</span>[..], |n| <a href="#843">n</a>.as_bytes());
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#816">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
                 <a href="#841">signal_name</a>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     text_remove_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#839">f</a>),
@@ -1814,13 +1809,13 @@
         }
     }
 
-    <span class="doccomment">/// The &quot;text-selection-changed&quot; signal is emitted when the
+    <span class="doccomment">/// The "text-selection-changed" signal is emitted when the
     /// selected text of an object which implements AtkText changes.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;text-selection-changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_text_selection_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>text_selection_changed_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"text-selection-changed"</span>)]
+    </span><span class="kw">fn </span>connect_text_selection_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>text_selection_changed_trampoline&lt;
             P: IsA&lt;<a href="#16-101">Text</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkText,
             f: glib::ffi::gpointer,
@@ -1832,8 +1827,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#858">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#858">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;text-selection-changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"text-selection-changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     text_selection_changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#870">f</a>),
@@ -1843,10 +1838,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#16-101">Text</a>&gt;&gt; <a href="#117-881">TextExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#16-101">Text</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#886">f</a>.write_str(<span class="string">&quot;Text&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/gl_area.rs`."><title>gl_area.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/gl_area.rs`."><title>gl_area.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -2296,23 +2297,17 @@
 <a href="#2223" id="2223">2223</a>
 <a href="#2224" id="2224">2224</a>
 <a href="#2225" id="2225">2225</a>
-<a href="#2226" id="2226">2226</a>
-<a href="#2227" id="2227">2227</a>
-<a href="#2228" id="2228">2228</a>
-<a href="#2229" id="2229">2229</a>
-<a href="#2230" id="2230">2230</a>
-<a href="#2231" id="2231">2231</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
-</span><span class="kw">use crate</span>::{<a href="enums.rs.html#27-49">Align</a>, <a href="buildable.rs.html#9-32">Buildable</a>, <a href="container.rs.html#14-1335">Container</a>, <a href="widget.rs.html#17-1520">Widget</a>};
+</span><span class="kw">use crate</span>::{<a href="enums.rs.html#26-48">Align</a>, <a href="buildable.rs.html#8-31">Buildable</a>, <a href="container.rs.html#14-1335">Container</a>, <a href="widget.rs.html#17-1520">Widget</a>};
 <span class="kw">use </span>glib::{
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/mem/index.html">mem</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// [`GLArea`][crate::GLArea] is a widget that allows drawing with OpenGL.
@@ -2327,7 +2322,7 @@
     /// function.
     ///
     /// The [`GLArea`][crate::GLArea] widget ensures that the [`gdk::GLContext`][crate::gdk::GLContext] is associated with
-    /// the widget&#39;s drawing area, and it is kept updated when the size and
+    /// the widget's drawing area, and it is kept updated when the size and
     /// position of the drawing area changes.
     ///
     /// ## Drawing with GtkGLArea ##
@@ -2343,8 +2338,8 @@
     ///   // create a GtkGLArea instance
     ///   GtkWidget *gl_area = gtk_gl_area_new ();
     ///
-    ///   // connect to the &quot;render&quot; signal
-    ///   g_signal_connect (gl_area, &quot;render&quot;, G_CALLBACK (render), NULL);
+    ///   // connect to the "render" signal
+    ///   g_signal_connect (gl_area, "render", G_CALLBACK (render), NULL);
     /// ```
     ///
     /// The ``render()`` function will be called when the [`GLArea`][crate::GLArea] is ready
@@ -2358,7 +2353,7 @@
     ///   static gboolean
     ///   render (GtkGLArea *area, GdkGLContext *context)
     ///   {
-    ///     // inside this function it&#39;s safe to use GL; the given
+    ///     // inside this function it's safe to use GL; the given
     ///     // #GdkGLContext has been made current to the drawable
     ///     // surface used by the #GtkGLArea and the viewport has
     ///     // already been set to be the size of the allocation
@@ -2581,7 +2576,7 @@
     ///
     ///
     /// #### `margin`
-    ///  Sets all four sides&#39; margin at once. If read, returns max
+    ///  Sets all four sides' margin at once. If read, returns max
     /// margin on any side.
     ///
     /// Readable | Writeable
@@ -2590,7 +2585,7 @@
     /// #### `margin-bottom`
     ///  Margin on bottom side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -2601,7 +2596,7 @@
     ///  Margin on end of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -2611,7 +2606,7 @@
     /// #### `margin-left`
     ///  Margin on left side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -2621,7 +2616,7 @@
     /// #### `margin-right`
     ///  Margin on right side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -2632,7 +2627,7 @@
     ///  Margin on start of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -2642,7 +2637,7 @@
     /// #### `margin-top`
     ///  Margin on top side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     ///
@@ -2750,7 +2745,7 @@
     ///
     ///
     /// #### `window`
-    ///  The widget&#39;s window if it is realized, [`None`] otherwise.
+    ///  The widget's window if it is realized, [`None`] otherwise.
     ///
     /// Readable
     /// &lt;/details&gt;
@@ -2838,7 +2833,7 @@
     /// #### `child-notify`
     ///  The ::child-notify signal is emitted for each
     /// [child property][child-properties] that has
-    /// changed on an object. The signal&#39;s detail holds the property name.
+    /// changed on an object. The signal's detail holds the property name.
     ///
     /// Detailed
     ///
@@ -2853,7 +2848,7 @@
     ///
     /// #### `configure-event`
     ///  The ::configure-event signal will be emitted when the size, position or
-    /// stacking of the `widget`&#39;s window has changed.
+    /// stacking of the `widget`'s window has changed.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::STRUCTURE_MASK`][crate::gdk::EventMask::STRUCTURE_MASK] mask. GDK will enable this mask
@@ -2926,7 +2921,7 @@
     ///  The ::drag-data-delete signal is emitted on the drag source when a drag
     /// with the action [`gdk::DragAction::MOVE`][crate::gdk::DragAction::MOVE] is successfully completed. The signal
     /// handler is responsible for deleting the data that has been dropped. What
-    /// &quot;delete&quot; means depends on the context of the drag operation.
+    /// "delete" means depends on the context of the drag operation.
     ///
     ///
     ///
@@ -2990,7 +2985,7 @@
     ///                                            GTK_DIALOG_DESTROY_WITH_PARENT,
     ///                                            GTK_MESSAGE_INFO,
     ///                                            GTK_BUTTONS_YES_NO,
-    ///                                            &quot;Move the data ?\n&quot;);
+    ///                                            "Move the data ?\n");
     ///           response = gtk_dialog_run (GTK_DIALOG (dialog));
     ///           gtk_widget_destroy (dialog);
     ///
@@ -3037,7 +3032,7 @@
     ///  The ::drag-failed signal is emitted on the drag source when a drag has
     /// failed. The signal handler may hook custom code to handle a failed DnD
     /// operation based on the type of error, it returns [`true`] is the failure has
-    /// been already handled (not showing the default &quot;drag operation failed&quot;
+    /// been already handled (not showing the default "drag operation failed"
     /// animation), otherwise it returns [`false`].
     ///
     ///
@@ -3066,7 +3061,7 @@
     /// handler is responsible for providing the necessary information for
     /// displaying feedback to the user, by calling `gdk_drag_status()`.
     ///
-    /// If the decision whether the drop will be accepted or rejected can&#39;t be
+    /// If the decision whether the drop will be accepted or rejected can't be
     /// made based solely on the cursor position and the type of the data, the
     /// handler may inspect the dragged data by calling [`WidgetExt::drag_get_data()`][crate::prelude::WidgetExt::drag_get_data()] and
     /// defer the `gdk_drag_status()` call to the [`drag-data-received`][struct@crate::Widget#drag-data-received]
@@ -3077,7 +3072,7 @@
     /// Also note that there is no drag-enter signal. The drag receiver has to
     /// keep track of whether he has received any drag-motion signals since the
     /// last [`drag-leave`][struct@crate::Widget#drag-leave] and if not, treat the drag-motion signal as
-    /// an &quot;enter&quot; signal. Upon an &quot;enter&quot;, the handler will typically highlight
+    /// an "enter" signal. Upon an "enter", the handler will typically highlight
     /// the drop site with [`WidgetExt::drag_highlight()`][crate::prelude::WidgetExt::drag_highlight()].
     ///
     ///
@@ -3154,18 +3149,18 @@
     ///
     /// #### `draw`
     ///  This signal is emitted when a widget is supposed to render itself.
-    /// The `widget`&#39;s top left corner must be painted at the origin of
+    /// The `widget`'s top left corner must be painted at the origin of
     /// the passed in context and be sized to the values returned by
     /// [`WidgetExt::allocated_width()`][crate::prelude::WidgetExt::allocated_width()] and
     /// [`WidgetExt::allocated_height()`][crate::prelude::WidgetExt::allocated_height()].
     ///
     /// Signal handlers connected to this signal can modify the cairo
-    /// context passed as `cr` in any way they like and don&#39;t need to
+    /// context passed as `cr` in any way they like and don't need to
     /// restore it. The signal emission takes care of calling `cairo_save()`
     /// before and `cairo_restore()` after invoking the handler.
     ///
     /// The signal handler will get a `cr` with a clip region already set to the
-    /// widget&#39;s dirty region, i.e. to the area that needs repainting. Complicated
+    /// widget's dirty region, i.e. to the area that needs repainting. Complicated
     /// widgets that want to avoid redrawing themselves completely can get the full
     /// extents of the clip region with `gdk_cairo_get_clip_rectangle()`, or they can
     /// get a finer-grained representation of the dirty region with
@@ -3176,7 +3171,7 @@
     ///
     /// #### `enter-notify-event`
     ///  The ::enter-notify-event will be emitted when the pointer enters
-    /// the `widget`&#39;s window.
+    /// the `widget`'s window.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::ENTER_NOTIFY_MASK`][crate::gdk::EventMask::ENTER_NOTIFY_MASK] mask.
@@ -3210,7 +3205,7 @@
     ///
     /// #### `focus-in-event`
     ///  The ::focus-in-event signal will be emitted when the keyboard focus
-    /// enters the `widget`&#39;s window.
+    /// enters the `widget`'s window.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::FOCUS_CHANGE_MASK`][crate::gdk::EventMask::FOCUS_CHANGE_MASK] mask.
@@ -3220,7 +3215,7 @@
     ///
     /// #### `focus-out-event`
     ///  The ::focus-out-event signal will be emitted when the keyboard focus
-    /// leaves the `widget`&#39;s window.
+    /// leaves the `widget`'s window.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::FOCUS_CHANGE_MASK`][crate::gdk::EventMask::FOCUS_CHANGE_MASK] mask.
@@ -3305,7 +3300,7 @@
     ///
     /// #### `leave-notify-event`
     ///  The ::leave-notify-event will be emitted when the pointer leaves
-    /// the `widget`&#39;s window.
+    /// the `widget`'s window.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::LEAVE_NOTIFY_MASK`][crate::gdk::EventMask::LEAVE_NOTIFY_MASK] mask.
@@ -3330,7 +3325,7 @@
     ///
     ///
     /// #### `map-event`
-    ///  The ::map-event signal will be emitted when the `widget`&#39;s window is
+    ///  The ::map-event signal will be emitted when the `widget`'s window is
     /// mapped. A window is mapped when it becomes visible on the screen.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
@@ -3349,7 +3344,7 @@
     ///
     /// #### `motion-notify-event`
     ///  The ::motion-notify-event signal is emitted when the pointer moves
-    /// over the widget&#39;s [`gdk::Window`][crate::gdk::Window].
+    /// over the widget's [`gdk::Window`][crate::gdk::Window].
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget
     /// needs to enable the [`gdk::EventMask::POINTER_MOTION_MASK`][crate::gdk::EventMask::POINTER_MOTION_MASK] mask.
@@ -3384,7 +3379,7 @@
     ///
     /// #### `property-notify-event`
     ///  The ::property-notify-event signal will be emitted when a property on
-    /// the `widget`&#39;s window has been changed or deleted.
+    /// the `widget`'s window has been changed or deleted.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
     /// to enable the [`gdk::EventMask::PROPERTY_CHANGE_MASK`][crate::gdk::EventMask::PROPERTY_CHANGE_MASK] mask.
@@ -3412,7 +3407,7 @@
     ///
     /// #### `query-tooltip`
     ///  Emitted when [`has-tooltip`][struct@crate::Widget#has-tooltip] is [`true`] and the hover timeout
-    /// has expired with the cursor hovering &quot;above&quot; `widget`; or emitted when `widget` got
+    /// has expired with the cursor hovering "above" `widget`; or emitted when `widget` got
     /// focus in keyboard mode.
     ///
     /// Using the given coordinates, the signal handler should determine
@@ -3457,7 +3452,7 @@
     ///
     /// #### `selection-clear-event`
     ///  The ::selection-clear-event signal will be emitted when the
-    /// the `widget`&#39;s window has lost ownership of a selection.
+    /// the `widget`'s window has lost ownership of a selection.
     ///
     ///
     ///
@@ -3477,7 +3472,7 @@
     /// #### `selection-request-event`
     ///  The ::selection-request-event signal will be emitted when
     /// another client requests ownership of the selection owned by
-    /// the `widget`&#39;s window.
+    /// the `widget`'s window.
     ///
     ///
     ///
@@ -3525,7 +3520,7 @@
     ///
     /// #### `style-updated`
     ///  The ::style-updated signal is a convenience signal that is emitted when the
-    /// [`changed`][struct@crate::StyleContext#changed] signal is emitted on the `widget`&#39;s associated
+    /// [`changed`][struct@crate::StyleContext#changed] signal is emitted on the `widget`'s associated
     /// [`StyleContext`][crate::StyleContext] as returned by [`WidgetExt::style_context()`][crate::prelude::WidgetExt::style_context()].
     ///
     /// Note that style-modifying functions like `gtk_widget_override_color()` also
@@ -3550,7 +3545,7 @@
     ///
     ///
     /// #### `unmap-event`
-    ///  The ::unmap-event signal will be emitted when the `widget`&#39;s window is
+    ///  The ::unmap-event signal will be emitted when the `widget`'s window is
     /// unmapped. A window is unmapped when it becomes invisible on the screen.
     ///
     /// To receive this signal, the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
@@ -3570,7 +3565,7 @@
     ///
     ///
     /// #### `visibility-notify-event`
-    ///  The ::visibility-notify-event will be emitted when the `widget`&#39;s
+    ///  The ::visibility-notify-event will be emitted when the `widget`'s
     /// window is obscured or unobscured.
     ///
     /// To receive this signal the [`gdk::Window`][crate::gdk::Window] associated to the widget needs
@@ -3593,8 +3588,8 @@
     /// # Implements
     ///
     /// [`GLAreaExt`][trait@crate::prelude::GLAreaExt], [`WidgetExt`][trait@crate::prelude::WidgetExt], [`trait@glib::ObjectExt`], [`BuildableExt`][trait@crate::prelude::BuildableExt], [`WidgetExtManual`][trait@crate::prelude::WidgetExtManual], [`BuildableExtManual`][trait@crate::prelude::BuildableExtManual]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;GtkGLArea&quot;</span>)]
-    </span><span class="kw">pub struct </span><a href="../../../gtk/struct.GLArea.html">GLArea</a>(Object&lt;<a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>, <a href="../../../gtk_sys/struct.GtkGLAreaClass.html">ffi::GtkGLAreaClass</a>&gt;) @extends <a href="widget.rs.html#17-1520">Widget</a>, @implements <a href="buildable.rs.html#9-32">Buildable</a>;
+    </span><span class="attr">#[doc(alias = <span class="string">"GtkGLArea"</span>)]
+    </span><span class="kw">pub struct </span><a href="../../../gtk/struct.GLArea.html">GLArea</a>(Object&lt;<a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>, <a href="../../../gtk_sys/struct.GtkGLAreaClass.html">ffi::GtkGLAreaClass</a>&gt;) @extends <a href="widget.rs.html#17-1520">Widget</a>, @implements <a href="buildable.rs.html#8-31">Buildable</a>;
 
     <span class="kw">match fn </span>{
         type_ =&gt; || ffi::gtk_gl_area_get_type(),
@@ -3602,14 +3597,14 @@
 }
 
 <span class="kw">impl </span><a href="#13-1298">GLArea</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#13-1298">GLArea</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#13-1298">GLArea</a>&gt; = <span class="prelude-val">None</span>;
 
     <span class="doccomment">/// Creates a new [`GLArea`][crate::GLArea] widget.
     ///
     /// # Returns
     ///
     /// a new [`GLArea`][crate::GLArea]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_new&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_new"</span>)]
     </span><span class="kw">pub fn </span>new() -&gt; <a href="#13-1298">GLArea</a> {
         <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
         <span class="kw">unsafe </span>{ Widget::from_glib_none(ffi::gtk_gl_area_new()).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">unsafe_cast</a>() }
@@ -3634,9 +3629,9 @@
 </span><span class="doccomment">/// A [builder-pattern] type to construct [`GLArea`] objects.
 ///
 /// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html
-</span><span class="attr">#[must_use = <span class="string">&quot;The builder must be built to be used&quot;</span>]
+</span><span class="attr">#[must_use = <span class="string">"The builder must be built to be used"</span>]
 </span><span class="kw">pub struct </span><a href="../../../gtk/builders/struct.GLAreaBuilder.html">GLAreaBuilder</a> {
-    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">&#39;static</span>, <a href="#13-1298">GLArea</a>&gt;,
+    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">'static</span>, <a href="#13-1298">GLArea</a>&gt;,
 }
 
 <span class="kw">impl </span><a href="#1334-1336">GLAreaBuilder</a> {
@@ -3657,7 +3652,7 @@
     /// to redraw.
     </span><span class="kw">pub fn </span>auto_render(<span class="self">self</span>, auto_render: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1354">self</a>.builder.property(<span class="string">&quot;auto-render&quot;</span>, <a href="#1354">auto_render</a>),
+            builder: <a class="self" href="#1354">self</a>.builder.property(<span class="string">"auto-render"</span>, <a href="#1354">auto_render</a>),
         }
     }
 
@@ -3669,7 +3664,7 @@
     /// replace anything below the widget.
     </span><span class="kw">pub fn </span>has_alpha(<span class="self">self</span>, has_alpha: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1366">self</a>.builder.property(<span class="string">&quot;has-alpha&quot;</span>, <a href="#1366">has_alpha</a>),
+            builder: <a class="self" href="#1366">self</a>.builder.property(<span class="string">"has-alpha"</span>, <a href="#1366">has_alpha</a>),
         }
     }
 
@@ -3677,7 +3672,7 @@
     /// target framebuffer.
     </span><span class="kw">pub fn </span>has_depth_buffer(<span class="self">self</span>, has_depth_buffer: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1374">self</a>.builder.property(<span class="string">&quot;has-depth-buffer&quot;</span>, <a href="#1374">has_depth_buffer</a>),
+            builder: <a class="self" href="#1374">self</a>.builder.property(<span class="string">"has-depth-buffer"</span>, <a href="#1374">has_depth_buffer</a>),
         }
     }
 
@@ -3687,7 +3682,7 @@
         <span class="self">Self </span>{
             builder: <span class="self"><a href="#1382">self</a>
                 </span>.builder
-                .property(<span class="string">&quot;has-stencil-buffer&quot;</span>, <a href="#1382">has_stencil_buffer</a>),
+                .property(<span class="string">"has-stencil-buffer"</span>, <a href="#1382">has_stencil_buffer</a>),
         }
     }
 
@@ -3697,38 +3692,38 @@
     /// See also: [`GLContext::set_use_es()`][crate::gdk::GLContext::set_use_es()]
     </span><span class="kw">pub fn </span>use_es(<span class="self">self</span>, use_es: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1394">self</a>.builder.property(<span class="string">&quot;use-es&quot;</span>, <a href="#1394">use_es</a>),
+            builder: <a class="self" href="#1394">self</a>.builder.property(<span class="string">"use-es"</span>, <a href="#1394">use_es</a>),
         }
     }
 
     <span class="kw">pub fn </span>app_paintable(<span class="self">self</span>, app_paintable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1400">self</a>.builder.property(<span class="string">&quot;app-paintable&quot;</span>, <a href="#1400">app_paintable</a>),
+            builder: <a class="self" href="#1400">self</a>.builder.property(<span class="string">"app-paintable"</span>, <a href="#1400">app_paintable</a>),
         }
     }
 
     <span class="kw">pub fn </span>can_default(<span class="self">self</span>, can_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1406">self</a>.builder.property(<span class="string">&quot;can-default&quot;</span>, <a href="#1406">can_default</a>),
+            builder: <a class="self" href="#1406">self</a>.builder.property(<span class="string">"can-default"</span>, <a href="#1406">can_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>can_focus(<span class="self">self</span>, can_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1412">self</a>.builder.property(<span class="string">&quot;can-focus&quot;</span>, <a href="#1412">can_focus</a>),
+            builder: <a class="self" href="#1412">self</a>.builder.property(<span class="string">"can-focus"</span>, <a href="#1412">can_focus</a>),
         }
     }
 
     <span class="kw">pub fn </span>events(<span class="self">self</span>, events: <a href="../../../gdk/auto/flags/struct.EventMask.html">gdk::EventMask</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1418">self</a>.builder.property(<span class="string">&quot;events&quot;</span>, <a href="#1418">events</a>),
+            builder: <a class="self" href="#1418">self</a>.builder.property(<span class="string">"events"</span>, <a href="#1418">events</a>),
         }
     }
 
     <span class="doccomment">/// Whether to expand in both directions. Setting this sets both [`hexpand`][struct@crate::Widget#hexpand] and [`vexpand`][struct@crate::Widget#vexpand]
     </span><span class="kw">pub fn </span>expand(<span class="self">self</span>, expand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1425">self</a>.builder.property(<span class="string">&quot;expand&quot;</span>, <a href="#1425">expand</a>),
+            builder: <a class="self" href="#1425">self</a>.builder.property(<span class="string">"expand"</span>, <a href="#1425">expand</a>),
         }
     }
 
@@ -3740,26 +3735,26 @@
     /// GtkComboBox) implemented this property individually.
     </span><span class="kw">pub fn </span>focus_on_click(<span class="self">self</span>, focus_on_click: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1437">self</a>.builder.property(<span class="string">&quot;focus-on-click&quot;</span>, <a href="#1437">focus_on_click</a>),
+            builder: <a class="self" href="#1437">self</a>.builder.property(<span class="string">"focus-on-click"</span>, <a href="#1437">focus_on_click</a>),
         }
     }
 
     <span class="doccomment">/// How to distribute horizontal space if widget gets extra space, see [`Align`][crate::Align]
-    </span><span class="kw">pub fn </span>halign(<span class="self">self</span>, halign: <a href="enums.rs.html#27-49">Align</a>) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>halign(<span class="self">self</span>, halign: <a href="enums.rs.html#26-48">Align</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1444">self</a>.builder.property(<span class="string">&quot;halign&quot;</span>, <a href="#1444">halign</a>),
+            builder: <a class="self" href="#1444">self</a>.builder.property(<span class="string">"halign"</span>, <a href="#1444">halign</a>),
         }
     }
 
     <span class="kw">pub fn </span>has_default(<span class="self">self</span>, has_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1450">self</a>.builder.property(<span class="string">&quot;has-default&quot;</span>, <a href="#1450">has_default</a>),
+            builder: <a class="self" href="#1450">self</a>.builder.property(<span class="string">"has-default"</span>, <a href="#1450">has_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>has_focus(<span class="self">self</span>, has_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1456">self</a>.builder.property(<span class="string">&quot;has-focus&quot;</span>, <a href="#1456">has_focus</a>),
+            builder: <a class="self" href="#1456">self</a>.builder.property(<span class="string">"has-focus"</span>, <a href="#1456">has_focus</a>),
         }
     }
 
@@ -3774,99 +3769,99 @@
     /// property is set to [`false`] again.
     </span><span class="kw">pub fn </span>has_tooltip(<span class="self">self</span>, has_tooltip: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1471">self</a>.builder.property(<span class="string">&quot;has-tooltip&quot;</span>, <a href="#1471">has_tooltip</a>),
+            builder: <a class="self" href="#1471">self</a>.builder.property(<span class="string">"has-tooltip"</span>, <a href="#1471">has_tooltip</a>),
         }
     }
 
     <span class="kw">pub fn </span>height_request(<span class="self">self</span>, height_request: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1477">self</a>.builder.property(<span class="string">&quot;height-request&quot;</span>, <a href="#1477">height_request</a>),
+            builder: <a class="self" href="#1477">self</a>.builder.property(<span class="string">"height-request"</span>, <a href="#1477">height_request</a>),
         }
     }
 
     <span class="doccomment">/// Whether to expand horizontally. See [`WidgetExt::set_hexpand()`][crate::prelude::WidgetExt::set_hexpand()].
     </span><span class="kw">pub fn </span>hexpand(<span class="self">self</span>, hexpand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1484">self</a>.builder.property(<span class="string">&quot;hexpand&quot;</span>, <a href="#1484">hexpand</a>),
+            builder: <a class="self" href="#1484">self</a>.builder.property(<span class="string">"hexpand"</span>, <a href="#1484">hexpand</a>),
         }
     }
 
     <span class="doccomment">/// Whether to use the [`hexpand`][struct@crate::Widget#hexpand] property. See [`WidgetExt::is_hexpand_set()`][crate::prelude::WidgetExt::is_hexpand_set()].
     </span><span class="kw">pub fn </span>hexpand_set(<span class="self">self</span>, hexpand_set: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1491">self</a>.builder.property(<span class="string">&quot;hexpand-set&quot;</span>, <a href="#1491">hexpand_set</a>),
+            builder: <a class="self" href="#1491">self</a>.builder.property(<span class="string">"hexpand-set"</span>, <a href="#1491">hexpand_set</a>),
         }
     }
 
     <span class="kw">pub fn </span>is_focus(<span class="self">self</span>, is_focus: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1497">self</a>.builder.property(<span class="string">&quot;is-focus&quot;</span>, <a href="#1497">is_focus</a>),
+            builder: <a class="self" href="#1497">self</a>.builder.property(<span class="string">"is-focus"</span>, <a href="#1497">is_focus</a>),
         }
     }
 
-    <span class="doccomment">/// Sets all four sides&#39; margin at once. If read, returns max
+    <span class="doccomment">/// Sets all four sides' margin at once. If read, returns max
     /// margin on any side.
     </span><span class="kw">pub fn </span>margin(<span class="self">self</span>, margin: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1505">self</a>.builder.property(<span class="string">&quot;margin&quot;</span>, <a href="#1505">margin</a>),
+            builder: <a class="self" href="#1505">self</a>.builder.property(<span class="string">"margin"</span>, <a href="#1505">margin</a>),
         }
     }
 
     <span class="doccomment">/// Margin on bottom side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     </span><span class="kw">pub fn </span>margin_bottom(<span class="self">self</span>, margin_bottom: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1516">self</a>.builder.property(<span class="string">&quot;margin-bottom&quot;</span>, <a href="#1516">margin_bottom</a>),
+            builder: <a class="self" href="#1516">self</a>.builder.property(<span class="string">"margin-bottom"</span>, <a href="#1516">margin_bottom</a>),
         }
     }
 
     <span class="doccomment">/// Margin on end of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     </span><span class="kw">pub fn </span>margin_end(<span class="self">self</span>, margin_end: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1528">self</a>.builder.property(<span class="string">&quot;margin-end&quot;</span>, <a href="#1528">margin_end</a>),
+            builder: <a class="self" href="#1528">self</a>.builder.property(<span class="string">"margin-end"</span>, <a href="#1528">margin_end</a>),
         }
     }
 
     <span class="doccomment">/// Margin on start of widget, horizontally. This property supports
     /// left-to-right and right-to-left text directions.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     </span><span class="kw">pub fn </span>margin_start(<span class="self">self</span>, margin_start: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1540">self</a>.builder.property(<span class="string">&quot;margin-start&quot;</span>, <a href="#1540">margin_start</a>),
+            builder: <a class="self" href="#1540">self</a>.builder.property(<span class="string">"margin-start"</span>, <a href="#1540">margin_start</a>),
         }
     }
 
     <span class="doccomment">/// Margin on top side of widget.
     ///
-    /// This property adds margin outside of the widget&#39;s normal size
+    /// This property adds margin outside of the widget's normal size
     /// request, the margin will be added in addition to the size from
     /// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.
     </span><span class="kw">pub fn </span>margin_top(<span class="self">self</span>, margin_top: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1551">self</a>.builder.property(<span class="string">&quot;margin-top&quot;</span>, <a href="#1551">margin_top</a>),
+            builder: <a class="self" href="#1551">self</a>.builder.property(<span class="string">"margin-top"</span>, <a href="#1551">margin_top</a>),
         }
     }
 
     <span class="kw">pub fn </span>name(<span class="self">self</span>, name: <span class="kw">impl </span>Into&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1557">self</a>.builder.property(<span class="string">&quot;name&quot;</span>, <a href="#1557">name</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
+            builder: <a class="self" href="#1557">self</a>.builder.property(<span class="string">"name"</span>, <a href="#1557">name</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
         }
     }
 
     <span class="kw">pub fn </span>no_show_all(<span class="self">self</span>, no_show_all: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1563">self</a>.builder.property(<span class="string">&quot;no-show-all&quot;</span>, <a href="#1563">no_show_all</a>),
+            builder: <a class="self" href="#1563">self</a>.builder.property(<span class="string">"no-show-all"</span>, <a href="#1563">no_show_all</a>),
         }
     }
 
@@ -3876,25 +3871,25 @@
     /// Before 3.8 this was only available in GtkWindow
     </span><span class="kw">pub fn </span>opacity(<span class="self">self</span>, opacity: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1573">self</a>.builder.property(<span class="string">&quot;opacity&quot;</span>, <a href="#1573">opacity</a>),
+            builder: <a class="self" href="#1573">self</a>.builder.property(<span class="string">"opacity"</span>, <a href="#1573">opacity</a>),
         }
     }
 
     <span class="kw">pub fn </span>parent(<span class="self">self</span>, parent: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="container.rs.html#14-1335">Container</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1579">self</a>.builder.property(<span class="string">&quot;parent&quot;</span>, <a href="#1579">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
+            builder: <a class="self" href="#1579">self</a>.builder.property(<span class="string">"parent"</span>, <a href="#1579">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
         }
     }
 
     <span class="kw">pub fn </span>receives_default(<span class="self">self</span>, receives_default: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1585">self</a>.builder.property(<span class="string">&quot;receives-default&quot;</span>, <a href="#1585">receives_default</a>),
+            builder: <a class="self" href="#1585">self</a>.builder.property(<span class="string">"receives-default"</span>, <a href="#1585">receives_default</a>),
         }
     }
 
     <span class="kw">pub fn </span>sensitive(<span class="self">self</span>, sensitive: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1591">self</a>.builder.property(<span class="string">&quot;sensitive&quot;</span>, <a href="#1591">sensitive</a>),
+            builder: <a class="self" href="#1591">self</a>.builder.property(<span class="string">"sensitive"</span>, <a href="#1591">sensitive</a>),
         }
     }
 
@@ -3913,7 +3908,7 @@
         <span class="self">Self </span>{
             builder: <span class="self"><a href="#1608">self</a>
                 </span>.builder
-                .property(<span class="string">&quot;tooltip-markup&quot;</span>, <a href="#1608">tooltip_markup</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
+                .property(<span class="string">"tooltip-markup"</span>, <a href="#1608">tooltip_markup</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
         }
     }
 
@@ -3930,46 +3925,46 @@
     /// are set, the last one wins.
     </span><span class="kw">pub fn </span>tooltip_text(<span class="self">self</span>, tooltip_text: <span class="kw">impl </span>Into&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1627">self</a>.builder.property(<span class="string">&quot;tooltip-text&quot;</span>, <a href="#1627">tooltip_text</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
+            builder: <a class="self" href="#1627">self</a>.builder.property(<span class="string">"tooltip-text"</span>, <a href="#1627">tooltip_text</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
         }
     }
 
     <span class="doccomment">/// How to distribute vertical space if widget gets extra space, see [`Align`][crate::Align]
-    </span><span class="kw">pub fn </span>valign(<span class="self">self</span>, valign: <a href="enums.rs.html#27-49">Align</a>) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>valign(<span class="self">self</span>, valign: <a href="enums.rs.html#26-48">Align</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1634">self</a>.builder.property(<span class="string">&quot;valign&quot;</span>, <a href="#1634">valign</a>),
+            builder: <a class="self" href="#1634">self</a>.builder.property(<span class="string">"valign"</span>, <a href="#1634">valign</a>),
         }
     }
 
     <span class="doccomment">/// Whether to expand vertically. See [`WidgetExt::set_vexpand()`][crate::prelude::WidgetExt::set_vexpand()].
     </span><span class="kw">pub fn </span>vexpand(<span class="self">self</span>, vexpand: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1641">self</a>.builder.property(<span class="string">&quot;vexpand&quot;</span>, <a href="#1641">vexpand</a>),
+            builder: <a class="self" href="#1641">self</a>.builder.property(<span class="string">"vexpand"</span>, <a href="#1641">vexpand</a>),
         }
     }
 
     <span class="doccomment">/// Whether to use the [`vexpand`][struct@crate::Widget#vexpand] property. See [`WidgetExt::is_vexpand_set()`][crate::prelude::WidgetExt::is_vexpand_set()].
     </span><span class="kw">pub fn </span>vexpand_set(<span class="self">self</span>, vexpand_set: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1648">self</a>.builder.property(<span class="string">&quot;vexpand-set&quot;</span>, <a href="#1648">vexpand_set</a>),
+            builder: <a class="self" href="#1648">self</a>.builder.property(<span class="string">"vexpand-set"</span>, <a href="#1648">vexpand_set</a>),
         }
     }
 
     <span class="kw">pub fn </span>visible(<span class="self">self</span>, visible: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1654">self</a>.builder.property(<span class="string">&quot;visible&quot;</span>, <a href="#1654">visible</a>),
+            builder: <a class="self" href="#1654">self</a>.builder.property(<span class="string">"visible"</span>, <a href="#1654">visible</a>),
         }
     }
 
     <span class="kw">pub fn </span>width_request(<span class="self">self</span>, width_request: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#1660">self</a>.builder.property(<span class="string">&quot;width-request&quot;</span>, <a href="#1660">width_request</a>),
+            builder: <a class="self" href="#1660">self</a>.builder.property(<span class="string">"width-request"</span>, <a href="#1660">width_request</a>),
         }
     }
 
     <span class="comment">// rustdoc-stripper-ignore-next
     </span><span class="doccomment">/// Build the [`GLArea`].
-    </span><span class="attr">#[must_use = <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]
+    </span><span class="attr">#[must_use = <span class="string">"Building the object from the builder is usually expensive and is not expected to have side effects"</span>]
     </span><span class="kw">pub fn </span>build(<span class="self">self</span>) -&gt; <a href="#13-1298">GLArea</a> {
         <a class="self" href="#1669">self</a>.builder.build()
     }
@@ -3985,15 +3980,15 @@
 /// # Implementors
 ///
 /// [`GLArea`][struct@crate::GLArea]
-</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.GLAreaExt.html">GLAreaExt</a>: IsA&lt;<a href="#13-1298">GLArea</a>&gt; + <a href="#1675">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.GLAreaExt.html">GLAreaExt</a>: IsA&lt;<a href="#13-1298">GLArea</a>&gt; + <a href="#1675">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Ensures that the `self` framebuffer object is made the current draw
     /// and read target, and that all the required buffers for the `self`
     /// are created and bound to the frambuffer.
     ///
     /// This function is automatically called before emitting the
-    /// [`render`][struct@crate::GLArea#render] signal, and doesn&#39;t normally need to be called
+    /// [`render`][struct@crate::GLArea#render] signal, and doesn't normally need to be called
     /// by application code.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_attach_buffers&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_attach_buffers"</span>)]
     </span><span class="kw">fn </span>attach_buffers(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_attach_buffers(<a class="self" href="#1693">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -4005,8 +4000,8 @@
     /// # Returns
     ///
     /// [`true`] if the `self` is auto rendering, [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_get_auto_render&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_auto_render&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_get_auto_render"</span>)]
+    #[doc(alias = <span class="string">"get_auto_render"</span>)]
     </span><span class="kw">fn </span>is_auto_render(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_gl_area_get_auto_render(
@@ -4020,8 +4015,8 @@
     /// # Returns
     ///
     /// the [`gdk::GLContext`][crate::gdk::GLContext]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_get_context&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_context&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_get_context"</span>)]
+    #[doc(alias = <span class="string">"get_context"</span>)]
     </span><span class="kw">fn </span>context(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>&gt; {
         <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_gl_area_get_context(<a class="self" href="#1721">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -4031,8 +4026,8 @@
     /// # Returns
     ///
     /// the [`glib::Error`][crate::glib::Error] or [`None`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_get_error&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_error&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_get_error"</span>)]
+    #[doc(alias = <span class="string">"get_error"</span>)]
     </span><span class="kw">fn </span>error(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html">glib::Error</a>&gt; {
         <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_gl_area_get_error(<a class="self" href="#1732">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -4042,8 +4037,8 @@
     /// # Returns
     ///
     /// [`true`] if the `self` has an alpha component, [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_get_has_alpha&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_has_alpha&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_get_has_alpha"</span>)]
+    #[doc(alias = <span class="string">"get_has_alpha"</span>)]
     </span><span class="kw">fn </span>has_alpha(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_gl_area_get_has_alpha(
@@ -4057,8 +4052,8 @@
     /// # Returns
     ///
     /// [`true`] if the `self` has a depth buffer, [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_get_has_depth_buffer&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_has_depth_buffer&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_get_has_depth_buffer"</span>)]
+    #[doc(alias = <span class="string">"get_has_depth_buffer"</span>)]
     </span><span class="kw">fn </span>has_depth_buffer(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_gl_area_get_has_depth_buffer(
@@ -4072,8 +4067,8 @@
     /// # Returns
     ///
     /// [`true`] if the `self` has a stencil buffer, [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_get_has_stencil_buffer&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_has_stencil_buffer&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_get_has_stencil_buffer"</span>)]
+    #[doc(alias = <span class="string">"get_has_stencil_buffer"</span>)]
     </span><span class="kw">fn </span>has_stencil_buffer(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_gl_area_get_has_stencil_buffer(
@@ -4093,12 +4088,12 @@
     ///
     /// ## `minor`
     /// return location for the required minor version
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_get_required_version&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_required_version&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_get_required_version"</span>)]
+    #[doc(alias = <span class="string">"get_required_version"</span>)]
     </span><span class="kw">fn </span>required_version(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; (<a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>major = mem::MaybeUninit::uninit();
-            <span class="kw">let </span><span class="kw-2">mut </span>minor = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>major = std::mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>minor = std::mem::MaybeUninit::uninit();
             ffi::gtk_gl_area_get_required_version(
                 <a class="self" href="#1794">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#1796">major</a>.as_mut_ptr(),
@@ -4114,8 +4109,8 @@
     ///
     /// [`true`] if the [`GLArea`][crate::GLArea] should create an OpenGL ES context
     ///  and [`false`] otherwise
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_get_use_es&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_use_es&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_get_use_es"</span>)]
+    #[doc(alias = <span class="string">"get_use_es"</span>)]
     </span><span class="kw">fn </span>uses_es(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_gl_area_get_use_es(<a class="self" href="#1815">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -4124,9 +4119,9 @@
     /// the [`GLArea`][crate::GLArea].
     ///
     /// This function is automatically called before emitting the
-    /// [`render`][struct@crate::GLArea#render] signal, and doesn&#39;t normally need to be called
+    /// [`render`][struct@crate::GLArea#render] signal, and doesn't normally need to be called
     /// by application code.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_make_current&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_make_current"</span>)]
     </span><span class="kw">fn </span>make_current(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_make_current(<a class="self" href="#1826">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -4140,7 +4135,7 @@
     /// This is only needed when the [`set_auto_render()`][Self::set_auto_render()] has
     /// been called with a [`false`] value. The default behaviour is to
     /// emit [`render`][struct@crate::GLArea#render] on each draw.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_queue_render&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_queue_render"</span>)]
     </span><span class="kw">fn </span>queue_render(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_queue_render(<a class="self" href="#1840">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -4158,7 +4153,7 @@
     /// the scene changes seldomly, but takes a long time to redraw.
     /// ## `auto_render`
     /// a boolean
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_set_auto_render&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_set_auto_render"</span>)]
     </span><span class="kw">fn </span>set_auto_render(<span class="kw-2">&amp;</span><span class="self">self</span>, auto_render: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_set_auto_render(
@@ -4173,7 +4168,7 @@
     /// signal if GL context creation fails.
     /// ## `error`
     /// a new [`glib::Error`][crate::glib::Error], or [`None`] to unset the error
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_set_error&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_set_error"</span>)]
     </span><span class="kw">fn </span>set_error(<span class="kw-2">&amp;</span><span class="self">self</span>, error: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html">glib::Error</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_set_error(<a class="self" href="#1873">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#1873">error</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -4188,7 +4183,7 @@
     /// buffer will fully replace anything below the widget.
     /// ## `has_alpha`
     /// [`true`] to add an alpha component
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_set_has_alpha&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_set_has_alpha"</span>)]
     </span><span class="kw">fn </span>set_has_alpha(<span class="kw-2">&amp;</span><span class="self">self</span>, has_alpha: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_set_has_alpha(<a class="self" href="#1888">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#1888">has_alpha</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
@@ -4200,7 +4195,7 @@
     /// there will be none.
     /// ## `has_depth_buffer`
     /// [`true`] to add a depth buffer
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_set_has_depth_buffer&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_set_has_depth_buffer"</span>)]
     </span><span class="kw">fn </span>set_has_depth_buffer(<span class="kw-2">&amp;</span><span class="self">self</span>, has_depth_buffer: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_set_has_depth_buffer(
@@ -4215,7 +4210,7 @@
     /// there will be none.
     /// ## `has_stencil_buffer`
     /// [`true`] to add a stencil buffer
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_set_has_stencil_buffer&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_set_has_stencil_buffer"</span>)]
     </span><span class="kw">fn </span>set_has_stencil_buffer(<span class="kw-2">&amp;</span><span class="self">self</span>, has_stencil_buffer: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_set_has_stencil_buffer(
@@ -4233,7 +4228,7 @@
     /// the major version
     /// ## `minor`
     /// the minor version
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_set_required_version&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_set_required_version"</span>)]
     </span><span class="kw">fn </span>set_required_version(<span class="kw-2">&amp;</span><span class="self">self</span>, major: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, minor: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_set_required_version(<a class="self" href="#1933">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#1933">major</a>, <a href="#1933">minor</a>);
@@ -4246,7 +4241,7 @@
     /// with either API.
     /// ## `use_es`
     /// whether to use OpenGL or OpenGL ES
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_gl_area_set_use_es&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_gl_area_set_use_es"</span>)]
     </span><span class="kw">fn </span>set_use_es(<span class="kw-2">&amp;</span><span class="self">self</span>, use_es: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_gl_area_set_use_es(<a class="self" href="#1946">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#1946">use_es</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
@@ -4267,18 +4262,18 @@
     ///
     /// a newly created [`gdk::GLContext`][crate::gdk::GLContext];
     ///  the [`GLArea`][crate::GLArea] widget will take ownership of the returned value.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;create-context&quot;</span>)]
-    </span><span class="kw">fn </span>connect_create_context&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>&gt; + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"create-context"</span>)]
+    </span><span class="kw">fn </span>connect_create_context&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>&gt; + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>create_context_trampoline&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>create_context_trampoline&lt;
             P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>&gt; + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>&gt; + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
             f: glib::ffi::gpointer,
-        ) -&gt; <span class="kw-2">*mut </span>gdk::ffi::GdkGLContext {
+        ) -&gt; <span class="kw-2">*mut </span><a href="../../../gdk_sys/struct.GdkGLContext.html">gdk::ffi::GdkGLContext</a> {
             <span class="kw">let </span>f: <span class="kw-2">&amp;</span>F = <span class="kw-2">&amp;*</span>(<a href="#1976">f</a> <span class="kw">as </span><span class="kw-2">*const </span>F);
             <a href="#1978">f</a>(GLArea::from_glib_borrow(<a href="#1975">this</a>).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">unsafe_cast_ref</a>()).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_full</a>()
         }
@@ -4286,8 +4281,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#1969">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#1968">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;create-context\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"create-context\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     create_context_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#1982">f</a>),
@@ -4307,17 +4302,17 @@
     ///
     /// [`true`] to stop other handlers from being invoked for the event.
     ///  [`false`] to propagate the event further.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;render&quot;</span>)]
-    </span><span class="kw">fn </span>connect_render&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"render"</span>)]
+    </span><span class="kw">fn </span>connect_render&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>render_trampoline&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>render_trampoline&lt;
             P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <span class="kw-2">&amp;</span><a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <span class="kw-2">&amp;</span><a href="../../../gdk/auto/gl_context/struct.GLContext.html">gdk::GLContext</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/enum.Propagation.html">glib::Propagation</a> + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
-            context: <span class="kw-2">*mut </span>gdk::ffi::GdkGLContext,
+            context: <span class="kw-2">*mut </span><a href="../../../gdk_sys/struct.GdkGLContext.html">gdk::ffi::GdkGLContext</a>,
             f: glib::ffi::gpointer,
         ) -&gt; glib::ffi::gboolean {
             <span class="kw">let </span>f: <span class="kw-2">&amp;</span>F = <span class="kw-2">&amp;*</span>(<a href="#2017">f</a> <span class="kw">as </span><span class="kw-2">*const </span>F);
@@ -4331,8 +4326,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2009">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2008">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;render\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"render\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     render_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2027">f</a>),
@@ -4353,9 +4348,9 @@
     /// the width of the viewport
     /// ## `height`
     /// the height of the viewport
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;resize&quot;</span>)]
-    </span><span class="kw">fn </span>connect_resize&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>resize_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"resize"</span>)]
+    </span><span class="kw">fn </span>connect_resize&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>resize_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
             width: libc::c_int,
             height: libc::c_int,
@@ -4372,8 +4367,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2053">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2053">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;resize\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"resize\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     resize_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2068">f</a>),
@@ -4381,9 +4376,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;auto-render&quot;</span>)]
-    </span><span class="kw">fn </span>connect_auto_render_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_auto_render_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"auto-render"</span>)]
+    </span><span class="kw">fn </span>connect_auto_render_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_auto_render_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -4395,8 +4390,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2081">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2081">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::auto-render\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::auto-render\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_auto_render_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2091">f</a>),
@@ -4404,9 +4399,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;context&quot;</span>)]
-    </span><span class="kw">fn </span>connect_context_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_context_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"context"</span>)]
+    </span><span class="kw">fn </span>connect_context_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_context_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -4418,8 +4413,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2104">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2104">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::context\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::context\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_context_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2114">f</a>),
@@ -4427,9 +4422,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;has-alpha&quot;</span>)]
-    </span><span class="kw">fn </span>connect_has_alpha_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_has_alpha_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"has-alpha"</span>)]
+    </span><span class="kw">fn </span>connect_has_alpha_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_has_alpha_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -4441,8 +4436,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2127">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2127">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::has-alpha\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::has-alpha\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_has_alpha_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2137">f</a>),
@@ -4450,11 +4445,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;has-depth-buffer&quot;</span>)]
-    </span><span class="kw">fn </span>connect_has_depth_buffer_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_has_depth_buffer_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"has-depth-buffer"</span>)]
+    </span><span class="kw">fn </span>connect_has_depth_buffer_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_has_depth_buffer_trampoline&lt;
             P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
             _param_spec: glib::ffi::gpointer,
@@ -4467,8 +4462,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2150">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2150">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::has-depth-buffer\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::has-depth-buffer\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_has_depth_buffer_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2163">f</a>),
@@ -4476,11 +4471,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;has-stencil-buffer&quot;</span>)]
-    </span><span class="kw">fn </span>connect_has_stencil_buffer_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_has_stencil_buffer_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"has-stencil-buffer"</span>)]
+    </span><span class="kw">fn </span>connect_has_stencil_buffer_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_has_stencil_buffer_trampoline&lt;
             P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
             _param_spec: glib::ffi::gpointer,
@@ -4493,8 +4488,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2176">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2176">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::has-stencil-buffer\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::has-stencil-buffer\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_has_stencil_buffer_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2189">f</a>),
@@ -4502,9 +4497,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;use-es&quot;</span>)]
-    </span><span class="kw">fn </span>connect_use_es_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_use_es_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"use-es"</span>)]
+    </span><span class="kw">fn </span>connect_use_es_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_use_es_trampoline&lt;P: IsA&lt;<a href="#13-1298">GLArea</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkGLArea.html">ffi::GtkGLArea</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -4516,8 +4511,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2202">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2202">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::use-es\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::use-es\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_use_es_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2212">f</a>),
@@ -4527,10 +4522,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#13-1298">GLArea</a>&gt;&gt; <a href="#1684-2223">GLAreaExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#13-1298">GLArea</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#2228">f</a>.write_str(<span class="string">&quot;GLArea&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk/src/auto/drag_context.rs`."><title>drag_context.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gdk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk/src/auto/drag_context.rs`."><title>drag_context.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gdk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -448,23 +449,17 @@
 <a href="#375" id="375">375</a>
 <a href="#376" id="376">376</a>
 <a href="#377" id="377">377</a>
-<a href="#378" id="378">378</a>
-<a href="#379" id="379">379</a>
-<a href="#380" id="380">380</a>
-<a href="#381" id="381">381</a>
-<a href="#382" id="382">382</a>
-<a href="#383" id="383">383</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
-</span><span class="kw">use crate</span>::{<a href="../atom.rs.html#12">Atom</a>, <a href="device.rs.html#16-148">Device</a>, <a href="flags.rs.html#252-280">DragAction</a>, <a href="enums.rs.html#1432-1444">DragCancelReason</a>, <a href="enums.rs.html#1551-1579">DragProtocol</a>, <a href="window.rs.html#20-101">Window</a>};
+</span><span class="kw">use crate</span>::{<a href="../atom.rs.html#12">Atom</a>, <a href="device.rs.html#16-148">Device</a>, <a href="flags.rs.html#241-269">DragAction</a>, <a href="enums.rs.html#1238-1250">DragCancelReason</a>, <a href="enums.rs.html#1343-1371">DragProtocol</a>, <a href="window.rs.html#20-101">Window</a>};
 <span class="kw">use </span>glib::{
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">///
@@ -512,8 +507,8 @@
     /// for more information.
     ///
     ///
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;GdkDragContext&quot;</span>)]
-    </span><span class="kw">pub struct </span><a href="../../../gdk/struct.DragContext.html">DragContext</a>(Object&lt;ffi::GdkDragContext&gt;);
+    </span><span class="attr">#[doc(alias = <span class="string">"GdkDragContext"</span>)]
+    </span><span class="kw">pub struct </span><a href="../../../gdk/struct.DragContext.html">DragContext</a>(Object&lt;<a href="../../../gdk_sys/struct.GdkDragContext.html">ffi::GdkDragContext</a>&gt;);
 
     <span class="kw">match fn </span>{
         type_ =&gt; || ffi::gdk_drag_context_get_type(),
@@ -527,9 +522,9 @@
     /// # Returns
     ///
     /// the [`DragAction`][crate::DragAction] flags
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_get_actions&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_actions&quot;</span>)]
-    </span><span class="kw">pub fn </span>actions(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#252-280">DragAction</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_get_actions"</span>)]
+    #[doc(alias = <span class="string">"get_actions"</span>)]
+    </span><span class="kw">pub fn </span>actions(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#241-269">DragAction</a> {
         <span class="kw">unsafe </span>{ from_glib(ffi::gdk_drag_context_get_actions(<a class="self" href="#76">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
 
@@ -538,8 +533,8 @@
     /// # Returns
     ///
     /// a [`Window`][crate::Window]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_get_dest_window&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_dest_window&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_get_dest_window"</span>)]
+    #[doc(alias = <span class="string">"get_dest_window"</span>)]
     </span><span class="kw">pub fn </span>dest_window(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="window.rs.html#20-101">Window</a> {
         <span class="kw">unsafe </span>{ from_glib_none(ffi::gdk_drag_context_get_dest_window(<a class="self" href="#87">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -549,8 +544,8 @@
     /// # Returns
     ///
     /// The [`Device`][crate::Device] associated to `self`.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_get_device&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_device&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_get_device"</span>)]
+    #[doc(alias = <span class="string">"get_device"</span>)]
     </span><span class="kw">pub fn </span>device(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="device.rs.html#16-148">Device</a> {
         <span class="kw">unsafe </span>{ from_glib_none(ffi::gdk_drag_context_get_device(<a class="self" href="#98">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -565,8 +560,8 @@
     /// # Returns
     ///
     /// the drag window, or [`None`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_get_drag_window&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_drag_window&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_get_drag_window"</span>)]
+    #[doc(alias = <span class="string">"get_drag_window"</span>)]
     </span><span class="kw">pub fn </span>drag_window(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="window.rs.html#20-101">Window</a>&gt; {
         <span class="kw">unsafe </span>{ from_glib_none(ffi::gdk_drag_context_get_drag_window(<a class="self" href="#114">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -576,9 +571,9 @@
     /// # Returns
     ///
     /// the drag protocol
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_get_protocol&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_protocol&quot;</span>)]
-    </span><span class="kw">pub fn </span>protocol(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="enums.rs.html#1551-1579">DragProtocol</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_get_protocol"</span>)]
+    #[doc(alias = <span class="string">"get_protocol"</span>)]
+    </span><span class="kw">pub fn </span>protocol(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="enums.rs.html#1343-1371">DragProtocol</a> {
         <span class="kw">unsafe </span>{ from_glib(ffi::gdk_drag_context_get_protocol(<a class="self" href="#125">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
 
@@ -587,9 +582,9 @@
     /// # Returns
     ///
     /// a [`DragAction`][crate::DragAction] value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_get_selected_action&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_selected_action&quot;</span>)]
-    </span><span class="kw">pub fn </span>selected_action(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#252-280">DragAction</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_get_selected_action"</span>)]
+    #[doc(alias = <span class="string">"get_selected_action"</span>)]
+    </span><span class="kw">pub fn </span>selected_action(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#241-269">DragAction</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::gdk_drag_context_get_selected_action(
                 <a class="self" href="#136">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -602,8 +597,8 @@
     /// # Returns
     ///
     /// a [`Window`][crate::Window]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_get_source_window&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_source_window&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_get_source_window"</span>)]
+    #[doc(alias = <span class="string">"get_source_window"</span>)]
     </span><span class="kw">pub fn </span>source_window(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="window.rs.html#20-101">Window</a> {
         <span class="kw">unsafe </span>{
             from_glib_none(ffi::gdk_drag_context_get_source_window(
@@ -617,9 +612,9 @@
     /// # Returns
     ///
     /// a [`DragAction`][crate::DragAction] value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_get_suggested_action&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_suggested_action&quot;</span>)]
-    </span><span class="kw">pub fn </span>suggested_action(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#252-280">DragAction</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_get_suggested_action"</span>)]
+    #[doc(alias = <span class="string">"get_suggested_action"</span>)]
+    </span><span class="kw">pub fn </span>suggested_action(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="flags.rs.html#241-269">DragAction</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::gdk_drag_context_get_suggested_action(
                 <a class="self" href="#166">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -632,7 +627,7 @@
     /// # Returns
     ///
     /// a `GList` of targets
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_list_targets&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_list_targets"</span>)]
     </span><span class="kw">pub fn </span>list_targets(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="../atom.rs.html#12">Atom</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibPtrContainer.html">FromGlibPtrContainer::from_glib_none</a>(ffi::gdk_drag_context_list_targets(
@@ -655,7 +650,7 @@
     /// - The [`dnd-finished`][struct@crate::DragContext#dnd-finished] signal after the drag and drop
     ///  operation concludes (after all `GdkSelection` transfers happen).
     /// - The [`cancel`][struct@crate::DragContext#cancel] signal if the drag and drop operation is
-    ///  finished but doesn&#39;t happen over an accepting destination, or is
+    ///  finished but doesn't happen over an accepting destination, or is
     ///  cancelled through other means.
     /// ## `ipc_window`
     /// Window to use for IPC messaging/events
@@ -665,8 +660,8 @@
     /// # Returns
     ///
     /// [`true`] if the drag and drop operation is managed.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_manage_dnd&quot;</span>)]
-    </span><span class="kw">pub fn </span>manage_dnd(<span class="kw-2">&amp;</span><span class="self">self</span>, ipc_window: <span class="kw-2">&amp;</span><a href="window.rs.html#20-101">Window</a>, actions: <a href="flags.rs.html#252-280">DragAction</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_manage_dnd"</span>)]
+    </span><span class="kw">pub fn </span>manage_dnd(<span class="kw-2">&amp;</span><span class="self">self</span>, ipc_window: <span class="kw-2">&amp;</span><a href="window.rs.html#20-101">Window</a>, actions: <a href="flags.rs.html#241-269">DragAction</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::gdk_drag_context_manage_dnd(
                 <a class="self" href="#213">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -680,7 +675,7 @@
     /// for `self` are emitted as if they came from this device.
     /// ## `device`
     /// a [`Device`][crate::Device]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_set_device&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_set_device"</span>)]
     </span><span class="kw">pub fn </span>set_device(<span class="kw-2">&amp;</span><span class="self">self</span>, device: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="device.rs.html#16-148">Device</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gdk_drag_context_set_device(
@@ -697,7 +692,7 @@
     /// x coordinate of the drag window hotspot
     /// ## `hot_y`
     /// y coordinate of the drag window hotspot
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gdk_drag_context_set_hotspot&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gdk_drag_context_set_hotspot"</span>)]
     </span><span class="kw">pub fn </span>set_hotspot(<span class="kw-2">&amp;</span><span class="self">self</span>, hot_x: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, hot_y: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
             ffi::gdk_drag_context_set_hotspot(<a class="self" href="#245">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#245">hot_x</a>, <a href="#245">hot_y</a>);
@@ -711,16 +706,16 @@
     /// for more information.
     /// ## `action`
     /// The action currently chosen
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;action-changed&quot;</span>)]
-    </span><span class="kw">pub fn </span>connect_action_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="flags.rs.html#252-280">DragAction</a>) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"action-changed"</span>)]
+    </span><span class="kw">pub fn </span>connect_action_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="flags.rs.html#241-269">DragAction</a>) + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>action_changed_trampoline&lt;
-            F: Fn(<span class="kw-2">&amp;</span><a href="#13-65">DragContext</a>, <a href="flags.rs.html#252-280">DragAction</a>) + <span class="lifetime">&#39;static</span>,
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>action_changed_trampoline&lt;
+            F: Fn(<span class="kw-2">&amp;</span><a href="#13-65">DragContext</a>, <a href="flags.rs.html#241-269">DragAction</a>) + <span class="lifetime">'static</span>,
         &gt;(
-            this: <span class="kw-2">*mut </span>ffi::GdkDragContext,
-            action: ffi::GdkDragAction,
+            this: <span class="kw-2">*mut </span><a href="../../../gdk_sys/struct.GdkDragContext.html">ffi::GdkDragContext</a>,
+            action: <a href="../../../gdk_sys/type.GdkDragAction.html">ffi::GdkDragAction</a>,
             f: glib::ffi::gpointer,
         ) {
             <span class="kw">let </span>f: <span class="kw-2">&amp;</span>F = <span class="kw-2">&amp;*</span>(<a href="#268">f</a> <span class="kw">as </span><span class="kw-2">*const </span>F);
@@ -730,8 +725,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#261">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#260">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;action-changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"action-changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     action_changed_trampoline::&lt;F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#274">f</a>),
@@ -746,14 +741,14 @@
     /// for more information.
     /// ## `reason`
     /// The reason the context was cancelled
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;cancel&quot;</span>)]
-    </span><span class="kw">pub fn </span>connect_cancel&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="enums.rs.html#1432-1444">DragCancelReason</a>) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"cancel"</span>)]
+    </span><span class="kw">pub fn </span>connect_cancel&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="enums.rs.html#1238-1250">DragCancelReason</a>) + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>cancel_trampoline&lt;F: Fn(<span class="kw-2">&amp;</span><a href="#13-65">DragContext</a>, <a href="enums.rs.html#1432-1444">DragCancelReason</a>) + <span class="lifetime">&#39;static</span>&gt;(
-            this: <span class="kw-2">*mut </span>ffi::GdkDragContext,
-            reason: ffi::GdkDragCancelReason,
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>cancel_trampoline&lt;F: Fn(<span class="kw-2">&amp;</span><a href="#13-65">DragContext</a>, <a href="enums.rs.html#1238-1250">DragCancelReason</a>) + <span class="lifetime">'static</span>&gt;(
+            this: <span class="kw-2">*mut </span><a href="../../../gdk_sys/struct.GdkDragContext.html">ffi::GdkDragContext</a>,
+            reason: <a href="../../../gdk_sys/type.GdkDragCancelReason.html">ffi::GdkDragCancelReason</a>,
             f: glib::ffi::gpointer,
         ) {
             <span class="kw">let </span>f: <span class="kw-2">&amp;</span>F = <span class="kw-2">&amp;*</span>(<a href="#301">f</a> <span class="kw">as </span><span class="kw-2">*const </span>F);
@@ -763,8 +758,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#296">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#295">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;cancel\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"cancel\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     cancel_trampoline::&lt;F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#307">f</a>),
@@ -779,10 +774,10 @@
     /// This signal will only be emitted if the [`DragContext`][crate::DragContext] manages
     /// the drag and drop operation. See [`manage_dnd()`][Self::manage_dnd()]
     /// for more information.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;dnd-finished&quot;</span>)]
-    </span><span class="kw">pub fn </span>connect_dnd_finished&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>dnd_finished_trampoline&lt;F: Fn(<span class="kw-2">&amp;</span><a href="#13-65">DragContext</a>) + <span class="lifetime">&#39;static</span>&gt;(
-            this: <span class="kw-2">*mut </span>ffi::GdkDragContext,
+    </span><span class="attr">#[doc(alias = <span class="string">"dnd-finished"</span>)]
+    </span><span class="kw">pub fn </span>connect_dnd_finished&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>dnd_finished_trampoline&lt;F: Fn(<span class="kw-2">&amp;</span><a href="#13-65">DragContext</a>) + <span class="lifetime">'static</span>&gt;(
+            this: <span class="kw-2">*mut </span><a href="../../../gdk_sys/struct.GdkDragContext.html">ffi::GdkDragContext</a>,
             f: glib::ffi::gpointer,
         ) {
             <span class="kw">let </span>f: <span class="kw-2">&amp;</span>F = <span class="kw-2">&amp;*</span>(<a href="#330">f</a> <span class="kw">as </span><span class="kw-2">*const </span>F);
@@ -792,8 +787,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#327">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#327">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;dnd-finished\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"dnd-finished\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     dnd_finished_trampoline::&lt;F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#336">f</a>),
@@ -808,10 +803,10 @@
     /// for more information.
     /// ## `time`
     /// the time at which the drop happened.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;drop-performed&quot;</span>)]
-    </span><span class="kw">pub fn </span>connect_drop_performed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>drop_performed_trampoline&lt;F: Fn(<span class="kw-2">&amp;</span><a href="#13-65">DragContext</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">&#39;static</span>&gt;(
-            this: <span class="kw-2">*mut </span>ffi::GdkDragContext,
+    </span><span class="attr">#[doc(alias = <span class="string">"drop-performed"</span>)]
+    </span><span class="kw">pub fn </span>connect_drop_performed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>drop_performed_trampoline&lt;F: Fn(<span class="kw-2">&amp;</span><a href="#13-65">DragContext</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + <span class="lifetime">'static</span>&gt;(
+            this: <span class="kw-2">*mut </span><a href="../../../gdk_sys/struct.GdkDragContext.html">ffi::GdkDragContext</a>,
             time: libc::c_int,
             f: glib::ffi::gpointer,
         ) {
@@ -822,19 +817,13 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#356">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#356">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;drop-performed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"drop-performed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     drop_performed_trampoline::&lt;F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#366">f</a>),
             )
         }
-    }
-}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#13-65">DragContext</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#380">f</a>.write_str(<span class="string">&quot;DragContext&quot;</span>)
     }
 }
 </code></pre></div></section></main></body></html>

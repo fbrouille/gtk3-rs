@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/text_buffer.rs`."><title>text_buffer.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/text_buffer.rs`."><title>text_buffer.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -2369,23 +2370,17 @@
 <a href="#2296" id="2296">2296</a>
 <a href="#2297" id="2297">2297</a>
 <a href="#2298" id="2298">2298</a>
-<a href="#2299" id="2299">2299</a>
-<a href="#2300" id="2300">2300</a>
-<a href="#2301" id="2301">2301</a>
-<a href="#2302" id="2302">2302</a>
-<a href="#2303" id="2303">2303</a>
-<a href="#2304" id="2304">2304</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
-</span><span class="kw">use crate</span>::{<a href="clipboard.rs.html#9-87">Clipboard</a>, <a href="target_list.rs.html#9-21">TargetList</a>, <a href="text_child_anchor.rs.html#9-23">TextChildAnchor</a>, <a href="text_iter.rs.html#9-22">TextIter</a>, <a href="text_mark.rs.html#9-65">TextMark</a>, <a href="text_tag.rs.html#13-407">TextTag</a>, <a href="text_tag_table.rs.html#13-62">TextTagTable</a>};
+</span><span class="kw">use crate</span>::{<a href="clipboard.rs.html#9-87">Clipboard</a>, <a href="target_list.rs.html#8-20">TargetList</a>, <a href="text_child_anchor.rs.html#8-22">TextChildAnchor</a>, <a href="text_iter.rs.html#8-21">TextIter</a>, <a href="text_mark.rs.html#8-64">TextMark</a>, <a href="text_tag.rs.html#13-407">TextTag</a>, <a href="text_tag_table.rs.html#13-62">TextTagTable</a>};
 <span class="kw">use </span>glib::{
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/mem/index.html">mem</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>, <a href="https://doc.rust-lang.org/nightly/core/ptr/index.html">ptr</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// You may wish to begin by reading the
@@ -2607,7 +2602,7 @@
     /// # Implements
     ///
     /// [`TextBufferExt`][trait@crate::prelude::TextBufferExt], [`trait@glib::ObjectExt`], [`TextBufferExtManual`][trait@crate::prelude::TextBufferExtManual]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;GtkTextBuffer&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"GtkTextBuffer"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.TextBuffer.html">TextBuffer</a>(Object&lt;<a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>, <a href="../../../gtk_sys/struct.GtkTextBufferClass.html">ffi::GtkTextBufferClass</a>&gt;);
 
     <span class="kw">match fn </span>{
@@ -2616,7 +2611,7 @@
 }
 
 <span class="kw">impl </span><a href="#13-239">TextBuffer</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#13-239">TextBuffer</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#13-239">TextBuffer</a>&gt; = <span class="prelude-val">None</span>;
 
     <span class="doccomment">/// Creates a new text buffer.
     /// ## `table`
@@ -2625,7 +2620,7 @@
     /// # Returns
     ///
     /// a new text buffer
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_new&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_new"</span>)]
     </span><span class="kw">pub fn </span>new(table: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_tag_table.rs.html#13-62">TextTagTable</a>&gt;&gt;) -&gt; <a href="#13-239">TextBuffer</a> {
         <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
         <span class="kw">unsafe </span>{
@@ -2654,9 +2649,9 @@
 </span><span class="doccomment">/// A [builder-pattern] type to construct [`TextBuffer`] objects.
 ///
 /// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html
-</span><span class="attr">#[must_use = <span class="string">&quot;The builder must be built to be used&quot;</span>]
+</span><span class="attr">#[must_use = <span class="string">"The builder must be built to be used"</span>]
 </span><span class="kw">pub struct </span><a href="../../../gtk/builders/struct.TextBufferBuilder.html">TextBufferBuilder</a> {
-    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">&#39;static</span>, <a href="#13-239">TextBuffer</a>&gt;,
+    builder: glib::object::ObjectBuilder&lt;<span class="lifetime">'static</span>, <a href="#13-239">TextBuffer</a>&gt;,
 }
 
 <span class="kw">impl </span><a href="#281-283">TextBufferBuilder</a> {
@@ -2670,7 +2665,7 @@
         <span class="self">Self </span>{
             builder: <span class="self"><a href="#292">self</a>
                 </span>.builder
-                .property(<span class="string">&quot;tag-table&quot;</span>, <a href="#292">tag_table</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
+                .property(<span class="string">"tag-table"</span>, <a href="#292">tag_table</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html">clone</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html">upcast</a>()),
         }
     }
 
@@ -2678,13 +2673,13 @@
     /// see [`TextBufferExt::text()`][crate::prelude::TextBufferExt::text()] for more information.
     </span><span class="kw">pub fn </span>text(<span class="self">self</span>, text: <span class="kw">impl </span>Into&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt;) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
-            builder: <a class="self" href="#302">self</a>.builder.property(<span class="string">&quot;text&quot;</span>, <a href="#302">text</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
+            builder: <a class="self" href="#302">self</a>.builder.property(<span class="string">"text"</span>, <a href="#302">text</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html">into</a>()),
         }
     }
 
     <span class="comment">// rustdoc-stripper-ignore-next
     </span><span class="doccomment">/// Build the [`TextBuffer`].
-    </span><span class="attr">#[must_use = <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]
+    </span><span class="attr">#[must_use = <span class="string">"Building the object from the builder is usually expensive and is not expected to have side effects"</span>]
     </span><span class="kw">pub fn </span>build(<span class="self">self</span>) -&gt; <a href="#13-239">TextBuffer</a> {
         <a class="self" href="#311">self</a>.builder.build()
     }
@@ -2700,19 +2695,19 @@
 /// # Implementors
 ///
 /// [`TextBuffer`][struct@crate::TextBuffer]
-</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.TextBufferExt.html">TextBufferExt</a>: IsA&lt;<a href="#13-239">TextBuffer</a>&gt; + <a href="#317">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../gtk/prelude/trait.TextBufferExt.html">TextBufferExt</a>: IsA&lt;<a href="#13-239">TextBuffer</a>&gt; + <a href="#317">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Adds the mark at position `where_`. The mark must not be added to
     /// another buffer, and if its name is not [`None`] then there must not
     /// be another mark in the buffer with the same name.
     ///
-    /// Emits the [`mark-set`][struct@crate::TextBuffer#mark-set] signal as notification of the mark&#39;s
+    /// Emits the [`mark-set`][struct@crate::TextBuffer#mark-set] signal as notification of the mark's
     /// initial placement.
     /// ## `mark`
     /// the mark to add
     /// ## `where_`
     /// location to place mark
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_add_mark&quot;</span>)]
-    </span><span class="kw">fn </span>add_mark(<span class="kw-2">&amp;</span><span class="self">self</span>, mark: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_mark.rs.html#9-65">TextMark</a>&gt;, where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_add_mark"</span>)]
+    </span><span class="kw">fn </span>add_mark(<span class="kw-2">&amp;</span><span class="self">self</span>, mark: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_mark.rs.html#8-64">TextMark</a>&gt;, where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_add_mark(
                 <a class="self" href="#338">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -2727,7 +2722,7 @@
     /// the [`Clipboard`][crate::Clipboard] of type `GDK_SELECTION_PRIMARY` for a view of `self`.
     /// ## `clipboard`
     /// a [`Clipboard`][crate::Clipboard]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_add_selection_clipboard&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_add_selection_clipboard"</span>)]
     </span><span class="kw">fn </span>add_selection_clipboard(<span class="kw-2">&amp;</span><span class="self">self</span>, clipboard: <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_add_selection_clipboard(
@@ -2746,8 +2741,8 @@
     /// one bound of range to be tagged
     /// ## `end`
     /// other bound of range to be tagged
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_apply_tag&quot;</span>)]
-    </span><span class="kw">fn </span>apply_tag(<span class="kw-2">&amp;</span><span class="self">self</span>, tag: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_tag.rs.html#13-407">TextTag</a>&gt;, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_apply_tag"</span>)]
+    </span><span class="kw">fn </span>apply_tag(<span class="kw-2">&amp;</span><span class="self">self</span>, tag: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_tag.rs.html#13-407">TextTag</a>&gt;, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_apply_tag(
                 <a class="self" href="#373">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -2766,8 +2761,8 @@
     /// one bound of range to be tagged
     /// ## `end`
     /// other bound of range to be tagged
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_apply_tag_by_name&quot;</span>)]
-    </span><span class="kw">fn </span>apply_tag_by_name(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_apply_tag_by_name"</span>)]
+    </span><span class="kw">fn </span>apply_tag_by_name(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_apply_tag_by_name(
                 <a class="self" href="#393">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -2798,8 +2793,8 @@
     /// # Returns
     ///
     /// [`true`] if the buffer was modified
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_backspace&quot;</span>)]
-    </span><span class="kw">fn </span>backspace(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>, interactive: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_backspace"</span>)]
+    </span><span class="kw">fn </span>backspace(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>, interactive: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_text_buffer_backspace(
                 <a class="self" href="#425">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -2824,10 +2819,10 @@
     ///
     /// The “interactive” buffer mutation functions, such as
     /// [`insert_interactive()`][Self::insert_interactive()], automatically call begin/end
-    /// user action around the buffer operations they perform, so there&#39;s
+    /// user action around the buffer operations they perform, so there's
     /// no need to add extra calls if you user action consists solely of a
     /// single call to one of those functions.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_begin_user_action&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_begin_user_action"</span>)]
     </span><span class="kw">fn </span>begin_user_action(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_begin_user_action(<a class="self" href="#454">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -2837,7 +2832,7 @@
     <span class="doccomment">/// Copies the currently-selected text to a clipboard.
     /// ## `clipboard`
     /// the [`Clipboard`][crate::Clipboard] object to copy to
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_copy_clipboard&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_copy_clipboard"</span>)]
     </span><span class="kw">fn </span>copy_clipboard(<span class="kw-2">&amp;</span><span class="self">self</span>, clipboard: <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_copy_clipboard(
@@ -2858,8 +2853,8 @@
     /// # Returns
     ///
     /// the created child anchor
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_create_child_anchor&quot;</span>)]
-    </span><span class="kw">fn </span>create_child_anchor(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_child_anchor.rs.html#9-23">TextChildAnchor</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_create_child_anchor"</span>)]
+    </span><span class="kw">fn </span>create_child_anchor(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_child_anchor.rs.html#8-22">TextChildAnchor</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_create_child_anchor(
                 <a class="self" href="#485">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -2883,7 +2878,7 @@
     /// return value if you like. Marks are owned by the buffer and go
     /// away when the buffer does.
     ///
-    /// Emits the [`mark-set`][struct@crate::TextBuffer#mark-set] signal as notification of the mark&#39;s
+    /// Emits the [`mark-set`][struct@crate::TextBuffer#mark-set] signal as notification of the mark's
     /// initial placement.
     /// ## `mark_name`
     /// name for mark, or [`None`]
@@ -2895,13 +2890,13 @@
     /// # Returns
     ///
     /// the new [`TextMark`][crate::TextMark] object
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_create_mark&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_create_mark"</span>)]
     </span><span class="kw">fn </span>create_mark(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         mark_name: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;,
-        where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
+        where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
         left_gravity: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
-    ) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_mark.rs.html#9-65">TextMark</a>&gt; {
+    ) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_mark.rs.html#8-64">TextMark</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_create_mark(
                 <a class="self" href="#523">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -2918,7 +2913,7 @@
     /// the [`Clipboard`][crate::Clipboard] object to cut to
     /// ## `default_editable`
     /// default editability of the buffer
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_cut_clipboard&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_cut_clipboard"</span>)]
     </span><span class="kw">fn </span>cut_clipboard(<span class="kw-2">&amp;</span><span class="self">self</span>, clipboard: <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>, default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_cut_clipboard(
@@ -2940,8 +2935,8 @@
     /// a position in `self`
     /// ## `end`
     /// another position in `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_delete&quot;</span>)]
-    </span><span class="kw">fn </span>delete(<span class="kw-2">&amp;</span><span class="self">self</span>, start: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>, end: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_delete"</span>)]
+    </span><span class="kw">fn </span>delete(<span class="kw-2">&amp;</span><span class="self">self</span>, start: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>, end: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_delete(
                 <a class="self" href="#567">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -2966,11 +2961,11 @@
     /// # Returns
     ///
     /// whether some text was actually deleted
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_delete_interactive&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_delete_interactive"</span>)]
     </span><span class="kw">fn </span>delete_interactive(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        start_iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>,
-        end_iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>,
+        start_iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>,
+        end_iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>,
         default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
     ) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
@@ -2994,8 +2989,8 @@
     /// the mark is deleted.
     /// ## `mark`
     /// a [`TextMark`][crate::TextMark] in `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_delete_mark&quot;</span>)]
-    </span><span class="kw">fn </span>delete_mark(<span class="kw-2">&amp;</span><span class="self">self</span>, mark: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_mark.rs.html#9-65">TextMark</a>&gt;) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_delete_mark"</span>)]
+    </span><span class="kw">fn </span>delete_mark(<span class="kw-2">&amp;</span><span class="self">self</span>, mark: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_mark.rs.html#8-64">TextMark</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_delete_mark(
                 <a class="self" href="#621">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3008,7 +3003,7 @@
     /// [`delete_mark()`][Self::delete_mark()] for details.
     /// ## `name`
     /// name of a mark in `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_delete_mark_by_name&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_delete_mark_by_name"</span>)]
     </span><span class="kw">fn </span>delete_mark_by_name(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_delete_mark_by_name(
@@ -3030,7 +3025,7 @@
     /// # Returns
     ///
     /// whether there was a non-empty selection to delete
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_delete_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_delete_selection"</span>)]
     </span><span class="kw">fn </span>delete_selection(<span class="kw-2">&amp;</span><span class="self">self</span>, interactive: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_text_buffer_delete_selection(
@@ -3059,17 +3054,17 @@
     /// # Returns
     ///
     /// [`true`] on success, [`false`] otherwise.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_deserialize&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_deserialize"</span>)]
     </span><span class="kw">fn </span>deserialize(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         content_buffer: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
         format: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>,
-        iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>,
+        iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>,
         data: <span class="kw-2">&amp;</span>[<a href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>],
     ) -&gt; <span class="prelude-ty">Result</span>&lt;(), <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html">glib::Error</a>&gt; {
         <span class="kw">let </span>length = <a href="#691">data</a>.len() <span class="kw">as _</span>;
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>error = ptr::null_mut();
+            <span class="kw">let </span><span class="kw-2">mut </span>error = std::ptr::null_mut();
             <span class="kw">let </span>is_ok = ffi::gtk_text_buffer_deserialize(
                 <a class="self" href="#687">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#688">content_buffer</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3096,7 +3091,7 @@
     /// # Returns
     ///
     /// whether deserializing this format may create tags
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_deserialize_get_can_create_tags&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_deserialize_get_can_create_tags"</span>)]
     </span><span class="kw">fn </span>deserialize_get_can_create_tags(<span class="kw-2">&amp;</span><span class="self">self</span>, format: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_text_buffer_deserialize_get_can_create_tags(
@@ -3127,7 +3122,7 @@
     /// a [`gdk::Atom`][crate::gdk::Atom] representing a registered rich text format
     /// ## `can_create_tags`
     /// whether deserializing this format may create tags
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_deserialize_set_can_create_tags&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_deserialize_set_can_create_tags"</span>)]
     </span><span class="kw">fn </span>deserialize_set_can_create_tags(<span class="kw-2">&amp;</span><span class="self">self</span>, format: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>, can_create_tags: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_deserialize_set_can_create_tags(
@@ -3140,7 +3135,7 @@
 
     <span class="doccomment">/// Should be paired with a call to [`begin_user_action()`][Self::begin_user_action()].
     /// See that function for a full explanation.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_end_user_action&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_end_user_action"</span>)]
     </span><span class="kw">fn </span>end_user_action(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_end_user_action(<a class="self" href="#767">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
@@ -3158,9 +3153,9 @@
     ///
     /// ## `end`
     /// iterator to initialize with the end iterator
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_bounds&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_bounds&quot;</span>)]
-    </span><span class="kw">fn </span>bounds(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; (<a href="text_iter.rs.html#9-22">TextIter</a>, <a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_bounds"</span>)]
+    #[doc(alias = <span class="string">"get_bounds"</span>)]
+    </span><span class="kw">fn </span>bounds(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; (<a href="text_iter.rs.html#8-21">TextIter</a>, <a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>start = TextIter::uninitialized();
             <span class="kw">let </span><span class="kw-2">mut </span>end = TextIter::uninitialized();
@@ -3181,8 +3176,8 @@
     /// # Returns
     ///
     /// number of characters in the buffer
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_char_count&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_char_count&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_char_count"</span>)]
+    #[doc(alias = <span class="string">"get_char_count"</span>)]
     </span><span class="kw">fn </span>char_count(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_text_buffer_get_char_count(<a class="self" href="#809">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -3196,9 +3191,9 @@
     /// # Returns
     ///
     /// the [`TargetList`][crate::TargetList]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_copy_target_list&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_copy_target_list&quot;</span>)]
-    </span><span class="kw">fn </span>copy_target_list(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="target_list.rs.html#9-21">TargetList</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_copy_target_list"</span>)]
+    #[doc(alias = <span class="string">"get_copy_target_list"</span>)]
+    </span><span class="kw">fn </span>copy_target_list(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="target_list.rs.html#8-20">TargetList</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_get_copy_target_list(
                 <a class="self" href="#824">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3214,11 +3209,11 @@
     ///
     /// an array of
     ///  `GdkAtoms` representing the registered formats.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_deserialize_formats&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_deserialize_formats&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_deserialize_formats"</span>)]
+    #[doc(alias = <span class="string">"get_deserialize_formats"</span>)]
     </span><span class="kw">fn </span>deserialize_formats(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>&gt; {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>n_formats = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>n_formats = std::mem::MaybeUninit::uninit();
             <span class="kw">let </span>ret = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibContainer.html">FromGlibContainer::from_glib_container_num</a>(
                 ffi::gtk_text_buffer_get_deserialize_formats(
                     <a class="self" href="#842">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3242,9 +3237,9 @@
     ///
     /// ## `iter`
     /// iterator to initialize
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_end_iter&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_end_iter&quot;</span>)]
-    </span><span class="kw">fn </span>end_iter(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="text_iter.rs.html#9-22">TextIter</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_end_iter"</span>)]
+    #[doc(alias = <span class="string">"get_end_iter"</span>)]
+    </span><span class="kw">fn </span>end_iter(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="text_iter.rs.html#8-21">TextIter</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>iter = TextIter::uninitialized();
             ffi::gtk_text_buffer_get_end_iter(
@@ -3260,8 +3255,8 @@
     /// # Returns
     ///
     /// [`true`] if the there is text selected
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_has_selection&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_has_selection&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_has_selection"</span>)]
+    #[doc(alias = <span class="string">"get_has_selection"</span>)]
     </span><span class="kw">fn </span>has_selection(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_text_buffer_get_has_selection(
@@ -3278,8 +3273,8 @@
     /// # Returns
     ///
     /// insertion point mark
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_insert&quot;</span>)]
-    </span><span class="kw">fn </span>get_insert(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_mark.rs.html#9-65">TextMark</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_insert"</span>)]
+    </span><span class="kw">fn </span>get_insert(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_mark.rs.html#8-64">TextMark</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_get_insert(
                 <a class="self" href="#905">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3296,9 +3291,9 @@
     ///
     /// ## `iter`
     /// an iterator to be initialized
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_iter_at_child_anchor&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_iter_at_child_anchor&quot;</span>)]
-    </span><span class="kw">fn </span>iter_at_child_anchor(<span class="kw-2">&amp;</span><span class="self">self</span>, anchor: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_child_anchor.rs.html#9-23">TextChildAnchor</a>&gt;) -&gt; <a href="text_iter.rs.html#9-22">TextIter</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_iter_at_child_anchor"</span>)]
+    #[doc(alias = <span class="string">"get_iter_at_child_anchor"</span>)]
+    </span><span class="kw">fn </span>iter_at_child_anchor(<span class="kw-2">&amp;</span><span class="self">self</span>, anchor: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_child_anchor.rs.html#8-22">TextChildAnchor</a>&gt;) -&gt; <a href="text_iter.rs.html#8-21">TextIter</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>iter = TextIter::uninitialized();
             ffi::gtk_text_buffer_get_iter_at_child_anchor(
@@ -3320,9 +3315,9 @@
     ///
     /// ## `iter`
     /// iterator to initialize
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_iter_at_line&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_iter_at_line&quot;</span>)]
-    </span><span class="kw">fn </span>iter_at_line(<span class="kw-2">&amp;</span><span class="self">self</span>, line_number: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="text_iter.rs.html#9-22">TextIter</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_iter_at_line"</span>)]
+    #[doc(alias = <span class="string">"get_iter_at_line"</span>)]
+    </span><span class="kw">fn </span>iter_at_line(<span class="kw-2">&amp;</span><span class="self">self</span>, line_number: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="text_iter.rs.html#8-21">TextIter</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>iter = TextIter::uninitialized();
             ffi::gtk_text_buffer_get_iter_at_line(
@@ -3353,9 +3348,9 @@
     ///
     /// ## `iter`
     /// iterator to initialize
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_iter_at_line_index&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_iter_at_line_index&quot;</span>)]
-    </span><span class="kw">fn </span>iter_at_line_index(<span class="kw-2">&amp;</span><span class="self">self</span>, line_number: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, byte_index: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="text_iter.rs.html#9-22">TextIter</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_iter_at_line_index"</span>)]
+    #[doc(alias = <span class="string">"get_iter_at_line_index"</span>)]
+    </span><span class="kw">fn </span>iter_at_line_index(<span class="kw-2">&amp;</span><span class="self">self</span>, line_number: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, byte_index: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="text_iter.rs.html#8-21">TextIter</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>iter = TextIter::uninitialized();
             ffi::gtk_text_buffer_get_iter_at_line_index(
@@ -3386,9 +3381,9 @@
     ///
     /// ## `iter`
     /// iterator to initialize
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_iter_at_line_offset&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_iter_at_line_offset&quot;</span>)]
-    </span><span class="kw">fn </span>iter_at_line_offset(<span class="kw-2">&amp;</span><span class="self">self</span>, line_number: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, char_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="text_iter.rs.html#9-22">TextIter</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_iter_at_line_offset"</span>)]
+    #[doc(alias = <span class="string">"get_iter_at_line_offset"</span>)]
+    </span><span class="kw">fn </span>iter_at_line_offset(<span class="kw-2">&amp;</span><span class="self">self</span>, line_number: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, char_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="text_iter.rs.html#8-21">TextIter</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>iter = TextIter::uninitialized();
             ffi::gtk_text_buffer_get_iter_at_line_offset(
@@ -3410,9 +3405,9 @@
     ///
     /// ## `iter`
     /// iterator to initialize
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_iter_at_mark&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_iter_at_mark&quot;</span>)]
-    </span><span class="kw">fn </span>iter_at_mark(<span class="kw-2">&amp;</span><span class="self">self</span>, mark: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_mark.rs.html#9-65">TextMark</a>&gt;) -&gt; <a href="text_iter.rs.html#9-22">TextIter</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_iter_at_mark"</span>)]
+    #[doc(alias = <span class="string">"get_iter_at_mark"</span>)]
+    </span><span class="kw">fn </span>iter_at_mark(<span class="kw-2">&amp;</span><span class="self">self</span>, mark: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_mark.rs.html#8-64">TextMark</a>&gt;) -&gt; <a href="text_iter.rs.html#8-21">TextIter</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>iter = TextIter::uninitialized();
             ffi::gtk_text_buffer_get_iter_at_mark(
@@ -3436,9 +3431,9 @@
     ///
     /// ## `iter`
     /// iterator to initialize
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_iter_at_offset&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_iter_at_offset&quot;</span>)]
-    </span><span class="kw">fn </span>iter_at_offset(<span class="kw-2">&amp;</span><span class="self">self</span>, char_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="text_iter.rs.html#9-22">TextIter</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_iter_at_offset"</span>)]
+    #[doc(alias = <span class="string">"get_iter_at_offset"</span>)]
+    </span><span class="kw">fn </span>iter_at_offset(<span class="kw-2">&amp;</span><span class="self">self</span>, char_offset: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="text_iter.rs.html#8-21">TextIter</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>iter = TextIter::uninitialized();
             ffi::gtk_text_buffer_get_iter_at_offset(
@@ -3456,8 +3451,8 @@
     /// # Returns
     ///
     /// number of lines in the buffer
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_line_count&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_line_count&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_line_count"</span>)]
+    #[doc(alias = <span class="string">"get_line_count"</span>)]
     </span><span class="kw">fn </span>line_count(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{ ffi::gtk_text_buffer_get_line_count(<a class="self" href="#1084">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -3470,9 +3465,9 @@
     /// # Returns
     ///
     /// a [`TextMark`][crate::TextMark], or [`None`]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_mark&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_mark&quot;</span>)]
-    </span><span class="kw">fn </span>mark(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_mark.rs.html#9-65">TextMark</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_mark"</span>)]
+    #[doc(alias = <span class="string">"get_mark"</span>)]
+    </span><span class="kw">fn </span>mark(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_mark.rs.html#8-64">TextMark</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_get_mark(
                 <a class="self" href="#1098">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3489,8 +3484,8 @@
     /// # Returns
     ///
     /// [`true`] if the buffer has been modified
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_modified&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_modified&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_modified"</span>)]
+    #[doc(alias = <span class="string">"get_modified"</span>)]
     </span><span class="kw">fn </span>is_modified(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_text_buffer_get_modified(
@@ -3508,9 +3503,9 @@
     /// # Returns
     ///
     /// the [`TargetList`][crate::TargetList]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_paste_target_list&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_paste_target_list&quot;</span>)]
-    </span><span class="kw">fn </span>paste_target_list(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="target_list.rs.html#9-21">TargetList</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_paste_target_list"</span>)]
+    #[doc(alias = <span class="string">"get_paste_target_list"</span>)]
+    </span><span class="kw">fn </span>paste_target_list(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="target_list.rs.html#8-20">TargetList</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_get_paste_target_list(
                 <a class="self" href="#1136">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3533,9 +3528,9 @@
     /// # Returns
     ///
     /// selection bound mark
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_selection_bound&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_selection_bound&quot;</span>)]
-    </span><span class="kw">fn </span>selection_bound(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_mark.rs.html#9-65">TextMark</a>&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_selection_bound"</span>)]
+    #[doc(alias = <span class="string">"get_selection_bound"</span>)]
+    </span><span class="kw">fn </span>selection_bound(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_mark.rs.html#8-64">TextMark</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_get_selection_bound(
                 <a class="self" href="#1161">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3559,9 +3554,9 @@
     ///
     /// ## `end`
     /// iterator to initialize with selection end
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_selection_bounds&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_selection_bounds&quot;</span>)]
-    </span><span class="kw">fn </span>selection_bounds(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;(<a href="text_iter.rs.html#9-22">TextIter</a>, <a href="text_iter.rs.html#9-22">TextIter</a>)&gt; {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_selection_bounds"</span>)]
+    #[doc(alias = <span class="string">"get_selection_bounds"</span>)]
+    </span><span class="kw">fn </span>selection_bounds(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;(<a href="text_iter.rs.html#8-21">TextIter</a>, <a href="text_iter.rs.html#8-21">TextIter</a>)&gt; {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>start = TextIter::uninitialized();
             <span class="kw">let </span><span class="kw-2">mut </span>end = TextIter::uninitialized();
@@ -3586,11 +3581,11 @@
     ///
     /// an array of
     ///  `GdkAtoms` representing the registered formats.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_serialize_formats&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_serialize_formats&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_serialize_formats"</span>)]
+    #[doc(alias = <span class="string">"get_serialize_formats"</span>)]
     </span><span class="kw">fn </span>serialize_formats(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>&gt; {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>n_formats = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>n_formats = std::mem::MaybeUninit::uninit();
             <span class="kw">let </span>ret = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibContainer.html">FromGlibContainer::from_glib_container_num</a>(
                 ffi::gtk_text_buffer_get_serialize_formats(
                     <a class="self" href="#1214">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3622,12 +3617,12 @@
     /// # Returns
     ///
     /// an allocated UTF-8 string
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_slice&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_slice&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_slice"</span>)]
+    #[doc(alias = <span class="string">"get_slice"</span>)]
     </span><span class="kw">fn </span>slice(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
-        end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
+        start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
+        end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
         include_hidden_chars: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
     ) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
@@ -3649,9 +3644,9 @@
     ///
     /// ## `iter`
     /// iterator to initialize
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_start_iter&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_start_iter&quot;</span>)]
-    </span><span class="kw">fn </span>start_iter(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="text_iter.rs.html#9-22">TextIter</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_start_iter"</span>)]
+    #[doc(alias = <span class="string">"get_start_iter"</span>)]
+    </span><span class="kw">fn </span>start_iter(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="text_iter.rs.html#8-21">TextIter</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>iter = TextIter::uninitialized();
             ffi::gtk_text_buffer_get_start_iter(
@@ -3667,8 +3662,8 @@
     /// # Returns
     ///
     /// the buffer’s tag table
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_tag_table&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_tag_table&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_tag_table"</span>)]
+    #[doc(alias = <span class="string">"get_tag_table"</span>)]
     </span><span class="kw">fn </span>tag_table(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="text_tag_table.rs.html#13-62">TextTagTable</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_get_tag_table(
@@ -3694,12 +3689,12 @@
     /// # Returns
     ///
     /// an allocated UTF-8 string
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_get_text&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_text&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_get_text"</span>)]
+    #[doc(alias = <span class="string">"get_text"</span>)]
     </span><span class="kw">fn </span>text(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
-        end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
+        start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
+        end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
         include_hidden_chars: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
     ) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
@@ -3725,8 +3720,8 @@
     /// text in UTF-8 format
     /// ## `len`
     /// length of text in bytes, or -1
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert&quot;</span>)]
-    </span><span class="kw">fn </span>insert(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>, text: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert"</span>)]
+    </span><span class="kw">fn </span>insert(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>, text: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">let </span>len = <a href="#1352">text</a>.len() <span class="kw">as _</span>;
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_insert(
@@ -3744,7 +3739,7 @@
     /// text in UTF-8 format
     /// ## `len`
     /// length of text, in bytes
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert_at_cursor&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert_at_cursor"</span>)]
     </span><span class="kw">fn </span>insert_at_cursor(<span class="kw-2">&amp;</span><span class="self">self</span>, text: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">let </span>len = <a href="#1371">text</a>.len() <span class="kw">as _</span>;
         <span class="kw">unsafe </span>{
@@ -3771,8 +3766,8 @@
     /// location to insert the anchor
     /// ## `anchor`
     /// a [`TextChildAnchor`][crate::TextChildAnchor]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert_child_anchor&quot;</span>)]
-    </span><span class="kw">fn </span>insert_child_anchor(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>, anchor: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_child_anchor.rs.html#9-23">TextChildAnchor</a>&gt;) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert_child_anchor"</span>)]
+    </span><span class="kw">fn </span>insert_child_anchor(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>, anchor: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_child_anchor.rs.html#8-22">TextChildAnchor</a>&gt;) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_insert_child_anchor(
                 <a class="self" href="#1398">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3787,7 +3782,7 @@
     /// want to prevent insertions at ineditable locations if the insertion
     /// results from a user action (is interactive).
     ///
-    /// `default_editable` indicates the editability of text that doesn&#39;t
+    /// `default_editable` indicates the editability of text that doesn't
     /// have a tag affecting editability applied to it. Typically the
     /// result of [`TextViewExt::is_editable()`][crate::prelude::TextViewExt::is_editable()] is appropriate here.
     /// ## `iter`
@@ -3802,8 +3797,8 @@
     /// # Returns
     ///
     /// whether text was actually inserted
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert_interactive&quot;</span>)]
-    </span><span class="kw">fn </span>insert_interactive(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>, text: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert_interactive"</span>)]
+    </span><span class="kw">fn </span>insert_interactive(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>, text: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">let </span>len = <a href="#1429">text</a>.len() <span class="kw">as _</span>;
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_text_buffer_insert_interactive(
@@ -3819,7 +3814,7 @@
     <span class="doccomment">/// Calls [`insert_interactive()`][Self::insert_interactive()] at the cursor
     /// position.
     ///
-    /// `default_editable` indicates the editability of text that doesn&#39;t
+    /// `default_editable` indicates the editability of text that doesn't
     /// have a tag affecting editability applied to it. Typically the
     /// result of [`TextViewExt::is_editable()`][crate::prelude::TextViewExt::is_editable()] is appropriate here.
     /// ## `text`
@@ -3832,7 +3827,7 @@
     /// # Returns
     ///
     /// whether text was actually inserted
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert_interactive_at_cursor&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert_interactive_at_cursor"</span>)]
     </span><span class="kw">fn </span>insert_interactive_at_cursor(<span class="kw-2">&amp;</span><span class="self">self</span>, text: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">let </span>len = <a href="#1459">text</a>.len() <span class="kw">as _</span>;
         <span class="kw">unsafe </span>{
@@ -3856,8 +3851,8 @@
     /// a nul-terminated UTF-8 string containing [Pango markup][PangoMarkupFormat]
     /// ## `len`
     /// length of `markup` in bytes, or -1
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert_markup&quot;</span>)]
-    </span><span class="kw">fn </span>insert_markup(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>, markup: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert_markup"</span>)]
+    </span><span class="kw">fn </span>insert_markup(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>, markup: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">let </span>len = <a href="#1483">markup</a>.len() <span class="kw">as _</span>;
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_insert_markup(
@@ -3881,8 +3876,8 @@
     /// location to insert the pixbuf
     /// ## `pixbuf`
     /// a [`gdk_pixbuf::Pixbuf`][crate::gdk_pixbuf::Pixbuf]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert_pixbuf&quot;</span>)]
-    </span><span class="kw">fn </span>insert_pixbuf(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>, pixbuf: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html">gdk_pixbuf::Pixbuf</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert_pixbuf"</span>)]
+    </span><span class="kw">fn </span>insert_pixbuf(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>, pixbuf: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html">gdk_pixbuf::Pixbuf</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_insert_pixbuf(
                 <a class="self" href="#1508">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3906,8 +3901,8 @@
     /// a position in a [`TextBuffer`][crate::TextBuffer]
     /// ## `end`
     /// another position in the same buffer as `start`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert_range&quot;</span>)]
-    </span><span class="kw">fn </span>insert_range(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert_range"</span>)]
+    </span><span class="kw">fn </span>insert_range(<span class="kw-2">&amp;</span><span class="self">self</span>, iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_insert_range(
                 <a class="self" href="#1533">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3935,12 +3930,12 @@
     /// # Returns
     ///
     /// whether an insertion was possible at `iter`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_insert_range_interactive&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_insert_range_interactive"</span>)]
     </span><span class="kw">fn </span>insert_range_interactive(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#9-22">TextIter</a>,
-        start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
-        end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
+        iter: <span class="kw-2">&amp;mut </span><a href="text_iter.rs.html#8-21">TextIter</a>,
+        start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
+        end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
         default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
     ) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
@@ -3954,7 +3949,7 @@
         }
     }
 
-    <span class="comment">//#[doc(alias = &quot;gtk_text_buffer_insert_with_tags_by_name&quot;)]
+    <span class="comment">//#[doc(alias = "gtk_text_buffer_insert_with_tags_by_name")]
     //fn insert_with_tags_by_name(&amp;self, iter: &amp;mut TextIter, text: &amp;str, first_tag_name: &amp;str, : /*Unknown conversion*//*Unimplemented*/Basic: VarArgs) {
     //    unsafe { TODO: call ffi:gtk_text_buffer_insert_with_tags_by_name() }
     //}
@@ -3965,8 +3960,8 @@
     /// a [`TextMark`][crate::TextMark]
     /// ## `where_`
     /// new location for `mark` in `self`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_move_mark&quot;</span>)]
-    </span><span class="kw">fn </span>move_mark(<span class="kw-2">&amp;</span><span class="self">self</span>, mark: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_mark.rs.html#9-65">TextMark</a>&gt;, where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_move_mark"</span>)]
+    </span><span class="kw">fn </span>move_mark(<span class="kw-2">&amp;</span><span class="self">self</span>, mark: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_mark.rs.html#8-64">TextMark</a>&gt;, where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_move_mark(
                 <a class="self" href="#1592">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -3982,8 +3977,8 @@
     /// name of a mark
     /// ## `where_`
     /// new location for mark
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_move_mark_by_name&quot;</span>)]
-    </span><span class="kw">fn </span>move_mark_by_name(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_move_mark_by_name"</span>)]
+    </span><span class="kw">fn </span>move_mark_by_name(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_move_mark_by_name(
                 <a class="self" href="#1609">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -4006,11 +4001,11 @@
     /// location to insert pasted text, or [`None`]
     /// ## `default_editable`
     /// whether the buffer is editable by default
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_paste_clipboard&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_paste_clipboard"</span>)]
     </span><span class="kw">fn </span>paste_clipboard(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         clipboard: <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>,
-        override_location: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>&gt;,
+        override_location: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>&gt;,
         default_editable: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
     ) {
         <span class="kw">unsafe </span>{
@@ -4032,8 +4027,8 @@
     /// be optimized.
     /// ## `where_`
     /// where to put the cursor
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_place_cursor&quot;</span>)]
-    </span><span class="kw">fn </span>place_cursor(<span class="kw-2">&amp;</span><span class="self">self</span>, where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_place_cursor"</span>)]
+    </span><span class="kw">fn </span>place_cursor(<span class="kw-2">&amp;</span><span class="self">self</span>, where_: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_place_cursor(
                 <a class="self" href="#1659">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -4052,7 +4047,7 @@
     ///
     /// the [`gdk::Atom`][crate::gdk::Atom] that corresponds to the
     ///  newly registered format’s mime-type.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_register_deserialize_tagset&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_register_deserialize_tagset"</span>)]
     </span><span class="kw">fn </span>register_deserialize_tagset(<span class="kw-2">&amp;</span><span class="self">self</span>, tagset_name: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;) -&gt; <a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_register_deserialize_tagset(
@@ -4086,7 +4081,7 @@
     ///
     /// the [`gdk::Atom`][crate::gdk::Atom] that corresponds to the
     ///  newly registered format’s mime-type.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_register_serialize_tagset&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_register_serialize_tagset"</span>)]
     </span><span class="kw">fn </span>register_serialize_tagset(<span class="kw-2">&amp;</span><span class="self">self</span>, tagset_name: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;) -&gt; <a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a> {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_text_buffer_register_serialize_tagset(
@@ -4105,8 +4100,8 @@
     /// one bound of range to be untagged
     /// ## `end`
     /// other bound of range to be untagged
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_remove_all_tags&quot;</span>)]
-    </span><span class="kw">fn </span>remove_all_tags(<span class="kw-2">&amp;</span><span class="self">self</span>, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_remove_all_tags"</span>)]
+    </span><span class="kw">fn </span>remove_all_tags(<span class="kw-2">&amp;</span><span class="self">self</span>, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_remove_all_tags(
                 <a class="self" href="#1732">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -4121,7 +4116,7 @@
     /// ## `clipboard`
     /// a [`Clipboard`][crate::Clipboard] added to `self` by
     ///  [`add_selection_clipboard()`][Self::add_selection_clipboard()]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_remove_selection_clipboard&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_remove_selection_clipboard"</span>)]
     </span><span class="kw">fn </span>remove_selection_clipboard(<span class="kw-2">&amp;</span><span class="self">self</span>, clipboard: <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_remove_selection_clipboard(
@@ -4140,8 +4135,8 @@
     /// one bound of range to be untagged
     /// ## `end`
     /// other bound of range to be untagged
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_remove_tag&quot;</span>)]
-    </span><span class="kw">fn </span>remove_tag(<span class="kw-2">&amp;</span><span class="self">self</span>, tag: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_tag.rs.html#13-407">TextTag</a>&gt;, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_remove_tag"</span>)]
+    </span><span class="kw">fn </span>remove_tag(<span class="kw-2">&amp;</span><span class="self">self</span>, tag: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="text_tag.rs.html#13-407">TextTag</a>&gt;, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_remove_tag(
                 <a class="self" href="#1767">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -4160,8 +4155,8 @@
     /// one bound of range to be untagged
     /// ## `end`
     /// other bound of range to be untagged
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_remove_tag_by_name&quot;</span>)]
-    </span><span class="kw">fn </span>remove_tag_by_name(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_remove_tag_by_name"</span>)]
+    </span><span class="kw">fn </span>remove_tag_by_name(<span class="kw-2">&amp;</span><span class="self">self</span>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_remove_tag_by_name(
                 <a class="self" href="#1787">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -4183,8 +4178,8 @@
     /// where to put the “insert” mark
     /// ## `bound`
     /// where to put the “selection_bound” mark
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_select_range&quot;</span>)]
-    </span><span class="kw">fn </span>select_range(<span class="kw-2">&amp;</span><span class="self">self</span>, ins: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, bound: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>) {
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_select_range"</span>)]
+    </span><span class="kw">fn </span>select_range(<span class="kw-2">&amp;</span><span class="self">self</span>, ins: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, bound: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_select_range(
                 <a class="self" href="#1810">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -4213,16 +4208,16 @@
     ///
     /// the serialized
     ///  data, encoded as `format`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_serialize&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_serialize"</span>)]
     </span><span class="kw">fn </span>serialize(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         content_buffer: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
         format: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>,
-        start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
-        end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>,
+        start: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
+        end: <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>,
     ) -&gt; Vec&lt;<a href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt; {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>length = mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>length = std::mem::MaybeUninit::uninit();
             <span class="kw">let </span>ret = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibContainer.html">FromGlibContainer::from_glib_full_num</a>(
                 ffi::gtk_text_buffer_serialize(
                     <a class="self" href="#1841">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
@@ -4245,7 +4240,7 @@
     /// bit flips, the buffer emits the [`modified-changed`][struct@crate::TextBuffer#modified-changed] signal.
     /// ## `setting`
     /// modification flag setting
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_set_modified&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_set_modified"</span>)]
     </span><span class="kw">fn </span>set_modified(<span class="kw-2">&amp;</span><span class="self">self</span>, setting: <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_set_modified(<a class="self" href="#1872">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#1872">setting</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
@@ -4258,7 +4253,7 @@
     /// UTF-8 text to insert
     /// ## `len`
     /// length of `text` in bytes
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_set_text&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_set_text"</span>)]
     </span><span class="kw">fn </span>set_text(<span class="kw-2">&amp;</span><span class="self">self</span>, text: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">let </span>len = <a href="#1885">text</a>.len() <span class="kw">as _</span>;
         <span class="kw">unsafe </span>{
@@ -4275,7 +4270,7 @@
     /// [`register_deserialize_tagset()`][Self::register_deserialize_tagset()].
     /// ## `format`
     /// a [`gdk::Atom`][crate::gdk::Atom] representing a registered rich text format.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_unregister_deserialize_format&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_unregister_deserialize_format"</span>)]
     </span><span class="kw">fn </span>unregister_deserialize_format(<span class="kw-2">&amp;</span><span class="self">self</span>, format: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_unregister_deserialize_format(
@@ -4290,7 +4285,7 @@
     /// [`register_serialize_tagset()`][Self::register_serialize_tagset()]
     /// ## `format`
     /// a [`gdk::Atom`][crate::gdk::Atom] representing a registered rich text format.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;gtk_text_buffer_unregister_serialize_format&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"gtk_text_buffer_unregister_serialize_format"</span>)]
     </span><span class="kw">fn </span>unregister_serialize_format(<span class="kw-2">&amp;</span><span class="self">self</span>, format: <span class="kw-2">&amp;</span><a href="../../../gdk/atom/struct.Atom.html">gdk::Atom</a>) {
         <span class="kw">unsafe </span>{
             ffi::gtk_text_buffer_unregister_serialize_format(
@@ -4303,9 +4298,9 @@
     <span class="doccomment">/// The position of the insert mark (as offset from the beginning
     /// of the buffer). It is useful for getting notified when the
     /// cursor moves.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;cursor-position&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"cursor-position"</span>)]
     </span><span class="kw">fn </span>cursor_position(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#1930">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">&quot;cursor-position&quot;</span>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html">ObjectExt::property</a>(<a class="self" href="#1930">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>(), <span class="string">"cursor-position"</span>)
     }
 
     <span class="doccomment">/// The ::begin-user-action signal is emitted at the beginning of a single
@@ -4318,11 +4313,11 @@
     /// [`delete_interactive()`][Self::delete_interactive()],
     /// [`backspace()`][Self::backspace()],
     /// [`delete_selection()`][Self::delete_selection()].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;begin-user-action&quot;</span>)]
-    </span><span class="kw">fn </span>connect_begin_user_action&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>begin_user_action_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"begin-user-action"</span>)]
+    </span><span class="kw">fn </span>connect_begin_user_action&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>begin_user_action_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             f: glib::ffi::gpointer,
@@ -4334,8 +4329,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#1945">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#1945">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;begin-user-action\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"begin-user-action\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     begin_user_action_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#1957">f</a>),
@@ -4345,9 +4340,9 @@
 
     <span class="doccomment">/// The ::changed signal is emitted when the content of a [`TextBuffer`][crate::TextBuffer]
     /// has changed.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>changed_trampoline&lt;P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"changed"</span>)]
+    </span><span class="kw">fn </span>connect_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>changed_trampoline&lt;P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             f: glib::ffi::gpointer,
         ) {
@@ -4358,8 +4353,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#1972">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#1972">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#1981">f</a>),
@@ -4378,9 +4373,9 @@
     /// [`backspace()`][Self::backspace()],
     /// [`delete_selection()`][Self::delete_selection()],
     /// [`backspace()`][Self::backspace()].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;end-user-action&quot;</span>)]
-    </span><span class="kw">fn </span>connect_end_user_action&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>end_user_action_trampoline&lt;P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"end-user-action"</span>)]
+    </span><span class="kw">fn </span>connect_end_user_action&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>end_user_action_trampoline&lt;P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             f: glib::ffi::gpointer,
         ) {
@@ -4391,8 +4386,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2005">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2005">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;end-user-action\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"end-user-action\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     end_user_action_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2014">f</a>),
@@ -4407,11 +4402,11 @@
     /// [`delete_mark()`][Self::delete_mark()].
     /// ## `mark`
     /// The mark that was deleted
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;mark-deleted&quot;</span>)]
-    </span><span class="kw">fn </span>connect_mark_deleted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="text_mark.rs.html#9-65">TextMark</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>mark_deleted_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"mark-deleted"</span>)]
+    </span><span class="kw">fn </span>connect_mark_deleted&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="text_mark.rs.html#8-64">TextMark</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>mark_deleted_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <span class="kw-2">&amp;</span><a href="text_mark.rs.html#9-65">TextMark</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <span class="kw-2">&amp;</span><a href="text_mark.rs.html#8-64">TextMark</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             mark: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextMark.html">ffi::GtkTextMark</a>,
@@ -4427,8 +4422,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2034">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2034">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;mark-deleted\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"mark-deleted\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     mark_deleted_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2050">f</a>),
@@ -4446,14 +4441,14 @@
     /// The location of `mark` in `textbuffer`
     /// ## `mark`
     /// The mark that is set
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;mark-set&quot;</span>)]
-    </span><span class="kw">fn </span>connect_mark_set&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, <span class="kw-2">&amp;</span><a href="text_mark.rs.html#9-65">TextMark</a>) + <span class="lifetime">&#39;static</span>&gt;(
+    </span><span class="attr">#[doc(alias = <span class="string">"mark-set"</span>)]
+    </span><span class="kw">fn </span>connect_mark_set&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, <span class="kw-2">&amp;</span><a href="text_mark.rs.html#8-64">TextMark</a>) + <span class="lifetime">'static</span>&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         f: F,
     ) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>mark_set_trampoline&lt;
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>mark_set_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <span class="kw-2">&amp;</span><a href="text_iter.rs.html#9-22">TextIter</a>, <span class="kw-2">&amp;</span><a href="text_mark.rs.html#9-65">TextMark</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <span class="kw-2">&amp;</span><a href="text_iter.rs.html#8-21">TextIter</a>, <span class="kw-2">&amp;</span><a href="text_mark.rs.html#8-64">TextMark</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             location: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextIter.html">ffi::GtkTextIter</a>,
@@ -4471,8 +4466,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2075">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2074">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;mark-set\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"mark-set\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     mark_set_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2094">f</a>),
@@ -4485,11 +4480,11 @@
     ///
     /// See also:
     /// [`set_modified()`][Self::set_modified()].
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;modified-changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_modified_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>modified_changed_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"modified-changed"</span>)]
+    </span><span class="kw">fn </span>connect_modified_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>modified_changed_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             f: glib::ffi::gpointer,
@@ -4501,8 +4496,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2112">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2112">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;modified-changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"modified-changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     modified_changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2124">f</a>),
@@ -4515,11 +4510,11 @@
     /// See [`paste_clipboard()`][Self::paste_clipboard()] for more details.
     /// ## `clipboard`
     /// the [`Clipboard`][crate::Clipboard] pasted from
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;paste-done&quot;</span>)]
-    </span><span class="kw">fn </span>connect_paste_done&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>paste_done_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"paste-done"</span>)]
+    </span><span class="kw">fn </span>connect_paste_done&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>paste_done_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <span class="kw-2">&amp;</span><a href="clipboard.rs.html#9-87">Clipboard</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             clipboard: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkClipboard.html">ffi::GtkClipboard</a>,
@@ -4535,8 +4530,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2142">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2142">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;paste-done\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"paste-done\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     paste_done_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2158">f</a>),
@@ -4544,11 +4539,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;copy-target-list&quot;</span>)]
-    </span><span class="kw">fn </span>connect_copy_target_list_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_copy_target_list_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"copy-target-list"</span>)]
+    </span><span class="kw">fn </span>connect_copy_target_list_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_copy_target_list_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             _param_spec: glib::ffi::gpointer,
@@ -4561,8 +4556,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2171">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2171">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::copy-target-list\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::copy-target-list\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_copy_target_list_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2184">f</a>),
@@ -4570,11 +4565,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;cursor-position&quot;</span>)]
-    </span><span class="kw">fn </span>connect_cursor_position_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_cursor_position_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"cursor-position"</span>)]
+    </span><span class="kw">fn </span>connect_cursor_position_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_cursor_position_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             _param_spec: glib::ffi::gpointer,
@@ -4587,8 +4582,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2197">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2197">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::cursor-position\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::cursor-position\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_cursor_position_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2210">f</a>),
@@ -4596,11 +4591,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;has-selection&quot;</span>)]
-    </span><span class="kw">fn </span>connect_has_selection_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_has_selection_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"has-selection"</span>)]
+    </span><span class="kw">fn </span>connect_has_selection_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_has_selection_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             _param_spec: glib::ffi::gpointer,
@@ -4613,8 +4608,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2223">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2223">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::has-selection\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::has-selection\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_has_selection_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2236">f</a>),
@@ -4622,11 +4617,11 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;paste-target-list&quot;</span>)]
-    </span><span class="kw">fn </span>connect_paste_target_list_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_paste_target_list_trampoline&lt;
+    <span class="attr">#[doc(alias = <span class="string">"paste-target-list"</span>)]
+    </span><span class="kw">fn </span>connect_paste_target_list_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_paste_target_list_trampoline&lt;
             P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             _param_spec: glib::ffi::gpointer,
@@ -4639,8 +4634,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2249">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2249">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::paste-target-list\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::paste-target-list\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_paste_target_list_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2262">f</a>),
@@ -4648,9 +4643,9 @@
         }
     }
 
-    <span class="attr">#[doc(alias = <span class="string">&quot;text&quot;</span>)]
-    </span><span class="kw">fn </span>connect_text_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>notify_text_trampoline&lt;P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">&#39;static</span>&gt;(
+    <span class="attr">#[doc(alias = <span class="string">"text"</span>)]
+    </span><span class="kw">fn </span>connect_text_notify&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_text_trampoline&lt;P: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;, F: Fn(<span class="kw-2">&amp;</span>P) + <span class="lifetime">'static</span>&gt;(
             this: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTextBuffer.html">ffi::GtkTextBuffer</a>,
             _param_spec: glib::ffi::gpointer,
             f: glib::ffi::gpointer,
@@ -4662,8 +4657,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#2275">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#2275">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;notify::text\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"notify::text\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     notify_text_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#2285">f</a>),
@@ -4673,10 +4668,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#13-239">TextBuffer</a>&gt;&gt; <a href="#326-2296">TextBufferExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#13-239">TextBuffer</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#2301">f</a>.write_str(<span class="string">&quot;TextBuffer&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

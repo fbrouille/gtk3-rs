@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `atk/src/auto/value.rs`."><title>value.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="atk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `atk/src/auto/value.rs`."><title>value.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="atk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -539,12 +540,6 @@
 <a href="#466" id="466">466</a>
 <a href="#467" id="467">467</a>
 <a href="#468" id="468">468</a>
-<a href="#469" id="469">469</a>
-<a href="#470" id="470">470</a>
-<a href="#471" id="471">471</a>
-<a href="#472" id="472">472</a>
-<a href="#473" id="473">473</a>
-<a href="#474" id="474">474</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
@@ -555,7 +550,7 @@
     signal::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a>},
     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>,
 };
-<span class="kw">use </span>std::{<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">boxed::Box</a> <span class="kw">as </span>Box_, <a href="https://doc.rust-lang.org/nightly/alloc/fmt/index.html">fmt</a>, <a href="https://doc.rust-lang.org/nightly/core/mem/index.html">mem</a>, <a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">mem::transmute</a>, <a href="https://doc.rust-lang.org/nightly/core/ptr/index.html">ptr</a>};
+<span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 
 <a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
     <span class="doccomment">/// The ATK interface implemented by valuators and components which display or select a value from a bounded range of values.
@@ -564,11 +559,11 @@
     /// a value from a bounded range, or which allow the user to specify a
     /// value from a bounded range, or both. For instance, most sliders and
     /// range controls, as well as dials, should have [`Object`][crate::Object]
-    /// representations which implement [`Value`][crate::Value] on the component&#39;s
+    /// representations which implement [`Value`][crate::Value] on the component's
     /// behalf. `AtKValues` may be read-only, in which case attempts to
     /// alter the value return would fail.
     ///
-    /// &lt;refsect1 id=&quot;current-value-text&quot;&gt;
+    /// &lt;refsect1 id="current-value-text"&gt;
     /// `&lt;title&gt;`On the subject of current value text`&lt;/title&gt;`
     /// `&lt;para&gt;`
     /// In addition to providing the current value, implementors can
@@ -584,8 +579,8 @@
     /// their new password. Red is used for values less than 4.0, yellow
     /// for values between 4.0 and 7.0, and green for values greater than
     /// 7.0. In this instance, value text should be provided by the
-    /// implementor. Appropriate value text would be &quot;weak&quot;, &quot;acceptable,&quot;
-    /// and &quot;strong&quot; respectively.
+    /// implementor. Appropriate value text would be "weak", "acceptable,"
+    /// and "strong" respectively.
     /// `&lt;/example&gt;`
     ///
     /// A level bar whose value changes to reflect the battery charge. The
@@ -595,12 +590,12 @@
     /// the user has of the current charge, value text should not be
     /// provided by the implementor.
     ///
-    /// &lt;refsect2 id=&quot;implementor-notes&quot;&gt;
+    /// &lt;refsect2 id="implementor-notes"&gt;
     /// `&lt;title&gt;`Implementor Notes`&lt;/title&gt;`
     /// `&lt;para&gt;`
     /// Implementors should bear in mind that assistive technologies will
     /// likely prefer the value text provided over the numeric value when
-    /// presenting a widget&#39;s value. As a result, strings not intended for
+    /// presenting a widget's value. As a result, strings not intended for
     /// end users should not be exposed in the value text, and strings
     /// which are exposed should be localized. In the case of widgets which
     /// display value text on screen, for instance through a separate label
@@ -620,7 +615,7 @@
     /// `&lt;/refsect2&gt;`
     /// `&lt;/refsect1&gt;`
     ///
-    /// &lt;refsect1 id=&quot;ranges&quot;&gt;
+    /// &lt;refsect1 id="ranges"&gt;
     /// `&lt;title&gt;`On the subject of ranges`&lt;/title&gt;`
     /// `&lt;para&gt;`
     /// In addition to providing the minimum and maximum values,
@@ -630,13 +625,13 @@
     /// the end user:
     /// `&lt;/para&gt;`
     /// `&lt;itemizedlist&gt;`
-    ///  `&lt;listitem&gt;`The existence of distinct ranges such as &quot;weak&quot;,
-    ///  &quot;acceptable&quot;, and &quot;strong&quot; indicated by color, bar tick marks,
+    ///  `&lt;listitem&gt;`The existence of distinct ranges such as "weak",
+    ///  "acceptable", and "strong" indicated by color, bar tick marks,
     ///  and/or on-screen text.`&lt;/listitem&gt;`
     ///  `&lt;listitem&gt;`Where the current value stands within a given subrange,
-    ///  for instance illustrating progression from very &quot;weak&quot; towards
-    ///  nearly &quot;acceptable&quot; through changes in shade and/or position on
-    ///  the bar within the &quot;weak&quot; subrange.`&lt;/listitem&gt;`
+    ///  for instance illustrating progression from very "weak" towards
+    ///  nearly "acceptable" through changes in shade and/or position on
+    ///  the bar within the "weak" subrange.`&lt;/listitem&gt;`
     /// `&lt;/itemizedlist&gt;`
     /// `&lt;para&gt;`
     /// If both of the above do not apply to the widget, it should be
@@ -644,7 +639,7 @@
     /// if appropriate, to make the widget accessible.
     /// `&lt;/para&gt;`
     ///
-    /// &lt;refsect2 id=&quot;ranges-implementor-notes&quot;&gt;
+    /// &lt;refsect2 id="ranges-implementor-notes"&gt;
     /// `&lt;title&gt;`Implementor Notes`&lt;/title&gt;`
     /// `&lt;para&gt;`
     /// If providing subrange details is deemed necessary, all possible
@@ -654,7 +649,7 @@
     /// `&lt;/refsect2&gt;`
     /// `&lt;/refsect1&gt;`
     ///
-    /// &lt;refsect1 id=&quot;localization&quot;&gt;
+    /// &lt;refsect1 id="localization"&gt;
     /// `&lt;title&gt;`On the subject of localization of end-user-consumable text
     /// values`&lt;/title&gt;`
     /// `&lt;para&gt;`
@@ -692,7 +687,7 @@
     /// `&lt;/para&gt;`
     /// `&lt;/refsect1&gt;`
     ///
-    /// &lt;refsect1 id=&quot;changes&quot;&gt;
+    /// &lt;refsect1 id="changes"&gt;
     /// `&lt;title&gt;`On the subject of changes`&lt;/title&gt;`
     /// `&lt;para&gt;`
     /// Note that if there is a textual description associated with the new
@@ -705,7 +700,7 @@
     ///
     ///
     /// #### `value-changed`
-    ///  The &#39;value-changed&#39; signal is emitted when the current value
+    ///  The 'value-changed' signal is emitted when the current value
     /// that represent the object changes. `value` is the numerical
     /// representation of this new value. `text` is the human
     /// readable text alternative of `value`, and can be NULL if it is
@@ -716,14 +711,14 @@
     ///
     /// Example: a password meter whose value changes as the user
     /// types their new password. Appropiate value text would be
-    /// &quot;weak&quot;, &quot;acceptable&quot; and &quot;strong&quot;.
+    /// "weak", "acceptable" and "strong".
     ///
     ///
     ///
     /// # Implements
     ///
     /// [`ValueExt`][trait@crate::prelude::ValueExt]
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;AtkValue&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"AtkValue"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../atk/struct.Value.html">Value</a>(Interface&lt;ffi::AtkValue, ffi::AtkValueIface&gt;);
 
     <span class="kw">match fn </span>{
@@ -732,7 +727,7 @@
 }
 
 <span class="kw">impl </span><a href="#13-185">Value</a> {
-    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span><a href="#13-185">Value</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#13-185">Value</a>&gt; = <span class="prelude-val">None</span>;
 }
 
 <span class="kw">mod </span>sealed {
@@ -745,7 +740,7 @@
 /// # Implementors
 ///
 /// [`NoOpObject`][struct@crate::NoOpObject], [`Value`][struct@crate::Value]
-</span><span class="kw">pub trait </span><a href="../../../atk/prelude/trait.ValueExt.html">ValueExt</a>: IsA&lt;<a href="#13-185">Value</a>&gt; + <a href="#192">sealed::Sealed</a> + <span class="lifetime">&#39;static </span>{
+</span><span class="kw">pub trait </span><a href="../../../atk/prelude/trait.ValueExt.html">ValueExt</a>: IsA&lt;<a href="#13-185">Value</a>&gt; + <a href="#192">sealed::Sealed</a> + <span class="lifetime">'static </span>{
     <span class="doccomment">/// Gets the value of this object.
     ///
     /// # Deprecated
@@ -758,8 +753,8 @@
     ///
     /// ## `value`
     /// a [`glib::Value`][crate::glib::Value] representing the current accessible value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_get_current_value&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_current_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_get_current_value"</span>)]
+    #[doc(alias = <span class="string">"get_current_value"</span>)]
     </span><span class="kw">fn </span>current_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::uninitialized();
@@ -780,8 +775,8 @@
     ///
     /// the minimum increment by which the value of this
     /// object may be changed. zero if undefined.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_get_increment&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_increment&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_get_increment"</span>)]
+    #[doc(alias = <span class="string">"get_increment"</span>)]
     </span><span class="kw">fn </span>increment(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a> {
         <span class="kw">unsafe </span>{ ffi::atk_value_get_increment(<a class="self" href="#238">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
     }
@@ -797,8 +792,8 @@
     ///
     /// ## `value`
     /// a [`glib::Value`][crate::glib::Value] representing the maximum accessible value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_get_maximum_value&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_maximum_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_get_maximum_value"</span>)]
+    #[doc(alias = <span class="string">"get_maximum_value"</span>)]
     </span><span class="kw">fn </span>maximum_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::uninitialized();
@@ -823,8 +818,8 @@
     ///
     /// ## `value`
     /// a [`glib::Value`][crate::glib::Value] representing the minimum increment by which the accessible value may be changed
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_get_minimum_increment&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_minimum_increment&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_get_minimum_increment"</span>)]
+    #[doc(alias = <span class="string">"get_minimum_increment"</span>)]
     </span><span class="kw">fn </span>minimum_increment(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::uninitialized();
@@ -847,8 +842,8 @@
     ///
     /// ## `value`
     /// a [`glib::Value`][crate::glib::Value] representing the minimum accessible value
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_get_minimum_value&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_minimum_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_get_minimum_value"</span>)]
+    #[doc(alias = <span class="string">"get_minimum_value"</span>)]
     </span><span class="kw">fn </span>minimum_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::uninitialized();
@@ -867,8 +862,8 @@
     /// a newly allocated [`Range`][crate::Range]
     /// that represents the minimum, maximum and descriptor (if available)
     /// of `self`. NULL if that range is not defined.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_get_range&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_range&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_get_range"</span>)]
+    #[doc(alias = <span class="string">"get_range"</span>)]
     </span><span class="kw">fn </span>range(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="range.rs.html#7-23">Range</a>&gt; {
         <span class="kw">unsafe </span>{ from_glib_full(ffi::atk_value_get_range(<a class="self" href="#325">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
     }
@@ -881,8 +876,8 @@
     /// an `GSList` of
     /// [`Range`][crate::Range] which each of the subranges defined for this object. Free
     /// the returns list with `g_slist_free()`.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_get_sub_ranges&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_sub_ranges&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_get_sub_ranges"</span>)]
+    #[doc(alias = <span class="string">"get_sub_ranges"</span>)]
     </span><span class="kw">fn </span>sub_ranges(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Vec&lt;<a href="range.rs.html#7-23">Range</a>&gt; {
         <span class="kw">unsafe </span>{
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibPtrContainer.html">FromGlibPtrContainer::from_glib_full</a>(ffi::atk_value_get_sub_ranges(
@@ -904,12 +899,12 @@
     /// ## `text`
     /// address of `gchar` to put the human
     /// readable text alternative for `value`
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_get_value_and_text&quot;</span>)]
-    #[doc(alias = <span class="string">&quot;get_value_and_text&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_get_value_and_text"</span>)]
+    #[doc(alias = <span class="string">"get_value_and_text"</span>)]
     </span><span class="kw">fn </span>value_and_text(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; (<a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>) {
         <span class="kw">unsafe </span>{
-            <span class="kw">let </span><span class="kw-2">mut </span>value = mem::MaybeUninit::uninit();
-            <span class="kw">let </span><span class="kw-2">mut </span>text = ptr::null_mut();
+            <span class="kw">let </span><span class="kw-2">mut </span>value = std::mem::MaybeUninit::uninit();
+            <span class="kw">let </span><span class="kw-2">mut </span>text = std::ptr::null_mut();
             ffi::atk_value_get_value_and_text(
                 <a class="self" href="#362">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#364">value</a>.as_mut_ptr(),
@@ -930,7 +925,7 @@
     /// # Returns
     ///
     /// [`true`] if new value is successfully set, [`false`] otherwise.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_set_current_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_set_current_value"</span>)]
     </span><span class="kw">fn </span>set_current_value(<span class="kw-2">&amp;</span><span class="self">self</span>, value: <span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             from_glib(ffi::atk_value_set_current_value(
@@ -943,7 +938,7 @@
     <span class="doccomment">/// Sets the value of this object.
     ///
     /// This method is intended to provide a way to change the value of the
-    /// object. In any case, it is possible that the value can&#39;t be
+    /// object. In any case, it is possible that the value can't be
     /// modified (ie: a read-only component). If the value changes due this
     /// call, it is possible that the text could change, and will trigger
     /// an [`value-changed`][struct@crate::Value#value-changed] signal emission.
@@ -956,14 +951,14 @@
     /// not.
     /// ## `new_value`
     /// a double which is the desired new accessible value.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;atk_value_set_value&quot;</span>)]
+    </span><span class="attr">#[doc(alias = <span class="string">"atk_value_set_value"</span>)]
     </span><span class="kw">fn </span>set_value(<span class="kw-2">&amp;</span><span class="self">self</span>, new_value: <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) {
         <span class="kw">unsafe </span>{
             ffi::atk_value_set_value(<a class="self" href="#413">self</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#413">new_value</a>);
         }
     }
 
-    <span class="doccomment">/// The &#39;value-changed&#39; signal is emitted when the current value
+    <span class="doccomment">/// The 'value-changed' signal is emitted when the current value
     /// that represent the object changes. `value` is the numerical
     /// representation of this new value. `text` is the human
     /// readable text alternative of `value`, and can be NULL if it is
@@ -974,17 +969,17 @@
     ///
     /// Example: a password meter whose value changes as the user
     /// types their new password. Appropiate value text would be
-    /// &quot;weak&quot;, &quot;acceptable&quot; and &quot;strong&quot;.
+    /// "weak", "acceptable" and "strong".
     /// ## `value`
     /// the new value in a numerical form.
     /// ## `text`
     /// human readable text alternative (also called
     /// description) of this object. NULL if not available.
-    </span><span class="attr">#[doc(alias = <span class="string">&quot;value-changed&quot;</span>)]
-    </span><span class="kw">fn </span>connect_value_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">&#39;static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
-        <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>value_changed_trampoline&lt;
+    </span><span class="attr">#[doc(alias = <span class="string">"value-changed"</span>)]
+    </span><span class="kw">fn </span>connect_value_changed&lt;F: Fn(<span class="kw-2">&amp;</span><span class="self">Self</span>, <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">'static</span>&gt;(<span class="kw-2">&amp;</span><span class="self">self</span>, f: F) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html">SignalHandlerId</a> {
+        <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>value_changed_trampoline&lt;
             P: IsA&lt;<a href="#13-185">Value</a>&gt;,
-            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">&#39;static</span>,
+            F: Fn(<span class="kw-2">&amp;</span>P, <a href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>, <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + <span class="lifetime">'static</span>,
         &gt;(
             this: <span class="kw-2">*mut </span>ffi::AtkValue,
             value: libc::c_double,
@@ -1002,8 +997,8 @@
             <span class="kw">let </span>f: Box_&lt;F&gt; = Box_::new(<a href="#437">f</a>);
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#437">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="string">b&quot;value-changed\0&quot;</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>()&gt;(
+                <span class="string">b"value-changed\0"</span>.as_ptr() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(std::mem::transmute::&lt;<span class="kw">_</span>, <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     value_changed_trampoline::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 Box_::into_raw(<a href="#455">f</a>),
@@ -1013,10 +1008,4 @@
 }
 
 <span class="kw">impl</span>&lt;O: IsA&lt;<a href="#13-185">Value</a>&gt;&gt; <a href="#201-466">ValueExt</a> <span class="kw">for </span>O {}
-
-<span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">fmt::Display</a> <span class="kw">for </span><a href="#13-185">Value</a> {
-    <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">fmt::Result</a> {
-        <a href="#471">f</a>.write_str(<span class="string">&quot;Value&quot;</span>)
-    }
-}
 </code></pre></div></section></main></body></html>

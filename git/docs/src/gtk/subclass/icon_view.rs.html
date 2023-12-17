@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/subclass/icon_view.rs`."><title>icon_view.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-deb46770fd761b69.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (09df6108c 2023-10-17)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/subclass/icon_view.rs`."><title>icon_view.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -307,14 +308,14 @@
 <span class="kw">use </span><a href="container.rs.html#14-107"><span class="kw">super</span>::container::ContainerImpl</a>;
 
 <span class="kw">use </span><a href="../auto/icon_view.rs.html#17-1414"><span class="kw">crate</span>::IconView</a>;
-<span class="kw">use </span><a href="../auto/enums.rs.html#4578-4611"><span class="kw">crate</span>::MovementStep</a>;
-<span class="kw">use </span><a href="../auto/tree_path.rs.html#8-17"><span class="kw">crate</span>::TreePath</a>;
+<span class="kw">use </span><a href="../auto/enums.rs.html#4040-4073"><span class="kw">crate</span>::MovementStep</a>;
+<span class="kw">use </span><a href="../auto/tree_path.rs.html#7-16"><span class="kw">crate</span>::TreePath</a>;
 
 <span class="kw">pub trait </span><a href="../../../gtk/subclass/icon_view/trait.IconViewImpl.html">IconViewImpl</a>: <a href="#53-137">IconViewImplExt</a> + <a href="container.rs.html#14-107">ContainerImpl</a> {
     <span class="doccomment">/// Activates the item determined by `path`.
     /// ## `path`
     /// The [`TreePath`][crate::TreePath] to be activated
-    </span><span class="kw">fn </span>item_activated(<span class="kw-2">&amp;</span><span class="self">self</span>, path: <span class="kw-2">&amp;</span><a href="../auto/tree_path.rs.html#8-17">TreePath</a>) {
+    </span><span class="kw">fn </span>item_activated(<span class="kw-2">&amp;</span><span class="self">self</span>, path: <span class="kw-2">&amp;</span><a href="../auto/tree_path.rs.html#7-16">TreePath</a>) {
         <a class="self" href="#19">self</a>.<a href="#54-65">parent_item_activated</a>(<a href="#19">path</a>)
     }
     <span class="kw">fn </span>selection_changed(<span class="kw-2">&amp;</span><span class="self">self</span>) {
@@ -335,7 +336,7 @@
     <span class="kw">fn </span>toggle_cursor_item(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <a class="self" href="#37">self</a>.<a href="#102-110">parent_toggle_cursor_item</a>()
     }
-    <span class="kw">fn </span>move_cursor(<span class="kw-2">&amp;</span><span class="self">self</span>, step: <a href="../auto/enums.rs.html#4578-4611">MovementStep</a>, count: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
+    <span class="kw">fn </span>move_cursor(<span class="kw-2">&amp;</span><span class="self">self</span>, step: <a href="../auto/enums.rs.html#4040-4073">MovementStep</a>, count: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <a class="self" href="#40">self</a>.<a href="#111-125">parent_move_cursor</a>(<a href="#40">step</a>, <a href="#40">count</a>)
     }
     <span class="kw">fn </span>activate_cursor_item(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
@@ -349,7 +350,7 @@
 }
 
 <span class="kw">pub trait </span><a href="../../../gtk/subclass/icon_view/trait.IconViewImplExt.html">IconViewImplExt</a>: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclass.html">ObjectSubclass</a> + <a href="#49">sealed::Sealed</a> {
-    <span class="kw">fn </span>parent_item_activated(<span class="kw-2">&amp;</span><span class="self">self</span>, path: <span class="kw-2">&amp;</span><a href="../auto/tree_path.rs.html#8-17">TreePath</a>) {
+    <span class="kw">fn </span>parent_item_activated(<span class="kw-2">&amp;</span><span class="self">self</span>, path: <span class="kw-2">&amp;</span><a href="../auto/tree_path.rs.html#7-16">TreePath</a>) {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <span class="self">Self</span>::type_data();
             <span class="kw">let </span>parent_class = <a href="#56">data</a>.as_ref().parent_class() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconViewClass.html">ffi::GtkIconViewClass</a>;
@@ -406,7 +407,7 @@
             }
         }
     }
-    <span class="kw">fn </span>parent_move_cursor(<span class="kw-2">&amp;</span><span class="self">self</span>, step: <a href="../auto/enums.rs.html#4578-4611">MovementStep</a>, count: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
+    <span class="kw">fn </span>parent_move_cursor(<span class="kw-2">&amp;</span><span class="self">self</span>, step: <a href="../auto/enums.rs.html#4040-4073">MovementStep</a>, count: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <span class="self">Self</span>::type_data();
             <span class="kw">let </span>parent_class = <a href="#113">data</a>.as_ref().parent_class() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconViewClass.html">ffi::GtkIconViewClass</a>;
@@ -441,7 +442,7 @@
         <span class="self">Self</span>::parent_class_init::&lt;T&gt;(<a href="#142">class</a>);
 
         <span class="kw">if </span>!<span class="kw">crate</span>::rt::is_initialized() {
-            <a class="macro" href="https://doc.rust-lang.org/nightly/std/macro.panic.html">panic!</a>(<span class="string">&quot;GTK has to be initialized first&quot;</span>);
+            <a class="macro" href="https://doc.rust-lang.org/nightly/std/macro.panic.html">panic!</a>(<span class="string">"GTK has to be initialized first"</span>);
         }
 
         <span class="kw">let </span>klass = <a href="#142">class</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsMut.html">as_mut</a>();
@@ -456,7 +457,7 @@
     }
 }
 
-<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>icon_view_item_activated&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(
+<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>icon_view_item_activated&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(
     ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>,
     path: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkTreePath.html">ffi::GtkTreePath</a>,
 ) {
@@ -467,42 +468,42 @@
     <a href="#166">imp</a>.<a href="#19-21">item_activated</a>(<span class="kw-2">&amp;</span><a href="#167">path</a>)
 }
 
-<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>icon_view_selection_changed&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
+<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>icon_view_selection_changed&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#172">ptr</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
     <span class="kw">let </span>imp = <a href="#173">instance</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.InstanceStructExt.html">imp</a>();
 
     <a href="#174">imp</a>.<a href="#22-24">selection_changed</a>()
 }
 
-<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>icon_view_select_all&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
+<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>icon_view_select_all&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#179">ptr</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
     <span class="kw">let </span>imp = <a href="#180">instance</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.InstanceStructExt.html">imp</a>();
 
     <a href="#181">imp</a>.<a href="#27-29">select_all</a>()
 }
 
-<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>icon_view_unselect_all&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
+<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>icon_view_unselect_all&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#186">ptr</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
     <span class="kw">let </span>imp = <a href="#187">instance</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.InstanceStructExt.html">imp</a>();
 
     <a href="#188">imp</a>.<a href="#31-33">unselect_all</a>()
 }
 
-<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>icon_view_select_cursor_item&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
+<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>icon_view_select_cursor_item&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#193">ptr</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
     <span class="kw">let </span>imp = <a href="#194">instance</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.InstanceStructExt.html">imp</a>();
 
     <a href="#195">imp</a>.<a href="#34-36">select_cursor_item</a>()
 }
 
-<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>icon_view_toggle_cursor_item&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
+<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>icon_view_toggle_cursor_item&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>) {
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#200">ptr</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
     <span class="kw">let </span>imp = <a href="#201">instance</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.InstanceStructExt.html">imp</a>();
 
     <a href="#202">imp</a>.<a href="#37-39">toggle_cursor_item</a>()
 }
 
-<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>icon_view_move_cursor&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(
+<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>icon_view_move_cursor&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(
     ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>,
     step: <a href="../../../gtk_sys/type.GtkMovementStep.html">ffi::GtkMovementStep</a>,
     count: c_int,
@@ -513,7 +514,7 @@
     <a href="#213">imp</a>.<a href="#40-42">move_cursor</a>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#209">step</a>), <a href="#210">count</a>).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>()
 }
 
-<span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn </span>icon_view_activate_cursor_item&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(
+<span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>icon_view_activate_cursor_item&lt;T: <a href="#15-46">IconViewImpl</a>&gt;(
     ptr: <span class="kw-2">*mut </span><a href="../../../gtk_sys/struct.GtkIconView.html">ffi::GtkIconView</a>,
 ) -&gt; glib::ffi::gboolean {
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#219">ptr</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
