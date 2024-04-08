@@ -4,9 +4,9 @@ use libc::{c_char, c_int};
 use std::mem;
 
 use glib::object::IsA;
+use glib::prelude::Cast;
 use glib::subclass::prelude::*;
 use glib::translate::*;
-use glib::Cast;
 use glib::GString;
 
 use crate::CellEditable;

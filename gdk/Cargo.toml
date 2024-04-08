@@ -28,11 +28,11 @@ rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
 [dependencies]
 libc = "0.2"
 ffi = { package = "gdk-sys", path = "sys" }
-cairo-rs = { git = "https://github.com/gtk-rs/gtk-rs-core" }
-gdk-pixbuf = { git = "https://github.com/gtk-rs/gtk-rs-core" }
-gio = { git = "https://github.com/gtk-rs/gtk-rs-core" }
-glib = { git = "https://github.com/gtk-rs/gtk-rs-core" }
-pango = { git = "https://github.com/gtk-rs/gtk-rs-core" }
+cairo-rs = "0.19.0"
+gdk-pixbuf = "0.19.0"
+gio = "0.19.0"
+glib = "0.19.0"
+pango = "0.19.0"
 
 [dev-dependencies]
 gir-format-check = "^0.1"
