@@ -4,9 +4,9 @@ description = "FFI binding for libgdkx11"
 homepage = "https://gtk-rs.org/"
 keywords = ["gdkx11", "ffi", "gtk-rs", "gnome"]
 license = "MIT"
-repository = "https://github.com/gtk-rs/gtk3-rs"
+repository = "https://github.com/fbrouille/gtk3-rs"
 name = "gdkx11-sys"
-version = "0.19.0"
+version = "0.20.0"
 build = "build.rs"
 edition = "2021"
 rust-version = "1.70"
@@ -39,12 +39,12 @@ path = "../../gdk/sys"
 
 [dependencies.glib]
 package = "glib-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [dependencies.cairo]
 package = "cairo-sys-rs"
-git = "https://github.com/gtk-rs/gtk-rs-core"
 optional = true
+version = "0.20"
 
 [build-dependencies]
 system-deps = "6"

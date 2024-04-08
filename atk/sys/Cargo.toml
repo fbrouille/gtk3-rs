@@ -6,11 +6,11 @@ libc = "0.2"
 
 [dependencies.glib]
 package = "glib-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [dependencies.gobject]
 package = "gobject-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [dev-dependencies]
 shell-words = "1.0.0"
@@ -36,8 +36,8 @@ keywords = ["atk", "ffi", "gtk-rs", "gnome"]
 license = "MIT"
 links = "atk-1.0"
 name = "atk-sys"
-repository = "https://github.com/gtk-rs/gtk3-rs"
-version = "0.19.0"
+repository = "https://github.com/fbrouille/gtk3-rs"
+version = "0.20.0"
 edition = "2021"
 rust-version = "1.70"
 

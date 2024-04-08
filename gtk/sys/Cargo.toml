@@ -1,6 +1,6 @@
 [package]
 name = "gtk-sys"
-version = "0.19.0"
+version = "0.20.0"
 links = "gtk-3"
 build = "build.rs"
 authors = ["The gtk-rs Project Developers"]
@@ -8,7 +8,7 @@ description = "FFI bindings to libgtk-3"
 homepage = "https://gtk-rs.org/"
 keywords = ["gtk", "ffi", "gtk-rs", "gnome"]
 license = "MIT"
-repository = "https://github.com/gtk-rs/gtk3-rs"
+repository = "https://github.com/fbrouille/gtk3-rs"
 edition = "2021"
 rust-version = "1.70"
 
@@ -47,15 +47,15 @@ libc = "0.2"
 
 [dependencies.glib]
 package = "glib-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [dependencies.gobject]
 package = "gobject-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [dependencies.gio]
 package = "gio-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [dependencies.atk]
 package = "atk-sys"
@@ -63,7 +63,7 @@ path = "../../atk/sys"
 
 [dependencies.gdk_pixbuf]
 package = "gdk-pixbuf-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [dependencies.gdk]
 package = "gdk-sys"
@@ -71,11 +71,11 @@ path = "../../gdk/sys"
 
 [dependencies.pango]
 package = "pango-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [dependencies.cairo]
 package = "cairo-sys-rs"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+version = "0.20"
 
 [build-dependencies]
 system-deps = "6"

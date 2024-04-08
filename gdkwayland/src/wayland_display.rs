@@ -1,8 +1,8 @@
 // Take a look at the license at the top of the repository in the LICENSE file.
 
-use glib::once_cell::sync::Lazy;
 use glib::translate::*;
-use glib::{ObjectExt, Quark};
+use glib::{prelude::ObjectExt, Quark};
+use once_cell::sync::Lazy;
 
 use wayland_client::backend::ObjectId;
 use wayland_client::protocol::{wl_compositor::WlCompositor, wl_display::WlDisplay};

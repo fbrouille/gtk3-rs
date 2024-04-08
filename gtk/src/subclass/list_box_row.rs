@@ -2,9 +2,9 @@
 
 use crate::ListBoxRow;
 
+use glib::prelude::Cast;
 use glib::subclass::prelude::*;
 use glib::translate::*;
-use glib::Cast;
 
 use super::bin::BinImpl;
 

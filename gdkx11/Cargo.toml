@@ -6,9 +6,9 @@ authors = ["The gtk-rs Project Developers"]
 keywords = ["gdkx11", "gdk", "gtk-rs", "gnome", "GUI"]
 readme = "README.md"
 documentation = "https://gtk-rs.org/gtk3-rs/stable/latest/docs/gdkx11/"
-version = "0.19.0"
+version = "0.20.0"
 description = "Rust bindings for the GDK X11 library"
-repository = "https://github.com/gtk-rs/gtk3-rs"
+repository = "https://github.com/fbrouille/gtk3-rs"
 exclude = ["gir-files/*"]
 edition = "2021"
 rust-version = "1.70"
@@ -26,9 +26,9 @@ rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
 libc = "0.2"
 x11 = "2.18"
 ffi = { package = "gdkx11-sys", path = "sys" }
-glib = { git = "https://github.com/gtk-rs/gtk-rs-core" }
+glib = "0.20"
 gdk = { path = "../gdk" }
-gio = { git = "https://github.com/gtk-rs/gtk-rs-core" }
+gio = "0.20"
 
 [dev-dependencies]
 gir-format-check = "^0.1"
