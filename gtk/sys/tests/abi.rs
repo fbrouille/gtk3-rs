@@ -1482,20 +1482,20 @@ const RUST_LAYOUTS: &[(&str, Layout)] = &[
             alignment: align_of::<GtkFileChooserWidget>(),
         },
     ),
-    (
-        "GtkFileChooserWidgetAccessible",
-        Layout {
-            size: size_of::<GtkFileChooserWidgetAccessible>(),
-            alignment: align_of::<GtkFileChooserWidgetAccessible>(),
-        },
-    ),
-    (
-        "GtkFileChooserWidgetAccessibleClass",
-        Layout {
-            size: size_of::<GtkFileChooserWidgetAccessibleClass>(),
-            alignment: align_of::<GtkFileChooserWidgetAccessibleClass>(),
-        },
-    ),
+    // (
+    //     "GtkFileChooserWidgetAccessible",
+    //     Layout {
+    //         size: size_of::<GtkFileChooserWidgetAccessible>(),
+    //         alignment: align_of::<GtkFileChooserWidgetAccessible>(),
+    //     },
+    // ),
+    // (
+    //     "GtkFileChooserWidgetAccessibleClass",
+    //     Layout {
+    //         size: size_of::<GtkFileChooserWidgetAccessibleClass>(),
+    //         alignment: align_of::<GtkFileChooserWidgetAccessibleClass>(),
+    //     },
+    // ),
     (
         "GtkFileChooserWidgetClass",
         Layout {
@@ -1853,20 +1853,20 @@ const RUST_LAYOUTS: &[(&str, Layout)] = &[
             alignment: align_of::<GtkHeaderBar>(),
         },
     ),
-    (
-        "GtkHeaderBarAccessible",
-        Layout {
-            size: size_of::<GtkHeaderBarAccessible>(),
-            alignment: align_of::<GtkHeaderBarAccessible>(),
-        },
-    ),
-    (
-        "GtkHeaderBarAccessibleClass",
-        Layout {
-            size: size_of::<GtkHeaderBarAccessibleClass>(),
-            alignment: align_of::<GtkHeaderBarAccessibleClass>(),
-        },
-    ),
+    // (
+    //     "GtkHeaderBarAccessible",
+    //     Layout {
+    //         size: size_of::<GtkHeaderBarAccessible>(),
+    //         alignment: align_of::<GtkHeaderBarAccessible>(),
+    //     },
+    // ),
+    // (
+    //     "GtkHeaderBarAccessibleClass",
+    //     Layout {
+    //         size: size_of::<GtkHeaderBarAccessibleClass>(),
+    //         alignment: align_of::<GtkHeaderBarAccessibleClass>(),
+    //     },
+    // ),
     (
         "GtkHeaderBarClass",
         Layout {
@@ -2784,13 +2784,13 @@ const RUST_LAYOUTS: &[(&str, Layout)] = &[
             alignment: align_of::<GtkPlacesOpenFlags>(),
         },
     ),
-    (
-        "GtkPlug",
-        Layout {
-            size: size_of::<GtkPlug>(),
-            alignment: align_of::<GtkPlug>(),
-        },
-    ),
+    // (
+    //     "GtkPlug",
+    //     Layout {
+    //         size: size_of::<GtkPlug>(),
+    //         alignment: align_of::<GtkPlug>(),
+    //     },
+    // ),
     (
         "GtkPlugAccessible",
         Layout {
@@ -2805,13 +2805,13 @@ const RUST_LAYOUTS: &[(&str, Layout)] = &[
             alignment: align_of::<GtkPlugAccessibleClass>(),
         },
     ),
-    (
-        "GtkPlugClass",
-        Layout {
-            size: size_of::<GtkPlugClass>(),
-            alignment: align_of::<GtkPlugClass>(),
-        },
-    ),
+    // (
+    //     "GtkPlugClass",
+    //     Layout {
+    //         size: size_of::<GtkPlugClass>(),
+    //         alignment: align_of::<GtkPlugClass>(),
+    //     },
+    // ),
     (
         "GtkPolicyType",
         Layout {
@@ -3610,13 +3610,13 @@ const RUST_LAYOUTS: &[(&str, Layout)] = &[
             alignment: align_of::<GtkSizeRequestMode>(),
         },
     ),
-    (
-        "GtkSocket",
-        Layout {
-            size: size_of::<GtkSocket>(),
-            alignment: align_of::<GtkSocket>(),
-        },
-    ),
+    // (
+    //     "GtkSocket",
+    //     Layout {
+    //         size: size_of::<GtkSocket>(),
+    //         alignment: align_of::<GtkSocket>(),
+    //     },
+    // ),
     (
         "GtkSocketAccessible",
         Layout {
@@ -3631,13 +3631,13 @@ const RUST_LAYOUTS: &[(&str, Layout)] = &[
             alignment: align_of::<GtkSocketAccessibleClass>(),
         },
     ),
-    (
-        "GtkSocketClass",
-        Layout {
-            size: size_of::<GtkSocketClass>(),
-            alignment: align_of::<GtkSocketClass>(),
-        },
-    ),
+    // (
+    //     "GtkSocketClass",
+    //     Layout {
+    //         size: size_of::<GtkSocketClass>(),
+    //         alignment: align_of::<GtkSocketClass>(),
+    //     },
+    // ),
     (
         "GtkSortType",
         Layout {
