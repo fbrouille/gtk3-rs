@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/lib.rs`."><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/lib.rs`."><title>lib.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-6d8951b3ccd3cbca.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.83.0-nightly (3ae715c8c 2024-10-07)" data-channel="nightly" data-search-js="search-e056c65ede92db13.js" data-settings-js="settings-805db61a62df4bd2.js" ><script src="../../static.files/storage-1d39b6787ed640ff.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-f070b9041d14864c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-0111fcff984fae8f.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,8 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
-    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1><div class="sub-heading">gtk/</div>lib.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers">
+<a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -247,8 +247,7 @@
 <a href="#173" id="173">173</a>
 <a href="#174" id="174">174</a>
 <a href="#175" id="175">175</a>
-<a href="#176" id="176">176</a>
-</pre></div><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.
+<a href="#176" id="176">176</a></pre></div><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.
 
 </span><span class="attr">#![allow(clippy::needless_doctest_main)]
 #![allow(clippy::upper_case_acronyms)]
@@ -286,37 +285,37 @@
 /// override styling provided at this priority with
 /// catch-all `* {...}` rules.
 </span><span class="attr">#[doc(alias = <span class="string">"GTK_STYLE_PROVIDER_PRIORITY_FALLBACK"</span>)]
-</span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_FALLBACK.html">STYLE_PROVIDER_PRIORITY_FALLBACK</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> = ffi::GTK_STYLE_PROVIDER_PRIORITY_FALLBACK <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
+</span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_FALLBACK.html">STYLE_PROVIDER_PRIORITY_FALLBACK</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> = <a href="../../gtk_sys/constant.GTK_STYLE_PROVIDER_PRIORITY_FALLBACK.html">ffi::GTK_STYLE_PROVIDER_PRIORITY_FALLBACK</a> <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
 <span class="doccomment">/// The priority used for style information provided
 /// by themes.
 </span><span class="attr">#[doc(alias = <span class="string">"GTK_STYLE_PROVIDER_PRIORITY_THEME"</span>)]
-</span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_THEME.html">STYLE_PROVIDER_PRIORITY_THEME</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> = ffi::GTK_STYLE_PROVIDER_PRIORITY_THEME <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
+</span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_THEME.html">STYLE_PROVIDER_PRIORITY_THEME</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> = <a href="../../gtk_sys/constant.GTK_STYLE_PROVIDER_PRIORITY_THEME.html">ffi::GTK_STYLE_PROVIDER_PRIORITY_THEME</a> <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
 <span class="doccomment">/// The priority used for style information provided
 /// via [`Settings`][crate::Settings].
 ///
 /// This priority is higher than `GTK_STYLE_PROVIDER_PRIORITY_THEME`
 /// to let settings override themes.
 </span><span class="attr">#[doc(alias = <span class="string">"GTK_STYLE_PROVIDER_PRIORITY_SETTINGS"</span>)]
-</span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_SETTINGS.html">STYLE_PROVIDER_PRIORITY_SETTINGS</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> = ffi::GTK_STYLE_PROVIDER_PRIORITY_SETTINGS <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
+</span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_SETTINGS.html">STYLE_PROVIDER_PRIORITY_SETTINGS</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> = <a href="../../gtk_sys/constant.GTK_STYLE_PROVIDER_PRIORITY_SETTINGS.html">ffi::GTK_STYLE_PROVIDER_PRIORITY_SETTINGS</a> <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
 <span class="doccomment">/// A priority that can be used when adding a [`StyleProvider`][crate::StyleProvider]
 /// for application-specific style information.
 </span><span class="attr">#[doc(alias = <span class="string">"GTK_STYLE_PROVIDER_PRIORITY_APPLICATION"</span>)]
 </span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_APPLICATION.html">STYLE_PROVIDER_PRIORITY_APPLICATION</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> =
-    ffi::GTK_STYLE_PROVIDER_PRIORITY_APPLICATION <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
+    <a href="../../gtk_sys/constant.GTK_STYLE_PROVIDER_PRIORITY_APPLICATION.html">ffi::GTK_STYLE_PROVIDER_PRIORITY_APPLICATION</a> <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
 <span class="doccomment">/// The priority used for the style information from
 /// `XDG_CONFIG_HOME/gtk-3.0/gtk.css`.
 ///
 /// You should not use priorities higher than this, to
 /// give the user the last word.
 </span><span class="attr">#[doc(alias = <span class="string">"GTK_STYLE_PROVIDER_PRIORITY_USER"</span>)]
-</span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_USER.html">STYLE_PROVIDER_PRIORITY_USER</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> = ffi::GTK_STYLE_PROVIDER_PRIORITY_USER <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
+</span><span class="kw">pub const </span><a href="../../gtk/constant.STYLE_PROVIDER_PRIORITY_USER.html">STYLE_PROVIDER_PRIORITY_USER</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> = <a href="../../gtk_sys/constant.GTK_STYLE_PROVIDER_PRIORITY_USER.html">ffi::GTK_STYLE_PROVIDER_PRIORITY_USER</a> <span class="kw">as </span><a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
 
 <span class="attr">#[macro_use]
 </span><span class="kw">mod </span><a href="rt.rs.html#3-172">rt</a>;
 
 <span class="attr">#[cfg(test)]
-</span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">static </span>TEST_THREAD_WORKER: glib::once_cell::sync::Lazy&lt;glib::ThreadPool&gt; =
-    glib::once_cell::sync::Lazy::new(|| {
+</span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">static </span>TEST_THREAD_WORKER: once_cell::sync::Lazy&lt;glib::ThreadPool&gt; =
+    once_cell::sync::Lazy::new(|| {
         <span class="kw">let </span>pool = glib::ThreadPool::exclusive(<span class="number">1</span>).unwrap();
         pool.push(<span class="kw">move </span>|| {
             <span class="kw">crate</span>::init().expect(<span class="string">"Tests failed to initialize gtk"</span>);
@@ -398,10 +397,10 @@
 <span class="kw">mod </span><a href="widget.rs.html#3-433">widget</a>;
 
 <span class="attr">#[macro_use]
-</span><span class="kw">pub mod </span><a href="subclass/mod.rs.html#3-82">subclass</a>;
+</span><span class="kw">pub mod </span><a href="subclass/mod.rs.html#3-80">subclass</a>;
 
 <span class="kw">pub mod </span><a href="builders.rs.html#4-8">builders</a>;
-<span class="kw">pub mod </span><a href="prelude.rs.html#3-54">prelude</a>;
+<span class="kw">pub mod </span><a href="prelude.rs.html#3-46">prelude</a>;
 
 <span class="kw">pub use </span><a href="auto/mod.rs.html#803"><span class="kw">crate</span>::auto::functions</a>::<span class="kw-2">*</span>;
 <span class="kw">pub use </span><a href="#83"><span class="kw">crate</span>::auto</a>::<span class="kw-2">*</span>;

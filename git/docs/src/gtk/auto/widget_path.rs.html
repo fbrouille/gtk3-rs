@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/widget_path.rs`."><title>widget_path.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/widget_path.rs`."><title>widget_path.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-6d8951b3ccd3cbca.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.83.0-nightly (3ae715c8c 2024-10-07)" data-channel="nightly" data-search-js="search-e056c65ede92db13.js" data-settings-js="settings-805db61a62df4bd2.js" ><script src="../../../static.files/storage-1d39b6787ed640ff.js"></script><script defer src="../../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-f070b9041d14864c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-0111fcff984fae8f.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,8 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
-    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1><div class="sub-heading">gtk/auto/</div>widget_path.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers">
+<a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -662,15 +662,14 @@
 <a href="#588" id="588">588</a>
 <a href="#589" id="589">589</a>
 <a href="#590" id="590">590</a>
-<a href="#591" id="591">591</a>
-</pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
+<a href="#591" id="591">591</a></pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
 </span><span class="kw">use crate</span>::{<a href="flags.rs.html#1622-1672">StateFlags</a>, <a href="widget.rs.html#17-1520">Widget</a>};
 <span class="kw">use </span>glib::{<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>};
 
-<a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper! </a>{
+<a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper!</a> {
     <span class="doccomment">/// GtkWidgetPath is a boxed type that represents a widget hierarchy from
     /// the topmost widget, typically a toplevel, to any child. This widget
     /// path abstraction is used in [`StyleContext`][crate::StyleContext] on behalf of the real
@@ -745,7 +744,7 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_new"</span>)]
     </span><span class="kw">pub fn </span>new() -&gt; <a href="#8-72">WidgetPath</a> {
         <a class="macro" href="../rt.rs.html#19-29">assert_initialized_main_thread!</a>();
-        <span class="kw">unsafe </span>{ from_glib_full(ffi::gtk_widget_path_new()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_new.html">ffi::gtk_widget_path_new</a>()) }
     }
 
     <span class="doccomment">/// Appends the data from `widget` to the widget hierarchy represented
@@ -761,9 +760,9 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_append_for_widget"</span>)]
     </span><span class="kw">pub fn </span>append_for_widget(<span class="kw-2">&amp;</span><span class="self">self</span>, widget: <span class="kw-2">&amp;</span><span class="kw">impl </span>IsA&lt;<a href="widget.rs.html#17-1520">Widget</a>&gt;) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_append_for_widget(
-                <a class="self" href="#97">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
-                <a href="#97">widget</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="../../../gtk_sys/fn.gtk_widget_path_append_for_widget.html">ffi::gtk_widget_path_append_for_widget</a>(
+                <a class="self" href="#97">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
+                <a href="#97">widget</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
             )
         }
     }
@@ -777,7 +776,7 @@
     /// the position where the element was inserted
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_append_type"</span>)]
     </span><span class="kw">pub fn </span>append_type(<span class="kw-2">&amp;</span><span class="self">self</span>, type_: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::types::Type</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
-        <span class="kw">unsafe </span>{ ffi::gtk_widget_path_append_type(<a class="self" href="#114">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#114">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>()) }
+        <span class="kw">unsafe </span>{ <a href="../../../gtk_sys/fn.gtk_widget_path_append_type.html">ffi::gtk_widget_path_append_type</a>(<a class="self" href="#114">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>, <a href="#114">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>()) }
     }
 
     <span class="doccomment">/// Appends a widget type with all its siblings to the widget hierarchy
@@ -801,9 +800,9 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_append_with_siblings"</span>)]
     </span><span class="kw">pub fn </span>append_with_siblings(<span class="kw-2">&amp;</span><span class="self">self</span>, siblings: <span class="kw-2">&amp;</span><a href="#8-72">WidgetPath</a>, sibling_index: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_append_with_siblings(
-                <a class="self" href="#137">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
-                <a href="#137">siblings</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="../../../gtk_sys/fn.gtk_widget_path_append_with_siblings.html">ffi::gtk_widget_path_append_with_siblings</a>(
+                <a class="self" href="#137">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
+                <a href="#137">siblings</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#137">sibling_index</a>,
             )
         }
@@ -812,7 +811,7 @@
     <span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_copy"</span>)]
     #[must_use]
     </span><span class="kw">pub fn </span>copy(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="#8-72">WidgetPath</a>&gt; {
-        <span class="kw">unsafe </span>{ from_glib_full(ffi::gtk_widget_path_copy(<a class="self" href="#149">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_copy.html">ffi::gtk_widget_path_copy</a>(<a class="self" href="#149">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)) }
     }
 
     <span class="doccomment">/// Returns the topmost object type, that is, the object type this path
@@ -824,7 +823,7 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_get_object_type"</span>)]
     #[doc(alias = <span class="string">"get_object_type"</span>)]
     </span><span class="kw">pub fn </span>object_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::types::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_get_object_type(<a class="self" href="#161">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_get_object_type.html">ffi::gtk_widget_path_get_object_type</a>(<a class="self" href="#161">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)) }
     }
 
     <span class="doccomment">/// Returns [`true`] if any of the parents of the widget represented
@@ -838,9 +837,9 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_has_parent"</span>)]
     </span><span class="kw">pub fn </span>has_parent(<span class="kw-2">&amp;</span><span class="self">self</span>, type_: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::types::Type</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_has_parent(
-                <a class="self" href="#174">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
-                <a href="#174">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>(),
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_has_parent.html">ffi::gtk_widget_path_has_parent</a>(
+                <a class="self" href="#174">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
+                <a href="#174">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
             ))
         }
     }
@@ -856,9 +855,9 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_is_type"</span>)]
     </span><span class="kw">pub fn </span>is_type(<span class="kw-2">&amp;</span><span class="self">self</span>, type_: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::types::Type</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_is_type(
-                <a class="self" href="#192">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
-                <a href="#192">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>(),
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_is_type.html">ffi::gtk_widget_path_is_type</a>(
+                <a class="self" href="#192">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
+                <a href="#192">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
             ))
         }
     }
@@ -873,7 +872,7 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_add_class"</span>)]
     </span><span class="kw">pub fn </span>iter_add_class(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_iter_add_class(<a class="self" href="#209">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#209">pos</a>, <a href="#209">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
+            <a href="../../../gtk_sys/fn.gtk_widget_path_iter_add_class.html">ffi::gtk_widget_path_iter_add_class</a>(<a class="self" href="#209">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>, <a href="#209">pos</a>, <a href="#209">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>);
         }
     }
 
@@ -884,7 +883,7 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_clear_classes"</span>)]
     </span><span class="kw">pub fn </span>iter_clear_classes(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_iter_clear_classes(<a class="self" href="#220">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#220">pos</a>);
+            <a href="../../../gtk_sys/fn.gtk_widget_path_iter_clear_classes.html">ffi::gtk_widget_path_iter_clear_classes</a>(<a class="self" href="#220">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>, <a href="#220">pos</a>);
         }
     }
 
@@ -900,8 +899,8 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_get_name"</span>)]
     </span><span class="kw">pub fn </span>iter_get_name(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_widget_path_iter_get_name(
-                <a class="self" href="#236">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_get_name.html">ffi::gtk_widget_path_iter_get_name</a>(
+                <a class="self" href="#236">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#236">pos</a>,
             ))
         }
@@ -918,8 +917,8 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_get_object_name"</span>)]
     </span><span class="kw">pub fn </span>iter_get_object_name(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_widget_path_iter_get_object_name(
-                <a class="self" href="#254">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_get_object_name.html">ffi::gtk_widget_path_iter_get_object_name</a>(
+                <a class="self" href="#254">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#254">pos</a>,
             ))
         }
@@ -936,8 +935,8 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_get_object_type"</span>)]
     </span><span class="kw">pub fn </span>iter_get_object_type(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::types::Type</a> {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_iter_get_object_type(
-                <a class="self" href="#272">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_get_object_type.html">ffi::gtk_widget_path_iter_get_object_type</a>(
+                <a class="self" href="#272">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#272">pos</a>,
             ))
         }
@@ -955,7 +954,7 @@
     /// 0 or the index into the list of siblings for the element at `pos`.
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_get_sibling_index"</span>)]
     </span><span class="kw">pub fn </span>iter_get_sibling_index(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
-        <span class="kw">unsafe </span>{ ffi::gtk_widget_path_iter_get_sibling_index(<a class="self" href="#292">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#292">pos</a>) }
+        <span class="kw">unsafe </span>{ <a href="../../../gtk_sys/fn.gtk_widget_path_iter_get_sibling_index.html">ffi::gtk_widget_path_iter_get_sibling_index</a>(<a class="self" href="#292">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>, <a href="#292">pos</a>) }
     }
 
     <span class="doccomment">/// Returns the list of siblings for the element at `pos`. If the element
@@ -970,8 +969,8 @@
     #[must_use]
     </span><span class="kw">pub fn </span>iter_get_siblings(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <span class="prelude-ty">Option</span>&lt;<a href="#8-72">WidgetPath</a>&gt; {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(ffi::gtk_widget_path_iter_get_siblings(
-                <a class="self" href="#306">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_none.html">from_glib_none</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_get_siblings.html">ffi::gtk_widget_path_iter_get_siblings</a>(
+                <a class="self" href="#306">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#306">pos</a>,
             ))
         }
@@ -989,8 +988,8 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_get_state"</span>)]
     </span><span class="kw">pub fn </span>iter_get_state(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a href="flags.rs.html#1622-1672">StateFlags</a> {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_iter_get_state(
-                <a class="self" href="#325">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_get_state.html">ffi::gtk_widget_path_iter_get_state</a>(
+                <a class="self" href="#325">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#325">pos</a>,
             ))
         }
@@ -1009,10 +1008,10 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_has_class"</span>)]
     </span><span class="kw">pub fn </span>iter_has_class(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_iter_has_class(
-                <a class="self" href="#345">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_has_class.html">ffi::gtk_widget_path_iter_has_class</a>(
+                <a class="self" href="#345">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#345">pos</a>,
-                <a href="#345">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+                <a href="#345">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
             ))
         }
     }
@@ -1030,10 +1029,10 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_has_name"</span>)]
     </span><span class="kw">pub fn </span>iter_has_name(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_iter_has_name(
-                <a class="self" href="#366">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_has_name.html">ffi::gtk_widget_path_iter_has_name</a>(
+                <a class="self" href="#366">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#366">pos</a>,
-                <a href="#366">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+                <a href="#366">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
             ))
         }
     }
@@ -1051,10 +1050,10 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_has_qclass"</span>)]
     </span><span class="kw">pub fn </span>iter_has_qclass(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, qname: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/quark/struct.Quark.html">glib::Quark</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_iter_has_qclass(
-                <a class="self" href="#387">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_has_qclass.html">ffi::gtk_widget_path_iter_has_qclass</a>(
+                <a class="self" href="#387">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#387">pos</a>,
-                <a href="#387">qname</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>(),
+                <a href="#387">qname</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
             ))
         }
     }
@@ -1072,10 +1071,10 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_has_qname"</span>)]
     </span><span class="kw">pub fn </span>iter_has_qname(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, qname: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/quark/struct.Quark.html">glib::Quark</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_widget_path_iter_has_qname(
-                <a class="self" href="#408">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_has_qname.html">ffi::gtk_widget_path_iter_has_qname</a>(
+                <a class="self" href="#408">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#408">pos</a>,
-                <a href="#408">qname</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>(),
+                <a href="#408">qname</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
             ))
         }
     }
@@ -1094,8 +1093,8 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_list_classes"</span>)]
     </span><span class="kw">pub fn </span>iter_list_classes(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; Vec&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a>&gt; {
         <span class="kw">unsafe </span>{
-            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibPtrContainer.html">FromGlibPtrContainer::from_glib_container</a>(ffi::gtk_widget_path_iter_list_classes(
-                <a class="self" href="#430">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlibPtrContainer.html#tymethod.from_glib_container">FromGlibPtrContainer::from_glib_container</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_iter_list_classes.html">ffi::gtk_widget_path_iter_list_classes</a>(
+                <a class="self" href="#430">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#430">pos</a>,
             ))
         }
@@ -1110,10 +1109,10 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_remove_class"</span>)]
     </span><span class="kw">pub fn </span>iter_remove_class(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_iter_remove_class(
-                <a class="self" href="#446">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="../../../gtk_sys/fn.gtk_widget_path_iter_remove_class.html">ffi::gtk_widget_path_iter_remove_class</a>(
+                <a class="self" href="#446">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#446">pos</a>,
-                <a href="#446">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+                <a href="#446">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
             );
         }
     }
@@ -1127,7 +1126,7 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_set_name"</span>)]
     </span><span class="kw">pub fn </span>iter_set_name(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, name: <span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_iter_set_name(<a class="self" href="#463">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#463">pos</a>, <a href="#463">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>);
+            <a href="../../../gtk_sys/fn.gtk_widget_path_iter_set_name.html">ffi::gtk_widget_path_iter_set_name</a>(<a class="self" href="#463">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>, <a href="#463">pos</a>, <a href="#463">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>);
         }
     }
 
@@ -1143,10 +1142,10 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_set_object_name"</span>)]
     </span><span class="kw">pub fn </span>iter_set_object_name(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, name: <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><a href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;) {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_iter_set_object_name(
-                <a class="self" href="#479">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="../../../gtk_sys/fn.gtk_widget_path_iter_set_object_name.html">ffi::gtk_widget_path_iter_set_object_name</a>(
+                <a class="self" href="#479">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#479">pos</a>,
-                <a href="#479">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+                <a href="#479">name</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
             );
         }
     }
@@ -1160,10 +1159,10 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_set_object_type"</span>)]
     </span><span class="kw">pub fn </span>iter_set_object_type(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, type_: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::types::Type</a>) {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_iter_set_object_type(
-                <a class="self" href="#496">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>,
+            <a href="../../../gtk_sys/fn.gtk_widget_path_iter_set_object_type.html">ffi::gtk_widget_path_iter_set_object_type</a>(
+                <a class="self" href="#496">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#496">pos</a>,
-                <a href="#496">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>(),
+                <a href="#496">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
             );
         }
     }
@@ -1200,7 +1199,7 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_iter_set_state"</span>)]
     </span><span class="kw">pub fn </span>iter_set_state(<span class="kw-2">&amp;</span><span class="self">self</span>, pos: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, state: <a href="flags.rs.html#1622-1672">StateFlags</a>) {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_iter_set_state(<a class="self" href="#536">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#536">pos</a>, <a href="#536">state</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            <a href="../../../gtk_sys/fn.gtk_widget_path_iter_set_state.html">ffi::gtk_widget_path_iter_set_state</a>(<a class="self" href="#536">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>, <a href="#536">pos</a>, <a href="#536">state</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
     }
 
@@ -1212,7 +1211,7 @@
     /// the number of elements in the path
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_length"</span>)]
     </span><span class="kw">pub fn </span>length(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a> {
-        <span class="kw">unsafe </span>{ ffi::gtk_widget_path_length(<a class="self" href="#549">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>) }
+        <span class="kw">unsafe </span>{ <a href="../../../gtk_sys/fn.gtk_widget_path_length.html">ffi::gtk_widget_path_length</a>(<a class="self" href="#549">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>) }
     }
 
     <span class="doccomment">/// Prepends a widget type to the widget hierachy represented by `self`.
@@ -1221,7 +1220,7 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_prepend_type"</span>)]
     </span><span class="kw">pub fn </span>prepend_type(<span class="kw-2">&amp;</span><span class="self">self</span>, type_: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::types::Type</a>) {
         <span class="kw">unsafe </span>{
-            ffi::gtk_widget_path_prepend_type(<a class="self" href="#557">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>, <a href="#557">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            <a href="../../../gtk_sys/fn.gtk_widget_path_prepend_type.html">ffi::gtk_widget_path_prepend_type</a>(<a class="self" href="#557">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>, <a href="#557">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
     }
 
@@ -1238,20 +1237,20 @@
     </span><span class="attr">#[doc(alias = <span class="string">"gtk_widget_path_to_string"</span>)]
     #[doc(alias = <span class="string">"to_string"</span>)]
     </span><span class="kw">pub fn </span>to_str(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">glib::GString</a> {
-        <span class="kw">unsafe </span>{ from_glib_full(ffi::gtk_widget_path_to_string(<a class="self" href="#575">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>)) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="../../../gtk_sys/fn.gtk_widget_path_to_string.html">ffi::gtk_widget_path_to_string</a>(<a class="self" href="#575">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)) }
     }
 }
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html">Default</a> <span class="kw">for </span><a href="#8-72">WidgetPath</a> {
     <span class="kw">fn </span>default() -&gt; <span class="self">Self </span>{
-        <span class="self">Self</span>::new()
+        <a href="#81-84"><span class="self">Self</span>::new</a>()
     }
 }
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html">std::fmt::Display</a> <span class="kw">for </span><a href="#8-72">WidgetPath</a> {
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">std::fmt::Result</a> {
-        <a href="#588">f</a>.write_str(<span class="kw-2">&amp;</span><a class="self" href="#588">self</a>.<a href="#575-577">to_str</a>())
+        <a href="#588">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.write_str">write_str</a>(<span class="kw-2">&amp;</span><a class="self" href="#588">self</a>.<a href="#575-577">to_str</a>())
     }
 }
 </code></pre></div></section></main></body></html>

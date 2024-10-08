@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `atk/sys/src/lib.rs`."><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="atk_sys" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `atk/sys/src/lib.rs`."><title>lib.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-6d8951b3ccd3cbca.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="atk_sys" data-themes="" data-resource-suffix="" data-rustdoc-version="1.83.0-nightly (3ae715c8c 2024-10-07)" data-channel="nightly" data-search-js="search-e056c65ede92db13.js" data-settings-js="settings-805db61a62df4bd2.js" ><script src="../../static.files/storage-1d39b6787ed640ff.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-f070b9041d14864c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-0111fcff984fae8f.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,8 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
-    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1><div class="sub-heading">atk_sys/</div>lib.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers">
+<a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -2673,8 +2673,7 @@
 <a href="#2599" id="2599">2599</a>
 <a href="#2600" id="2600">2600</a>
 <a href="#2601" id="2601">2601</a>
-<a href="#2602" id="2602">2602</a>
-</pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
+<a href="#2602" id="2602">2602</a></pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
@@ -3042,15 +3041,15 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#355-365">AtkActionIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#368">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkActionIface @ {self:p}"</span>))
-            .field(<span class="string">"do_action"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.do_action)
-            .field(<span class="string">"get_n_actions"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_n_actions)
-            .field(<span class="string">"get_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_description)
-            .field(<span class="string">"get_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_name)
-            .field(<span class="string">"get_keybinding"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_keybinding)
-            .field(<span class="string">"set_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.set_description)
-            .field(<span class="string">"get_localized_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_localized_name)
-            .finish()
+        <a href="#368">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkActionIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"do_action"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.do_action)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_n_actions"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_n_actions)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_name)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_keybinding"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_keybinding)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.set_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_localized_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#368">self</a>.get_localized_name)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3063,10 +3062,10 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#383-386">AtkAttribute</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#389">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkAttribute @ {self:p}"</span>))
-            .field(<span class="string">"name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#389">self</a>.name)
-            .field(<span class="string">"value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#389">self</a>.value)
-            .finish()
+        <a href="#389">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkAttribute @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#389">self</a>.name)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#389">self</a>.value)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3120,25 +3119,25 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#399-443">AtkComponentIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#446">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkComponentIface @ {self:p}"</span>))
-            .field(<span class="string">"add_focus_handler"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.add_focus_handler)
-            .field(<span class="string">"contains"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.contains)
-            .field(<span class="string">"ref_accessible_at_point"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.ref_accessible_at_point)
-            .field(<span class="string">"get_extents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_extents)
-            .field(<span class="string">"get_position"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_position)
-            .field(<span class="string">"get_size"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_size)
-            .field(<span class="string">"grab_focus"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.grab_focus)
-            .field(<span class="string">"remove_focus_handler"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.remove_focus_handler)
-            .field(<span class="string">"set_extents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.set_extents)
-            .field(<span class="string">"set_position"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.set_position)
-            .field(<span class="string">"set_size"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.set_size)
-            .field(<span class="string">"get_layer"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_layer)
-            .field(<span class="string">"get_mdi_zorder"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_mdi_zorder)
-            .field(<span class="string">"bounds_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.bounds_changed)
-            .field(<span class="string">"get_alpha"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_alpha)
-            .field(<span class="string">"scroll_to"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.scroll_to)
-            .field(<span class="string">"scroll_to_point"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.scroll_to_point)
-            .finish()
+        <a href="#446">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkComponentIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"add_focus_handler"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.add_focus_handler)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"contains"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.contains)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"ref_accessible_at_point"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.ref_accessible_at_point)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_extents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_extents)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_position"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_position)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_size"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_size)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"grab_focus"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.grab_focus)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"remove_focus_handler"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.remove_focus_handler)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_extents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.set_extents)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_position"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.set_position)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_size"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.set_size)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_layer"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_layer)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_mdi_zorder"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_mdi_zorder)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"bounds_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.bounds_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_alpha"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.get_alpha)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"scroll_to"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.scroll_to)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"scroll_to_point"</span>, <span class="kw-2">&amp;</span><a class="self" href="#446">self</a>.scroll_to_point)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3161,20 +3160,20 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#471-484">AtkDocumentIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#487">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkDocumentIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.parent)
-            .field(<span class="string">"get_document_type"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document_type)
-            .field(<span class="string">"get_document"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document)
-            .field(<span class="string">"get_document_locale"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document_locale)
-            .field(<span class="string">"get_document_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document_attributes)
-            .field(
+        <a href="#487">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkDocumentIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_document_type"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document_type)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_document"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_document_locale"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document_locale)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_document_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document_attributes)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(
                 <span class="string">"get_document_attribute_value"</span>,
                 <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_document_attribute_value,
             )
-            .field(<span class="string">"set_document_attribute"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.set_document_attribute)
-            .field(<span class="string">"get_current_page_number"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_current_page_number)
-            .field(<span class="string">"get_page_count"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_page_count)
-            .finish()
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_document_attribute"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.set_document_attribute)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_current_page_number"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_current_page_number)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_page_count"</span>, <span class="kw-2">&amp;</span><a class="self" href="#487">self</a>.get_page_count)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3196,16 +3195,16 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#507-519">AtkEditableTextIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#522">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkEditableTextIface @ {self:p}"</span>))
-            .field(<span class="string">"parent_interface"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.parent_interface)
-            .field(<span class="string">"set_run_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.set_run_attributes)
-            .field(<span class="string">"set_text_contents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.set_text_contents)
-            .field(<span class="string">"insert_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.insert_text)
-            .field(<span class="string">"copy_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.copy_text)
-            .field(<span class="string">"cut_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.cut_text)
-            .field(<span class="string">"delete_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.delete_text)
-            .field(<span class="string">"paste_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.paste_text)
-            .finish()
+        <a href="#522">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkEditableTextIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent_interface"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.parent_interface)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_run_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.set_run_attributes)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_text_contents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.set_text_contents)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"insert_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.insert_text)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"copy_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.copy_text)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"cut_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.cut_text)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"delete_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.delete_text)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"paste_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#522">self</a>.paste_text)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3219,11 +3218,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#538-542">AtkGObjectAccessibleClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#545">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkGObjectAccessibleClass @ {self:p}"</span>))
-            .field(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#545">self</a>.parent_class)
-            .field(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#545">self</a>.pad1)
-            .field(<span class="string">"pad2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#545">self</a>.pad2)
-            .finish()
+        <a href="#545">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkGObjectAccessibleClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#545">self</a>.parent_class)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#545">self</a>.pad1)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#545">self</a>.pad2)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3245,19 +3244,19 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#556-568">AtkHyperlinkClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#571">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkHyperlinkClass @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.parent)
-            .field(<span class="string">"get_uri"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_uri)
-            .field(<span class="string">"get_object"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_object)
-            .field(<span class="string">"get_end_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_end_index)
-            .field(<span class="string">"get_start_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_start_index)
-            .field(<span class="string">"is_valid"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.is_valid)
-            .field(<span class="string">"get_n_anchors"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_n_anchors)
-            .field(<span class="string">"link_state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.link_state)
-            .field(<span class="string">"is_selected_link"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.is_selected_link)
-            .field(<span class="string">"link_activated"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.link_activated)
-            .field(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.pad1)
-            .finish()
+        <a href="#571">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkHyperlinkClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_uri"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_uri)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_object"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_object)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_end_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_end_index)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_start_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_start_index)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"is_valid"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.is_valid)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_n_anchors"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.get_n_anchors)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"link_state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.link_state)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"is_selected_link"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.is_selected_link)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"link_activated"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.link_activated)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#571">self</a>.pad1)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3270,10 +3269,10 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#590-593">AtkHyperlinkImplIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#596">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkHyperlinkImplIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#596">self</a>.parent)
-            .field(<span class="string">"get_hyperlink"</span>, <span class="kw-2">&amp;</span><a class="self" href="#596">self</a>.get_hyperlink)
-            .finish()
+        <a href="#596">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkHyperlinkImplIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#596">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_hyperlink"</span>, <span class="kw-2">&amp;</span><a class="self" href="#596">self</a>.get_hyperlink)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3289,13 +3288,13 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#606-612">AtkHypertextIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#615">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkHypertextIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.parent)
-            .field(<span class="string">"get_link"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.get_link)
-            .field(<span class="string">"get_n_links"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.get_n_links)
-            .field(<span class="string">"get_link_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.get_link_index)
-            .field(<span class="string">"link_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.link_selected)
-            .finish()
+        <a href="#615">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkHypertextIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_link"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.get_link)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_n_links"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.get_n_links)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_link_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.get_link_index)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"link_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#615">self</a>.link_selected)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3314,14 +3313,14 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#628-637">AtkImageIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#640">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkImageIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.parent)
-            .field(<span class="string">"get_image_position"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.get_image_position)
-            .field(<span class="string">"get_image_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.get_image_description)
-            .field(<span class="string">"get_image_size"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.get_image_size)
-            .field(<span class="string">"set_image_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.set_image_description)
-            .field(<span class="string">"get_image_locale"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.get_image_locale)
-            .finish()
+        <a href="#640">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkImageIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_image_position"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.get_image_position)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_image_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.get_image_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_image_size"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.get_image_size)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_image_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.set_image_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_image_locale"</span>, <span class="kw-2">&amp;</span><a class="self" href="#640">self</a>.get_image_locale)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3347,15 +3346,15 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#662-670">AtkKeyEventStruct</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#673">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkKeyEventStruct @ {self:p}"</span>))
-            .field(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.type_)
-            .field(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.state)
-            .field(<span class="string">"keyval"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.keyval)
-            .field(<span class="string">"length"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.length)
-            .field(<span class="string">"string"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.string)
-            .field(<span class="string">"keycode"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.keycode)
-            .field(<span class="string">"timestamp"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.timestamp)
-            .finish()
+        <a href="#673">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkKeyEventStruct @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"type_"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.type_)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"state"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.state)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"keyval"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.keyval)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"length"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.length)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"string"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.string)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"keycode"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.keycode)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"timestamp"</span>, <span class="kw-2">&amp;</span><a class="self" href="#673">self</a>.timestamp)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3370,12 +3369,12 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#688-693">AtkMiscClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#696">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkMiscClass @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#696">self</a>.parent)
-            .field(<span class="string">"threads_enter"</span>, <span class="kw-2">&amp;</span><a class="self" href="#696">self</a>.threads_enter)
-            .field(<span class="string">"threads_leave"</span>, <span class="kw-2">&amp;</span><a class="self" href="#696">self</a>.threads_leave)
-            .field(<span class="string">"vfuncs"</span>, <span class="kw-2">&amp;</span><a class="self" href="#696">self</a>.vfuncs)
-            .finish()
+        <a href="#696">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkMiscClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#696">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"threads_enter"</span>, <span class="kw-2">&amp;</span><a class="self" href="#696">self</a>.threads_enter)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"threads_leave"</span>, <span class="kw-2">&amp;</span><a class="self" href="#696">self</a>.threads_leave)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"vfuncs"</span>, <span class="kw-2">&amp;</span><a class="self" href="#696">self</a>.vfuncs)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3387,9 +3386,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#708-710">AtkNoOpObjectClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#713">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkNoOpObjectClass @ {self:p}"</span>))
-            .field(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#713">self</a>.parent_class)
-            .finish()
+        <a href="#713">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkNoOpObjectClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#713">self</a>.parent_class)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3401,9 +3400,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#722-724">AtkNoOpObjectFactoryClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#727">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkNoOpObjectFactoryClass @ {self:p}"</span>))
-            .field(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#727">self</a>.parent_class)
-            .finish()
+        <a href="#727">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkNoOpObjectFactoryClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#727">self</a>.parent_class)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3443,42 +3442,42 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#736-766">AtkObjectClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#769">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkObjectClass @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.parent)
-            .field(<span class="string">"get_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_name)
-            .field(<span class="string">"get_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_description)
-            .field(<span class="string">"get_parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_parent)
-            .field(<span class="string">"get_n_children"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_n_children)
-            .field(<span class="string">"ref_child"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.ref_child)
-            .field(<span class="string">"get_index_in_parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_index_in_parent)
-            .field(<span class="string">"ref_relation_set"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.ref_relation_set)
-            .field(<span class="string">"get_role"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_role)
-            .field(<span class="string">"get_layer"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_layer)
-            .field(<span class="string">"get_mdi_zorder"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_mdi_zorder)
-            .field(<span class="string">"ref_state_set"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.ref_state_set)
-            .field(<span class="string">"set_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.set_name)
-            .field(<span class="string">"set_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.set_description)
-            .field(<span class="string">"set_parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.set_parent)
-            .field(<span class="string">"set_role"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.set_role)
-            .field(
+        <a href="#769">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkObjectClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_name)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_n_children"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_n_children)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"ref_child"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.ref_child)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_index_in_parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_index_in_parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"ref_relation_set"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.ref_relation_set)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_role"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_role)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_layer"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_layer)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_mdi_zorder"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_mdi_zorder)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"ref_state_set"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.ref_state_set)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.set_name)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.set_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.set_parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_role"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.set_role)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(
                 <span class="string">"connect_property_change_handler"</span>,
                 <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.connect_property_change_handler,
             )
-            .field(
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(
                 <span class="string">"remove_property_change_handler"</span>,
                 <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.remove_property_change_handler,
             )
-            .field(<span class="string">"initialize"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.initialize)
-            .field(<span class="string">"children_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.children_changed)
-            .field(<span class="string">"focus_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.focus_event)
-            .field(<span class="string">"property_change"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.property_change)
-            .field(<span class="string">"state_change"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.state_change)
-            .field(<span class="string">"visible_data_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.visible_data_changed)
-            .field(<span class="string">"active_descendant_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.active_descendant_changed)
-            .field(<span class="string">"get_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_attributes)
-            .field(<span class="string">"get_object_locale"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_object_locale)
-            .field(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.pad1)
-            .finish()
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"initialize"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.initialize)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"children_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.children_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"focus_event"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.focus_event)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"property_change"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.property_change)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"state_change"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.state_change)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"visible_data_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.visible_data_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"active_descendant_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.active_descendant_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_attributes)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_object_locale"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.get_object_locale)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#769">self</a>.pad1)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3495,14 +3494,14 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#811-818">AtkObjectFactoryClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#821">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkObjectFactoryClass @ {self:p}"</span>))
-            .field(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.parent_class)
-            .field(<span class="string">"create_accessible"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.create_accessible)
-            .field(<span class="string">"invalidate"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.invalidate)
-            .field(<span class="string">"get_accessible_type"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.get_accessible_type)
-            .field(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.pad1)
-            .field(<span class="string">"pad2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.pad2)
-            .finish()
+        <a href="#821">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkObjectFactoryClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.parent_class)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"create_accessible"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.create_accessible)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"invalidate"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.invalidate)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_accessible_type"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.get_accessible_type)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.pad1)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#821">self</a>.pad2)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3515,10 +3514,10 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#835-838">AtkPlugClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#841">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkPlugClass @ {self:p}"</span>))
-            .field(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#841">self</a>.parent_class)
-            .field(<span class="string">"get_object_id"</span>, <span class="kw-2">&amp;</span><a class="self" href="#841">self</a>.get_object_id)
-            .finish()
+        <a href="#841">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkPlugClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#841">self</a>.parent_class)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_object_id"</span>, <span class="kw-2">&amp;</span><a class="self" href="#841">self</a>.get_object_id)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3532,11 +3531,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#851-855">AtkPropertyValues</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#858">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkPropertyValues @ {self:p}"</span>))
-            .field(<span class="string">"property_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#858">self</a>.property_name)
-            .field(<span class="string">"old_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#858">self</a>.old_value)
-            .field(<span class="string">"new_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#858">self</a>.new_value)
-            .finish()
+        <a href="#858">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkPropertyValues @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"property_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#858">self</a>.property_name)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"old_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#858">self</a>.old_value)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"new_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#858">self</a>.new_value)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3548,7 +3547,7 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#868-871">AtkRange</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#874">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRange @ {self:p}"</span>)).finish()
+        <a href="#874">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRange @ {self:p}"</span>)).<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3563,12 +3562,12 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#881-886">AtkRectangle</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#889">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRectangle @ {self:p}"</span>))
-            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#889">self</a>.x)
-            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#889">self</a>.y)
-            .field(<span class="string">"width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#889">self</a>.width)
-            .field(<span class="string">"height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#889">self</a>.height)
-            .finish()
+        <a href="#889">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRectangle @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#889">self</a>.x)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#889">self</a>.y)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#889">self</a>.width)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#889">self</a>.height)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3580,9 +3579,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#901-903">AtkRegistryClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#906">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRegistryClass @ {self:p}"</span>))
-            .field(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#906">self</a>.parent_class)
-            .finish()
+        <a href="#906">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRegistryClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#906">self</a>.parent_class)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3594,9 +3593,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#915-917">AtkRelationClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#920">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRelationClass @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#920">self</a>.parent)
-            .finish()
+        <a href="#920">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRelationClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#920">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3610,11 +3609,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#929-933">AtkRelationSetClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#936">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRelationSetClass @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#936">self</a>.parent)
-            .field(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#936">self</a>.pad1)
-            .field(<span class="string">"pad2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#936">self</a>.pad2)
-            .finish()
+        <a href="#936">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRelationSetClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#936">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#936">self</a>.pad1)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#936">self</a>.pad2)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3634,17 +3633,17 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#947-957">AtkSelectionIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#960">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkSelectionIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.parent)
-            .field(<span class="string">"add_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.add_selection)
-            .field(<span class="string">"clear_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.clear_selection)
-            .field(<span class="string">"ref_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.ref_selection)
-            .field(<span class="string">"get_selection_count"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.get_selection_count)
-            .field(<span class="string">"is_child_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.is_child_selected)
-            .field(<span class="string">"remove_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.remove_selection)
-            .field(<span class="string">"select_all_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.select_all_selection)
-            .field(<span class="string">"selection_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.selection_changed)
-            .finish()
+        <a href="#960">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkSelectionIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"add_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.add_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"clear_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.clear_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"ref_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.ref_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_selection_count"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.get_selection_count)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"is_child_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.is_child_selected)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"remove_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.remove_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"select_all_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.select_all_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"selection_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#960">self</a>.selection_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3657,10 +3656,10 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#977-980">AtkSocketClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#983">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkSocketClass @ {self:p}"</span>))
-            .field(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#983">self</a>.parent_class)
-            .field(<span class="string">"embed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#983">self</a>.embed)
-            .finish()
+        <a href="#983">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkSocketClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent_class"</span>, <span class="kw-2">&amp;</span><a class="self" href="#983">self</a>.parent_class)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"embed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#983">self</a>.embed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3672,9 +3671,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#993-995">AtkStateSetClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#998">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkStateSetClass @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#998">self</a>.parent)
-            .finish()
+        <a href="#998">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkStateSetClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#998">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3697,16 +3696,16 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1007-1020">AtkStreamableContentIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1023">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkStreamableContentIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.parent)
-            .field(<span class="string">"get_n_mime_types"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.get_n_mime_types)
-            .field(<span class="string">"get_mime_type"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.get_mime_type)
-            .field(<span class="string">"get_stream"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.get_stream)
-            .field(<span class="string">"get_uri"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.get_uri)
-            .field(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.pad1)
-            .field(<span class="string">"pad2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.pad2)
-            .field(<span class="string">"pad3"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.pad3)
-            .finish()
+        <a href="#1023">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkStreamableContentIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_n_mime_types"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.get_n_mime_types)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_mime_type"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.get_mime_type)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_stream"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.get_stream)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_uri"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.get_uri)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad1"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.pad1)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad2"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.pad2)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"pad3"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1023">self</a>.pad3)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3736,15 +3735,15 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1039-1059">AtkTableCellIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1062">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTableCellIface @ {self:p}"</span>))
-            .field(<span class="string">"get_column_span"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_column_span)
-            .field(<span class="string">"get_column_header_cells"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_column_header_cells)
-            .field(<span class="string">"get_position"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_position)
-            .field(<span class="string">"get_row_span"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_row_span)
-            .field(<span class="string">"get_row_header_cells"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_row_header_cells)
-            .field(<span class="string">"get_row_column_span"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_row_column_span)
-            .field(<span class="string">"get_table"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_table)
-            .finish()
+        <a href="#1062">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTableCellIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_column_span"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_column_span)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_column_header_cells"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_column_header_cells)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_position"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_position)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_row_span"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_row_span)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_row_header_cells"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_row_header_cells)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_row_column_span"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_row_column_span)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_table"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1062">self</a>.get_table)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3792,45 +3791,45 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1077-1115">AtkTableIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1118">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTableIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.parent)
-            .field(<span class="string">"ref_at"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.ref_at)
-            .field(<span class="string">"get_index_at"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_index_at)
-            .field(<span class="string">"get_column_at_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_column_at_index)
-            .field(<span class="string">"get_row_at_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_row_at_index)
-            .field(<span class="string">"get_n_columns"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_n_columns)
-            .field(<span class="string">"get_n_rows"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_n_rows)
-            .field(<span class="string">"get_column_extent_at"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_column_extent_at)
-            .field(<span class="string">"get_row_extent_at"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_row_extent_at)
-            .field(<span class="string">"get_caption"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_caption)
-            .field(<span class="string">"get_column_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_column_description)
-            .field(<span class="string">"get_column_header"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_column_header)
-            .field(<span class="string">"get_row_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_row_description)
-            .field(<span class="string">"get_row_header"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_row_header)
-            .field(<span class="string">"get_summary"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_summary)
-            .field(<span class="string">"set_caption"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_caption)
-            .field(<span class="string">"set_column_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_column_description)
-            .field(<span class="string">"set_column_header"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_column_header)
-            .field(<span class="string">"set_row_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_row_description)
-            .field(<span class="string">"set_row_header"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_row_header)
-            .field(<span class="string">"set_summary"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_summary)
-            .field(<span class="string">"get_selected_columns"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_selected_columns)
-            .field(<span class="string">"get_selected_rows"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_selected_rows)
-            .field(<span class="string">"is_column_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.is_column_selected)
-            .field(<span class="string">"is_row_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.is_row_selected)
-            .field(<span class="string">"is_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.is_selected)
-            .field(<span class="string">"add_row_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.add_row_selection)
-            .field(<span class="string">"remove_row_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.remove_row_selection)
-            .field(<span class="string">"add_column_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.add_column_selection)
-            .field(<span class="string">"remove_column_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.remove_column_selection)
-            .field(<span class="string">"row_inserted"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.row_inserted)
-            .field(<span class="string">"column_inserted"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.column_inserted)
-            .field(<span class="string">"row_deleted"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.row_deleted)
-            .field(<span class="string">"column_deleted"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.column_deleted)
-            .field(<span class="string">"row_reordered"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.row_reordered)
-            .field(<span class="string">"column_reordered"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.column_reordered)
-            .field(<span class="string">"model_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.model_changed)
-            .finish()
+        <a href="#1118">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTableIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"ref_at"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.ref_at)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_index_at"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_index_at)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_column_at_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_column_at_index)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_row_at_index"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_row_at_index)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_n_columns"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_n_columns)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_n_rows"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_n_rows)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_column_extent_at"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_column_extent_at)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_row_extent_at"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_row_extent_at)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_caption"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_caption)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_column_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_column_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_column_header"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_column_header)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_row_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_row_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_row_header"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_row_header)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_summary"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_summary)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_caption"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_caption)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_column_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_column_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_column_header"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_column_header)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_row_description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_row_description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_row_header"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_row_header)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_summary"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.set_summary)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_selected_columns"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_selected_columns)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_selected_rows"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.get_selected_rows)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"is_column_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.is_column_selected)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"is_row_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.is_row_selected)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"is_selected"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.is_selected)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"add_row_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.add_row_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"remove_row_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.remove_row_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"add_column_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.add_column_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"remove_column_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.remove_column_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"row_inserted"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.row_inserted)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"column_inserted"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.column_inserted)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"row_deleted"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.row_deleted)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"column_deleted"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.column_deleted)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"row_reordered"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.row_reordered)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"column_reordered"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.column_reordered)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"model_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1118">self</a>.model_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3927,35 +3926,35 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1163-1250">AtkTextIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1253">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTextIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.parent)
-            .field(<span class="string">"get_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_text)
-            .field(<span class="string">"get_text_after_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_text_after_offset)
-            .field(<span class="string">"get_text_at_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_text_at_offset)
-            .field(<span class="string">"get_character_at_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_character_at_offset)
-            .field(<span class="string">"get_text_before_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_text_before_offset)
-            .field(<span class="string">"get_caret_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_caret_offset)
-            .field(<span class="string">"get_run_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_run_attributes)
-            .field(<span class="string">"get_default_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_default_attributes)
-            .field(<span class="string">"get_character_extents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_character_extents)
-            .field(<span class="string">"get_character_count"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_character_count)
-            .field(<span class="string">"get_offset_at_point"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_offset_at_point)
-            .field(<span class="string">"get_n_selections"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_n_selections)
-            .field(<span class="string">"get_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_selection)
-            .field(<span class="string">"add_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.add_selection)
-            .field(<span class="string">"remove_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.remove_selection)
-            .field(<span class="string">"set_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.set_selection)
-            .field(<span class="string">"set_caret_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.set_caret_offset)
-            .field(<span class="string">"text_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.text_changed)
-            .field(<span class="string">"text_caret_moved"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.text_caret_moved)
-            .field(<span class="string">"text_selection_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.text_selection_changed)
-            .field(<span class="string">"text_attributes_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.text_attributes_changed)
-            .field(<span class="string">"get_range_extents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_range_extents)
-            .field(<span class="string">"get_bounded_ranges"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_bounded_ranges)
-            .field(<span class="string">"get_string_at_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_string_at_offset)
-            .field(<span class="string">"scroll_substring_to"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.scroll_substring_to)
-            .field(<span class="string">"scroll_substring_to_point"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.scroll_substring_to_point)
-            .finish()
+        <a href="#1253">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTextIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_text)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_text_after_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_text_after_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_text_at_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_text_at_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_character_at_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_character_at_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_text_before_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_text_before_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_caret_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_caret_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_run_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_run_attributes)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_default_attributes"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_default_attributes)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_character_extents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_character_extents)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_character_count"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_character_count)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_offset_at_point"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_offset_at_point)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_n_selections"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_n_selections)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"add_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.add_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"remove_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.remove_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_selection"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.set_selection)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_caret_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.set_caret_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"text_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.text_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"text_caret_moved"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.text_caret_moved)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"text_selection_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.text_selection_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"text_attributes_changed"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.text_attributes_changed)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_range_extents"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_range_extents)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_bounded_ranges"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_bounded_ranges)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_string_at_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.get_string_at_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"scroll_substring_to"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.scroll_substring_to)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"scroll_substring_to_point"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1253">self</a>.scroll_substring_to_point)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3970,12 +3969,12 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1288-1293">AtkTextRange</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1296">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTextRange @ {self:p}"</span>))
-            .field(<span class="string">"bounds"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1296">self</a>.bounds)
-            .field(<span class="string">"start_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1296">self</a>.start_offset)
-            .field(<span class="string">"end_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1296">self</a>.end_offset)
-            .field(<span class="string">"content"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1296">self</a>.content)
-            .finish()
+        <a href="#1296">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTextRange @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"bounds"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1296">self</a>.bounds)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"start_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1296">self</a>.start_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"end_offset"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1296">self</a>.end_offset)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"content"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1296">self</a>.content)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -3990,12 +3989,12 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1308-1313">AtkTextRectangle</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1316">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTextRectangle @ {self:p}"</span>))
-            .field(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1316">self</a>.x)
-            .field(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1316">self</a>.y)
-            .field(<span class="string">"width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1316">self</a>.width)
-            .field(<span class="string">"height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1316">self</a>.height)
-            .finish()
+        <a href="#1316">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkTextRectangle @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"x"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1316">self</a>.x)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"y"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1316">self</a>.y)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"width"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1316">self</a>.width)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"height"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1316">self</a>.height)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4015,19 +4014,19 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1328-1338">AtkUtilClass</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1341">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkUtilClass @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.parent)
-            .field(<span class="string">"add_global_event_listener"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.add_global_event_listener)
-            .field(
+        <a href="#1341">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkUtilClass @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"add_global_event_listener"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.add_global_event_listener)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(
                 <span class="string">"remove_global_event_listener"</span>,
                 <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.remove_global_event_listener,
             )
-            .field(<span class="string">"add_key_event_listener"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.add_key_event_listener)
-            .field(<span class="string">"remove_key_event_listener"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.remove_key_event_listener)
-            .field(<span class="string">"get_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.get_root)
-            .field(<span class="string">"get_toolkit_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.get_toolkit_name)
-            .field(<span class="string">"get_toolkit_version"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.get_toolkit_version)
-            .finish()
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"add_key_event_listener"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.add_key_event_listener)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"remove_key_event_listener"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.remove_key_event_listener)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_root"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.get_root)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_toolkit_name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.get_toolkit_name)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_toolkit_version"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1341">self</a>.get_toolkit_version)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4051,19 +4050,19 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1360-1374">AtkValueIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1377">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkValueIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.parent)
-            .field(<span class="string">"get_current_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_current_value)
-            .field(<span class="string">"get_maximum_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_maximum_value)
-            .field(<span class="string">"get_minimum_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_minimum_value)
-            .field(<span class="string">"set_current_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.set_current_value)
-            .field(<span class="string">"get_minimum_increment"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_minimum_increment)
-            .field(<span class="string">"get_value_and_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_value_and_text)
-            .field(<span class="string">"get_range"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_range)
-            .field(<span class="string">"get_increment"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_increment)
-            .field(<span class="string">"get_sub_ranges"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_sub_ranges)
-            .field(<span class="string">"set_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.set_value)
-            .finish()
+        <a href="#1377">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkValueIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_current_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_current_value)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_maximum_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_maximum_value)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_minimum_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_minimum_value)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_current_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.set_current_value)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_minimum_increment"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_minimum_increment)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_value_and_text"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_value_and_text)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_range"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_range)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_increment"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_increment)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"get_sub_ranges"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.get_sub_ranges)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"set_value"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1377">self</a>.set_value)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4075,9 +4074,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1396-1398">AtkWindowIface</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1401">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkWindowIface @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1401">self</a>.parent)
-            .finish()
+        <a href="#1401">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkWindowIface @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1401">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4090,9 +4089,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1411-1413">AtkGObjectAccessible</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1416">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkGObjectAccessible @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1416">self</a>.parent)
-            .finish()
+        <a href="#1416">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkGObjectAccessible @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1416">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4104,9 +4103,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1425-1427">AtkHyperlink</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1430">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkHyperlink @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1430">self</a>.parent)
-            .finish()
+        <a href="#1430">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkHyperlink @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1430">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4118,9 +4117,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1439-1441">AtkMisc</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1444">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkMisc @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1444">self</a>.parent)
-            .finish()
+        <a href="#1444">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkMisc @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1444">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4132,9 +4131,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1453-1455">AtkNoOpObject</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1458">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkNoOpObject @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1458">self</a>.parent)
-            .finish()
+        <a href="#1458">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkNoOpObject @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1458">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4146,9 +4145,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1467-1469">AtkNoOpObjectFactory</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1472">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkNoOpObjectFactory @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1472">self</a>.parent)
-            .finish()
+        <a href="#1472">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkNoOpObjectFactory @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1472">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4166,15 +4165,15 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1481-1489">AtkObject</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1492">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkObject @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.parent)
-            .field(<span class="string">"description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.description)
-            .field(<span class="string">"name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.name)
-            .field(<span class="string">"accessible_parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.accessible_parent)
-            .field(<span class="string">"role"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.role)
-            .field(<span class="string">"relation_set"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.relation_set)
-            .field(<span class="string">"layer"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.layer)
-            .finish()
+        <a href="#1492">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkObject @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"description"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.description)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"name"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.name)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"accessible_parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.accessible_parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"role"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.role)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"relation_set"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.relation_set)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"layer"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1492">self</a>.layer)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4186,9 +4185,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1507-1509">AtkObjectFactory</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1512">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkObjectFactory @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1512">self</a>.parent)
-            .finish()
+        <a href="#1512">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkObjectFactory @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1512">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4200,9 +4199,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1521-1523">AtkPlug</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1526">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkPlug @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1526">self</a>.parent)
-            .finish()
+        <a href="#1526">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkPlug @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1526">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4216,11 +4215,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1535-1539">AtkRegistry</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1542">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRegistry @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1542">self</a>.parent)
-            .field(<span class="string">"factory_type_registry"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1542">self</a>.factory_type_registry)
-            .field(<span class="string">"factory_singleton_cache"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1542">self</a>.factory_singleton_cache)
-            .finish()
+        <a href="#1542">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRegistry @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1542">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"factory_type_registry"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1542">self</a>.factory_type_registry)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"factory_singleton_cache"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1542">self</a>.factory_singleton_cache)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4234,11 +4233,11 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1553-1557">AtkRelation</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1560">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRelation @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1560">self</a>.parent)
-            .field(<span class="string">"target"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1560">self</a>.target)
-            .field(<span class="string">"relationship"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1560">self</a>.relationship)
-            .finish()
+        <a href="#1560">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRelation @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1560">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"target"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1560">self</a>.target)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"relationship"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1560">self</a>.relationship)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4251,10 +4250,10 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1571-1574">AtkRelationSet</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1577">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRelationSet @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1577">self</a>.parent)
-            .field(<span class="string">"relations"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1577">self</a>.relations)
-            .finish()
+        <a href="#1577">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkRelationSet @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1577">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"relations"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1577">self</a>.relations)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4267,9 +4266,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1587-1590">AtkSocket</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1593">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkSocket @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1593">self</a>.parent)
-            .finish()
+        <a href="#1593">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkSocket @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1593">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4281,9 +4280,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1602-1604">AtkStateSet</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1607">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkStateSet @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1607">self</a>.parent)
-            .finish()
+        <a href="#1607">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkStateSet @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1607">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 
@@ -4295,9 +4294,9 @@
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#1616-1618">AtkUtil</a> {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span><a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html">::std::fmt::Formatter</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html">::std::fmt::Result</a> {
-        <a href="#1621">f</a>.debug_struct(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkUtil @ {self:p}"</span>))
-            .field(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1621">self</a>.parent)
-            .finish()
+        <a href="#1621">f</a>.<a href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html#method.debug_struct">debug_struct</a>(<span class="kw-2">&amp;</span><a class="macro" href="https://doc.rust-lang.org/nightly/alloc/macro.format.html">format!</a>(<span class="string">"AtkUtil @ {self:p}"</span>))
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.field">field</a>(<span class="string">"parent"</span>, <span class="kw-2">&amp;</span><a class="self" href="#1621">self</a>.parent)
+            .<a href="https://doc.rust-lang.org/nightly/core/fmt/builders/struct.DebugStruct.html#method.finish">finish</a>()
     }
 }
 

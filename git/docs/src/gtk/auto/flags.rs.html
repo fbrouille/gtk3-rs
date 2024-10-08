@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/flags.rs`."><title>flags.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-804b98a1284a310a.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0-nightly (445177724 2023-12-16)" data-channel="nightly" data-search-js="search-874d56868bf05518.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk/src/auto/flags.rs`."><title>flags.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-6d8951b3ccd3cbca.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.83.0-nightly (3ae715c8c 2024-10-07)" data-channel="nightly" data-search-js="search-e056c65ede92db13.js" data-settings-js="settings-805db61a62df4bd2.js" ><script src="../../../static.files/storage-1d39b6787ed640ff.js"></script><script defer src="../../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-f070b9041d14864c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-0111fcff984fae8f.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,8 +71,8 @@
 </script>
 
 
-<nav class="sidebar"></nav><div class="sidebar-resizer"></div>
-    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1><div class="sub-heading">gtk/auto/</div>flags.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers">
+<a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -2296,27 +2296,26 @@
 <a href="#2222" id="2222">2222</a>
 <a href="#2223" id="2223">2223</a>
 <a href="#2224" id="2224">2224</a>
-<a href="#2225" id="2225">2225</a>
-</pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
+<a href="#2225" id="2225">2225</a></pre></div><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)
 // from gir-files (https://github.com/gtk-rs/gir-files)
 // DO NOT EDIT
 
 </span><span class="kw">use </span>glib::{bitflags::bitflags, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/index.html">translate</a>::<span class="kw-2">*</span>};
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Accelerator flags used with [`AccelGroupExtManual::connect_accel_group()`][crate::prelude::AccelGroupExtManual::connect_accel_group()].
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkAccelFlags"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.AccelFlags.html">AccelFlags</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// Accelerator is visible
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ACCEL_VISIBLE"</span>)]
-        </span><span class="kw">const </span>VISIBLE = ffi::GTK_ACCEL_VISIBLE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>VISIBLE = <a href="../../../gtk_sys/constant.GTK_ACCEL_VISIBLE.html">ffi::GTK_ACCEL_VISIBLE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Accelerator not removable
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ACCEL_LOCKED"</span>)]
-        </span><span class="kw">const </span>LOCKED = ffi::GTK_ACCEL_LOCKED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>LOCKED = <a href="../../../gtk_sys/constant.GTK_ACCEL_LOCKED.html">ffi::GTK_ACCEL_LOCKED</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Mask
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ACCEL_MASK"</span>)]
-        </span><span class="kw">const </span>MASK = ffi::GTK_ACCEL_MASK <span class="kw">as _</span>;
+        </span><span class="kw">const </span>MASK = <a href="../../../gtk_sys/constant.GTK_ACCEL_MASK.html">ffi::GTK_ACCEL_MASK</a> <span class="kw">as _</span>;
     }
 }
 
@@ -2335,7 +2334,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkAccelFlags.html">ffi::GtkAccelFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#37">value</a>)
+        <a href="#7-22"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#37">value</a>)
     }
 }
 
@@ -2343,7 +2342,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_accel_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_accel_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_accel_flags_get_type.html">ffi::gtk_accel_flags_get_type</a>()) }
     }
 }
 
@@ -2367,7 +2366,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#69">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#69">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -2376,14 +2375,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#78">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#77">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#78">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#77">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#78">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -2391,11 +2390,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#7-22">AccelFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#93">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#93">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Types of user actions that may be blocked by [`GtkApplicationExt::inhibit()`][crate::prelude::GtkApplicationExt::inhibit()].
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkApplicationInhibitFlags"</span>)]
@@ -2403,18 +2402,18 @@
         <span class="doccomment">/// Inhibit ending the user session
         ///  by logging out or by shutting down the computer
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_APPLICATION_INHIBIT_LOGOUT"</span>)]
-        </span><span class="kw">const </span>LOGOUT = ffi::GTK_APPLICATION_INHIBIT_LOGOUT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>LOGOUT = <a href="../../../gtk_sys/constant.GTK_APPLICATION_INHIBIT_LOGOUT.html">ffi::GTK_APPLICATION_INHIBIT_LOGOUT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Inhibit user switching
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_APPLICATION_INHIBIT_SWITCH"</span>)]
-        </span><span class="kw">const </span>SWITCH = ffi::GTK_APPLICATION_INHIBIT_SWITCH <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SWITCH = <a href="../../../gtk_sys/constant.GTK_APPLICATION_INHIBIT_SWITCH.html">ffi::GTK_APPLICATION_INHIBIT_SWITCH</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Inhibit suspending the
         ///  session or computer
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_APPLICATION_INHIBIT_SUSPEND"</span>)]
-        </span><span class="kw">const </span>SUSPEND = ffi::GTK_APPLICATION_INHIBIT_SUSPEND <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SUSPEND = <a href="../../../gtk_sys/constant.GTK_APPLICATION_INHIBIT_SUSPEND.html">ffi::GTK_APPLICATION_INHIBIT_SUSPEND</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Inhibit the session being
         ///  marked as idle (and possibly locked)
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_APPLICATION_INHIBIT_IDLE"</span>)]
-        </span><span class="kw">const </span>IDLE = ffi::GTK_APPLICATION_INHIBIT_IDLE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>IDLE = <a href="../../../gtk_sys/constant.GTK_APPLICATION_INHIBIT_IDLE.html">ffi::GTK_APPLICATION_INHIBIT_IDLE</a> <span class="kw">as _</span>;
     }
 }
 
@@ -2433,7 +2432,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkApplicationInhibitFlags.html">ffi::GtkApplicationInhibitFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#135">value</a>)
+        <a href="#99-120"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#135">value</a>)
     }
 }
 
@@ -2441,7 +2440,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_application_inhibit_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_application_inhibit_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_application_inhibit_flags_get_type.html">ffi::gtk_application_inhibit_flags_get_type</a>()) }
     }
 }
 
@@ -2465,7 +2464,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#167">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#167">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -2474,14 +2473,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#176">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#175">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#176">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#175">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#176">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -2489,32 +2488,32 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#99-120">ApplicationInhibitFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#191">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#191">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// These options can be used to influence the display and behaviour of a [`Calendar`][crate::Calendar].
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkCalendarDisplayOptions"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.CalendarDisplayOptions.html">CalendarDisplayOptions</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// Specifies that the month and year should be displayed.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CALENDAR_SHOW_HEADING"</span>)]
-        </span><span class="kw">const </span>SHOW_HEADING = ffi::GTK_CALENDAR_SHOW_HEADING <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SHOW_HEADING = <a href="../../../gtk_sys/constant.GTK_CALENDAR_SHOW_HEADING.html">ffi::GTK_CALENDAR_SHOW_HEADING</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Specifies that three letter day descriptions should be present.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CALENDAR_SHOW_DAY_NAMES"</span>)]
-        </span><span class="kw">const </span>SHOW_DAY_NAMES = ffi::GTK_CALENDAR_SHOW_DAY_NAMES <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SHOW_DAY_NAMES = <a href="../../../gtk_sys/constant.GTK_CALENDAR_SHOW_DAY_NAMES.html">ffi::GTK_CALENDAR_SHOW_DAY_NAMES</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Prevents the user from switching months with the calendar.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CALENDAR_NO_MONTH_CHANGE"</span>)]
-        </span><span class="kw">const </span>NO_MONTH_CHANGE = ffi::GTK_CALENDAR_NO_MONTH_CHANGE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NO_MONTH_CHANGE = <a href="../../../gtk_sys/constant.GTK_CALENDAR_NO_MONTH_CHANGE.html">ffi::GTK_CALENDAR_NO_MONTH_CHANGE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Displays each week numbers of the current year, down the
         /// left side of the calendar.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CALENDAR_SHOW_WEEK_NUMBERS"</span>)]
-        </span><span class="kw">const </span>SHOW_WEEK_NUMBERS = ffi::GTK_CALENDAR_SHOW_WEEK_NUMBERS <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SHOW_WEEK_NUMBERS = <a href="../../../gtk_sys/constant.GTK_CALENDAR_SHOW_WEEK_NUMBERS.html">ffi::GTK_CALENDAR_SHOW_WEEK_NUMBERS</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Just show an indicator, not the full details
         /// text when details are provided. See [`CalendarExt::set_detail_func()`][crate::prelude::CalendarExt::set_detail_func()].
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CALENDAR_SHOW_DETAILS"</span>)]
-        </span><span class="kw">const </span>SHOW_DETAILS = ffi::GTK_CALENDAR_SHOW_DETAILS <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SHOW_DETAILS = <a href="../../../gtk_sys/constant.GTK_CALENDAR_SHOW_DETAILS.html">ffi::GTK_CALENDAR_SHOW_DETAILS</a> <span class="kw">as _</span>;
     }
 }
 
@@ -2533,7 +2532,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkCalendarDisplayOptions.html">ffi::GtkCalendarDisplayOptions</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#235">value</a>)
+        <a href="#197-220"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#235">value</a>)
     }
 }
 
@@ -2541,7 +2540,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_calendar_display_options_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_calendar_display_options_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_calendar_display_options_get_type.html">ffi::gtk_calendar_display_options_get_type</a>()) }
     }
 }
 
@@ -2565,7 +2564,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#267">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#267">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -2574,14 +2573,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#276">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#275">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#276">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#275">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#276">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -2589,11 +2588,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#197-220">CalendarDisplayOptions</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#291">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#291">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Tells how a cell is to be rendered.
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkCellRendererState"</span>)]
@@ -2601,25 +2600,25 @@
         <span class="doccomment">/// The cell is currently selected, and
         ///  probably has a selection colored background to render to.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CELL_RENDERER_SELECTED"</span>)]
-        </span><span class="kw">const </span>SELECTED = ffi::GTK_CELL_RENDERER_SELECTED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SELECTED = <a href="../../../gtk_sys/constant.GTK_CELL_RENDERER_SELECTED.html">ffi::GTK_CELL_RENDERER_SELECTED</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The mouse is hovering over the cell.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CELL_RENDERER_PRELIT"</span>)]
-        </span><span class="kw">const </span>PRELIT = ffi::GTK_CELL_RENDERER_PRELIT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>PRELIT = <a href="../../../gtk_sys/constant.GTK_CELL_RENDERER_PRELIT.html">ffi::GTK_CELL_RENDERER_PRELIT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The cell is drawn in an insensitive manner
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CELL_RENDERER_INSENSITIVE"</span>)]
-        </span><span class="kw">const </span>INSENSITIVE = ffi::GTK_CELL_RENDERER_INSENSITIVE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>INSENSITIVE = <a href="../../../gtk_sys/constant.GTK_CELL_RENDERER_INSENSITIVE.html">ffi::GTK_CELL_RENDERER_INSENSITIVE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The cell is in a sorted row
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CELL_RENDERER_SORTED"</span>)]
-        </span><span class="kw">const </span>SORTED = ffi::GTK_CELL_RENDERER_SORTED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SORTED = <a href="../../../gtk_sys/constant.GTK_CELL_RENDERER_SORTED.html">ffi::GTK_CELL_RENDERER_SORTED</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The cell is in the focus row.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CELL_RENDERER_FOCUSED"</span>)]
-        </span><span class="kw">const </span>FOCUSED = ffi::GTK_CELL_RENDERER_FOCUSED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FOCUSED = <a href="../../../gtk_sys/constant.GTK_CELL_RENDERER_FOCUSED.html">ffi::GTK_CELL_RENDERER_FOCUSED</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The cell is in a row that can be expanded. Since 3.4
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CELL_RENDERER_EXPANDABLE"</span>)]
-        </span><span class="kw">const </span>EXPANDABLE = ffi::GTK_CELL_RENDERER_EXPANDABLE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>EXPANDABLE = <a href="../../../gtk_sys/constant.GTK_CELL_RENDERER_EXPANDABLE.html">ffi::GTK_CELL_RENDERER_EXPANDABLE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The cell is in a row that is expanded. Since 3.4
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_CELL_RENDERER_EXPANDED"</span>)]
-        </span><span class="kw">const </span>EXPANDED = ffi::GTK_CELL_RENDERER_EXPANDED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>EXPANDED = <a href="../../../gtk_sys/constant.GTK_CELL_RENDERER_EXPANDED.html">ffi::GTK_CELL_RENDERER_EXPANDED</a> <span class="kw">as _</span>;
     }
 }
 
@@ -2638,7 +2637,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkCellRendererState.html">ffi::GtkCellRendererState</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#340">value</a>)
+        <a href="#297-325"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#340">value</a>)
     }
 }
 
@@ -2646,7 +2645,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_cell_renderer_state_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_cell_renderer_state_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_cell_renderer_state_get_type.html">ffi::gtk_cell_renderer_state_get_type</a>()) }
     }
 }
 
@@ -2670,7 +2669,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#372">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#372">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -2679,14 +2678,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#381">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#380">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#381">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#380">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#381">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -2694,11 +2693,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#297-325">CellRendererState</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#396">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#396">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// The [`DestDefaults`][crate::DestDefaults] enumeration specifies the various
     /// types of action that will be taken on behalf
     /// of the user for a drag destination site.
@@ -2710,12 +2709,12 @@
         ///  and actions.
         ///  GTK+ will then call `gdk_drag_status()` as appropriate.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_DEST_DEFAULT_MOTION"</span>)]
-        </span><span class="kw">const </span>MOTION = ffi::GTK_DEST_DEFAULT_MOTION <span class="kw">as _</span>;
+        </span><span class="kw">const </span>MOTION = <a href="../../../gtk_sys/constant.GTK_DEST_DEFAULT_MOTION.html">ffi::GTK_DEST_DEFAULT_MOTION</a> <span class="kw">as _</span>;
         <span class="doccomment">/// If set for a widget, GTK+ will draw a highlight on
         ///  this widget as long as a drag is over this widget and the widget drag format
         ///  and action are acceptable.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_DEST_DEFAULT_HIGHLIGHT"</span>)]
-        </span><span class="kw">const </span>HIGHLIGHT = ffi::GTK_DEST_DEFAULT_HIGHLIGHT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>HIGHLIGHT = <a href="../../../gtk_sys/constant.GTK_DEST_DEFAULT_HIGHLIGHT.html">ffi::GTK_DEST_DEFAULT_HIGHLIGHT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// If set for a widget, when a drop occurs, GTK+ will
         ///  will check if the drag matches this widget’s list of possible targets and
         ///  actions. If so, GTK+ will call [`WidgetExt::drag_get_data()`][crate::prelude::WidgetExt::drag_get_data()] on behalf of the widget.
@@ -2723,11 +2722,11 @@
         ///  the action was a move, then if the drag was successful, then [`true`] will be
         ///  passed for the `delete` parameter to `gtk_drag_finish()`.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_DEST_DEFAULT_DROP"</span>)]
-        </span><span class="kw">const </span>DROP = ffi::GTK_DEST_DEFAULT_DROP <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DROP = <a href="../../../gtk_sys/constant.GTK_DEST_DEFAULT_DROP.html">ffi::GTK_DEST_DEFAULT_DROP</a> <span class="kw">as _</span>;
         <span class="doccomment">/// If set, specifies that all default actions should
         ///  be taken.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_DEST_DEFAULT_ALL"</span>)]
-        </span><span class="kw">const </span>ALL = ffi::GTK_DEST_DEFAULT_ALL <span class="kw">as _</span>;
+        </span><span class="kw">const </span>ALL = <a href="../../../gtk_sys/constant.GTK_DEST_DEFAULT_ALL.html">ffi::GTK_DEST_DEFAULT_ALL</a> <span class="kw">as _</span>;
     }
 }
 
@@ -2746,7 +2745,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkDestDefaults.html">ffi::GtkDestDefaults</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#448">value</a>)
+        <a href="#402-433"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#448">value</a>)
     }
 }
 
@@ -2754,7 +2753,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_dest_defaults_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_dest_defaults_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_dest_defaults_get_type.html">ffi::gtk_dest_defaults_get_type</a>()) }
     }
 }
 
@@ -2778,7 +2777,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#480">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#480">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -2787,14 +2786,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#489">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#488">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#489">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#488">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#489">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -2802,11 +2801,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#402-433">DestDefaults</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#504">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#504">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Flags used to influence dialog construction.
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkDialogFlags"</span>)]
@@ -2814,15 +2813,15 @@
         <span class="doccomment">/// Make the constructed dialog modal,
         ///  see [`GtkWindowExt::set_modal()`][crate::prelude::GtkWindowExt::set_modal()]
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_DIALOG_MODAL"</span>)]
-        </span><span class="kw">const </span>MODAL = ffi::GTK_DIALOG_MODAL <span class="kw">as _</span>;
+        </span><span class="kw">const </span>MODAL = <a href="../../../gtk_sys/constant.GTK_DIALOG_MODAL.html">ffi::GTK_DIALOG_MODAL</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Destroy the dialog when its
         ///  parent is destroyed, see [`GtkWindowExt::set_destroy_with_parent()`][crate::prelude::GtkWindowExt::set_destroy_with_parent()]
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_DIALOG_DESTROY_WITH_PARENT"</span>)]
-        </span><span class="kw">const </span>DESTROY_WITH_PARENT = ffi::GTK_DIALOG_DESTROY_WITH_PARENT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DESTROY_WITH_PARENT = <a href="../../../gtk_sys/constant.GTK_DIALOG_DESTROY_WITH_PARENT.html">ffi::GTK_DIALOG_DESTROY_WITH_PARENT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Create dialog with actions in header
         ///  bar instead of action area. Since 3.12.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_DIALOG_USE_HEADER_BAR"</span>)]
-        </span><span class="kw">const </span>USE_HEADER_BAR = ffi::GTK_DIALOG_USE_HEADER_BAR <span class="kw">as _</span>;
+        </span><span class="kw">const </span>USE_HEADER_BAR = <a href="../../../gtk_sys/constant.GTK_DIALOG_USE_HEADER_BAR.html">ffi::GTK_DIALOG_USE_HEADER_BAR</a> <span class="kw">as _</span>;
     }
 }
 
@@ -2841,7 +2840,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkDialogFlags.html">ffi::GtkDialogFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#543">value</a>)
+        <a href="#510-528"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#543">value</a>)
     }
 }
 
@@ -2849,7 +2848,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_dialog_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_dialog_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_dialog_flags_get_type.html">ffi::gtk_dialog_flags_get_type</a>()) }
     }
 }
 
@@ -2873,7 +2872,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#575">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#575">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -2882,14 +2881,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#584">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#583">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#584">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#583">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#584">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -2897,12 +2896,12 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#510-528">DialogFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#599">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#599">v</a>)
     }
 }
 
 <span class="attr">#[cfg(feature = <span class="string">"v3_24"</span>)]
-</span><span class="macro">bitflags! </span>{
+</span><span class="macro">bitflags!</span> {
     <span class="doccomment">/// Describes the behavior of a [`EventControllerScroll`][crate::EventControllerScroll].
     </span><span class="attr">#[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v3_24"</span>)))]
     #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -2910,23 +2909,23 @@
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.EventControllerScrollFlags.html">EventControllerScrollFlags</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// Don't emit scroll.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_EVENT_CONTROLLER_SCROLL_NONE"</span>)]
-        </span><span class="kw">const </span>NONE = ffi::GTK_EVENT_CONTROLLER_SCROLL_NONE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NONE = <a href="../../../gtk_sys/constant.GTK_EVENT_CONTROLLER_SCROLL_NONE.html">ffi::GTK_EVENT_CONTROLLER_SCROLL_NONE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Emit scroll with vertical deltas.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_EVENT_CONTROLLER_SCROLL_VERTICAL"</span>)]
-        </span><span class="kw">const </span>VERTICAL = ffi::GTK_EVENT_CONTROLLER_SCROLL_VERTICAL <span class="kw">as _</span>;
+        </span><span class="kw">const </span>VERTICAL = <a href="../../../gtk_sys/constant.GTK_EVENT_CONTROLLER_SCROLL_VERTICAL.html">ffi::GTK_EVENT_CONTROLLER_SCROLL_VERTICAL</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Emit scroll with horizontal deltas.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_EVENT_CONTROLLER_SCROLL_HORIZONTAL"</span>)]
-        </span><span class="kw">const </span>HORIZONTAL = ffi::GTK_EVENT_CONTROLLER_SCROLL_HORIZONTAL <span class="kw">as _</span>;
+        </span><span class="kw">const </span>HORIZONTAL = <a href="../../../gtk_sys/constant.GTK_EVENT_CONTROLLER_SCROLL_HORIZONTAL.html">ffi::GTK_EVENT_CONTROLLER_SCROLL_HORIZONTAL</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Only emit deltas that are multiples of 1.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_EVENT_CONTROLLER_SCROLL_DISCRETE"</span>)]
-        </span><span class="kw">const </span>DISCRETE = ffi::GTK_EVENT_CONTROLLER_SCROLL_DISCRETE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DISCRETE = <a href="../../../gtk_sys/constant.GTK_EVENT_CONTROLLER_SCROLL_DISCRETE.html">ffi::GTK_EVENT_CONTROLLER_SCROLL_DISCRETE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Emit [`decelerate`][struct@crate::EventControllerScroll#decelerate]
         ///  after continuous scroll finishes.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_EVENT_CONTROLLER_SCROLL_KINETIC"</span>)]
-        </span><span class="kw">const </span>KINETIC = ffi::GTK_EVENT_CONTROLLER_SCROLL_KINETIC <span class="kw">as _</span>;
+        </span><span class="kw">const </span>KINETIC = <a href="../../../gtk_sys/constant.GTK_EVENT_CONTROLLER_SCROLL_KINETIC.html">ffi::GTK_EVENT_CONTROLLER_SCROLL_KINETIC</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Emit scroll on both axes.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_EVENT_CONTROLLER_SCROLL_BOTH_AXES"</span>)]
-        </span><span class="kw">const </span>BOTH_AXES = ffi::GTK_EVENT_CONTROLLER_SCROLL_BOTH_AXES <span class="kw">as _</span>;
+        </span><span class="kw">const </span>BOTH_AXES = <a href="../../../gtk_sys/constant.GTK_EVENT_CONTROLLER_SCROLL_BOTH_AXES.html">ffi::GTK_EVENT_CONTROLLER_SCROLL_BOTH_AXES</a> <span class="kw">as _</span>;
     }
 }
 
@@ -2949,7 +2948,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkEventControllerScrollFlags.html">ffi::GtkEventControllerScrollFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#651">value</a>)
+        <a href="#606-632"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#651">value</a>)
     }
 }
 
@@ -2959,7 +2958,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_event_controller_scroll_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_event_controller_scroll_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_event_controller_scroll_flags_get_type.html">ffi::gtk_event_controller_scroll_flags_get_type</a>()) }
     }
 }
 
@@ -2989,7 +2988,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#691">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#691">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3000,14 +2999,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#702">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#701">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#702">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#701">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#702">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3017,11 +3016,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#606-632">EventControllerScrollFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#719">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#719">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// These flags indicate what parts of a [`FileFilterInfo`][crate::FileFilterInfo] struct
     /// are filled or need to be filled.
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -3029,17 +3028,17 @@
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.FileFilterFlags.html">FileFilterFlags</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// the filename of the file being tested
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_FILE_FILTER_FILENAME"</span>)]
-        </span><span class="kw">const </span>FILENAME = ffi::GTK_FILE_FILTER_FILENAME <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FILENAME = <a href="../../../gtk_sys/constant.GTK_FILE_FILTER_FILENAME.html">ffi::GTK_FILE_FILTER_FILENAME</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the URI for the file being tested
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_FILE_FILTER_URI"</span>)]
-        </span><span class="kw">const </span>URI = ffi::GTK_FILE_FILTER_URI <span class="kw">as _</span>;
+        </span><span class="kw">const </span>URI = <a href="../../../gtk_sys/constant.GTK_FILE_FILTER_URI.html">ffi::GTK_FILE_FILTER_URI</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the string that will be used to
         ///  display the file in the file chooser
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_FILE_FILTER_DISPLAY_NAME"</span>)]
-        </span><span class="kw">const </span>DISPLAY_NAME = ffi::GTK_FILE_FILTER_DISPLAY_NAME <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DISPLAY_NAME = <a href="../../../gtk_sys/constant.GTK_FILE_FILTER_DISPLAY_NAME.html">ffi::GTK_FILE_FILTER_DISPLAY_NAME</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the mime type of the file
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_FILE_FILTER_MIME_TYPE"</span>)]
-        </span><span class="kw">const </span>MIME_TYPE = ffi::GTK_FILE_FILTER_MIME_TYPE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>MIME_TYPE = <a href="../../../gtk_sys/constant.GTK_FILE_FILTER_MIME_TYPE.html">ffi::GTK_FILE_FILTER_MIME_TYPE</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3058,7 +3057,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkFileFilterFlags.html">ffi::GtkFileFilterFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#760">value</a>)
+        <a href="#725-745"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#760">value</a>)
     }
 }
 
@@ -3066,7 +3065,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_file_filter_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_file_filter_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_file_filter_flags_get_type.html">ffi::gtk_file_filter_flags_get_type</a>()) }
     }
 }
 
@@ -3090,7 +3089,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#792">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#792">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3099,14 +3098,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#801">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#800">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#801">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#800">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#801">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3114,12 +3113,12 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#725-745">FileFilterFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#816">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#816">v</a>)
     }
 }
 
 <span class="attr">#[cfg(feature = <span class="string">"v3_24"</span>)]
-</span><span class="macro">bitflags! </span>{
+</span><span class="macro">bitflags!</span> {
     <span class="doccomment">/// This enumeration specifies the granularity of font selection
     /// that is desired in a font chooser.
     ///
@@ -3131,18 +3130,18 @@
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.FontChooserLevel.html">FontChooserLevel</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// Allow selecting a font family
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_FONT_CHOOSER_LEVEL_FAMILY"</span>)]
-        </span><span class="kw">const </span>FAMILY = ffi::GTK_FONT_CHOOSER_LEVEL_FAMILY <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FAMILY = <a href="../../../gtk_sys/constant.GTK_FONT_CHOOSER_LEVEL_FAMILY.html">ffi::GTK_FONT_CHOOSER_LEVEL_FAMILY</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Allow selecting a specific font face
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_FONT_CHOOSER_LEVEL_STYLE"</span>)]
-        </span><span class="kw">const </span>STYLE = ffi::GTK_FONT_CHOOSER_LEVEL_STYLE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>STYLE = <a href="../../../gtk_sys/constant.GTK_FONT_CHOOSER_LEVEL_STYLE.html">ffi::GTK_FONT_CHOOSER_LEVEL_STYLE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Allow selecting a specific font size
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_FONT_CHOOSER_LEVEL_SIZE"</span>)]
-        </span><span class="kw">const </span>SIZE = ffi::GTK_FONT_CHOOSER_LEVEL_SIZE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SIZE = <a href="../../../gtk_sys/constant.GTK_FONT_CHOOSER_LEVEL_SIZE.html">ffi::GTK_FONT_CHOOSER_LEVEL_SIZE</a> <span class="kw">as _</span>;
         <span class="attr">#[doc(alias = <span class="string">"GTK_FONT_CHOOSER_LEVEL_VARIATIONS"</span>)]
-        </span><span class="kw">const </span>VARIATIONS = ffi::GTK_FONT_CHOOSER_LEVEL_VARIATIONS <span class="kw">as _</span>;
+        </span><span class="kw">const </span>VARIATIONS = <a href="../../../gtk_sys/constant.GTK_FONT_CHOOSER_LEVEL_VARIATIONS.html">ffi::GTK_FONT_CHOOSER_LEVEL_VARIATIONS</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Allow selecting specific OpenType font features
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_FONT_CHOOSER_LEVEL_FEATURES"</span>)]
-        </span><span class="kw">const </span>FEATURES = ffi::GTK_FONT_CHOOSER_LEVEL_FEATURES <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FEATURES = <a href="../../../gtk_sys/constant.GTK_FONT_CHOOSER_LEVEL_FEATURES.html">ffi::GTK_FONT_CHOOSER_LEVEL_FEATURES</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3165,7 +3164,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkFontChooserLevel.html">ffi::GtkFontChooserLevel</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#867">value</a>)
+        <a href="#823-848"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#867">value</a>)
     }
 }
 
@@ -3175,7 +3174,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_font_chooser_level_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_font_chooser_level_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_font_chooser_level_get_type.html">ffi::gtk_font_chooser_level_get_type</a>()) }
     }
 }
 
@@ -3205,7 +3204,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#907">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#907">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3216,14 +3215,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#918">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#917">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#918">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#917">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#918">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3233,11 +3232,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#823-848">FontChooserLevel</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#935">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#935">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Used to specify options for [`IconThemeExt::lookup_icon()`][crate::prelude::IconThemeExt::lookup_icon()]
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkIconLookupFlags"</span>)]
@@ -3245,44 +3244,44 @@
         <span class="doccomment">/// Never get SVG icons, even if gdk-pixbuf
         ///  supports them. Cannot be used together with [`FORCE_SVG`][Self::FORCE_SVG].
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_NO_SVG"</span>)]
-        </span><span class="kw">const </span>NO_SVG = ffi::GTK_ICON_LOOKUP_NO_SVG <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NO_SVG = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_NO_SVG.html">ffi::GTK_ICON_LOOKUP_NO_SVG</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Get SVG icons, even if gdk-pixbuf
         ///  doesn’t support them.
         ///  Cannot be used together with [`NO_SVG`][Self::NO_SVG].
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_FORCE_SVG"</span>)]
-        </span><span class="kw">const </span>FORCE_SVG = ffi::GTK_ICON_LOOKUP_FORCE_SVG <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FORCE_SVG = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_FORCE_SVG.html">ffi::GTK_ICON_LOOKUP_FORCE_SVG</a> <span class="kw">as _</span>;
         <span class="doccomment">/// When passed to
         ///  [`IconThemeExt::lookup_icon()`][crate::prelude::IconThemeExt::lookup_icon()] includes builtin icons
         ///  as well as files. For a builtin icon, [`IconInfo::filename()`][crate::IconInfo::filename()]
         ///  is [`None`] and you need to call `gtk_icon_info_get_builtin_pixbuf()`.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_USE_BUILTIN"</span>)]
-        </span><span class="kw">const </span>USE_BUILTIN = ffi::GTK_ICON_LOOKUP_USE_BUILTIN <span class="kw">as _</span>;
+        </span><span class="kw">const </span>USE_BUILTIN = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_USE_BUILTIN.html">ffi::GTK_ICON_LOOKUP_USE_BUILTIN</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Try to shorten icon name at '-'
         ///  characters before looking at inherited themes. This flag is only
         ///  supported in functions that take a single icon name. For more general
         ///  fallback, see `gtk_icon_theme_choose_icon()`. Since 2.12.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_GENERIC_FALLBACK"</span>)]
-        </span><span class="kw">const </span>GENERIC_FALLBACK = ffi::GTK_ICON_LOOKUP_GENERIC_FALLBACK <span class="kw">as _</span>;
+        </span><span class="kw">const </span>GENERIC_FALLBACK = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_GENERIC_FALLBACK.html">ffi::GTK_ICON_LOOKUP_GENERIC_FALLBACK</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Always get the icon scaled to the
         ///  requested size. Since 2.14.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_FORCE_SIZE"</span>)]
-        </span><span class="kw">const </span>FORCE_SIZE = ffi::GTK_ICON_LOOKUP_FORCE_SIZE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FORCE_SIZE = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_FORCE_SIZE.html">ffi::GTK_ICON_LOOKUP_FORCE_SIZE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Try to always load regular icons, even
         ///  when symbolic icon names are given. Since 3.14.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_FORCE_REGULAR"</span>)]
-        </span><span class="kw">const </span>FORCE_REGULAR = ffi::GTK_ICON_LOOKUP_FORCE_REGULAR <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FORCE_REGULAR = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_FORCE_REGULAR.html">ffi::GTK_ICON_LOOKUP_FORCE_REGULAR</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Try to always load symbolic icons, even
         ///  when regular icon names are given. Since 3.14.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_FORCE_SYMBOLIC"</span>)]
-        </span><span class="kw">const </span>FORCE_SYMBOLIC = ffi::GTK_ICON_LOOKUP_FORCE_SYMBOLIC <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FORCE_SYMBOLIC = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_FORCE_SYMBOLIC.html">ffi::GTK_ICON_LOOKUP_FORCE_SYMBOLIC</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Try to load a variant of the icon for left-to-right
         ///  text direction. Since 3.14.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_DIR_LTR"</span>)]
-        </span><span class="kw">const </span>DIR_LTR = ffi::GTK_ICON_LOOKUP_DIR_LTR <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DIR_LTR = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_DIR_LTR.html">ffi::GTK_ICON_LOOKUP_DIR_LTR</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Try to load a variant of the icon for right-to-left
         ///  text direction. Since 3.14.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_ICON_LOOKUP_DIR_RTL"</span>)]
-        </span><span class="kw">const </span>DIR_RTL = ffi::GTK_ICON_LOOKUP_DIR_RTL <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DIR_RTL = <a href="../../../gtk_sys/constant.GTK_ICON_LOOKUP_DIR_RTL.html">ffi::GTK_ICON_LOOKUP_DIR_RTL</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3301,7 +3300,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkIconLookupFlags.html">ffi::GtkIconLookupFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1003">value</a>)
+        <a href="#941-988"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1003">value</a>)
     }
 }
 
@@ -3309,7 +3308,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_icon_lookup_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_icon_lookup_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_icon_lookup_flags_get_type.html">ffi::gtk_icon_lookup_flags_get_type</a>()) }
     }
 }
 
@@ -3333,7 +3332,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1035">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1035">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3342,14 +3341,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1044">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1043">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1044">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1043">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1044">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3357,11 +3356,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#941-988">IconLookupFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1059">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1059">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Describes hints that might be taken into account by input methods
     /// or applications. Note that input methods may already tailor their
     /// behaviour according to the [`InputPurpose`][crate::InputPurpose] of the entry.
@@ -3376,43 +3375,43 @@
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.InputHints.html">InputHints</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// No special behaviour suggested
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_NONE"</span>)]
-        </span><span class="kw">const </span>NONE = ffi::GTK_INPUT_HINT_NONE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NONE = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_NONE.html">ffi::GTK_INPUT_HINT_NONE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest checking for typos
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_SPELLCHECK"</span>)]
-        </span><span class="kw">const </span>SPELLCHECK = ffi::GTK_INPUT_HINT_SPELLCHECK <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SPELLCHECK = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_SPELLCHECK.html">ffi::GTK_INPUT_HINT_SPELLCHECK</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest not checking for typos
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_NO_SPELLCHECK"</span>)]
-        </span><span class="kw">const </span>NO_SPELLCHECK = ffi::GTK_INPUT_HINT_NO_SPELLCHECK <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NO_SPELLCHECK = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_NO_SPELLCHECK.html">ffi::GTK_INPUT_HINT_NO_SPELLCHECK</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest word completion
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_WORD_COMPLETION"</span>)]
-        </span><span class="kw">const </span>WORD_COMPLETION = ffi::GTK_INPUT_HINT_WORD_COMPLETION <span class="kw">as _</span>;
+        </span><span class="kw">const </span>WORD_COMPLETION = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_WORD_COMPLETION.html">ffi::GTK_INPUT_HINT_WORD_COMPLETION</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest to convert all text to lowercase
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_LOWERCASE"</span>)]
-        </span><span class="kw">const </span>LOWERCASE = ffi::GTK_INPUT_HINT_LOWERCASE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>LOWERCASE = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_LOWERCASE.html">ffi::GTK_INPUT_HINT_LOWERCASE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest to capitalize all text
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_UPPERCASE_CHARS"</span>)]
-        </span><span class="kw">const </span>UPPERCASE_CHARS = ffi::GTK_INPUT_HINT_UPPERCASE_CHARS <span class="kw">as _</span>;
+        </span><span class="kw">const </span>UPPERCASE_CHARS = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_UPPERCASE_CHARS.html">ffi::GTK_INPUT_HINT_UPPERCASE_CHARS</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest to capitalize the first
         ///  character of each word
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_UPPERCASE_WORDS"</span>)]
-        </span><span class="kw">const </span>UPPERCASE_WORDS = ffi::GTK_INPUT_HINT_UPPERCASE_WORDS <span class="kw">as _</span>;
+        </span><span class="kw">const </span>UPPERCASE_WORDS = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_UPPERCASE_WORDS.html">ffi::GTK_INPUT_HINT_UPPERCASE_WORDS</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest to capitalize the
         ///  first word of each sentence
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_UPPERCASE_SENTENCES"</span>)]
-        </span><span class="kw">const </span>UPPERCASE_SENTENCES = ffi::GTK_INPUT_HINT_UPPERCASE_SENTENCES <span class="kw">as _</span>;
+        </span><span class="kw">const </span>UPPERCASE_SENTENCES = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_UPPERCASE_SENTENCES.html">ffi::GTK_INPUT_HINT_UPPERCASE_SENTENCES</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest to not show an onscreen keyboard
         ///  (e.g for a calculator that already has all the keys).
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_INHIBIT_OSK"</span>)]
-        </span><span class="kw">const </span>INHIBIT_OSK = ffi::GTK_INPUT_HINT_INHIBIT_OSK <span class="kw">as _</span>;
+        </span><span class="kw">const </span>INHIBIT_OSK = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_INHIBIT_OSK.html">ffi::GTK_INPUT_HINT_INHIBIT_OSK</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The text is vertical. Since 3.18
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_VERTICAL_WRITING"</span>)]
-        </span><span class="kw">const </span>VERTICAL_WRITING = ffi::GTK_INPUT_HINT_VERTICAL_WRITING <span class="kw">as _</span>;
+        </span><span class="kw">const </span>VERTICAL_WRITING = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_VERTICAL_WRITING.html">ffi::GTK_INPUT_HINT_VERTICAL_WRITING</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest offering Emoji support. Since 3.22.20
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_EMOJI"</span>)]
-        </span><span class="kw">const </span>EMOJI = ffi::GTK_INPUT_HINT_EMOJI <span class="kw">as _</span>;
+        </span><span class="kw">const </span>EMOJI = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_EMOJI.html">ffi::GTK_INPUT_HINT_EMOJI</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Suggest not offering Emoji support. Since 3.22.20
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_INPUT_HINT_NO_EMOJI"</span>)]
-        </span><span class="kw">const </span>NO_EMOJI = ffi::GTK_INPUT_HINT_NO_EMOJI <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NO_EMOJI = <a href="../../../gtk_sys/constant.GTK_INPUT_HINT_NO_EMOJI.html">ffi::GTK_INPUT_HINT_NO_EMOJI</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3431,7 +3430,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkInputHints.html">ffi::GtkInputHints</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1133">value</a>)
+        <a href="#1065-1118"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1133">value</a>)
     }
 }
 
@@ -3439,7 +3438,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_input_hints_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_input_hints_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_input_hints_get_type.html">ffi::gtk_input_hints_get_type</a>()) }
     }
 }
 
@@ -3463,7 +3462,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1165">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1165">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3472,14 +3471,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1174">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1173">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1174">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1173">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1174">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3487,42 +3486,42 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1065-1118">InputHints</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1189">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1189">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Describes how a rendered element connects to adjacent elements.
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkJunctionSides"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.JunctionSides.html">JunctionSides</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// No junctions.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_NONE"</span>)]
-        </span><span class="kw">const </span>NONE = ffi::GTK_JUNCTION_NONE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NONE = <a href="../../../gtk_sys/constant.GTK_JUNCTION_NONE.html">ffi::GTK_JUNCTION_NONE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Element connects on the top-left corner.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_CORNER_TOPLEFT"</span>)]
-        </span><span class="kw">const </span>CORNER_TOPLEFT = ffi::GTK_JUNCTION_CORNER_TOPLEFT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>CORNER_TOPLEFT = <a href="../../../gtk_sys/constant.GTK_JUNCTION_CORNER_TOPLEFT.html">ffi::GTK_JUNCTION_CORNER_TOPLEFT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Element connects on the top-right corner.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_CORNER_TOPRIGHT"</span>)]
-        </span><span class="kw">const </span>CORNER_TOPRIGHT = ffi::GTK_JUNCTION_CORNER_TOPRIGHT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>CORNER_TOPRIGHT = <a href="../../../gtk_sys/constant.GTK_JUNCTION_CORNER_TOPRIGHT.html">ffi::GTK_JUNCTION_CORNER_TOPRIGHT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Element connects on the bottom-left corner.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_CORNER_BOTTOMLEFT"</span>)]
-        </span><span class="kw">const </span>CORNER_BOTTOMLEFT = ffi::GTK_JUNCTION_CORNER_BOTTOMLEFT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>CORNER_BOTTOMLEFT = <a href="../../../gtk_sys/constant.GTK_JUNCTION_CORNER_BOTTOMLEFT.html">ffi::GTK_JUNCTION_CORNER_BOTTOMLEFT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Element connects on the bottom-right corner.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_CORNER_BOTTOMRIGHT"</span>)]
-        </span><span class="kw">const </span>CORNER_BOTTOMRIGHT = ffi::GTK_JUNCTION_CORNER_BOTTOMRIGHT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>CORNER_BOTTOMRIGHT = <a href="../../../gtk_sys/constant.GTK_JUNCTION_CORNER_BOTTOMRIGHT.html">ffi::GTK_JUNCTION_CORNER_BOTTOMRIGHT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Element connects on the top side.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_TOP"</span>)]
-        </span><span class="kw">const </span>TOP = ffi::GTK_JUNCTION_TOP <span class="kw">as _</span>;
+        </span><span class="kw">const </span>TOP = <a href="../../../gtk_sys/constant.GTK_JUNCTION_TOP.html">ffi::GTK_JUNCTION_TOP</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Element connects on the bottom side.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_BOTTOM"</span>)]
-        </span><span class="kw">const </span>BOTTOM = ffi::GTK_JUNCTION_BOTTOM <span class="kw">as _</span>;
+        </span><span class="kw">const </span>BOTTOM = <a href="../../../gtk_sys/constant.GTK_JUNCTION_BOTTOM.html">ffi::GTK_JUNCTION_BOTTOM</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Element connects on the left side.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_LEFT"</span>)]
-        </span><span class="kw">const </span>LEFT = ffi::GTK_JUNCTION_LEFT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>LEFT = <a href="../../../gtk_sys/constant.GTK_JUNCTION_LEFT.html">ffi::GTK_JUNCTION_LEFT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Element connects on the right side.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_JUNCTION_RIGHT"</span>)]
-        </span><span class="kw">const </span>RIGHT = ffi::GTK_JUNCTION_RIGHT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>RIGHT = <a href="../../../gtk_sys/constant.GTK_JUNCTION_RIGHT.html">ffi::GTK_JUNCTION_RIGHT</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3541,7 +3540,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkJunctionSides.html">ffi::GtkJunctionSides</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1243">value</a>)
+        <a href="#1195-1228"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1243">value</a>)
     }
 }
 
@@ -3549,7 +3548,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_junction_sides_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_junction_sides_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_junction_sides_get_type.html">ffi::gtk_junction_sides_get_type</a>()) }
     }
 }
 
@@ -3573,7 +3572,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1275">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1275">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3582,14 +3581,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1284">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1283">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1284">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1283">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1284">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3597,11 +3596,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1195-1228">JunctionSides</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1299">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1299">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// These flags serve two purposes. First, the application can call [`PlacesSidebar::set_open_flags()`][crate::PlacesSidebar::set_open_flags()]
     /// using these flags as a bitmask. This tells the sidebar that the application is able to open
     /// folders selected from the sidebar in various ways, for example, in new tabs or in new windows in
@@ -3623,17 +3622,17 @@
         ///  are specified. It indicates that the calling application should open the selected location
         ///  in the normal way, for example, in the folder view beside the sidebar.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_PLACES_OPEN_NORMAL"</span>)]
-        </span><span class="kw">const </span>NORMAL = ffi::GTK_PLACES_OPEN_NORMAL <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NORMAL = <a href="../../../gtk_sys/constant.GTK_PLACES_OPEN_NORMAL.html">ffi::GTK_PLACES_OPEN_NORMAL</a> <span class="kw">as _</span>;
         <span class="doccomment">/// When passed to [`PlacesSidebar::set_open_flags()`][crate::PlacesSidebar::set_open_flags()], this indicates
         ///  that the application can open folders selected from the sidebar in new tabs. This value
         ///  will be passed to the [`open-location`][struct@crate::PlacesSidebar#open-location] signal when the user selects
         ///  that a location be opened in a new tab instead of in the standard fashion.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_PLACES_OPEN_NEW_TAB"</span>)]
-        </span><span class="kw">const </span>NEW_TAB = ffi::GTK_PLACES_OPEN_NEW_TAB <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NEW_TAB = <a href="../../../gtk_sys/constant.GTK_PLACES_OPEN_NEW_TAB.html">ffi::GTK_PLACES_OPEN_NEW_TAB</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Similar to [`NEW_TAB`][Self::NEW_TAB], but indicates that the application
         ///  can open folders in new windows.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_PLACES_OPEN_NEW_WINDOW"</span>)]
-        </span><span class="kw">const </span>NEW_WINDOW = ffi::GTK_PLACES_OPEN_NEW_WINDOW <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NEW_WINDOW = <a href="../../../gtk_sys/constant.GTK_PLACES_OPEN_NEW_WINDOW.html">ffi::GTK_PLACES_OPEN_NEW_WINDOW</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3652,7 +3651,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkPlacesOpenFlags.html">ffi::GtkPlacesOpenFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1354">value</a>)
+        <a href="#1305-1339"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1354">value</a>)
     }
 }
 
@@ -3660,7 +3659,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_places_open_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_places_open_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_places_open_flags_get_type.html">ffi::gtk_places_open_flags_get_type</a>()) }
     }
 }
 
@@ -3684,7 +3683,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1386">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1386">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3693,14 +3692,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1395">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1394">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1395">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1394">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1395">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3708,11 +3707,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1305-1339">PlacesOpenFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1410">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1410">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// These flags indicate what parts of a `GtkRecentFilterInfo` struct
     /// are filled or need to be filled.
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -3720,25 +3719,25 @@
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.RecentFilterFlags.html">RecentFilterFlags</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// the URI of the file being tested
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_RECENT_FILTER_URI"</span>)]
-        </span><span class="kw">const </span>URI = ffi::GTK_RECENT_FILTER_URI <span class="kw">as _</span>;
+        </span><span class="kw">const </span>URI = <a href="../../../gtk_sys/constant.GTK_RECENT_FILTER_URI.html">ffi::GTK_RECENT_FILTER_URI</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the string that will be used to
         ///  display the file in the recent chooser
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_RECENT_FILTER_DISPLAY_NAME"</span>)]
-        </span><span class="kw">const </span>DISPLAY_NAME = ffi::GTK_RECENT_FILTER_DISPLAY_NAME <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DISPLAY_NAME = <a href="../../../gtk_sys/constant.GTK_RECENT_FILTER_DISPLAY_NAME.html">ffi::GTK_RECENT_FILTER_DISPLAY_NAME</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the mime type of the file
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_RECENT_FILTER_MIME_TYPE"</span>)]
-        </span><span class="kw">const </span>MIME_TYPE = ffi::GTK_RECENT_FILTER_MIME_TYPE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>MIME_TYPE = <a href="../../../gtk_sys/constant.GTK_RECENT_FILTER_MIME_TYPE.html">ffi::GTK_RECENT_FILTER_MIME_TYPE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the list of applications that have
         ///  registered the file
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_RECENT_FILTER_APPLICATION"</span>)]
-        </span><span class="kw">const </span>APPLICATION = ffi::GTK_RECENT_FILTER_APPLICATION <span class="kw">as _</span>;
+        </span><span class="kw">const </span>APPLICATION = <a href="../../../gtk_sys/constant.GTK_RECENT_FILTER_APPLICATION.html">ffi::GTK_RECENT_FILTER_APPLICATION</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the groups to which the file belongs to
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_RECENT_FILTER_GROUP"</span>)]
-        </span><span class="kw">const </span>GROUP = ffi::GTK_RECENT_FILTER_GROUP <span class="kw">as _</span>;
+        </span><span class="kw">const </span>GROUP = <a href="../../../gtk_sys/constant.GTK_RECENT_FILTER_GROUP.html">ffi::GTK_RECENT_FILTER_GROUP</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the number of days elapsed since the file
         ///  has been registered
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_RECENT_FILTER_AGE"</span>)]
-        </span><span class="kw">const </span>AGE = ffi::GTK_RECENT_FILTER_AGE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>AGE = <a href="../../../gtk_sys/constant.GTK_RECENT_FILTER_AGE.html">ffi::GTK_RECENT_FILTER_AGE</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3757,7 +3756,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkRecentFilterFlags.html">ffi::GtkRecentFilterFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1459">value</a>)
+        <a href="#1416-1444"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1459">value</a>)
     }
 }
 
@@ -3765,7 +3764,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_recent_filter_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_recent_filter_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_recent_filter_flags_get_type.html">ffi::gtk_recent_filter_flags_get_type</a>()) }
     }
 }
 
@@ -3789,7 +3788,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1491">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1491">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3798,14 +3797,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1500">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1499">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1500">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1499">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1500">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3813,33 +3812,33 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1416-1444">RecentFilterFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1515">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1515">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Describes a region within a widget.
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkRegionFlags"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.RegionFlags.html">RegionFlags</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// Region has an even number within a set.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_REGION_EVEN"</span>)]
-        </span><span class="kw">const </span>EVEN = ffi::GTK_REGION_EVEN <span class="kw">as _</span>;
+        </span><span class="kw">const </span>EVEN = <a href="../../../gtk_sys/constant.GTK_REGION_EVEN.html">ffi::GTK_REGION_EVEN</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Region has an odd number within a set.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_REGION_ODD"</span>)]
-        </span><span class="kw">const </span>ODD = ffi::GTK_REGION_ODD <span class="kw">as _</span>;
+        </span><span class="kw">const </span>ODD = <a href="../../../gtk_sys/constant.GTK_REGION_ODD.html">ffi::GTK_REGION_ODD</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Region is the first one within a set.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_REGION_FIRST"</span>)]
-        </span><span class="kw">const </span>FIRST = ffi::GTK_REGION_FIRST <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FIRST = <a href="../../../gtk_sys/constant.GTK_REGION_FIRST.html">ffi::GTK_REGION_FIRST</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Region is the last one within a set.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_REGION_LAST"</span>)]
-        </span><span class="kw">const </span>LAST = ffi::GTK_REGION_LAST <span class="kw">as _</span>;
+        </span><span class="kw">const </span>LAST = <a href="../../../gtk_sys/constant.GTK_REGION_LAST.html">ffi::GTK_REGION_LAST</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Region is the only one within a set.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_REGION_ONLY"</span>)]
-        </span><span class="kw">const </span>ONLY = ffi::GTK_REGION_ONLY <span class="kw">as _</span>;
+        </span><span class="kw">const </span>ONLY = <a href="../../../gtk_sys/constant.GTK_REGION_ONLY.html">ffi::GTK_REGION_ONLY</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Region is part of a sorted area.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_REGION_SORTED"</span>)]
-        </span><span class="kw">const </span>SORTED = ffi::GTK_REGION_SORTED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SORTED = <a href="../../../gtk_sys/constant.GTK_REGION_SORTED.html">ffi::GTK_REGION_SORTED</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3858,7 +3857,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkRegionFlags.html">ffi::GtkRegionFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1560">value</a>)
+        <a href="#1521-1545"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1560">value</a>)
     }
 }
 
@@ -3866,7 +3865,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_region_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_region_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_region_flags_get_type.html">ffi::gtk_region_flags_get_type</a>()) }
     }
 }
 
@@ -3890,7 +3889,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1592">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1592">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -3899,14 +3898,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1601">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1600">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1601">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1600">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1601">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -3914,11 +3913,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1521-1545">RegionFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1616">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1616">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Describes a widget state. Widget states are used to match the widget
     /// against CSS pseudo-classes. Note that GTK extends the regular CSS
     /// classes and sometimes uses different names.
@@ -3927,46 +3926,46 @@
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.StateFlags.html">StateFlags</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// State during normal operation.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_NORMAL"</span>)]
-        </span><span class="kw">const </span>NORMAL = ffi::GTK_STATE_FLAG_NORMAL <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NORMAL = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_NORMAL.html">ffi::GTK_STATE_FLAG_NORMAL</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is active.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_ACTIVE"</span>)]
-        </span><span class="kw">const </span>ACTIVE = ffi::GTK_STATE_FLAG_ACTIVE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>ACTIVE = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_ACTIVE.html">ffi::GTK_STATE_FLAG_ACTIVE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget has a mouse pointer over it.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_PRELIGHT"</span>)]
-        </span><span class="kw">const </span>PRELIGHT = ffi::GTK_STATE_FLAG_PRELIGHT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>PRELIGHT = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_PRELIGHT.html">ffi::GTK_STATE_FLAG_PRELIGHT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is selected.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_SELECTED"</span>)]
-        </span><span class="kw">const </span>SELECTED = ffi::GTK_STATE_FLAG_SELECTED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SELECTED = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_SELECTED.html">ffi::GTK_STATE_FLAG_SELECTED</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is insensitive.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_INSENSITIVE"</span>)]
-        </span><span class="kw">const </span>INSENSITIVE = ffi::GTK_STATE_FLAG_INSENSITIVE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>INSENSITIVE = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_INSENSITIVE.html">ffi::GTK_STATE_FLAG_INSENSITIVE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is inconsistent.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_INCONSISTENT"</span>)]
-        </span><span class="kw">const </span>INCONSISTENT = ffi::GTK_STATE_FLAG_INCONSISTENT <span class="kw">as _</span>;
+        </span><span class="kw">const </span>INCONSISTENT = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_INCONSISTENT.html">ffi::GTK_STATE_FLAG_INCONSISTENT</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget has the keyboard focus.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_FOCUSED"</span>)]
-        </span><span class="kw">const </span>FOCUSED = ffi::GTK_STATE_FLAG_FOCUSED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>FOCUSED = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_FOCUSED.html">ffi::GTK_STATE_FLAG_FOCUSED</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is in a background toplevel window.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_BACKDROP"</span>)]
-        </span><span class="kw">const </span>BACKDROP = ffi::GTK_STATE_FLAG_BACKDROP <span class="kw">as _</span>;
+        </span><span class="kw">const </span>BACKDROP = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_BACKDROP.html">ffi::GTK_STATE_FLAG_BACKDROP</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is in left-to-right text direction. Since 3.8
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_DIR_LTR"</span>)]
-        </span><span class="kw">const </span>DIR_LTR = ffi::GTK_STATE_FLAG_DIR_LTR <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DIR_LTR = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_DIR_LTR.html">ffi::GTK_STATE_FLAG_DIR_LTR</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is in right-to-left text direction. Since 3.8
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_DIR_RTL"</span>)]
-        </span><span class="kw">const </span>DIR_RTL = ffi::GTK_STATE_FLAG_DIR_RTL <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DIR_RTL = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_DIR_RTL.html">ffi::GTK_STATE_FLAG_DIR_RTL</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is a link. Since 3.12
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_LINK"</span>)]
-        </span><span class="kw">const </span>LINK = ffi::GTK_STATE_FLAG_LINK <span class="kw">as _</span>;
+        </span><span class="kw">const </span>LINK = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_LINK.html">ffi::GTK_STATE_FLAG_LINK</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The location the widget points to has already been visited. Since 3.12
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_VISITED"</span>)]
-        </span><span class="kw">const </span>VISITED = ffi::GTK_STATE_FLAG_VISITED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>VISITED = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_VISITED.html">ffi::GTK_STATE_FLAG_VISITED</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is checked. Since 3.14
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_CHECKED"</span>)]
-        </span><span class="kw">const </span>CHECKED = ffi::GTK_STATE_FLAG_CHECKED <span class="kw">as _</span>;
+        </span><span class="kw">const </span>CHECKED = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_CHECKED.html">ffi::GTK_STATE_FLAG_CHECKED</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Widget is highlighted as a drop target for DND. Since 3.20
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STATE_FLAG_DROP_ACTIVE"</span>)]
-        </span><span class="kw">const </span>DROP_ACTIVE = ffi::GTK_STATE_FLAG_DROP_ACTIVE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>DROP_ACTIVE = <a href="../../../gtk_sys/constant.GTK_STATE_FLAG_DROP_ACTIVE.html">ffi::GTK_STATE_FLAG_DROP_ACTIVE</a> <span class="kw">as _</span>;
     }
 }
 
@@ -3985,7 +3984,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkStateFlags.html">ffi::GtkStateFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1687">value</a>)
+        <a href="#1622-1672"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1687">value</a>)
     }
 }
 
@@ -3993,7 +3992,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_state_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_state_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_state_flags_get_type.html">ffi::gtk_state_flags_get_type</a>()) }
     }
 }
 
@@ -4017,7 +4016,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1719">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1719">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -4026,14 +4025,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1728">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1727">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1728">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1727">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1728">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -4041,26 +4040,26 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1622-1672">StateFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1743">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1743">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Flags that modify the behavior of [`StyleContextExt::to_string()`][crate::prelude::StyleContextExt::to_string()].
     /// New values may be added to this enumeration.
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkStyleContextPrintFlags"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.StyleContextPrintFlags.html">StyleContextPrintFlags</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="attr">#[doc(alias = <span class="string">"GTK_STYLE_CONTEXT_PRINT_NONE"</span>)]
-        </span><span class="kw">const </span>NONE = ffi::GTK_STYLE_CONTEXT_PRINT_NONE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>NONE = <a href="../../../gtk_sys/constant.GTK_STYLE_CONTEXT_PRINT_NONE.html">ffi::GTK_STYLE_CONTEXT_PRINT_NONE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Print the entire tree of
         ///  CSS nodes starting at the style context's node
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STYLE_CONTEXT_PRINT_RECURSE"</span>)]
-        </span><span class="kw">const </span>RECURSE = ffi::GTK_STYLE_CONTEXT_PRINT_RECURSE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>RECURSE = <a href="../../../gtk_sys/constant.GTK_STYLE_CONTEXT_PRINT_RECURSE.html">ffi::GTK_STYLE_CONTEXT_PRINT_RECURSE</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Show the values of the
         ///  CSS properties for each node
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE"</span>)]
-        </span><span class="kw">const </span>SHOW_STYLE = ffi::GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SHOW_STYLE = <a href="../../../gtk_sys/constant.GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE.html">ffi::GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE</a> <span class="kw">as _</span>;
     }
 }
 
@@ -4079,7 +4078,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkStyleContextPrintFlags.html">ffi::GtkStyleContextPrintFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1781">value</a>)
+        <a href="#1749-1766"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1781">value</a>)
     }
 }
 
@@ -4087,7 +4086,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_style_context_print_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_style_context_print_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_style_context_print_flags_get_type.html">ffi::gtk_style_context_print_flags_get_type</a>()) }
     }
 }
 
@@ -4111,7 +4110,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1813">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1813">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -4120,14 +4119,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1822">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1821">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1822">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1821">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1822">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -4135,11 +4134,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1749-1766">StyleContextPrintFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1837">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1837">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// The [`TargetFlags`][crate::TargetFlags] enumeration is used to specify
     /// constraints on a [`TargetEntry`][crate::TargetEntry].
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -4148,19 +4147,19 @@
         <span class="doccomment">/// If this is set, the target will only be selected
         ///  for drags within a single application.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TARGET_SAME_APP"</span>)]
-        </span><span class="kw">const </span>SAME_APP = ffi::GTK_TARGET_SAME_APP <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SAME_APP = <a href="../../../gtk_sys/constant.GTK_TARGET_SAME_APP.html">ffi::GTK_TARGET_SAME_APP</a> <span class="kw">as _</span>;
         <span class="doccomment">/// If this is set, the target will only be selected
         ///  for drags within a single widget.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TARGET_SAME_WIDGET"</span>)]
-        </span><span class="kw">const </span>SAME_WIDGET = ffi::GTK_TARGET_SAME_WIDGET <span class="kw">as _</span>;
+        </span><span class="kw">const </span>SAME_WIDGET = <a href="../../../gtk_sys/constant.GTK_TARGET_SAME_WIDGET.html">ffi::GTK_TARGET_SAME_WIDGET</a> <span class="kw">as _</span>;
         <span class="doccomment">/// If this is set, the target will not be selected
         ///  for drags within a single application.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TARGET_OTHER_APP"</span>)]
-        </span><span class="kw">const </span>OTHER_APP = ffi::GTK_TARGET_OTHER_APP <span class="kw">as _</span>;
+        </span><span class="kw">const </span>OTHER_APP = <a href="../../../gtk_sys/constant.GTK_TARGET_OTHER_APP.html">ffi::GTK_TARGET_OTHER_APP</a> <span class="kw">as _</span>;
         <span class="doccomment">/// If this is set, the target will not be selected
         ///  for drags withing a single widget.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TARGET_OTHER_WIDGET"</span>)]
-        </span><span class="kw">const </span>OTHER_WIDGET = ffi::GTK_TARGET_OTHER_WIDGET <span class="kw">as _</span>;
+        </span><span class="kw">const </span>OTHER_WIDGET = <a href="../../../gtk_sys/constant.GTK_TARGET_OTHER_WIDGET.html">ffi::GTK_TARGET_OTHER_WIDGET</a> <span class="kw">as _</span>;
     }
 }
 
@@ -4179,7 +4178,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkTargetFlags.html">ffi::GtkTargetFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1881">value</a>)
+        <a href="#1843-1866"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1881">value</a>)
     }
 }
 
@@ -4187,7 +4186,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_target_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_target_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_target_flags_get_type.html">ffi::gtk_target_flags_get_type</a>()) }
     }
 }
 
@@ -4211,7 +4210,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1913">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#1913">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -4220,14 +4219,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#1922">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1921">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#1922">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#1921">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#1922">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -4235,11 +4234,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1843-1866">TargetFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1937">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#1937">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Flags affecting how a search is done.
     ///
     /// If neither [`VISIBLE_ONLY`][Self::VISIBLE_ONLY] nor [`TEXT_ONLY`][Self::TEXT_ONLY] are
@@ -4251,15 +4250,15 @@
         <span class="doccomment">/// Search only visible data. A search match may
         /// have invisible text interspersed.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TEXT_SEARCH_VISIBLE_ONLY"</span>)]
-        </span><span class="kw">const </span>VISIBLE_ONLY = ffi::GTK_TEXT_SEARCH_VISIBLE_ONLY <span class="kw">as _</span>;
+        </span><span class="kw">const </span>VISIBLE_ONLY = <a href="../../../gtk_sys/constant.GTK_TEXT_SEARCH_VISIBLE_ONLY.html">ffi::GTK_TEXT_SEARCH_VISIBLE_ONLY</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Search only text. A match may have pixbufs or
         /// child widgets mixed inside the matched range.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TEXT_SEARCH_TEXT_ONLY"</span>)]
-        </span><span class="kw">const </span>TEXT_ONLY = ffi::GTK_TEXT_SEARCH_TEXT_ONLY <span class="kw">as _</span>;
+        </span><span class="kw">const </span>TEXT_ONLY = <a href="../../../gtk_sys/constant.GTK_TEXT_SEARCH_TEXT_ONLY.html">ffi::GTK_TEXT_SEARCH_TEXT_ONLY</a> <span class="kw">as _</span>;
         <span class="doccomment">/// The text will be matched regardless of
         /// what case it is in.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TEXT_SEARCH_CASE_INSENSITIVE"</span>)]
-        </span><span class="kw">const </span>CASE_INSENSITIVE = ffi::GTK_TEXT_SEARCH_CASE_INSENSITIVE <span class="kw">as _</span>;
+        </span><span class="kw">const </span>CASE_INSENSITIVE = <a href="../../../gtk_sys/constant.GTK_TEXT_SEARCH_CASE_INSENSITIVE.html">ffi::GTK_TEXT_SEARCH_CASE_INSENSITIVE</a> <span class="kw">as _</span>;
     }
 }
 
@@ -4278,7 +4277,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkTextSearchFlags.html">ffi::GtkTextSearchFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#1980">value</a>)
+        <a href="#1943-1965"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#1980">value</a>)
     }
 }
 
@@ -4286,7 +4285,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_text_search_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_text_search_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_text_search_flags_get_type.html">ffi::gtk_text_search_flags_get_type</a>()) }
     }
 }
 
@@ -4310,7 +4309,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#2012">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#2012">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -4319,14 +4318,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#2021">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#2020">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#2021">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#2020">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#2021">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -4334,21 +4333,21 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#1943-1965">TextSearchFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#2036">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#2036">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// Flags used to specify the supported drag targets.
     </span><span class="attr">#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
     #[doc(alias = <span class="string">"GtkToolPaletteDragTargets"</span>)]
     </span><span class="kw">pub struct </span><a href="../../../gtk/struct.ToolPaletteDragTargets.html">ToolPaletteDragTargets</a>: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a> {
         <span class="doccomment">/// Support drag of items.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TOOL_PALETTE_DRAG_ITEMS"</span>)]
-        </span><span class="kw">const </span>ITEMS = ffi::GTK_TOOL_PALETTE_DRAG_ITEMS <span class="kw">as _</span>;
+        </span><span class="kw">const </span>ITEMS = <a href="../../../gtk_sys/constant.GTK_TOOL_PALETTE_DRAG_ITEMS.html">ffi::GTK_TOOL_PALETTE_DRAG_ITEMS</a> <span class="kw">as _</span>;
         <span class="doccomment">/// Support drag of groups.
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TOOL_PALETTE_DRAG_GROUPS"</span>)]
-        </span><span class="kw">const </span>GROUPS = ffi::GTK_TOOL_PALETTE_DRAG_GROUPS <span class="kw">as _</span>;
+        </span><span class="kw">const </span>GROUPS = <a href="../../../gtk_sys/constant.GTK_TOOL_PALETTE_DRAG_GROUPS.html">ffi::GTK_TOOL_PALETTE_DRAG_GROUPS</a> <span class="kw">as _</span>;
     }
 }
 
@@ -4367,7 +4366,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkToolPaletteDragTargets.html">ffi::GtkToolPaletteDragTargets</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#2069">value</a>)
+        <a href="#2042-2054"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#2069">value</a>)
     }
 }
 
@@ -4375,7 +4374,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_tool_palette_drag_targets_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_tool_palette_drag_targets_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_tool_palette_drag_targets_get_type.html">ffi::gtk_tool_palette_drag_targets_get_type</a>()) }
     }
 }
 
@@ -4399,7 +4398,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#2101">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#2101">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -4408,14 +4407,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#2110">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#2109">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#2110">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#2109">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#2110">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -4423,11 +4422,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#2042-2054">ToolPaletteDragTargets</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#2125">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#2125">v</a>)
     }
 }
 
-<span class="macro">bitflags! </span>{
+<span class="macro">bitflags!</span> {
     <span class="doccomment">/// These flags indicate various properties of a [`TreeModel`][crate::TreeModel].
     ///
     /// They are returned by [`TreeModelExt::flags()`][crate::prelude::TreeModelExt::flags()], and must be
@@ -4440,11 +4439,11 @@
         <span class="doccomment">/// iterators survive all signals
         ///  emitted by the tree
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TREE_MODEL_ITERS_PERSIST"</span>)]
-        </span><span class="kw">const </span>ITERS_PERSIST = ffi::GTK_TREE_MODEL_ITERS_PERSIST <span class="kw">as _</span>;
+        </span><span class="kw">const </span>ITERS_PERSIST = <a href="../../../gtk_sys/constant.GTK_TREE_MODEL_ITERS_PERSIST.html">ffi::GTK_TREE_MODEL_ITERS_PERSIST</a> <span class="kw">as _</span>;
         <span class="doccomment">/// the model is a list only, and never
         ///  has children
         </span><span class="attr">#[doc(alias = <span class="string">"GTK_TREE_MODEL_LIST_ONLY"</span>)]
-        </span><span class="kw">const </span>LIST_ONLY = ffi::GTK_TREE_MODEL_LIST_ONLY <span class="kw">as _</span>;
+        </span><span class="kw">const </span>LIST_ONLY = <a href="../../../gtk_sys/constant.GTK_TREE_MODEL_LIST_ONLY.html">ffi::GTK_TREE_MODEL_LIST_ONLY</a> <span class="kw">as _</span>;
     }
 }
 
@@ -4463,7 +4462,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_glib(value: <a href="../../../gtk_sys/type.GtkTreeModelFlags.html">ffi::GtkTreeModelFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <span class="self">Self</span>::from_bits_truncate(<a href="#2165">value</a>)
+        <a href="#2131-2150"><span class="self">Self</span>::from_bits_truncate</a>(<a href="#2165">value</a>)
     }
 }
 
@@ -4471,7 +4470,7 @@
     <span class="attr">#[inline]
     #[doc(alias = <span class="string">"gtk_tree_model_flags_get_type"</span>)]
     </span><span class="kw">fn </span>static_type() -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(ffi::gtk_tree_model_flags_get_type()) }
+        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk_sys/fn.gtk_tree_model_flags_get_type.html">ffi::gtk_tree_model_flags_get_type</a>()) }
     }
 }
 
@@ -4495,7 +4494,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">unsafe fn </span>from_value(value: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#2197">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html">to_glib_none</a>().<span class="number">0</span>))
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(glib::gobject_ffi::g_value_get_flags(<a href="#2197">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>))
     }
 }
 
@@ -4504,14 +4503,14 @@
     </span><span class="kw">fn </span>to_value(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html">glib::Value</a> {
         <span class="kw">let </span><span class="kw-2">mut </span>value = glib::Value::for_value_type::&lt;<span class="self">Self</span>&gt;();
         <span class="kw">unsafe </span>{
-            glib::gobject_ffi::g_value_set_flags(<a href="#2206">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#2205">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html">into_glib</a>());
+            glib::gobject_ffi::g_value_set_flags(<a href="#2206">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <a class="self" href="#2205">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
         }
         <a href="#2206">value</a>
     }
 
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>value_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html">glib::Type</a> {
-        <span class="self">Self</span>::static_type()
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/trait.StaticType.html#tymethod.static_type"><span class="self">Self</span>::static_type</a>()
     }
 }
 
@@ -4519,7 +4518,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>from(v: <a href="#2131-2150">TreeModelFlags</a>) -&gt; <span class="self">Self </span>{
         <span class="macro">skip_assert_initialized!</span>();
-        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#2221">v</a>)
+        <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/trait.ToValue.html#tymethod.to_value">ToValue::to_value</a>(<span class="kw-2">&amp;</span><a href="#2221">v</a>)
     }
 }
 </code></pre></div></section></main></body></html>
